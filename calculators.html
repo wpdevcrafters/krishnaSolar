@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Calculators | ShriKrishna Solar — Plan Your Solar System</title>
+    <meta name="description" content="Use ShriKrishna Solar's free calculators to estimate rooftop capacity, monthly savings, ROI, battery sizing, subsidy, and payback period for your solar investment.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ========================================
+         HEADER — identical to home page
+    ======================================== -->
+    <header class="header">
+        <nav class="navbar navbar-expand-xl navbar-light">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo" />
+                </a>
+
+                <!-- Tablet header bar actions (768px–1199px) -->
+                <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                    <a href="https://wa.me/1234567890"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+
+                <!-- Hamburger (mobile & tablet) -->
+                <button class="navbar-toggler d-xl-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                        aria-controls="navDrawer" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Right-side offcanvas drawer (mobile + tablet) -->
+                <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1"
+                     id="navDrawer" aria-labelledby="navDrawerLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <a href="index.html" class="navbar-brand mb-0">
+                            <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo" />
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column p-0">
+                        <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link d-flex justify-content-between align-items-center" href="#" data-submenu-toggle>
+                                    Residential Solar <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                </a>
+                                <ul class="submenu nav flex-column ps-3">
+                                    <li class="nav-item"><a class="nav-link" href="#">Villas</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Apartments</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Independent Houses</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Commercial Solar</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="calculators.html">Solar Calculator</a></li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link d-flex justify-content-between align-items-center" href="#" data-submenu-toggle>
+                                    Subsidy Information <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                </a>
+                                <ul class="submenu nav flex-column ps-3">
+                                    <li class="nav-item"><a class="nav-link" href="#">Central Subsidy</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">State Subsidy</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Success Froxies</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                        <!-- Mobile-only CTA -->
+                        <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                            <a href="contact.html"
+                               class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                               data-bs-dismiss="offcanvas">
+                                Book Free Solar Consultation
+                            </a>
+                            <a href="https://wa.me/1234567890"
+                               class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                               target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop nav (≥1200px) -->
+                <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item has-submenu position-static">
+                            <a class="nav-link" href="#">Residential Solar</a>
+                            <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                                <li><a class="dropdown-item" href="#">Villas</a></li>
+                                <li><a class="dropdown-item" href="#">Apartments</a></li>
+                                <li><a class="dropdown-item" href="#">Independent Houses</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Commercial Solar</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="calculators.html">Solar Calculator</a></li>
+                        <li class="nav-item has-submenu position-static">
+                            <a class="nav-link" href="#">Subsidy Information</a>
+                            <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                                <li><a class="dropdown-item" href="#">Central Subsidy</a></li>
+                                <li><a class="dropdown-item" href="#">State Subsidy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Success Froxies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="https://wa.me/1234567890"
+                           class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                           target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                            <i class="bi bi-whatsapp fs-5"></i>
+                        </a>
+                        <a href="contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                            Book Free Solar Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         HERO — compact calculator hero
+    ======================================== -->
+    <section class="calc-page-hero" aria-labelledby="calc-hero-title">
+        <div class="calc-page-hero__bg" aria-hidden="true"></div>
+        <div class="container position-relative z-1">
+            <div class="calc-page-hero__content" data-aos="fade-up">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" class="calc-page-hero__breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Solar Calculators</li>
+                    </ol>
+                </nav>
+                <h1 class="calc-page-hero__title" id="calc-hero-title">
+                    Solar <span class="calc-page-hero__accent">Calculators</span>
+                </h1>
+                <p class="calc-page-hero__desc">
+                    Determine your rooftop potential, battery requirements, inverter sizing, and estimated savings<br class="d-none d-md-block">
+                    with our comprehensive suite of free, engineering-grade tools.
+                </p>
+                <div class="calc-page-hero__badges">
+                    <span class="calc-page-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span>
+                    <span class="calc-page-hero__badge"><i class="bi bi-shield-check-fill"></i> 100% Free</span>
+                    <span class="calc-page-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span>
+                    <span class="calc-page-hero__badge"><i class="bi bi-lock-fill"></i> Data Private</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SOLAR CALCULATORS SECTION
+    ======================================== -->
+    <section class="calc-main-section py-5" id="calculators" aria-labelledby="calc-main-title">
+        <div class="container py-2">
+
+            <!-- Disclaimer banner -->
+            <div class="calc-disclaimer" data-aos="fade-up" role="note">
+                <i class="bi bi-info-circle-fill calc-disclaimer__icon" aria-hidden="true"></i>
+                <div>
+                    <strong>Disclaimer:</strong> Results are estimates based on standard engineering conditions.
+                    For a precise quote and site blueprint, <a href="contact.html">schedule a free site survey</a>.
+                </div>
+            </div>
+
+            <!-- ── GROUP 1: Core Calculators ── -->
+            <div class="calc-group" data-aos="fade-up">
+                <div class="calc-group__header">
+                    <div class="calc-group__icon-wrap calc-group__icon-wrap--green">
+                        <i class="bi bi-sun-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 class="calc-group__title" id="calc-main-title">Core Solar Calculators</h2>
+                        <p class="calc-group__subtitle">Essential tools for homeowners and business owners planning their solar journey.</p>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="0">
+                        <div class="calc-tool-card calc-tool-card--green">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--green">
+                                    <i class="bi bi-house-door-fill" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Residential</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Rooftop Area Calculator</h3>
+                            <p class="calc-tool-card__desc">Calculate the maximum solar panel capacity your roof can accommodate based on usable square footage and shading analysis.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~2 min</span>
+                                <span><i class="bi bi-bar-chart-line"></i> kW output</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="60">
+                        <div class="calc-tool-card calc-tool-card--blue">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--blue">
+                                    <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Popular</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Monthly Savings Estimator</h3>
+                            <p class="calc-tool-card__desc">Input your current electricity bill and discover exactly how much a rooftop solar system can save you every month and annually.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~1 min</span>
+                                <span><i class="bi bi-currency-rupee"></i> ₹ savings</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="120">
+                        <div class="calc-tool-card calc-tool-card--purple">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--purple">
+                                    <i class="bi bi-buildings-fill" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Commercial</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Commercial ROI Calculator</h3>
+                            <p class="calc-tool-card__desc">Advanced ROI projection including accelerated depreciation benefits and net metering credits for commercial and industrial setups.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~3 min</span>
+                                <span><i class="bi bi-graph-up-arrow"></i> % ROI</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="0">
+                        <div class="calc-tool-card calc-tool-card--amber">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--amber">
+                                    <i class="bi bi-sun-fill" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Off-Grid</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Off-Grid Load Calculator</h3>
+                            <p class="calc-tool-card__desc">Determine the exact size of the off-grid solar system required based on the total wattage and usage hours of your home appliances.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~2 min</span>
+                                <span><i class="bi bi-plug-fill"></i> Wh/day</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="60">
+                        <div class="calc-tool-card calc-tool-card--cyan">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--cyan">
+                                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Location</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Solar Generation by City</h3>
+                            <p class="calc-tool-card__desc">Check estimated daily power generation (kWh) for a 1 kW system in your specific city using real geographic irradiation data.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~1 min</span>
+                                <span><i class="bi bi-cloud-sun"></i> kWh/day</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="120">
+                        <div class="calc-tool-card calc-tool-card--red">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--red">
+                                    <i class="bi bi-tree-fill" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Eco Impact</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Carbon Footprint Reducer</h3>
+                            <p class="calc-tool-card__desc">Calculate the total tons of CO₂ emissions you will prevent annually by switching your property to clean solar energy.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~1 min</span>
+                                <span><i class="bi bi-wind"></i> CO₂ saved</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /.calc-group -->
+
+            <!-- ── GROUP 2: Equipment & Sizing Tools ── -->
+            <div class="calc-group" data-aos="fade-up">
+                <div class="calc-group__header">
+                    <div class="calc-group__icon-wrap calc-group__icon-wrap--blue">
+                        <i class="bi bi-cpu-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 class="calc-group__title">Equipment &amp; System Sizing Tools</h2>
+                        <p class="calc-group__subtitle">Precision tools for engineers and installers to size components accurately.</p>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="0">
+                        <div class="calc-tool-card calc-tool-card--purple">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--purple">
+                                    <i class="bi bi-battery-charging" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Battery</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Battery Bank Sizing</h3>
+                            <p class="calc-tool-card__desc">Calculate the required battery capacity (Ah) based on daily energy consumption and desired backup hours for your installation.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~2 min</span>
+                                <span><i class="bi bi-battery-full"></i> Ah capacity</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="60">
+                        <div class="calc-tool-card calc-tool-card--amber">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--amber">
+                                    <i class="bi bi-cpu" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Inverter</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Inverter Capacity Tool</h3>
+                            <p class="calc-tool-card__desc">Find the optimal inverter rating to safely handle your peak load and surge currents, preventing overloads and equipment damage.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~2 min</span>
+                                <span><i class="bi bi-activity"></i> VA rating</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="120">
+                        <div class="calc-tool-card calc-tool-card--green">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--green">
+                                    <i class="bi bi-plugin" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Wiring</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">DC Cable Sizing Calculator</h3>
+                            <p class="calc-tool-card__desc">Determine the correct AWG/sq.mm wire gauge to minimize voltage drop between your panels and the inverter for optimal efficiency.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~2 min</span>
+                                <span><i class="bi bi-bounding-box"></i> sq.mm gauge</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /.calc-group -->
+
+            <!-- ── GROUP 3: Financial & Subsidy Tools ── -->
+            <div class="calc-group" data-aos="fade-up">
+                <div class="calc-group__header">
+                    <div class="calc-group__icon-wrap calc-group__icon-wrap--amber">
+                        <i class="bi bi-currency-rupee" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 class="calc-group__title">Financial &amp; Subsidy Tools</h2>
+                        <p class="calc-group__subtitle">Plan your investment with confidence using government scheme data and financial projections.</p>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="0">
+                        <div class="calc-tool-card calc-tool-card--dark">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--dark">
+                                    <i class="bi bi-bank2" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Subsidy</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Govt. Subsidy Estimator</h3>
+                            <p class="calc-tool-card__desc">Calculate your exact eligible subsidy amount under the latest MNRE national rooftop solar portal scheme for residential consumers.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~1 min</span>
+                                <span><i class="bi bi-percent"></i> subsidy %</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="60">
+                        <div class="calc-tool-card calc-tool-card--blue">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--blue">
+                                    <i class="bi bi-calculator-fill" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Finance</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Solar EMI &amp; Loan Calculator</h3>
+                            <p class="calc-tool-card__desc">Plan your finances by calculating monthly EMI payments and comparing them against your expected electricity bill savings over time.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~2 min</span>
+                                <span><i class="bi bi-currency-rupee"></i> EMI/mo</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col" data-aos="fade-up" data-aos-delay="120">
+                        <div class="calc-tool-card calc-tool-card--red">
+                            <div class="calc-tool-card__top">
+                                <div class="calc-tool-icon calc-tool-icon--red">
+                                    <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+                                </div>
+                                <span class="calc-tool-tag">Investment</span>
+                            </div>
+                            <h3 class="calc-tool-card__title">Payback Period Analyzer</h3>
+                            <p class="calc-tool-card__desc">A detailed projection showing exactly in which month and year your solar system will break even and start generating pure profit.</p>
+                            <div class="calc-tool-card__meta">
+                                <span><i class="bi bi-clock"></i> ~2 min</span>
+                                <span><i class="bi bi-calendar-check"></i> break-even</span>
+                            </div>
+                            <a href="#" class="calc-tool-card__cta">
+                                Start Calculator <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /.calc-group -->
+
+            <!-- ── Why Use Our Calculators ── -->
+            <div class="calc-why-section" data-aos="fade-up">
+                <div class="calc-why-section__header">
+                    <h2 class="calc-why-section__title">Why Use ShriKrishna Solar Calculators?</h2>
+                    <p class="calc-why-section__subtitle">Built on real engineering data — not guesswork.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+                    <div class="col">
+                        <div class="calc-feature-item">
+                            <div class="calc-feature-icon">
+                                <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="calc-feature-item__title">Accurate Algorithms</h3>
+                                <p class="calc-feature-item__text">Powered by latest MNRE guidelines and real local solar irradiation datasets for your region.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="calc-feature-item">
+                            <div class="calc-feature-icon">
+                                <i class="bi bi-calendar2-check-fill" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="calc-feature-item__title">Updated for 2026</h3>
+                                <p class="calc-feature-item__text">Reflects current market panel pricing, tariff rates, and updated subsidy slabs — always current.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="calc-feature-item">
+                            <div class="calc-feature-icon">
+                                <i class="bi bi-gift-fill" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="calc-feature-item__title">100% Free to Use</h3>
+                                <p class="calc-feature-item__text">No hidden fees, paywalls, or forced sign-ups. Access all tools and view your full results freely.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="calc-feature-item">
+                            <div class="calc-feature-icon">
+                                <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="calc-feature-item__title">Instant Results</h3>
+                                <p class="calc-feature-item__text">Complex engineering calculations are processed instantly in your browser — no waiting for reports.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="calc-feature-item">
+                            <div class="calc-feature-icon">
+                                <i class="bi bi-phone-fill" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="calc-feature-item__title">Mobile Optimised</h3>
+                                <p class="calc-feature-item__text">Calculate your requirements from any smartphone, tablet, or desktop — perfectly responsive on all devices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="calc-feature-item">
+                            <div class="calc-feature-icon">
+                                <i class="bi bi-shield-lock-fill" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="calc-feature-item__title">Data Privacy Secure</h3>
+                                <p class="calc-feature-item__text">Your financial and location inputs are processed locally and never stored or shared with third parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Reference Price Table ── -->
+            <div class="calc-table-section" data-aos="fade-up">
+                <div class="calc-table-section__header">
+                    <div>
+                        <h2 class="calc-table-section__title">Estimated Solar System Prices (2026)</h2>
+                        <p class="calc-table-section__subtitle">
+                            Quick reference for standard on-grid residential systems. Prices represent approximate baseline costs <strong>before</strong> government subsidies are applied.
+                        </p>
+                    </div>
+                    <div class="calc-table-section__legend">
+                        <span class="calc-table-legend-badge">
+                            <i class="bi bi-sun-fill" aria-hidden="true"></i> On-Grid Systems
+                        </span>
+                        <span class="calc-table-legend-badge">
+                            <i class="bi bi-house-door-fill" aria-hidden="true"></i> Residential Use
+                        </span>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="calc-price-table table table-borderless" aria-label="Solar system prices 2026">
+                        <thead>
+                            <tr>
+                                <th scope="col">System Capacity</th>
+                                <th scope="col">Space Required</th>
+                                <th scope="col">Daily Generation</th>
+                                <th scope="col">Est. Cost (Pre-Subsidy)</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="calc-kw-badge">1 kW</span></td>
+                                <td>100 sq.ft</td>
+                                <td><span class="calc-gen-pill">4 – 5 Units/day</span></td>
+                                <td class="calc-price-cell">₹ 65,000</td>
+                                <td><a href="contact.html" class="calc-quote-btn">Get Quote</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="calc-kw-badge">2 kW</span></td>
+                                <td>200 sq.ft</td>
+                                <td><span class="calc-gen-pill">8 – 10 Units/day</span></td>
+                                <td class="calc-price-cell">₹ 1,25,000</td>
+                                <td><a href="contact.html" class="calc-quote-btn">Get Quote</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="calc-kw-badge">3 kW</span></td>
+                                <td>300 sq.ft</td>
+                                <td><span class="calc-gen-pill">12 – 15 Units/day</span></td>
+                                <td class="calc-price-cell">₹ 1,80,000</td>
+                                <td><a href="contact.html" class="calc-quote-btn">Get Quote</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="calc-kw-badge">5 kW</span></td>
+                                <td>500 sq.ft</td>
+                                <td><span class="calc-gen-pill">20 – 25 Units/day</span></td>
+                                <td class="calc-price-cell">₹ 2,90,000</td>
+                                <td><a href="contact.html" class="calc-quote-btn">Get Quote</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="calc-kw-badge">10 kW</span></td>
+                                <td>1000 sq.ft</td>
+                                <td><span class="calc-gen-pill">40 – 50 Units/day</span></td>
+                                <td class="calc-price-cell">₹ 5,50,000</td>
+                                <td><a href="contact.html" class="calc-quote-btn">Get Quote</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="calc-table-note">
+                    <i class="bi bi-info-circle" aria-hidden="true"></i>
+                    Prices vary based on panel brand, mounting structure type, and site complexity. <a href="contact.html">Request a free custom quote</a>.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+         FAQ — identical class structure as home page
+    ======================================== -->
+    <section class="faq-section py-5 bg-white" id="faq" aria-labelledby="faq-calc-title">
+        <div class="container py-4">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="faq-section__title" id="faq-calc-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Left column -->
+                <div class="accordion faq-accordion" id="calcFaqLeft">
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="calcFaqH1">
+                            <button class="accordion-button faq-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#calcFaqC1"
+                                    aria-expanded="true" aria-controls="calcFaqC1">
+                                How accurate are these solar calculators?
+                            </button>
+                        </h3>
+                        <div id="calcFaqC1" class="accordion-collapse collapse show"
+                             aria-labelledby="calcFaqH1" data-bs-parent="#calcFaqLeft">
+                            <div class="accordion-body faq-body">
+                                Our calculators use MNRE-approved irradiation data and current market benchmarks. Results are accurate within ±10–15%, which is standard for desk-based estimates. A physical site survey provides the most precise design.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="calcFaqH2">
+                            <button class="accordion-button collapsed faq-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#calcFaqC2"
+                                    aria-expanded="false" aria-controls="calcFaqC2">
+                                How much rooftop area do I need for solar?
+                            </button>
+                        </h3>
+                        <div id="calcFaqC2" class="accordion-collapse collapse"
+                             aria-labelledby="calcFaqH2" data-bs-parent="#calcFaqLeft">
+                            <div class="accordion-body faq-body">
+                                A standard rule is approximately 100 sq.ft per 1 kW of solar capacity. A 3 kW system typically needs 300 sq.ft of unshaded, south-facing roof area. Use our Rooftop Area Calculator for a precise estimate.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="calcFaqH3">
+                            <button class="accordion-button collapsed faq-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#calcFaqC3"
+                                    aria-expanded="false" aria-controls="calcFaqC3">
+                                What is the payback period for a solar system?
+                            </button>
+                        </h3>
+                        <div id="calcFaqC3" class="accordion-collapse collapse"
+                             aria-labelledby="calcFaqH3" data-bs-parent="#calcFaqLeft">
+                            <div class="accordion-body faq-body">
+                                For residential systems in India, the typical payback period is 4–6 years after applying government subsidies. Post payback, the system generates free power for 20+ years.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div class="faq-column">
+                    <div class="accordion faq-accordion" id="calcFaqRight">
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="calcFaqH4">
+                                <button class="accordion-button collapsed faq-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#calcFaqC4"
+                                        aria-expanded="false" aria-controls="calcFaqC4">
+                                    How much subsidy can I get on a solar system?
+                                </button>
+                            </h3>
+                            <div id="calcFaqC4" class="accordion-collapse collapse"
+                                 aria-labelledby="calcFaqH4" data-bs-parent="#calcFaqRight">
+                                <div class="accordion-body faq-body">
+                                    Under the current MNRE scheme, residential consumers can receive up to ₹30,000 for 1 kW systems, ₹60,000 for 2 kW, and ₹78,000 for 3 kW or above. Use our Subsidy Estimator for your exact eligible amount.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="calcFaqH5">
+                                <button class="accordion-button collapsed faq-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#calcFaqC5"
+                                        aria-expanded="false" aria-controls="calcFaqC5">
+                                    Do I need batteries for a grid-connected system?
+                                </button>
+                            </h3>
+                            <div id="calcFaqC5" class="accordion-collapse collapse"
+                                 aria-labelledby="calcFaqH5" data-bs-parent="#calcFaqRight">
+                                <div class="accordion-body faq-body">
+                                    No. On-grid (grid-tied) systems do not require batteries — they feed excess power back to the grid via net metering. Batteries are only required for off-grid or hybrid systems needing backup power.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="calcFaqH6">
+                                <button class="accordion-button collapsed faq-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#calcFaqC6"
+                                        aria-expanded="false" aria-controls="calcFaqC6">
+                                    Can I trust the results for financial planning?
+                                </button>
+                            </h3>
+                            <div id="calcFaqC6" class="accordion-collapse collapse"
+                                 aria-labelledby="calcFaqH6" data-bs-parent="#calcFaqRight">
+                                <div class="accordion-body faq-body">
+                                    Yes, as a planning benchmark. For loan applications or project financing, we recommend getting a formal site assessment and quotation from our technical team, which provides bankable estimates.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-actions">
+                        <a href="contact.html" class="faq-more-btn">
+                            Ask an Expert <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CTA — identical to home page
+    ======================================== -->
+    <section class="cta-section py-4 bg-white" aria-labelledby="cta-calc-title">
+        <div class="container">
+            <div class="cta-banner" data-aos="fade-up">
+                <div class="cta-banner__content">
+                    <h2 class="cta-banner__title" id="cta-calc-title">Start Saving with Solar Today</h2>
+                    <p class="cta-banner__text">Have a free consultation and discover how much you can save.</p>
+                    <div class="cta-banner__actions">
+                        <a href="contact.html" class="cta-banner__btn cta-banner__btn--primary">Get Free Solar Consultation</a>
+                        <a href="#calculators" class="cta-banner__btn cta-banner__btn--secondary">Calculate My Savings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER — identical to home page
+    ======================================== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="site-footer__grid">
+                <div class="site-footer__brand">
+                    <a href="index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                        <img src="assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                    </a>
+                    <p class="site-footer__text">Your trusted partner for rooftop solar solutions. We help you save more, save energy, and build a sustainable future.</p>
+                    <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                        <li><a href="#" aria-label="Follow on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Follow on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Subscribe on YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Follow on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+                <nav class="site-footer__col" aria-label="Footer quick links">
+                    <h2 class="site-footer__title">Quick Links</h2>
+                    <ul class="site-footer__links list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Residential Solar</a></li>
+                        <li><a href="#">Commercial Solar</a></li>
+                        <li><a href="calculators.html">Solar Calculator</a></li>
+                        <li><a href="#">Subsidy Information</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="site-footer__col">
+                    <h2 class="site-footer__title">Our Services</h2>
+                    <ul class="site-footer__links list-unstyled">
+                        <li>Rooftop Solar Installation</li>
+                        <li>Solar System Design</li>
+                        <li>Net Metering Support</li>
+                        <li>Solar Maintenance (AMC)</li>
+                        <li>Solar Financing</li>
+                        <li>Subsidy Assistance</li>
+                    </ul>
+                </div>
+
+                <address class="site-footer__col site-footer__contact">
+                    <h2 class="site-footer__title">Contact Us</h2>
+                    <ul class="site-footer__contact-list list-unstyled">
+                        <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal – 721301</span></li>
+                        <li><i class="bi bi-telephone-fill" aria-hidden="true"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        <li><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                        <li><i class="bi bi-clock-fill" aria-hidden="true"></i><span>Mon – Sat 9 AM – 7 PM</span></li>
+                    </ul>
+                </address>
+
+                <div class="site-footer__col site-footer__location">
+                    <h2 class="site-footer__title">Our Location</h2>
+                    <div class="site-footer__map" aria-label="ShriKrishna Solar location map">
+                        <iframe
+                            title="ShriKrishna Solar location map"
+                            src="https://www.google.com/maps?q=Kharagpur%2C%20West%20Bengal%2C%20India&output=embed"
+                            width="390" height="195"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p>&copy; 2026 ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+                <nav class="site-footer__legal" aria-label="Footer legal links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <span>|</span>
+                    <a href="#">Refund Policy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp bubble -->
+    <a href="https://wa.me/1234567890"
+       class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift"
+       target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp fs-2"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg width="757" height="510" viewBox="0 0 757 510" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="49" y="4" width="658" height="502" fill="#F5F5F5" stroke="black" stroke-width="7"/>
+<path d="M3 3H49V507H3V3Z" fill="black" stroke="black" stroke-width="5"/>
+<path d="M708 3H754V507H708V3Z" fill="black" stroke="black" stroke-width="5"/>
+<rect x="95" y="54" width="566" height="402" fill="white" stroke="black" stroke-width="2.5"/>
+<rect x="156" y="99" width="224" height="250" fill="#A9D0DC" stroke="black" stroke-width="2.5"/>
+<path d="M440 193H607V224H440V193Z" fill="black" stroke="black" stroke-width="2.5"/>
+<rect x="440" y="287" width="167" height="31" fill="black" stroke="black" stroke-width="2.5"/>
+<rect x="440" y="99" width="167" height="31" fill="black" stroke="black" stroke-width="2.5"/>
+<rect x="440" y="381" width="167" height="31" fill="black" stroke="black" stroke-width="2.5"/>
+<ellipse cx="367.845" cy="397.781" rx="12.155" ry="12.7808" transform="rotate(180 367.845 397.781)" fill="#F86673" stroke="black" stroke-width="2.5"/>
+<ellipse cx="300.126" cy="397.781" rx="12.155" ry="12.7808" transform="rotate(180 300.126 397.781)" fill="#F9CF5F" stroke="black" stroke-width="2.5"/>
+<ellipse cx="234.142" cy="397.781" rx="12.155" ry="12.7808" transform="rotate(180 234.142 397.781)" fill="#F86572" stroke="black" stroke-width="2.5"/>
+<ellipse cx="168.158" cy="397.781" rx="12.155" ry="12.7808" transform="rotate(180 168.158 397.781)" fill="#F9CF5F" stroke="black" stroke-width="2.5"/>
+</svg>

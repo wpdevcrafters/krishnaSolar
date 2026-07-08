@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ShriKrishna Solar — Get Free Solar Consultation</title>
+    <meta name="description" content="Contact ShriKrishna Solar for rooftop solar installation, post-installation support, subsidy guidance, and free consultations. Serving Kharagpur and across West Bengal.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ========================================
+         HEADER — identical to home page
+    ======================================== -->
+    <header class="header">
+        <nav class="navbar navbar-expand-xl navbar-light">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo" />
+                </a>
+
+                <!-- Tablet header bar actions (768px–1199px) -->
+                <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                    <a href="https://wa.me/1234567890"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="#contact-form" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+
+                <!-- Hamburger (mobile & tablet) -->
+                <button class="navbar-toggler d-xl-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                        aria-controls="navDrawer" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Right-side offcanvas drawer (mobile + tablet) -->
+                <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1"
+                     id="navDrawer" aria-labelledby="navDrawerLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <a href="index.html" class="navbar-brand mb-0">
+                            <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo" />
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column p-0">
+                        <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link d-flex justify-content-between align-items-center" href="#" data-submenu-toggle>
+                                    Residential Solar <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                </a>
+                                <ul class="submenu nav flex-column ps-3">
+                                    <li class="nav-item"><a class="nav-link" href="#">Villas</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Apartments</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Independent Houses</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Commercial Solar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Solar Calculator</a></li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link d-flex justify-content-between align-items-center" href="#" data-submenu-toggle>
+                                    Subsidy Information <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                </a>
+                                <ul class="submenu nav flex-column ps-3">
+                                    <li class="nav-item"><a class="nav-link" href="#">Central Subsidy</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">State Subsidy</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Success Froxies</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        </ul>
+                        <!-- Mobile-only CTA -->
+                        <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                            <a href="#contact-form"
+                               class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                               data-bs-dismiss="offcanvas">
+                                Book Free Solar Consultation
+                            </a>
+                            <a href="https://wa.me/1234567890"
+                               class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                               target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop nav (≥1200px) -->
+                <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item has-submenu position-static">
+                            <a class="nav-link" href="#">Residential Solar</a>
+                            <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                                <li><a class="dropdown-item" href="#">Villas</a></li>
+                                <li><a class="dropdown-item" href="#">Apartments</a></li>
+                                <li><a class="dropdown-item" href="#">Independent Houses</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Commercial Solar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Solar Calculator</a></li>
+                        <li class="nav-item has-submenu position-static">
+                            <a class="nav-link" href="#">Subsidy Information</a>
+                            <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                                <li><a class="dropdown-item" href="#">Central Subsidy</a></li>
+                                <li><a class="dropdown-item" href="#">State Subsidy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Success Froxies</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="https://wa.me/1234567890"
+                           class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                           target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                            <i class="bi bi-whatsapp fs-5"></i>
+                        </a>
+                        <a href="#contact-form" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                            Book Free Solar Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         HERO — compact contact hero
+    ======================================== -->
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+        <div class="contact-hero__bg" aria-hidden="true"></div>
+        <div class="container position-relative z-1">
+            <div class="contact-hero__content" data-aos="fade-up">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" class="contact-hero__breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                    </ol>
+                </nav>
+                <h1 class="contact-hero__title" id="contact-hero-title">
+                    Get in <span class="contact-hero__accent">Touch</span>
+                </h1>
+                <p class="contact-hero__desc">
+                    Whether you're planning a new solar installation, need post-installation support,<br class="d-none d-md-block">
+                    or have any questions — our expert team is here to help you every step of the way.
+                </p>
+                <!-- Quick-action badges -->
+                <div class="contact-hero__badges">
+                    <span class="contact-hero__badge">
+                        <i class="bi bi-clock-fill"></i> Respond within 24h
+                    </span>
+                    <span class="contact-hero__badge">
+                        <i class="bi bi-shield-check-fill"></i> Free Consultation
+                    </span>
+                    <span class="contact-hero__badge">
+                        <i class="bi bi-geo-alt-fill"></i> Serving West Bengal
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT FORM SECTION
+    ======================================== -->
+    <section class="contact-form-section py-5" id="contact-form" aria-labelledby="contact-form-title">
+        <div class="container py-2">
+            <div class="row g-4 g-xl-5 align-items-start">
+
+                <!-- ── Left: Quick-contact info cards ── -->
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="contact-info-panel">
+                        <h2 class="contact-info-panel__title" id="contact-form-title">Contact Information</h2>
+                        <p class="contact-info-panel__subtitle">
+                            Reach us through any of the channels below. We typically respond within 24 business hours.
+                        </p>
+
+                        <ul class="contact-info-list list-unstyled">
+                            <li class="contact-info-item">
+                                <div class="contact-info-icon contact-info-icon--green">
+                                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-info-body">
+                                    <h3 class="contact-info-label">Corporate Office</h3>
+                                    <p class="contact-info-text">
+                                        ShriKrishna Solar Pvt. Ltd.<br>
+                                        Tech Park Avenue, Sector 5<br>
+                                        Kharagpur, West Bengal – 721301
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="contact-info-item">
+                                <div class="contact-info-icon contact-info-icon--amber">
+                                    <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-info-body">
+                                    <h3 class="contact-info-label">Call Us</h3>
+                                    <p class="contact-info-text">
+                                        <a href="tel:+919876543210">+91 98765 43210</a><br>
+                                        <a href="tel:+919876512345">+91 98765 12345</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="contact-info-item">
+                                <div class="contact-info-icon contact-info-icon--blue">
+                                    <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-info-body">
+                                    <h3 class="contact-info-label">Email Support</h3>
+                                    <p class="contact-info-text">
+                                        <a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a><br>
+                                        <a href="mailto:support@shrikrishnasolar.in">support@shrikrishnasolar.in</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="contact-info-item">
+                                <div class="contact-info-icon contact-info-icon--purple">
+                                    <i class="bi bi-clock-fill" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-info-body">
+                                    <h3 class="contact-info-label">Business Hours</h3>
+                                    <p class="contact-info-text">
+                                        Monday – Saturday<br>
+                                        9:00 AM – 7:00 PM (IST)
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Social row -->
+                        <div class="contact-social">
+                            <p class="contact-social__label">Follow us on</p>
+                            <div class="contact-social__links">
+                                <a href="#" class="contact-social__link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="contact-social__link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="contact-social__link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                                <a href="#" class="contact-social__link contact-social__link--wa" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── Right: Message form ── -->
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="contact-form-card">
+                        <div class="contact-form-card__header">
+                            <h2 class="contact-form-card__title">Send Us a Message</h2>
+                            <p class="contact-form-card__subtitle">Fill in the details below and we'll get back to you shortly.</p>
+                        </div>
+
+                        <form class="contact-form row g-3" id="contactForm" novalidate>
+                            <div class="col-sm-6">
+                                <label class="contact-form__label" for="cf-name">Full Name <span aria-hidden="true">*</span></label>
+                                <input type="text" class="contact-form__input form-control" id="cf-name"
+                                       placeholder="e.g. Ramesh Kumar" required autocomplete="name">
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="contact-form__label" for="cf-email">Email Address <span aria-hidden="true">*</span></label>
+                                <input type="email" class="contact-form__input form-control" id="cf-email"
+                                       placeholder="you@example.com" required autocomplete="email">
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="contact-form__label" for="cf-phone">Phone Number <span aria-hidden="true">*</span></label>
+                                <div class="contact-form__input-group input-group">
+                                    <span class="input-group-text contact-form__prefix">+91</span>
+                                    <input type="tel" class="contact-form__input form-control" id="cf-phone"
+                                           placeholder="98765 43210" required autocomplete="tel">
+                                </div>
+                                <div class="invalid-feedback">Please enter a valid phone number.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="contact-form__label" for="cf-inquiry">Nature of Inquiry <span aria-hidden="true">*</span></label>
+                                <select class="contact-form__input form-select" id="cf-inquiry" required>
+                                    <option value="" selected disabled>Select an option…</option>
+                                    <option value="residential">Residential Solar Installation</option>
+                                    <option value="commercial">Commercial / Industrial Solar</option>
+                                    <option value="subsidy">Subsidy &amp; Documentation Help</option>
+                                    <option value="amc">AMC / Maintenance Request</option>
+                                    <option value="franchise">Franchise &amp; Business Opportunities</option>
+                                    <option value="other">Other General Inquiry</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an inquiry type.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="contact-form__label" for="cf-city">City / District</label>
+                                <input type="text" class="contact-form__input form-control" id="cf-city"
+                                       placeholder="e.g. Kharagpur" autocomplete="address-level2">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="contact-form__label" for="cf-system">Current Monthly Bill</label>
+                                <select class="contact-form__input form-select" id="cf-system">
+                                    <option value="" selected disabled>Select range…</option>
+                                    <option value="lt2k">Less than ₹2,000</option>
+                                    <option value="2k-5k">₹2,000 – ₹5,000</option>
+                                    <option value="5k-10k">₹5,000 – ₹10,000</option>
+                                    <option value="gt10k">More than ₹10,000</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="contact-form__label" for="cf-message">Your Message</label>
+                                <textarea class="contact-form__input form-control" id="cf-message" rows="4"
+                                          placeholder="Describe your requirement or ask us anything…"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="contact-form__footer">
+                                    <p class="contact-form__note">
+                                        <i class="bi bi-shield-lock-fill" aria-hidden="true"></i>
+                                        Your information is 100% secure and never shared.
+                                    </p>
+                                    <button type="submit" class="contact-form__submit btn btn-warning" id="cf-submit">
+                                        Send Message <i class="bi bi-send-fill ms-1" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         POST-INSTALLATION SERVICE REQUEST
+    ======================================== -->
+    <section class="service-section py-5" id="service-request" aria-labelledby="service-title">
+        <div class="container">
+            <div class="service-banner" data-aos="fade-up">
+                <!-- Left pattern decoration -->
+                <div class="service-banner__deco" aria-hidden="true"></div>
+
+                <div class="row align-items-center g-4 position-relative z-1">
+                    <div class="col-lg-7">
+                        <div class="service-banner__badge">
+                            <i class="bi bi-tools" aria-hidden="true"></i> Post-Installation Support
+                        </div>
+                        <h2 class="service-banner__title" id="service-title">Existing Customer?</h2>
+                        <p class="service-banner__desc">
+                            Require maintenance, AMC renewal, inverter health check, or technical support for your installed solar system?
+                            Log a service ticket directly with our engineering team for <strong>prioritized resolution</strong>.
+                        </p>
+                        <!-- Feature tags -->
+                        <div class="service-banner__tags">
+                            <span class="service-tag"><i class="bi bi-lightning-charge-fill"></i> 48h Resolution SLA</span>
+                            <span class="service-tag"><i class="bi bi-clipboard2-check-fill"></i> Live Ticket Tracking</span>
+                            <span class="service-tag"><i class="bi bi-headset"></i> Dedicated Support</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="service-banner__actions">
+                            <a href="#" class="service-btn service-btn--outline">
+                                <i class="bi bi-search" aria-hidden="true"></i>
+                                Track Existing Ticket
+                            </a>
+                            <a href="#" class="service-btn service-btn--primary">
+                                <i class="bi bi-send-fill" aria-hidden="true"></i>
+                                Request Service Visit
+                            </a>
+                        </div>
+
+                        <!-- Quick stats -->
+                        <div class="service-stats">
+                            <div class="service-stat">
+                                <strong class="service-stat__num">48h</strong>
+                                <span class="service-stat__label">Response SLA</span>
+                            </div>
+                            <div class="service-stat-divider"></div>
+                            <div class="service-stat">
+                                <strong class="service-stat__num">500+</strong>
+                                <span class="service-stat__label">Systems Serviced</span>
+                            </div>
+                            <div class="service-stat-divider"></div>
+                            <div class="service-stat">
+                                <strong class="service-stat__num">98%</strong>
+                                <span class="service-stat__label">Satisfaction Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT INFORMATION CARDS — map + details
+    ======================================== -->
+    <section class="contact-details-section py-5 bg-white" id="contact-info" aria-labelledby="contact-details-title">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="contact-details__title" id="contact-details-title">Find Us Easily</h2>
+                <p class="contact-details__subtitle">Visit our office or reach us through your preferred channel.</p>
+            </div>
+
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="80">
+                <!-- Map -->
+                <div class="col-lg-7">
+                    <div class="contact-map-card">
+                        <div class="contact-map-card__header">
+                            <i class="bi bi-pin-map-fill" aria-hidden="true"></i>
+                            <span>ShriKrishna Solar — Kharagpur, West Bengal</span>
+                        </div>
+                        <div class="contact-map-card__map">
+                            <iframe
+                                title="ShriKrishna Solar Office Location"
+                                src="https://www.google.com/maps?q=Kharagpur%2C+West+Bengal%2C+India&output=embed"
+                                width="100%" height="320"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <a href="https://maps.google.com/?q=Kharagpur,+West+Bengal" target="_blank" rel="noopener noreferrer"
+                           class="contact-map-card__link">
+                            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Detail cards column -->
+                <div class="col-lg-5 d-flex flex-column gap-3">
+                    <!-- Address card -->
+                    <div class="contact-detail-card">
+                        <div class="contact-detail-card__icon contact-detail-card__icon--green">
+                            <i class="bi bi-buildings-fill" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="contact-detail-card__label">Our Office</h3>
+                            <p class="contact-detail-card__text">
+                                ShriKrishna Solar Pvt. Ltd.,<br>
+                                Tech Park Avenue, Sector 5,<br>
+                                Kharagpur, West Bengal – 721301
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Phone card -->
+                    <div class="contact-detail-card">
+                        <div class="contact-detail-card__icon contact-detail-card__icon--amber">
+                            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="contact-detail-card__label">Phone &amp; WhatsApp</h3>
+                            <p class="contact-detail-card__text">
+                                <a href="tel:+919876543210">+91 98765 43210</a><br>
+                                <a href="tel:+919876512345">+91 98765 12345</a><br>
+                                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+                                   class="contact-wa-link">
+                                    <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Email card -->
+                    <div class="contact-detail-card">
+                        <div class="contact-detail-card__icon contact-detail-card__icon--blue">
+                            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="contact-detail-card__label">Email</h3>
+                            <p class="contact-detail-card__text">
+                                <a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a><br>
+                                <a href="mailto:support@shrikrishnasolar.in">support@shrikrishnasolar.in</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hours card -->
+                    <div class="contact-detail-card">
+                        <div class="contact-detail-card__icon contact-detail-card__icon--purple">
+                            <i class="bi bi-clock-fill" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="contact-detail-card__label">Business Hours</h3>
+                            <p class="contact-detail-card__text">
+                                Mon – Sat: 9:00 AM – 7:00 PM (IST)<br>
+                                <span class="text-muted">Sunday: Closed</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FAQ — identical class structure as home page
+    ======================================== -->
+    <section class="faq-section py-5 bg-white" id="faq" aria-labelledby="faq-contact-title">
+        <div class="container py-4">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="faq-section__title" id="faq-contact-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Left column -->
+                <div class="accordion faq-accordion" id="faqAccordionLeft">
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="cfaqH1">
+                            <button class="accordion-button faq-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#cfaqC1"
+                                    aria-expanded="true" aria-controls="cfaqC1">
+                                How long does it take to get a site survey?
+                            </button>
+                        </h3>
+                        <div id="cfaqC1" class="accordion-collapse collapse show"
+                             aria-labelledby="cfaqH1" data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body faq-body">
+                                Once you submit a request, our team reaches out within 24 hours to schedule a free site survey at your convenience — usually completed within 2–3 business days.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="cfaqH2">
+                            <button class="accordion-button collapsed faq-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#cfaqC2"
+                                    aria-expanded="false" aria-controls="cfaqC2">
+                                Do you help with claiming government subsidies?
+                            </button>
+                        </h3>
+                        <div id="cfaqC2" class="accordion-collapse collapse"
+                             aria-labelledby="cfaqH2" data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body faq-body">
+                                Yes. We provide end-to-end documentation and liaison support so residential customers receive applicable MNRE subsidies without any hassle.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="cfaqH3">
+                            <button class="accordion-button collapsed faq-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#cfaqC3"
+                                    aria-expanded="false" aria-controls="cfaqC3">
+                                What areas do you currently service?
+                            </button>
+                        </h3>
+                        <div id="cfaqC3" class="accordion-collapse collapse"
+                             aria-labelledby="cfaqH3" data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body faq-body">
+                                We primarily serve Kharagpur and surrounding districts across West Bengal. Contact us with your location and we'll confirm service availability for your area.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div class="faq-column">
+                    <div class="accordion faq-accordion" id="faqAccordionRight">
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="cfaqH4">
+                                <button class="accordion-button collapsed faq-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#cfaqC4"
+                                        aria-expanded="false" aria-controls="cfaqC4">
+                                    What is the standard maintenance response time?
+                                </button>
+                            </h3>
+                            <div id="cfaqC4" class="accordion-collapse collapse"
+                                 aria-labelledby="cfaqH4" data-bs-parent="#faqAccordionRight">
+                                <div class="accordion-body faq-body">
+                                    For AMC customers, standard issues are resolved within 48 hours of ticket generation. Emergency grid-sync issues are prioritized with same-day response.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="cfaqH5">
+                                <button class="accordion-button collapsed faq-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#cfaqC5"
+                                        aria-expanded="false" aria-controls="cfaqC5">
+                                    How do I track my service request?
+                                </button>
+                            </h3>
+                            <div id="cfaqC5" class="accordion-collapse collapse"
+                                 aria-labelledby="cfaqH5" data-bs-parent="#faqAccordionRight">
+                                <div class="accordion-body faq-body">
+                                    After your ticket is logged, you'll receive an SMS/email with a unique ticket ID. Use it on our support portal to track the current status in real time.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="cfaqH6">
+                                <button class="accordion-button collapsed faq-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#cfaqC6"
+                                        aria-expanded="false" aria-controls="cfaqC6">
+                                    Is there a warranty on the solar system?
+                                </button>
+                            </h3>
+                            <div id="cfaqC6" class="accordion-collapse collapse"
+                                 aria-labelledby="cfaqH6" data-bs-parent="#faqAccordionRight">
+                                <div class="accordion-body faq-body">
+                                    Yes. Tier-1 panels come with 25-year performance warranties, inverters with 5–10 years, and our installation workmanship is warranted for 5 years from commissioning.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-actions">
+                        <a href="#contact-form" class="faq-more-btn">
+                            Ask Your Question <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CTA — identical to home page
+    ======================================== -->
+    <section class="cta-section py-4 bg-white" aria-labelledby="cta-contact-title">
+        <div class="container">
+            <div class="cta-banner" data-aos="fade-up">
+                <div class="cta-banner__content">
+                    <h2 class="cta-banner__title" id="cta-contact-title">Start Saving with Solar Today</h2>
+                    <p class="cta-banner__text">Have a free consultation and discover how much you can save.</p>
+                    <div class="cta-banner__actions">
+                        <a href="#contact-form" class="cta-banner__btn cta-banner__btn--primary">Get Free Solar Consultation</a>
+                        <a href="index.html#calculator" class="cta-banner__btn cta-banner__btn--secondary">Calculate My Savings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER — identical to home page
+    ======================================== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="site-footer__grid">
+                <div class="site-footer__brand">
+                    <a href="index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                        <img src="assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                    </a>
+                    <p class="site-footer__text">Your trusted partner for rooftop solar solutions. We help you save more, save energy, and build a sustainable future.</p>
+                    <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                        <li><a href="#" aria-label="Follow on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Follow on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Subscribe on YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Follow on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+                <nav class="site-footer__col" aria-label="Footer quick links">
+                    <h2 class="site-footer__title">Quick Links</h2>
+                    <ul class="site-footer__links list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Residential Solar</a></li>
+                        <li><a href="#">Commercial Solar</a></li>
+                        <li><a href="#">Solar Calculator</a></li>
+                        <li><a href="#">Subsidy Information</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="site-footer__col">
+                    <h2 class="site-footer__title">Our Services</h2>
+                    <ul class="site-footer__links list-unstyled">
+                        <li>Rooftop Solar Installation</li>
+                        <li>Solar System Design</li>
+                        <li>Net Metering Support</li>
+                        <li>Solar Maintenance (AMC)</li>
+                        <li>Solar Financing</li>
+                        <li>Subsidy Assistance</li>
+                    </ul>
+                </div>
+
+                <address class="site-footer__col site-footer__contact">
+                    <h2 class="site-footer__title">Contact Us</h2>
+                    <ul class="site-footer__contact-list list-unstyled">
+                        <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal – 721301</span></li>
+                        <li><i class="bi bi-telephone-fill" aria-hidden="true"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        <li><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                        <li><i class="bi bi-clock-fill" aria-hidden="true"></i><span>Mon – Sat 9 AM – 7 PM</span></li>
+                    </ul>
+                </address>
+
+                <div class="site-footer__col site-footer__location">
+                    <h2 class="site-footer__title">Our Location</h2>
+                    <div class="site-footer__map" aria-label="ShriKrishna Solar location map">
+                        <iframe
+                            title="ShriKrishna Solar location map"
+                            src="https://www.google.com/maps?q=Kharagpur%2C%20West%20Bengal%2C%20India&output=embed"
+                            width="390" height="195"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p>&copy; 2026 ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+                <nav class="site-footer__legal" aria-label="Footer legal links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <span>|</span>
+                    <a href="#">Refund Policy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp bubble -->
+    <a href="https://wa.me/1234567890"
+       class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift"
+       target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp fs-2"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
+    <!-- Contact form validation -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (!form.checkValidity()) {
+                    e.stopPropagation();
+                    form.classList.add('was-validated');
+                } else {
+                    var btn = document.getElementById('cf-submit');
+                    btn.disabled = true;
+                    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Sending…';
+                    setTimeout(function () {
+                        btn.disabled = false;
+                        btn.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Message Sent!';
+                        btn.classList.remove('btn-warning');
+                        btn.classList.add('btn-success');
+                        form.reset();
+                        form.classList.remove('was-validated');
+                    }, 1800);
+                }
+            });
+        }
+    });
+    </script>
+
+</body>
+</html>

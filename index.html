@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShriKrishna Solar | Powering a Brighter Future</title>
+    <meta name="description" content="Reduce Your Electricity Bills by Up to 90% with Rooftop Solar.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-xl navbar-light">
+            <div class="container">
+
+                <!-- ── Logo ── -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo" />
+                </a>
+
+                <!-- ── Tablet header bar actions (768 px – 1199 px): WhatsApp + CTA next to hamburger ── -->
+                <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                    <a href="https://wa.me/1234567890"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+
+                <!-- ── Hamburger (visible on mobile & tablet, hidden on desktop) ── -->
+                <button class="navbar-toggler d-xl-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                        aria-controls="navDrawer" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- ══════════════════════════════════════════════════════════
+                     RIGHT-SIDE OFFCANVAS DRAWER — mobile + tablet (< xl)
+                     Bootstrap controls display; no d-xl-none here so JS
+                     doesn't fight with utility classes.
+                ══════════════════════════════════════════════════════════ -->
+                <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1"
+                     id="navDrawer" aria-labelledby="navDrawerLabel">
+
+                    <div class="offcanvas-header border-bottom">
+                        <a href="#" class="navbar-brand mb-0">
+                            <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo" />
+                        </a>
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column p-0">
+
+                        <!-- Nav links (all breakpoints inside drawer) -->
+                        <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link d-flex justify-content-between align-items-center"
+                                   href="#" data-submenu-toggle>
+                                    Residential Solar
+                                    <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                </a>
+                                <ul class="submenu nav flex-column ps-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#residential-villas">Villas</a>
+                                    </li>
+                                    <li class="nav-item has-submenu">
+                                        <a class="nav-link d-flex justify-content-between align-items-center"
+                                           href="#" data-submenu-toggle>
+                                            Apartments
+                                            <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                        </a>
+                                        <ul class="submenu nav flex-column ps-3">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#apartments-lowrise">Low-rise</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#apartments-highrise">High-rise</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#residential-independent">Independent Houses</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#commercial">Commercial Solar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#calculator">Solar Calculator</a>
+                            </li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link d-flex justify-content-between align-items-center"
+                                   href="#" data-submenu-toggle>
+                                    Subsidy Information
+                                    <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                </a>
+                                <ul class="submenu nav flex-column ps-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#subsidy-central">Central Subsidy</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#subsidy-state">State Subsidy</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Success Froxies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+
+                        <!-- Mobile-only CTA block (< 768 px): shown only on phones -->
+                        <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                            <a href="#contact"
+                               class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                               data-bs-dismiss="offcanvas">
+                                Book Free Solar Consultation
+                            </a>
+                            <a href="https://wa.me/1234567890"
+                               class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                               target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                            </a>
+                        </div>
+
+                    </div><!-- /.offcanvas-body -->
+                </div><!-- /#navDrawer -->
+
+                <!-- ══════════════════════════════════════════════════════════
+                     DESKTOP NAV — visible only at ≥ 1200 px (xl)
+                ══════════════════════════════════════════════════════════ -->
+                <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item has-submenu position-static">
+                            <a class="nav-link" href="#residential">Residential Solar</a>
+                            <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                                <li><a class="dropdown-item" href="#residential-villas">Villas</a></li>
+                                <li class="has-submenu position-relative">
+                                    <a class="dropdown-item" href="#apartments-lowrise">Apartments</a>
+                                    <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-0 py-2">
+                                        <li><a class="dropdown-item" href="#apartments-lowrise">Low-rise</a></li>
+                                        <li><a class="dropdown-item" href="#apartments-highrise">High-rise</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#residential-independent">Independent Houses</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#commercial">Commercial Solar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#calculator">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item has-submenu position-static">
+                            <a class="nav-link" href="#subsidy">Subsidy Information</a>
+                            <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                                <li><a class="dropdown-item" href="#subsidy-central">Central Subsidy</a></li>
+                                <li><a class="dropdown-item" href="#subsidy-state">State Subsidy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Success Froxies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="https://wa.me/1234567890"
+                           class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                           target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                            <i class="bi bi-whatsapp fs-5"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                            Book Free Solar Consultation
+                        </a>
+                    </div>
+                </div><!-- /#mainNav -->
+
+            </div><!-- /.container -->
+        </nav>
+    </header>
+
+    <section class="hero-section position-relative overflow-hidden">
+        <img src="assets/image/solarheroimg.png" alt="Solar hero background" class="hero-bg-img position-absolute top-0 start-0 w-100 h-100 object-fit-cover" />
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-xl-7 col-lg-7 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="hero-copy pe-xl-5">
+                        <h1 class="display-4 fw-bold text-dark mb-4">
+                            Reduce Your Electricity Bills by Up to <span class="text-warning">90%</span> with <span class="text-success">Rooftop Solar</span>
+                        </h1>
+                        <p class="lead text-dark mb-4">
+                            Get expert consultation, subsidy guidance, and professional installation from your trusted local solar partner.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 mb-5">
+                            <a href="#calculator" class="btn btn-warning btn-lg px-5 fw-semibold text-white shadow-sm hover-lift">Calculate My Savings</a>
+                            <a href="#contact" class="btn btn-white btn-lg px-5 fw-semibold shadow-sm hover-lift">Get Free Quote</a>
+                        </div>
+                        <div class="hero-features d-flex flex-wrap gap-1 bg-white bg-opacity-90 rounded-4 shadow-sm p-2">
+                            <div class="feature-item d-flex align-items-center gap-2 p-1 rounded-4 bg-white">
+                                <span class="feature-icon d-flex align-items-center justify-content-center rounded-circle bg-success bg-opacity-10 text-dark"><i class="bi bi-currency-dollar fs-5"></i></span>
+                                <div>
+                                    <h6 class="mb-1 fw-bold fs-7 text-dark">Government</h6>
+                                    <p class="mb-0 fs-8 text-muted">Approved Scheme</p>
+                                </div>
+                            </div>
+                            <div class="feature-item d-flex align-items-center gap-2 p-1 rounded-4 bg-white">
+                                <span class="feature-icon d-flex align-items-center justify-content-center rounded-circle bg-warning bg-opacity-10 text-dark"><i class="bi bi-award fs-5"></i></span>
+                                <div>
+                                    <h6 class="mb-1 fw-bold fs-7 text-dark">20+ Years</h6>
+                                    <p class="mb-0 fs-8 text-muted">Panel Life</p>
+                                </div>
+                            </div>
+                            <div class="feature-item d-flex align-items-center gap-2 p-1 rounded-4 bg-white">
+                                <span class="feature-icon d-flex align-items-center justify-content-center rounded-circle bg-danger bg-opacity-10 text-danger"><i class="bi bi-lightning-charge fs-5"></i></span>
+                                <div>
+                                    <h6 class="mb-1 fw-bold fs-7 text-dark">Fast</h6>
+                                    <p class="mb-0 fs-8 text-muted">Installation</p>
+                                </div>
+                            </div>
+                            <div class="feature-item d-flex align-items-center gap-2 p-1 rounded-4 bg-white">
+                                <span class="feature-icon d-flex align-items-center justify-content-center rounded-circle bg-info bg-opacity-10 text-info"><i class="bi bi-wallet2 fs-5"></i></span>
+                                <div>
+                                    <h6 class="mb-1 fw-bold fs-7 text-dark">EMI</h6>
+                                    <p class="mb-0 fs-8 text-muted">Available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 d-flex align-items-center justify-content-end h-100" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-card rounded-4 shadow-lg bg-white p-4 p-lg-5">
+                        <h5 class="fw-bold text-success mb-4">Calculate Your Savings</h5>
+                        <form id="heroCalcForm">
+                            <div class="mb-1">
+                                <label class="fs-7 text-muted">Monthly Electricity Bill (₹)</label>
+                                <div class="d-flex align-items-center">
+                                    <input type="range" class="form-range flex-grow-1" id="heroBillRange" min="500" max="50000" value="6000">
+                                    <span class="fw-semibold" style="display: flex;">₹ <span id="heroBillVal">37,500</span></span>
+                                </div>
+                            </div>
+                            <div class="mb-1">
+                                <label class="fs-7 text-muted">Units Consumed (kWh)</label>
+                                <div class="d-flex align-items-center">
+                                    <input type="range" class="form-range flex-grow-1" id="heroUnitRange" min="100" max="5000" value="400">
+                                    <span class="fw-semibold"><span id="heroUnitVal">5,000</span></span>
+                                </div>
+                            </div>
+                            <div class="mb-1">
+                                <label class="fs-7 text-muted">City</label>
+                                <select class="form-select bg-white border rounded-1 py-1 px-1">
+                                    <option>Mormogun West Rengei</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label class="fs-7 text-muted">Property Type</label>
+                                <select class="form-select bg-white border rounded-1 py-1 px-1">
+                                    <option>Independent House</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-success w-100 py-3 fw-semibold">Calculate Now →</button>
+                        </form>
+                        <div class="mt-4 p-2 rounded-4 border border-success border-opacity-10 bg-success bg-opacity-10 savings-summary">
+                            <div class="d-flex justify-content-between align-items-center mb-2 gap-1">
+                                <div>
+                                    <span class="d-block text-success fs-7 fw-semibold">Estimated Monthly Savings</span>
+                                    <span class="d-block fw-bold text-success">₹ 5,400</span>
+                                </div>
+                                <div class="text-end">
+                                    <span class="d-block text-success fs-7 fw-semibold">Payback Period</span>
+                                    <span class="d-block fw-bold text-success">4.6 Years</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section py-5">
+        <div class="container px-4 px-xl-5">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="stats-banner d-flex align-items-center rounded-4 shadow-sm p-3 p-md-4">
+                        <div class="row g-3 w-100 text-center align-items-center">
+                            <div class="col-6 stats-col">
+                                <div class="stats-item d-flex flex-column align-items-center">
+                                    <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-award fs-4"></i></span>
+                                    <h3 class="fw-bold mb-1">15+</h3>
+                                    <p class="mb-0 fs-8">Years of Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-6 stats-col">
+                                <div class="stats-item d-flex flex-column align-items-center">
+                                    <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-house-fill fs-4"></i></span>
+                                    <h3 class="fw-bold mb-1">1,500+</h3>
+                                    <p class="mb-0 fs-8">Installations Completed</p>
+                                </div>
+                            </div>
+                            <div class="col-6 stats-col">
+                                <div class="stats-item d-flex flex-column align-items-center">
+                                    <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-lightning-charge fs-4"></i></span>
+                                    <h3 class="fw-bold mb-1">12 MW+</h3>
+                                    <p class="mb-0 fs-8">Total MW Installed</p>
+                                </div>
+                            </div>
+                            <div class="col-6 stats-col">
+                                <div class="stats-item d-flex flex-column align-items-center">
+                                    <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-people-fill fs-4"></i></span>
+                                    <h3 class="fw-bold mb-1">4,800+</h3>
+                                    <p class="mb-0 fs-8">Happy Customers</p>
+                                </div>
+                            </div>
+                            <div class="col-6 stats-col">
+                                <div class="stats-item d-flex flex-column align-items-center">
+                                    <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-tree-fill fs-4"></i></span>
+                                    <h3 class="fw-bold mb-1">9,200+</h3>
+                                    <p class="mb-0 fs-8">Tons of CO₂ Saved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section py-5 bg-light" id="solutions">
+        <div class="container py-4">
+
+            <!-- Section Heading — full width, center aligned -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold text-primary-dark">Our Solar Solutions</h2>
+            </div>
+
+            <!-- 4 Cards in a row -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+
+                <!-- Card 1: Residential Solar -->
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="solution-card solution-card--green h-100 rounded-4 shadow-sm">
+                        <div class="d-flex flex-column h-100 p-4">
+
+                            <!-- Title — full width, centered -->
+                            <h5 class="solution-title text-success fw-bold mb-3 w-100 text-center">Residential Solar</h5>
+
+                            <!-- Body row: 35% image | 65% bullets -->
+                            <div class="d-flex align-items-center gap-1 flex-grow-1 mb-3">
+                                <div class="solution-visual flex-shrink-0">
+                                    <span class="solution-blob solution-blob--green"></span>
+                                    <img src="assets/image/sol1.png" alt="Residential Solar illustration" class="solution-img" loading="lazy">
+                                </div>
+                                <ul class="solution-list list-unstyled mb-0">
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-success flex-shrink-0" aria-hidden="true"></i><span>Villas</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-success flex-shrink-0" aria-hidden="true"></i><span>Apartments</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-success flex-shrink-0" aria-hidden="true"></i><span>Independent Houses</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Explore link — centered below -->
+                            <div class="text-center">
+                                <a href="#" class="solution-link text-success fw-semibold text-decoration-none">Explore &rarr;</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Commercial Solar -->
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="solution-card solution-card--blue h-100 rounded-4 shadow-sm">
+                        <div class="d-flex flex-column h-100 p-4">
+
+                            <h5 class="solution-title text-primary fw-bold mb-3 w-100 text-center">Commercial Solar</h5>
+
+                            <div class="d-flex align-items-center gap-1 flex-grow-1 mb-3">
+                                <div class="solution-visual flex-shrink-0">
+                                    <span class="solution-blob solution-blob--blue"></span>
+                                    <img src="assets/image/sol2.png" alt="Commercial Solar illustration" class="solution-img" loading="lazy">
+                                </div>
+                                <ul class="solution-list list-unstyled mb-0">
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-primary flex-shrink-0" aria-hidden="true"></i><span>Factories</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-primary flex-shrink-0" aria-hidden="true"></i><span>Warehouses</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-primary flex-shrink-0" aria-hidden="true"></i><span>Retail Stores</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-primary flex-shrink-0" aria-hidden="true"></i><span>Offices</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="#" class="solution-link text-primary fw-semibold text-decoration-none">Explore &rarr;</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Industrial Solar -->
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="solution-card solution-card--purple h-100 rounded-4 shadow-sm">
+                        <div class="d-flex flex-column h-100 p-4">
+
+                            <h5 class="solution-title text-purple fw-bold mb-3 w-100 text-center">Industrial Solar</h5>
+
+                            <div class="d-flex align-items-center gap-1 flex-grow-1 mb-3">
+                                <div class="solution-visual flex-shrink-0">
+                                    <span class="solution-blob solution-blob--purple"></span>
+                                    <img src="assets/image/sol3.png" alt="Industrial Solar illustration" class="solution-img" loading="lazy">
+                                </div>
+                                <ul class="solution-list list-unstyled mb-0">
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-purple flex-shrink-0" aria-hidden="true"></i><span>Manufacturing Units</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-purple flex-shrink-0" aria-hidden="true"></i><span>Large Facilities</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-purple flex-shrink-0" aria-hidden="true"></i><span>High Energy Usage</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="#" class="solution-link text-purple fw-semibold text-decoration-none">Explore &rarr;</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Solar Maintenance -->
+                <div class="col" data-aos="fade-up" data-aos-delay="400">
+                    <div class="solution-card solution-card--yellow h-100 rounded-4 shadow-sm">
+                        <div class="d-flex flex-column h-100 p-4">
+
+                            <h5 class="solution-title text-warning fw-bold mb-3 w-100 text-center">Solar Maintenance</h5>
+
+                            <div class="d-flex align-items-center gap-1 flex-grow-1 mb-3">
+                                <div class="solution-visual flex-shrink-0">
+                                    <span class="solution-blob solution-blob--yellow"></span>
+                                    <img src="assets/image/sol4.png" alt="Solar Maintenance illustration" class="solution-img" loading="lazy">
+                                </div>
+                                <ul class="solution-list list-unstyled mb-0">
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-warning flex-shrink-0" aria-hidden="true"></i><span>AMC Services</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-warning flex-shrink-0" aria-hidden="true"></i><span>Cleaning Services</span></li>
+                                    <li class="d-flex align-items-center gap-1"><i class="bi bi-check2 text-warning flex-shrink-0" aria-hidden="true"></i><span>Performance Monitoring</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="#" class="solution-link text-warning fw-semibold text-decoration-none">Explore &rarr;</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="calculator-section py-5" id="calculator">
+        <div class="container py-4">
+            <div class="row align-items-stretch rounded-5 shadow-sm border p-0 overflow-hidden">
+
+                <!-- ── LEFT: Calculator Form (40%) ── -->
+                <div class="col-lg-5 p-4 p-lg-5 border-end bg-white">
+                    <h3 class="fw-bold mb-4 text-primary-dark fs-5">Advanced Solar Savings Calculator</h3>
+                    <form id="advCalcForm">
+                        <div class="row g-3">
+
+                            <!-- Row 1: Monthly Bill | Units Consumed -->
+                            <div class="col-6">
+                                <label for="calcBill" class="form-label fs-8 text-muted mb-1">Monthly Electricity Bill (₹)</label>
+                                <input type="number" id="calcBill" class="form-control calc-input" value="1000" placeholder="1000">
+                            </div>
+                            <div class="col-6">
+                                <label for="calcUnits" class="form-label fs-8 text-muted mb-1">Solar Resistance (MRI)</label>
+                                <input type="number" id="calcUnits" class="form-control calc-input" value="100" placeholder="100">
+                            </div>
+
+                            <!-- Row 2: Property Type | Roof Area -->
+                            <div class="col-6">
+                                <label for="calcProperty" class="form-label fs-8 text-muted mb-1">Property Type</label>
+                                <select id="calcProperty" class="form-select calc-input">
+                                    <option>Independent House</option>
+                                    <option>Apartment</option>
+                                    <option>Commercial</option>
+                                    <option>Industrial</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="calcRoof" class="form-label fs-8 text-muted mb-1">Roof Area (sq.ft.)</label>
+                                <input type="text" id="calcRoof" class="form-control calc-input" value="A3C" placeholder="A3C">
+                            </div>
+
+                            <!-- Row 3: City full-width -->
+                            <div class="col-12">
+                                <label for="calcCity" class="form-label fs-8 text-muted mb-1">City</label>
+                                <select id="calcCity" class="form-select calc-input">
+                                    <option>Kharagpur, West Bengal</option>
+                                    <option>Midnapore, West Bengal</option>
+                                    <option>Haldia, West Bengal</option>
+                                    <option>Durgapur, West Bengal</option>
+                                </select>
+                            </div>
+
+                            <!-- Calculate Button -->
+                            <div class="col-12 mt-2">
+                                <button type="button" class="btn btn-success w-100 py-3 fw-bold rounded-3">
+                                    Calculate Savings
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ── RIGHT: Savings Estimate Panel (60%) ── -->
+                <div class="col-lg-7 p-4 p-lg-5 bg-blue">
+                    <h4 class="fw-bold mb-4 text-success">Your Solar Savings Estimate</h4>
+
+                    <!-- 3×3 stat grid -->
+                    <div class="calc-results-grid no-border">
+
+                        <!-- Row 1 -->
+                        <div class="calc-stat-cell rounded-3 bg-white">
+                            <span class="calc-stat-label">Recommended Capacity</span>
+                            <span class="calc-stat-value text-dark">5 kW</span>
+                            <span class="calc-stat-sub">Rooftop Solar System</span>
+                        </div>
+                        <div class="calc-stat-cell rounded-3 bg-white">
+                            <span class="calc-stat-label">Est. Installation Cost</span>
+                            <span class="calc-stat-value text-dark">₹ 3,25,000</span>
+                            <span class="calc-stat-sub">Before Subsidy</span>
+                        </div>
+                        <div class="calc-stat-cell rounded-3 bg-white">
+                            <span class="calc-stat-label">Govt. Subsidy</span>
+                            <span class="calc-stat-value text-success">₹ 78,000</span>
+                            <span class="calc-stat-sub">Approx. (MNRE)</span>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="calc-stat-cell rounded-3 bg-white">
+                            <span class="calc-stat-label">Monthly Savings</span>
+                            <span class="calc-stat-value text-dark">₹ 5,400</span>
+                        </div>
+                        <div class="calc-stat-cell rounded-3 bg-white">
+                            <span class="calc-stat-label">Annual Savings</span>
+                            <span class="calc-stat-value text-success">₹ 64,900</span>
+                        </div>
+                        <div class="calc-stat-cell rounded-3 bg-white">
+                            <span class="calc-stat-label">ROI Period</span>
+                            <span class="calc-stat-value text-warning">4.6 Years</span>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="calc-stat-cell rounded-3 bg-white">
+                            <span class="calc-stat-label">Lifetime Savings (25 Years)</span>
+                            <span class="calc-stat-value text-dark">₹ 16,20,000</span>
+                        </div>
+                        <div class="calc-stat-cell rounded-3 bg-white">
+                            <span class="calc-stat-label">Carbon Reduction</span>
+                            <span class="calc-stat-value text-dark">6.3 Tons/Year</span>
+                            <span class="calc-stat-sub">CO₂ Equivalent</span>
+                        </div>
+
+                        <!-- CTA cell — amber background -->
+                        <div class="calc-stat-cell calc-stat-cell--cta rounded-3 bg-white">
+                            <a href="#contact" class="calc-cta-link text-decoration-none d-flex flex-column align-items-start gap-1">
+                                <span class="calc-cta-title">Get Detailed Solar Proposal</span>
+                                <span class="calc-cta-badge">
+                                    100% Free <i class="bi bi-gift-fill ms-1" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="survey-section py-5" id="contact">
+        <div class="container">
+            <div class="survey-card rounded-4 shadow-sm overflow-hidden">
+                <div class="row g-0 align-items-stretch">
+
+                    <!-- ── LEFT: Green Info Panel ── -->
+                    <div class="col-lg-3 survey-panel-left p-4 p-lg-5 d-flex flex-column justify-content-center">
+                        <h3 class="fw-bold text-white mb-3 lh-sm">Request Free Site Survey</h3>
+                        <p class="text-white opacity-75 fs-7 mb-4">Our experts will visit your site and provide you a customised solar solution.</p>
+                        <a href="https://wa.me/1234567890" target="_blank" class="survey-whatsapp-btn d-inline-flex align-items-center gap-2 text-decoration-none" aria-label="Chat with us on WhatsApp">
+                            <span class="survey-whatsapp-icon d-flex align-items-center justify-content-center rounded-circle flex-shrink-0">
+                                <i class="bi bi-whatsapp fs-5" aria-hidden="true"></i>
+                            </span>
+                            <span class="text-white fw-semibold fs-7">Chat with us on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- ── RIGHT: Form Panel ── -->
+                    <div class="col-lg-9 bg-white p-4 p-lg-5 d-flex flex-column justify-content-center">
+                        <form id="surveyForm" class="row g-3">
+
+                            <!-- Row 1: Full Name | Phone | Email | City -->
+                            <div class="col-md-6 col-xl-3">
+                                <label for="surveyName" class="survey-label">Full Name*</label>
+                                <input type="text" id="surveyName" class="form-control survey-input" placeholder="Enter your name">
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <label for="surveyPhone" class="survey-label">Phone Number*</label>
+                                <input type="tel" id="surveyPhone" class="form-control survey-input" placeholder="Enter phone number">
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <label for="surveyEmail" class="survey-label">Email Address</label>
+                                <input type="email" id="surveyEmail" class="form-control survey-input" placeholder="Enter email address">
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <label for="surveyCity" class="survey-label">City*</label>
+                                <input type="text" id="surveyCity" class="form-control survey-input" placeholder="Enter your city">
+                            </div>
+
+                            <!-- Row 2: Property Type | Monthly Bill | Installation Time | CTA Button -->
+                            <div class="col-md-6 col-xl-3">
+                                <label for="surveyProperty" class="survey-label">Property Type*</label>
+                                <select id="surveyProperty" class="form-select survey-input">
+                                    <option value="" disabled selected>Select property type</option>
+                                    <option>Independent House</option>
+                                    <option>Apartment</option>
+                                    <option>Commercial</option>
+                                    <option>Industrial</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <label for="surveyBill" class="survey-label">Monthly Electricity Bill (₹)*</label>
+                                <input type="number" id="surveyBill" class="form-control survey-input" placeholder="Enter amount">
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <label for="surveyTime" class="survey-label">Preferred Installation Time*</label>
+                                <select id="surveyTime" class="form-select survey-input">
+                                    <option value="" disabled selected>Select one</option>
+                                    <option>Within 1 Month</option>
+                                    <option>1–3 Months</option>
+                                    <option>3–6 Months</option>
+                                    <option>Just Exploring</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-xl-3 d-flex align-items-end">
+                                <button type="submit" class="btn survey-submit-btn w-100 fw-bold">
+                                    Request Free Site Survey &rarr;
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us py-5 bg-white" id="why-us">
+        <div class="container py-4">
+
+            <!-- Section Heading -->
+            <h2 class="fw-bold text-primary-dark text-center mb-5" data-aos="fade-up">Why Choose ShriKrishna Solar?</h2>
+
+            <!-- 8 items in one row -->
+            <div class="row row-cols-2 row-cols-sm-4 g-4 justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- 1. Certified Solar Experts -->
+                <div class="col">
+                    <div class="why-item">
+                        <div class="why-icon-box why-icon-box--orange">
+                            <i class="bi bi-person-check" aria-hidden="true"></i>
+                        </div>
+                        <span class="why-label">Certified<br>Solar Experts</span>
+                    </div>
+                </div>
+
+                <!-- 2. Premium Tier-1 Panels -->
+                <div class="col">
+                    <div class="why-item">
+                        <div class="why-icon-box why-icon-box--orange">
+                            <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i>
+                        </div>
+                        <span class="why-label">Premium<br>Tier-1 Panels</span>
+                    </div>
+                </div>
+
+                <!-- 3. Government Subsidy Assistance -->
+                <div class="col">
+                    <div class="why-item">
+                        <div class="why-icon-box why-icon-box--orange">
+                            <i class="bi bi-bank2" aria-hidden="true"></i>
+                        </div>
+                        <span class="why-label">Government<br>Subsidy Assistance</span>
+                    </div>
+                </div>
+
+                <!-- 4. Fast Installation -->
+                <div class="col">
+                    <div class="why-item">
+                        <div class="why-icon-box why-icon-box--orange">
+                            <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                        </div>
+                        <span class="why-label">Fast<br>Installation</span>
+                    </div>
+                </div>
+
+                <!-- 5. Net Metering Support -->
+                <div class="col">
+                    <div class="why-item">
+                        <div class="why-icon-box why-icon-box--orange">
+                            <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+                        </div>
+                        <span class="why-label">Net Metering<br>Support</span>
+                    </div>
+                </div>
+
+                <!-- 6. 25-Year Warranty -->
+                <div class="col">
+                    <div class="why-item">
+                        <div class="why-icon-box why-icon-box--orange">
+                            <i class="bi bi-shield-check" aria-hidden="true"></i>
+                        </div>
+                        <span class="why-label">25-Year<br>Warranty</span>
+                    </div>
+                </div>
+
+                <!-- 7. Financing Available -->
+                <div class="col">
+                    <div class="why-item">
+                        <div class="why-icon-box why-icon-box--orange">
+                            <i class="bi bi-house-check" aria-hidden="true"></i>
+                        </div>
+                        <span class="why-label">Financing<br>Available</span>
+                    </div>
+                </div>
+
+                <!-- 8. End-to-End Service -->
+                <div class="col">
+                    <div class="why-item">
+                        <div class="why-icon-box why-icon-box--orange">
+                            <i class="bi bi-key" aria-hidden="true"></i>
+                        </div>
+                        <span class="why-label">End-to-End<br>Service</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section py-5 bg-light" id="process">
+        <div class="container py-4">
+
+            <h2 class="fw-bold text-primary-dark text-center mb-5" data-aos="fade-up">Our Simple 6-Step Process</h2>
+
+            <!-- White card -->
+            <div class="process-card rounded-4 shadow-sm bg-white px-4 px-lg-5 py-4" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="process-track">
+
+                    <!-- ── Step 1: Consultation ── -->
+                    <div class="process-step text-center">
+                        <div class="process-icon-box process-icon-box--green mb-3">
+                            <i class="bi bi-chat-dots" aria-hidden="true"></i>
+                        </div>
+                        <h6 class="process-title">Consultation</h6>
+                        <p class="process-desc">Understand your energy needs and goals</p>
+                    </div>
+
+                    <!-- Connector 1 → 2 -->
+                    <div class="process-seg">
+                        <div class="process-seg-line"></div>
+                        <span class="process-num">01</span>
+                        <div class="process-seg-line"></div>
+                    </div>
+
+                    <!-- ── Step 2: Site Survey ── -->
+                    <div class="process-step text-center">
+                        <div class="process-icon-box process-icon-box--blue mb-3">
+                            <i class="bi bi-people" aria-hidden="true"></i>
+                        </div>
+                        <h6 class="process-title">Site Survey</h6>
+                        <p class="process-desc">We assess your roof &amp; energy requirements</p>
+                    </div>
+
+                    <!-- Connector 2 → 3 -->
+                    <div class="process-seg">
+                        <div class="process-seg-line"></div>
+                        <span class="process-num">02</span>
+                        <div class="process-seg-line"></div>
+                    </div>
+
+                    <!-- ── Step 3: System Design (active) ── -->
+                    <div class="process-step text-center">
+                        <div class="process-icon-box process-icon-box--orange mb-3">
+                            <i class="bi bi-gear-wide-connected" aria-hidden="true"></i>
+                        </div>
+                        <h6 class="process-title">System Design</h6>
+                        <p class="process-desc">Custom-made system design &amp; software</p>
+                    </div>
+
+                    <!-- Connector 3 → 4 -->
+                    <div class="process-seg">
+                        <div class="process-seg-line"></div>
+                        <span class="process-num">03</span>
+                        <div class="process-seg-line"></div>
+                    </div>
+
+                    <!-- ── Step 4: Subsidy Assistance ── -->
+                    <div class="process-step text-center">
+                        <div class="process-icon-box process-icon-box--orange mb-3">
+                            <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+                        </div>
+                        <h6 class="process-title">Subsidy Assistance</h6>
+                        <p class="process-desc">We handle documentation &amp; subsidy process</p>
+                    </div>
+
+                    <!-- Connector 4 → 5 -->
+                    <div class="process-seg">
+                        <div class="process-seg-line"></div>
+                        <span class="process-num">04</span>
+                        <div class="process-seg-line"></div>
+                    </div>
+
+                    <!-- ── Step 5: Installation ── -->
+                    <div class="process-step text-center">
+                        <div class="process-icon-box process-icon-box--teal mb-3">
+                            <i class="bi bi-grid-1x2" aria-hidden="true"></i>
+                        </div>
+                        <h6 class="process-title">Installation</h6>
+                        <p class="process-desc">Professional &amp; timely installation</p>
+                    </div>
+
+                    <!-- Connector 5 → 6 -->
+                    <div class="process-seg">
+                        <div class="process-seg-line"></div>
+                        <span class="process-num">05</span>
+                        <div class="process-seg-line"></div>
+                    </div>
+
+                    <!-- ── Step 6: Commissioning ── -->
+                    <div class="process-step text-center">
+                        <div class="process-icon-box process-icon-box--blue mb-3">
+                            <i class="bi bi-tools" aria-hidden="true"></i>
+                        </div>
+                        <h6 class="process-title">Commissioning</h6>
+                        <p class="process-desc">System testing &amp; performance support</p>
+                    </div>
+
+                </div><!-- /.process-track -->
+            </div><!-- /.process-card -->
+        </div>
+    </section>
+
+
+    <section class="projects-section py-5 bg-white" id="projects">
+        <div class="container py-4">
+
+            <h2 class="fw-bold text-primary-dark text-center mb-4" data-aos="fade-up">Our Recent Projects</h2>
+
+            <!-- ── Filter Buttons ── -->
+            <div class="d-flex justify-content-center gap-2 mb-5 proj-filter-group" data-aos="fade-up" data-aos-delay="100">
+                <button class="proj-filter-btn active" data-filter="all">All</button>
+                <button class="proj-filter-btn" data-filter="residential">Residential</button>
+                <button class="proj-filter-btn" data-filter="commercial">Commercial</button>
+                <button class="proj-filter-btn" data-filter="industrial">Industrial</button>
+            </div>
+
+            <!-- ── 4 × 2 Project Grid ── -->
+            <div class="row g-4 proj-grid" id="projectGrid" data-aos="fade-up" data-aos-delay="150">
+
+                <!-- Card 1: Residential -->
+                <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="residential">
+                    <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="position-relative">
+                            <img src="https://placehold.co/420x220/a8d5a2/1a472a?text=Residential+Solar" class="proj-img w-100" alt="5kW Rooftop Solar System – Kharagpur">
+                            <span class="proj-badge">Residential</span>
+                        </div>
+                        <div class="proj-body">
+                            <h6 class="proj-title">5kW Rooftop Solar System</h6>
+                            <p class="proj-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Kharagpur, West Bengal</p>
+                            <div class="proj-stats">
+                                <div>
+                                    <span class="proj-stat-label">Annual Savings</span>
+                                    <strong class="proj-savings">₹ 64,000</strong>
+                                </div>
+                                <div class="text-end">
+                                    <span class="proj-stat-label">System Size</span>
+                                    <strong class="proj-size">5 kW</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Commercial -->
+                <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="commercial">
+                    <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="position-relative">
+                            <img src="https://placehold.co/420x220/a2c4d5/0a3d62?text=Commercial+Solar" class="proj-img w-100" alt="20kW Solar System – Midnapore">
+                            <span class="proj-badge">Commercial</span>
+                        </div>
+                        <div class="proj-body">
+                            <h6 class="proj-title">20kW Solar System</h6>
+                            <p class="proj-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Midnapore, West Bengal</p>
+                            <div class="proj-stats">
+                                <div>
+                                    <span class="proj-stat-label">Annual Savings</span>
+                                    <strong class="proj-savings">₹ 3,60,000</strong>
+                                </div>
+                                <div class="text-end">
+                                    <span class="proj-stat-label">System Size</span>
+                                    <strong class="proj-size">20 kW</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Industrial -->
+                <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="industrial">
+                    <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="position-relative">
+                            <img src="https://placehold.co/420x220/c5d5a8/2d4a1e?text=Industrial+Solar" class="proj-img w-100" alt="100kW Solar System – Haldia">
+                            <span class="proj-badge">Industrial</span>
+                        </div>
+                        <div class="proj-body">
+                            <h6 class="proj-title">100kW Solar System</h6>
+                            <p class="proj-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Haldia, West Bengal</p>
+                            <div class="proj-stats">
+                                <div>
+                                    <span class="proj-stat-label">Annual Savings</span>
+                                    <strong class="proj-savings">₹ 12,20,000</strong>
+                                </div>
+                                <div class="text-end">
+                                    <span class="proj-stat-label">System Size</span>
+                                    <strong class="proj-size">100 kW</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Commercial -->
+                <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="commercial">
+                    <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="position-relative">
+                            <img src="https://placehold.co/420x220/a2c4d5/0a3d62?text=Commercial+Solar" class="proj-img w-100" alt="25kW Solar System – Durgapur">
+                            <span class="proj-badge">Commercial</span>
+                        </div>
+                        <div class="proj-body">
+                            <h6 class="proj-title">25kW Solar System</h6>
+                            <p class="proj-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Durgapur, West Bengal</p>
+                            <div class="proj-stats">
+                                <div>
+                                    <span class="proj-stat-label">Annual Savings</span>
+                                    <strong class="proj-savings">₹ 2,60,000</strong>
+                                </div>
+                                <div class="text-end">
+                                    <span class="proj-stat-label">System Size</span>
+                                    <strong class="proj-size">25 kW</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Residential -->
+                <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="residential">
+                    <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="position-relative">
+                            <img src="https://placehold.co/420x220/a8d5a2/1a472a?text=Residential+Solar" class="proj-img w-100" alt="3kW Home Solar – Asansol">
+                            <span class="proj-badge">Residential</span>
+                        </div>
+                        <div class="proj-body">
+                            <h6 class="proj-title">3kW Home Solar System</h6>
+                            <p class="proj-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Asansol, West Bengal</p>
+                            <div class="proj-stats">
+                                <div>
+                                    <span class="proj-stat-label">Annual Savings</span>
+                                    <strong class="proj-savings">₹ 38,000</strong>
+                                </div>
+                                <div class="text-end">
+                                    <span class="proj-stat-label">System Size</span>
+                                    <strong class="proj-size">3 kW</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Industrial -->
+                <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="industrial">
+                    <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="position-relative">
+                            <img src="https://placehold.co/420x220/c5d5a8/2d4a1e?text=Industrial+Solar" class="proj-img w-100" alt="200kW Solar Plant – Bardhaman">
+                            <span class="proj-badge">Industrial</span>
+                        </div>
+                        <div class="proj-body">
+                            <h6 class="proj-title">200kW Solar Plant</h6>
+                            <p class="proj-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Bardhaman, West Bengal</p>
+                            <div class="proj-stats">
+                                <div>
+                                    <span class="proj-stat-label">Annual Savings</span>
+                                    <strong class="proj-savings">₹ 24,00,000</strong>
+                                </div>
+                                <div class="text-end">
+                                    <span class="proj-stat-label">System Size</span>
+                                    <strong class="proj-size">200 kW</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Residential -->
+                <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="residential">
+                    <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="position-relative">
+                            <img src="https://placehold.co/420x220/a8d5a2/1a472a?text=Residential+Solar" class="proj-img w-100" alt="7kW Solar System – Siliguri">
+                            <span class="proj-badge">Residential</span>
+                        </div>
+                        <div class="proj-body">
+                            <h6 class="proj-title">7kW Rooftop Solar System</h6>
+                            <p class="proj-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Siliguri, West Bengal</p>
+                            <div class="proj-stats">
+                                <div>
+                                    <span class="proj-stat-label">Annual Savings</span>
+                                    <strong class="proj-savings">₹ 85,000</strong>
+                                </div>
+                                <div class="text-end">
+                                    <span class="proj-stat-label">System Size</span>
+                                    <strong class="proj-size">7 kW</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Commercial -->
+                <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="commercial">
+                    <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div class="position-relative">
+                            <img src="https://placehold.co/420x220/a2c4d5/0a3d62?text=Commercial+Solar" class="proj-img w-100" alt="50kW Solar System – Howrah">
+                            <span class="proj-badge">Commercial</span>
+                        </div>
+                        <div class="proj-body">
+                            <h6 class="proj-title">50kW Commercial Solar</h6>
+                            <p class="proj-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Howrah, West Bengal</p>
+                            <div class="proj-stats">
+                                <div>
+                                    <span class="proj-stat-label">Annual Savings</span>
+                                    <strong class="proj-savings">₹ 5,80,000</strong>
+                                </div>
+                                <div class="text-end">
+                                    <span class="proj-stat-label">System Size</span>
+                                    <strong class="proj-size">50 kW</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.proj-grid -->
+
+            <!-- ── CTA ── -->
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="btn proj-cta-btn px-5 fw-semibold" id="viewMoreProjects">
+                    View More Projects &nbsp;→
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="testimonials-section py-5 bg-light" id="testimonials">
+        <div class="container py-4">
+
+            <!-- Single outer white card -->
+            <div class="testi-card rounded-4 shadow-sm bg-white p-4 p-lg-5" data-aos="fade-up">
+                <div class="row align-items-center g-4">
+
+                    <!-- ── LEFT: Rating Panel ── -->
+                    <div class="col-lg-3 testi-left-panel">
+                        <h2 class="fw-bold text-primary-dark mb-3" style="font-size:1.25rem; line-height:1.35;">What Our Customers Say</h2>
+
+                        <!-- Score + stars -->
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="testi-score">4.9</span>
+                            <div class="testi-stars" aria-label="4.9 out of 5 stars">
+                                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <p class="testi-review-count mb-4">from 800+ Google Reviews</p>
+
+                        <!-- CTA + Nav arrows on same row -->
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <a href="#" class="btn testi-all-btn">View All Reviews →</a>
+                            <button class="testi-nav-btn" id="testiPrev" aria-label="Previous review">
+                                <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="testi-nav-btn" id="testiNext" aria-label="Next review">
+                                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ── RIGHT: Swiper Slider ── -->
+                    <div class="col-lg-9">
+                        <div class="swiper reviewsSwiper" style="overflow:hidden;">
+                            <div class="swiper-wrapper align-items-stretch">
+
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide h-auto">
+                                    <div class="testi-review-card rounded-3 p-3 h-100">
+                                        <div class="d-flex align-items-start gap-3 mb-3">
+                                            <div class="testi-avatar-wrap position-relative flex-shrink-0">
+                                                <img src="https://placehold.co/56x56/d4a373/ffffff?text=R" class="testi-avatar rounded-circle" alt="Ravi Kumar">
+                                                <span class="testi-g-badge" aria-hidden="true">G</span>
+                                            </div>
+                                            <div>
+                                                <h6 class="testi-name">Ravi Kumar</h6>
+                                                <span class="testi-location">Kharagpur</span>
+                                                <div class="testi-stars testi-stars--sm" aria-label="5 stars">
+                                                    <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="testi-text">Our electricity bill reduced by more than 85%! The team was professional and the installation was super smooth.</p>
+                                        <p class="testi-sys-size">System Size: 5kW</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide h-auto">
+                                    <div class="testi-review-card rounded-3 p-3 h-100">
+                                        <div class="d-flex align-items-start gap-3 mb-3">
+                                            <div class="testi-avatar-wrap position-relative flex-shrink-0">
+                                                <img src="https://placehold.co/56x56/9d8189/ffffff?text=A" class="testi-avatar rounded-circle" alt="Anita Shaw">
+                                                <span class="testi-g-badge" aria-hidden="true">G</span>
+                                            </div>
+                                            <div>
+                                                <h6 class="testi-name">Anita Shaw</h6>
+                                                <span class="testi-location">Midnapore</span>
+                                                <div class="testi-stars testi-stars--sm" aria-label="5 stars">
+                                                    <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="testi-text">Excellent service and great support for subsidy and documentation. Highly recommend ShriKrishna Solar!</p>
+                                        <p class="testi-sys-size">System Size: 3kW</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide h-auto">
+                                    <div class="testi-review-card rounded-3 p-3 h-100">
+                                        <div class="d-flex align-items-start gap-3 mb-3">
+                                            <div class="testi-avatar-wrap position-relative flex-shrink-0">
+                                                <img src="https://placehold.co/56x56/588157/ffffff?text=S" class="testi-avatar rounded-circle" alt="Sourav Ghosh">
+                                                <span class="testi-g-badge" aria-hidden="true">G</span>
+                                            </div>
+                                            <div>
+                                                <h6 class="testi-name">Sourav Ghosh</h6>
+                                                <span class="testi-location">Durgapur</span>
+                                                <div class="testi-stars testi-stars--sm" aria-label="5 stars">
+                                                    <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="testi-text">We installed 50kW for our factory and the savings are huge. Great team and on-time delivery.</p>
+                                        <p class="testi-sys-size">System Size: 50kW</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="swiper-slide h-auto">
+                                    <div class="testi-review-card rounded-3 p-3 h-100">
+                                        <div class="d-flex align-items-start gap-3 mb-3">
+                                            <div class="testi-avatar-wrap position-relative flex-shrink-0">
+                                                <img src="https://placehold.co/56x56/4a90d9/ffffff?text=P" class="testi-avatar rounded-circle" alt="Priya Das">
+                                                <span class="testi-g-badge" aria-hidden="true">G</span>
+                                            </div>
+                                            <div>
+                                                <h6 class="testi-name">Priya Das</h6>
+                                                <span class="testi-location">Siliguri</span>
+                                                <div class="testi-stars testi-stars--sm" aria-label="5 stars">
+                                                    <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="testi-text">Transparent pricing and fast installation. The subsidy process was completely handled by them. Very happy!</p>
+                                        <p class="testi-sys-size">System Size: 7kW</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 5 -->
+                                <div class="swiper-slide h-auto">
+                                    <div class="testi-review-card rounded-3 p-3 h-100">
+                                        <div class="d-flex align-items-start gap-3 mb-3">
+                                            <div class="testi-avatar-wrap position-relative flex-shrink-0">
+                                                <img src="https://placehold.co/56x56/e07b54/ffffff?text=M" class="testi-avatar rounded-circle" alt="Mohan Sen">
+                                                <span class="testi-g-badge" aria-hidden="true">G</span>
+                                            </div>
+                                            <div>
+                                                <h6 class="testi-name">Mohan Sen</h6>
+                                                <span class="testi-location">Asansol</span>
+                                                <div class="testi-stars testi-stars--sm" aria-label="5 stars">
+                                                    <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="testi-text">Best solar company in the region. After-sales service is excellent and the team is always reachable.</p>
+                                        <p class="testi-sys-size">System Size: 10kW</p>
+                                    </div>
+                                </div>
+
+                            </div><!-- /.swiper-wrapper -->
+                        </div><!-- /.reviewsSwiper -->
+                    </div><!-- /.col-lg-9 -->
+
+                </div><!-- /.row -->
+            </div><!-- /.testi-card -->
+
+        </div>
+    </section>
+
+
+
+    <!-- ========================================
+         SECTION: Subsidy And Service Area
+    ======================================== -->
+    <section class="info-section py-5 bg-white" id="subsidy" aria-label="Solar subsidy and service area">
+        <div class="container py-4">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <article class="info-card info-card--subsidy h-100">
+                        <div class="info-card__content">
+                            <!-- WP: ACF subsidy_heading -->
+                            <h2 class="info-card__title">Government Solar Subsidy</h2>
+                            <!-- /WP -->
+
+                            <!-- WP: Loop Start - ACF repeater subsidy_points -->
+                            <ul class="info-card__list list-unstyled">
+                                <li><i class="bi bi-check-lg" aria-hidden="true"></i><span>Up to &#8377;1,10,000 subsidy for residential customers</span></li>
+                                <li><i class="bi bi-check-lg" aria-hidden="true"></i><span>Accelerated depreciation benefits for businesses</span></li>
+                                <li><i class="bi bi-check-lg" aria-hidden="true"></i><span>Easy application and documentation support</span></li>
+                                <li><i class="bi bi-check-lg" aria-hidden="true"></i><span>MNRE approved vendor assistance</span></li>
+                            </ul>
+                            <!-- WP: Loop End -->
+
+                            <!-- WP: ACF subsidy_pdf -->
+                            <a href="#" class="info-card__button" aria-label="Download subsidy benefits PDF">
+                                <span>Download Subsidy Benefits (PDF)</span>
+                                <i class="bi bi-download" aria-hidden="true"></i>
+                            </a>
+                            <!-- /WP -->
+                        </div>
+
+                        <!-- WP: ACF subsidy_brochure_image -->
+                        <div class="subsidy-brochure" aria-label="Solar subsidy brochure preview">
+                            <span class="subsidy-brochure__tag">Govt Certified</span>
+                            <span class="subsidy-brochure__brand">Solar Savings</span>
+                            <strong>Solar Subsidy<br>Benefits</strong>
+                            <span class="subsidy-brochure__note">Approved pricing guide</span>
+                            <span class="subsidy-brochure__grid" aria-hidden="true"></span>
+                        </div>
+                        <!-- /WP -->
+                    </article>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <article class="info-card info-card--city h-100">
+                        <div class="info-map" aria-hidden="true">
+                            <span class="info-map__road info-map__road--one"></span>
+                            <span class="info-map__road info-map__road--two"></span>
+                            <span class="info-map__road info-map__road--three"></span>
+                            <span class="info-map__pin info-map__pin--green info-map__pin--one"><i class="bi bi-geo-alt-fill"></i></span>
+                            <span class="info-map__pin info-map__pin--red info-map__pin--two"><i class="bi bi-geo-alt-fill"></i></span>
+                            <span class="info-map__pin info-map__pin--green info-map__pin--three"><i class="bi bi-geo-alt-fill"></i></span>
+                            <span class="info-map__pin info-map__pin--red info-map__pin--four"><i class="bi bi-geo-alt-fill"></i></span>
+                            <span class="info-map__pin info-map__pin--green info-map__pin--five"><i class="bi bi-geo-alt-fill"></i></span>
+                        </div>
+
+                        <div class="info-card__content info-card__content--city">
+                            <!-- WP: ACF service_area_heading -->
+                            <h2 class="info-card__title info-card__title--city">We Serve In Your City</h2>
+                            <!-- /WP -->
+
+                            <!-- WP: Loop Start - ACF repeater service_area_points -->
+                            <ul class="info-card__list info-card__list--city list-unstyled">
+                                <li><i class="bi bi-check-lg" aria-hidden="true"></i><span>Rooftop Solar Installation Near Me</span></li>
+                                <li><i class="bi bi-check-lg" aria-hidden="true"></i><span>Solar Company in Kharagpur</span></li>
+                                <li><i class="bi bi-check-lg" aria-hidden="true"></i><span>Commercial Solar Solutions</span></li>
+                                <li><i class="bi bi-check-lg" aria-hidden="true"></i><span>Solar Panel Installation Services</span></li>
+                            </ul>
+                            <!-- WP: Loop End -->
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /SECTION: Subsidy And Service Area -->
+    <!-- ========================================
+         SECTION: Frequently Asked Questions
+    ======================================== -->
+    <section class="faq-section py-5 bg-white" id="faq" aria-labelledby="faq-title">
+        <div class="container py-4">
+            <div class="text-center" data-aos="fade-up">
+                <!-- WP: ACF faq_section_heading -->
+                <h2 class="faq-section__title" id="faq-title">Frequently Asked Questions</h2>
+                <!-- /WP -->
+            </div>
+
+            <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="accordion faq-accordion" id="faqAccordionLeft">
+                    <!-- WP: Loop Start - CPT sn_faq / first column -->
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="faqHeadingOne">
+                            <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
+                                How much does a solar system cost?
+                            </button>
+                        </h3>
+                        <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body faq-body">The final cost depends on system size, roof structure, inverter type, and subsidy eligibility. A site survey gives the most accurate estimate.</div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="faqHeadingTwo">
+                            <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                What is the government subsidy for solar?
+                            </button>
+                        </h3>
+                        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body faq-body">Residential rooftop solar customers can receive subsidy support under applicable central and state schemes, subject to current policy and capacity limits.</div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item faq-item">
+                        <h3 class="accordion-header" id="faqHeadingThree">
+                            <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                What is net metering?
+                            </button>
+                        </h3>
+                        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body faq-body">Net metering lets your system export unused solar energy to the grid and receive bill credits based on your local utility rules.</div>
+                        </div>
+                    </div>
+                    <!-- WP: Loop End -->
+                </div>
+
+                <div class="faq-column">
+                    <div class="accordion faq-accordion" id="faqAccordionRight">
+                        <!-- WP: Loop Start - CPT sn_faq / second column -->
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="faqHeadingFour">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                    How much electricity can solar panels generate?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordionRight">
+                                <div class="accordion-body faq-body">A well-installed 1kW rooftop system typically generates around 4 to 5 units per day, depending on location, season, tilt, and shading.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="faqHeadingFive">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                    What is the lifespan of solar panels?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordionRight">
+                                <div class="accordion-body faq-body">Tier-1 solar panels generally include long performance warranties and can continue producing power for 25 years or more with proper maintenance.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item">
+                            <h3 class="accordion-header" id="faqHeadingSix">
+                                <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
+                                    Do solar panels work on cloudy days?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseSix" class="accordion-collapse collapse" aria-labelledby="faqHeadingSix" data-bs-parent="#faqAccordionRight">
+                                <div class="accordion-body faq-body">Yes. Solar panels still generate electricity in cloudy weather, though output is lower than on bright sunny days.</div>
+                            </div>
+                        </div>
+                        <!-- WP: Loop End -->
+                    </div>
+
+                    <!-- WP: get_post_type_archive_link('sn_faq') -->
+                    <div class="faq-actions">
+                        <a href="#" class="faq-more-btn">View All FAQs <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- /WP -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /SECTION: Frequently Asked Questions -->
+    <!-- ========================================
+         SECTION: Final Call To Action
+    ======================================== -->
+    <section class="cta-section py-4 bg-white" aria-labelledby="cta-title">
+        <div class="container">
+            <div class="cta-banner" data-aos="fade-up">
+                <div class="cta-banner__content">
+                    <!-- WP: ACF cta_heading -->
+                    <h2 class="cta-banner__title" id="cta-title">Start Saving with Solar Today</h2>
+                    <!-- /WP -->
+
+                    <!-- WP: ACF cta_description -->
+                    <p class="cta-banner__text">Have a free consultation and discover how much you can save.</p>
+                    <!-- /WP -->
+
+                    <div class="cta-banner__actions">
+                        <!-- WP: ACF cta_primary_link -->
+                        <a href="#contact" class="cta-banner__btn cta-banner__btn--primary">Get Free Solar Consultation</a>
+                        <!-- /WP -->
+
+                        <!-- WP: ACF cta_secondary_link -->
+                        <a href="#calculator" class="cta-banner__btn cta-banner__btn--secondary">Calculate My Savings</a>
+                        <!-- /WP -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /SECTION: Final Call To Action -->
+    <!-- ========================================
+         SECTION: Footer
+    ======================================== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="site-footer__grid">
+                <div class="site-footer__brand">
+                    <!-- WP: get_custom_logo() -->
+                    <a href="#" class="site-footer__logo" aria-label="SolarNest home">
+                        <img src="assets/image/footerlogo.png" alt="SolarNest" width="855" height="292" loading="lazy">
+                    </a>
+                    <!-- /WP -->
+
+                    <!-- WP: ACF footer_description -->
+                    <p class="site-footer__text">Your trusted partner for rooftop solar solutions. We help you save more, save energy, and build a sustainable future.</p>
+                    <!-- /WP -->
+
+                    <!-- WP: ACF social_links repeater -->
+                    <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                        <li><a href="#" aria-label="Follow SolarNest on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Follow SolarNest on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Subscribe to SolarNest on YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Follow SolarNest on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <!-- /WP -->
+                </div>
+
+                <nav class="site-footer__col" aria-label="Footer quick links">
+                    <h2 class="site-footer__title">Quick Links</h2>
+                    <!-- WP: wp_nav_menu('footer_quick_links') -->
+                    <ul class="site-footer__links list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#solutions">Residential Solar</a></li>
+                        <li><a href="#solutions">Commercial Solar</a></li>
+                        <li><a href="#calculator">Solar Calculator</a></li>
+                        <li><a href="#subsidy">Subsidy Information</a></li>
+                        <li><a href="#projects">Success Stories</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                    <!-- /WP -->
+                </nav>
+
+                <div class="site-footer__col">
+                    <h2 class="site-footer__title">Our Services</h2>
+                    <!-- WP: ACF footer_services repeater -->
+                    <ul class="site-footer__links list-unstyled">
+                        <li>Rooftop Solar Installation</li>
+                        <li>Solar System Design</li>
+                        <li>Net Metering Support</li>
+                        <li>Solar Maintenance (AMC)</li>
+                        <li>Solar Financing</li>
+                        <li>Subsidy Assistance</li>
+                    </ul>
+                    <!-- /WP -->
+                </div>
+
+                <address class="site-footer__col site-footer__contact">
+                    <h2 class="site-footer__title">Contact Us</h2>
+                    <!-- WP: ACF options contact_details -->
+                    <ul class="site-footer__contact-list list-unstyled">
+                        <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal - 721301</span></li>
+                        <li><i class="bi bi-telephone-fill" aria-hidden="true"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        <li><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                        <li><i class="bi bi-clock-fill" aria-hidden="true"></i><span>Mon - Sat 9 AM - 7 PM</span></li>
+                    </ul>
+                    <!-- /WP -->
+                </address>
+
+                <div class="site-footer__col site-footer__location">
+                    <h2 class="site-footer__title">Our Location</h2>
+                    <!-- WP: ACF google_map field or iframe from options -->
+                    <div class="site-footer__map" aria-label="ShriKrishna Solar location map">
+                        <iframe
+                            title="ShriKrishna Solar location map"
+                            src="https://www.google.com/maps?q=Kharagpur%2C%20West%20Bengal%2C%20India&amp;output=embed"
+                            width="390"
+                            height="195"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- /WP -->
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <!-- WP: ACF footer_copyright -->
+                <p>&copy; 2026 ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+                <!-- /WP -->
+
+                <!-- WP: wp_nav_menu('footer_legal_links') -->
+                <nav class="site-footer__legal" aria-label="Footer legal links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <span>|</span>
+                    <a href="#">Refund Policy</a>
+                </nav>
+                <!-- /WP -->
+            </div>
+        </div>
+    </footer>
+    <!-- /SECTION: Footer -->
+    <a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp fs-2"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
+    <!-- Project category filter -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            /* ── Project category filter ── */
+            const filterBtns = document.querySelectorAll('.proj-filter-btn');
+            const cards      = document.querySelectorAll('.proj-card-wrap');
+
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    filterBtns.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter');
+                    cards.forEach(function (card) {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+        });
+    </script>
+
+
+
+</body>
+</html>

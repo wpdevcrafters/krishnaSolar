@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Savings Forecast Calculator (25 Years) | ShriKrishna Solar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
+            </a>
+
+            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                <a href="https://wa.me/919876543210"
+                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </a>
+                <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    Book Free Solar Consultation
+                </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                    aria-controls="navDrawer" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile / Tablet Drawer -->
+            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+                <div class="offcanvas-header border-bottom">
+                    <a href="../index.html" class="navbar-brand mb-0">
+                        <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Mobile-only CTA block -->
+                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                        <a href="../contact.html"
+                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                           data-bs-dismiss="offcanvas">
+                            Book Free Solar Consultation
+                        </a>
+                        <a href="https://wa.me/919876543210"
+                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919876543210"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section class="calc-detail-hero" aria-labelledby="calc-detail-title">
+    <div class="calc-detail-hero__bg" aria-hidden="true"></div>
+    <div class="container position-relative z-1">
+        <div class="calc-detail-hero__content" data-aos="fade-up">
+            <nav aria-label="breadcrumb" class="calc-detail-hero__breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../index.html">Home</a></li><li class="breadcrumb-item"><a href="../calculators.html">Solar Calculators</a></li><li class="breadcrumb-item active" aria-current="page">Solar Savings Forecast</li></ol></nav>
+            <h1 class="calc-detail-hero__title" id="calc-detail-title"><span class="calc-detail-hero__accent">Solar Savings Forecast (25 Years)</span></h1>
+            <p class="calc-detail-hero__desc">Calculate your total wealth creation by switching to solar today. See how much you will save over 25 years with electricity inflation factored in.</p>
+            <div class="calc-detail-hero__badges"><span class="calc-detail-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span><span class="calc-detail-hero__badge"><i class="bi bi-shield-check-fill"></i> Free Tool</span><span class="calc-detail-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="calc-detail-section py-5" id="calculator">
+    <div class="container">
+        <div class="calculator-detail-scope">
+<div>
+        
+
+        <div class="hero-section calc-inline-065">
+            <h1 class="calc-inline-066">Solar Savings Forecast (25 Years)</h1>
+            <p class="calc-inline-067">Calculate total wealth creation by switching to solar today.</p>
+        </div>
+
+        <div class="grid grid-calc">
+            <!-- Left: Calculator Form -->
+            <div class="calculator-form-card">
+                <form id="savings-calculator-form">
+                    <div class="form-group">
+                        <label>Current Monthly Bill (₹)</label>
+                        <input type="number" id="monthly_bill" class="form-control" placeholder="e.g. 3000" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Electricity Inflation Rate (%)</label>
+                        <input type="number" id="inflation" class="form-control" value="5">
+                        <p class="calc-inline-068">Tariff hike per year
+                            (Avg 5%).</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary calc-inline-069">Forecast
+                        Savings</button>
+                </form>
+            </div>
+
+            <!-- Right: Results -->
+            <div id="result-box" class="result-container calc-inline-023">
+
+                <div class="metric-card featured calc-inline-116">
+                    <div class="metric-label calc-inline-117">Total 25-Year Savings</div>
+                    <div class="metric-value calc-inline-118">₹<span id="res_total">-</span>
+                    </div>
+                    <div class="metric-sub">Inflation Adjusted Wealth</div>
+                </div>
+
+                <div class="details-card-modern">
+                    <div class="details-header-modern">
+                        <span class="calc-inline-032">📈</span> Year-wise Projection
+                    </div>
+                    <div class="details-list">
+                        <div class="detail-row-modern">
+                            <span class="detail-label-modern">Savings in Year 1</span>
+                            <span id="res_year1_save" class="detail-value-modern">-</span>
+                        </div>
+                        <div class="detail-row-modern">
+                            <span class="detail-label-modern">Savings in Year 10</span>
+                            <span id="res_year10_save" class="detail-value-modern calc-inline-119">-</span>
+                        </div>
+                        <div class="detail-row-modern">
+                            <span class="detail-label-modern">Savings in Year 25</span>
+                            <span id="res_year25_save" class="detail-value-modern calc-inline-120">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-3 bg-light border rounded calc-inline-077">
+                    <strong>Disclaimer:</strong> This calculation is an approximation based on average solar generation
+                    numbers in India (4 units/kW/day).
+                </div>
+            </div>
+
+                            <!-- Inline "Get 3 Free Quotes" CTA -->
+                <div id="lm-inline-cta" class="calc-inline-078">
+                    <div class="calc-inline-079">
+                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
+                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                    </div>
+                    <button onclick="(function(){var s=document.getElementById('state'),c=document.getElementById('city'),k=document.getElementById('system_capacity');window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{state:s?s.options[s.selectedIndex].text:'',city:c&amp;&amp;c.value?c.options[c.selectedIndex].text:'',size:k?k.value:''});})();" class="calc-inline-082">Get Free Quotes →</button>
+                </div>
+            <!-- Default Empty State -->
+            <div id="empty-state" class="result-container calc-inline-083">
+                <img alt="" src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-084">
+                <h3>Predict Future Savings 🔮</h3>
+            </div>
+        </div>
+
+        <!-- SEO Content -->
+        <article class="content-area mt-5">
+            <h2>The "Cost of Waiting" Analysis</h2>
+            <p>Most people look at the cost of installing solar (e.g. ₹2 Lakhs). But very few look at the <strong>cost
+                    of NOT installing solar</strong>. </p>
+            <p>If your monthly bill is ₹3,000 today, you are paying ₹36,000 a year to the DISCOM. This is money that is
+                burned forever. It creates no asset.</p>
+
+            <h3>The Power of Electricity Inflation</h3>
+            <p>Grid electricity prices in India are not fixed. They rise due to coal prices, distribution losses, and
+                inflation. A conservative estimate is a <strong>5% annual hike</strong>.</p>
+            <ul>
+                <li><strong>Year 1:</strong> You pay ₹ 36,000</li>
+                <li><strong>Year 10:</strong> You will pay ₹ 55,000 (for the same usage!)</li>
+                <li><strong>Year 20:</strong> You will pay ₹ 90,000</li>
+            </ul>
+            <p>By locking in your energy cost today with a solar plant, you immune yourself from these hikes.</p>
+        </article>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<section class="cta-section py-4 bg-white">
+    <div class="container">
+        <div class="cta-banner" data-aos="fade-up">
+            <div class="cta-banner__content">
+                <h2 class="cta-banner__title">Ready to Go Solar?</h2>
+                <p class="cta-banner__text">Get a free site survey and precise quote from our expert solar team.</p>
+                <div class="cta-banner__actions"><a href="../contact.html" class="cta-banner__btn cta-banner__btn--primary">Book Free Consultation</a><a href="../calculators.html" class="cta-banner__btn cta-banner__btn--secondary">All Calculators</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="../index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="../assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../calculators.html">Solar Calculator</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="#">Privacy Policy</a><span>|</span>
+                <a href="#">Terms &amp; Conditions</a><span>|</span>
+                <a href="#">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/calculator-js/solar-energy-savings-calculator.js"></script>
+</body>
+</html>
+

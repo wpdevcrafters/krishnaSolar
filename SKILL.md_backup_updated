@@ -1,0 +1,389 @@
+# AI Project Orchestrator
+
+This repository contains a professional web application that will evolve through multiple development phases.
+
+The AI assistant should understand the complete project lifecycle before making decisions.
+
+---
+
+# Project Goal
+
+The final product is a Solar CRM built on WordPress.
+
+The development process is intentionally divided into phases.
+
+Never skip phases.
+
+Always optimize current work for future phases.
+
+---
+
+# Development Roadmap
+
+Phase 1
+
+UI Design
+
+↓
+
+Phase 2
+
+Static HTML Development
+
+↓
+
+Phase 3
+
+Responsive Optimization
+
+↓
+
+Phase 4
+
+WordPress Theme Development
+
+↓
+
+Phase 5
+
+Custom Plugin Development
+
+↓
+
+Phase 6
+
+Solar CRM Features
+
+↓
+
+Phase 7
+
+API Integrations
+
+↓
+
+Phase 8
+
+Testing
+
+↓
+
+Phase 9
+
+Deployment
+
+---
+
+# Current Phase
+
+The repository is currently in the HTML Development phase.
+
+During this phase the primary objective is creating clean reusable HTML that can later become WordPress templates.
+
+Avoid WordPress-specific implementation unless requested.
+
+Instead, write HTML that can easily become:
+
+header.php
+
+footer.php
+
+page templates
+
+template parts
+
+Gutenberg blocks
+
+Elementor sections
+
+WooCommerce templates
+
+---
+
+# Long-Term Goal
+
+The finished application will become a complete Solar CRM including:
+
+Lead Management
+
+Customer Management
+
+Quotation Management
+
+Site Survey
+
+Project Tracking
+
+Installation Workflow
+
+Document Management
+
+Sales Pipeline
+
+Follow-up System
+
+Task Management
+
+Employee Management
+
+Dealer Management
+
+Installer Portal
+
+Customer Portal
+
+Support Tickets
+
+Email Notifications
+
+SMS Notifications
+
+Payment Tracking
+
+Invoices
+
+Reports
+
+Analytics Dashboard
+
+Role-based Permissions
+
+REST API
+
+Third-party Integrations
+
+Cloud Deployment
+
+Every architectural decision should keep these future requirements in mind.
+
+---
+
+# General Rules
+
+Always generate production-ready code.
+
+Never generate demo code.
+
+Never generate placeholder logic.
+
+Never generate fake APIs.
+
+Never remove existing functionality.
+
+Always preserve backward compatibility.
+
+Prefer extending existing architecture.
+
+Avoid unnecessary complexity.
+
+Keep solutions modular.
+
+Follow Single Responsibility Principle.
+
+---
+
+# Project Organization
+
+Respect the current folder structure.
+
+Do not move files unless requested.
+
+Do not rename files.
+
+Do not reorganize assets.
+
+Keep HTML reusable.
+
+Separate structure, style and behavior.
+
+---
+
+# HTML Rules
+
+Prefer semantic HTML5.
+
+Use accessible markup.
+
+Use external CSS.
+
+Use external JavaScript.
+
+Never use inline JavaScript.
+
+Avoid inline CSS.
+
+Create reusable sections.
+
+Keep layouts modular.
+
+Optimize for future PHP conversion.
+
+---
+
+# CSS Rules
+
+Prefer Bootstrap 5.
+
+Use CSS variables.
+
+Mobile-first.
+
+Avoid !important.
+
+Avoid duplicated selectors.
+
+Keep components reusable.
+
+---
+
+# JavaScript Rules
+
+Prefer ES2023+.
+
+Use const by default.
+
+Use async/await.
+
+Avoid globals.
+
+Keep modules independent.
+
+---
+
+# Images
+
+Always use optimized images.
+
+Lazy load where appropriate.
+
+Use descriptive alt attributes.
+
+---
+
+# Accessibility
+
+WCAG friendly.
+
+Keyboard navigation.
+
+Semantic HTML.
+
+Proper labels.
+
+Meaningful headings.
+
+Visible focus states.
+
+---
+
+# Performance
+
+Optimize for Core Web Vitals.
+
+Avoid unnecessary JavaScript.
+
+Avoid unnecessary DOM nodes.
+
+Minimize HTTP requests.
+
+Optimize assets.
+
+---
+
+# Security
+
+Never expose credentials.
+
+Validate all input.
+
+Escape output.
+
+Never hardcode secrets.
+
+---
+
+# Documentation
+
+When implementing major functionality explain:
+
+Purpose
+
+Architecture
+
+Files modified
+
+Reasoning
+
+Limitations
+
+Future improvements
+
+---
+
+# AI Skill Selection
+
+When a task relates to HTML conversion, use:
+
+ui-to-html
+
+When reviewing existing code, use:
+
+code-review
+
+When debugging, use:
+
+bug-fixer
+
+When converting to WordPress, use:
+
+wordpress-engineer
+
+When working with React or Next.js, use:
+
+react-nextjs
+
+When preparing production infrastructure, use:
+
+deployment
+
+When multiple skills could apply, choose one primary skill and only use others as supporting context.
+
+Avoid mixing responsibilities unnecessarily.
+
+---
+
+# Quality Checklist
+
+Every completed task should be:
+
+Production Ready
+
+Responsive
+
+Accessible
+
+Maintainable
+
+Secure
+
+Performant
+
+Reusable
+
+Well Structured
+
+Well Documented
+
+Compatible with future WordPress migration
+
+Compatible with future CRM development
+
+Optimized for long-term maintenance
+
+---
+
+# Final Objective
+
+Every decision made today should reduce future development effort.
+
+The HTML created now should transition smoothly into a scalable WordPress-powered Solar CRM without requiring major rewrites.

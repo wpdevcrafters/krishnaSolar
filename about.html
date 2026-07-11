@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ShriKrishna Solar</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        /* Exact Colors Extracted from Homepage Image */
+        :root {
+            --brand-success: #10b981; /* Primary Green */
+            --brand-success-dark: #059669;
+            --brand-warning: #f59e0b; /* Accent Orange/Yellow */
+            --brand-warning-hover: #d97706;
+            --brand-dark: #0f172a; /* Slate Dark */
+            --font-family-base: 'Outfit', sans-serif;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            color: #334155;
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Utilities */
+        .text-primary-dark { color: var(--brand-dark) !important; }
+        .text-success { color: var(--brand-success) !important; }
+        .text-warning { color: var(--brand-warning) !important; }
+        .bg-success { background-color: var(--brand-success) !important; }
+        .bg-warning { background-color: var(--brand-warning) !important; }
+
+        .fs-7 { font-size: 0.875rem !important; }
+        .fs-8 { font-size: 0.75rem !important; }
+        
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important; }
+
+        /* Buttons (Matching Homepage) */
+        .btn-success { background-color: var(--brand-success); border-color: var(--brand-success); color: white; }
+        .btn-success:hover { background-color: var(--brand-success-dark); border-color: var(--brand-success-dark); color: white; }
+        .btn-warning { background-color: var(--brand-warning); border-color: var(--brand-warning); color: #fff; }
+        .btn-warning:hover { background-color: var(--brand-warning-hover); border-color: var(--brand-warning-hover); color: #fff; }
+
+        /* Header Navigation */
+        .navbar-nav .nav-link {
+            color: #475569;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.2s;
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: var(--brand-success) !important;
+        }
+
+        /* About Hero Section */
+        .about-hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(16, 185, 129, 0.85) 100%), url('https://placehold.co/1920x600/e2e8f0/475569?text=Solar+Installation+Team') center/cover no-repeat;
+            padding: 6rem 0;
+            color: white;
+            position: relative;
+        }
+        
+        /* Stat Cards */
+        .stat-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--brand-warning);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Core Value Cards */
+        .value-icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Image Masking */
+        .img-mask-rounded {
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header sticky-top bg-white shadow-sm border-bottom">
+        <nav class="navbar navbar-expand-xl py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <i class="bi bi-brightness-high-fill text-warning fs-2"></i>
+                    <div>
+                        <h1 class="m-0 fs-5 fw-bold text-primary-dark lh-1">ShriKrishna Solar</h1>
+                        <span class="d-block text-muted" style="font-size: 0.65rem; letter-spacing: 0.5px;">powering a brighter future</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Residential Solar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Commercial Solar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Solar Calculator</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="https://wa.me/1234567890" class="btn btn-light rounded-circle text-success fs-5 p-2 shadow-sm d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#contact" class="btn btn-warning fw-semibold rounded-pill px-4 shadow-sm">Get Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="about-hero text-center">
+        <div class="container position-relative z-1">
+            <span class="badge bg-warning mb-3 px-3 py-2 rounded-pill fs-8 fw-medium text-dark">Who We Are</span>
+            <h1 class="display-4 fw-bold mb-3">Accelerating India's Transition <br>to Clean Energy</h1>
+            <p class="lead opacity-75 col-md-8 mx-auto mb-0">We are passionate engineers, designers, and solar experts dedicated to making renewable energy accessible, affordable, and reliable for everyone.</p>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 position-relative">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-success bg-opacity-10 rounded-circle" style="transform: scale(0.9); z-index: 0; filter: blur(40px);"></div>
+                    <img src="https://placehold.co/800x900/e2e8f0/475569?text=Solar+Engineers" class="img-fluid img-mask-rounded position-relative z-1" alt="Our Story">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold text-primary-dark mb-4">Our Journey</h2>
+                    <p class="text-muted fs-6 mb-4 lh-lg">Founded with a vision to revolutionize the rooftop solar industry, ShriKrishna Solar began as a small team of passionate engineers. Today, we have grown into one of the region's most trusted end-to-end EPC (Engineering, Procurement, and Construction) companies.</p>
+                    <p class="text-muted fs-6 mb-5 lh-lg">We recognized that customers were often confused by complex solar jargon and unreliable vendors. We stepped in to bridge that gap by providing complete transparency, premium Tier-1 materials, and hassle-free subsidy assistance.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-3 align-items-start">
+                                <i class="bi bi-bullseye text-warning fs-2 mt-1"></i>
+                                <div>
+                                    <h5 class="fw-bold text-primary-dark mb-2">Our Mission</h5>
+                                    <p class="text-muted fs-8 mb-0">To empower homes and businesses to generate their own clean energy, reducing carbon footprints and electricity bills simultaneously.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-3 align-items-start">
+                                <i class="bi bi-eye-fill text-success fs-2 mt-1"></i>
+                                <div>
+                                    <h5 class="fw-bold text-primary-dark mb-2">Our Vision</h5>
+                                    <p class="text-muted fs-8 mb-0">To become the most reliable and innovative renewable energy partner in the country, powering a 100% sustainable future.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light border-top border-bottom">
+        <div class="container py-4">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card hover-lift">
+                        <i class="bi bi-calendar-check text-warning fs-1 mb-3 d-block"></i>
+                        <h2 class="fw-bold text-primary-dark mb-1">15+</h2>
+                        <span class="text-muted fw-medium fs-7">Years Experience</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card hover-lift border-bottom border-success">
+                        <i class="bi bi-house-check text-success fs-1 mb-3 d-block"></i>
+                        <h2 class="fw-bold text-primary-dark mb-1">1,500+</h2>
+                        <span class="text-muted fw-medium fs-7">Installations Done</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card hover-lift border-bottom border-primary">
+                        <i class="bi bi-lightning-charge text-primary fs-1 mb-3 d-block"></i>
+                        <h2 class="fw-bold text-primary-dark mb-1">12 MW+</h2>
+                        <span class="text-muted fw-medium fs-7">Total Capacity</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card hover-lift border-bottom border-danger">
+                        <i class="bi bi-cloud-arrow-down text-danger fs-1 mb-3 d-block"></i>
+                        <h2 class="fw-bold text-primary-dark mb-1">9,200+</h2>
+                        <span class="text-muted fw-medium fs-7">Tons CO₂ Saved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-dark">Why We Stand Out</h2>
+                <p class="text-muted fs-6 mt-3">The principles that guide our work and our relationship with you.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift bg-light">
+                        <div class="value-icon-box bg-success bg-opacity-10 text-success">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary-dark mb-3">Uncompromising Quality</h5>
+                        <p class="text-muted fs-7 mb-0">We exclusively use Tier-1 ALMM-approved panels, heavy-duty GI structures, and premium inverters to ensure your plant runs flawlessly for 25+ years.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift bg-light">
+                        <div class="value-icon-box bg-warning bg-opacity-10 text-warning">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary-dark mb-3">100% Transparency</h5>
+                        <p class="text-muted fs-7 mb-0">No hidden fees or unrealistic promises. We provide highly accurate generation estimates and clear financial models before you sign anything.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 hover-lift bg-light">
+                        <div class="value-icon-box bg-primary bg-opacity-10 text-primary">
+                            <i class="bi bi-person-hearts"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary-dark mb-3">Customer First Approach</h5>
+                        <p class="text-muted fs-7 mb-0">From handling complex subsidy paperwork to managing net-metering approvals with the DISCOM, we take the entire burden off your shoulders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 text-white text-center position-relative" style="background: linear-gradient(135deg, var(--brand-success-dark) 0%, var(--brand-success) 100%);">
+        <div class="container py-4">
+            <h2 class="display-6 fw-bold mb-3">Be Part of the Solar Revolution</h2>
+            <p class="lead opacity-75 mb-4 col-md-6 mx-auto">Join thousands of happy homeowners and businesses who trust ShriKrishna Solar.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-warning rounded-pill px-5 py-3 fw-bold shadow-sm hover-lift text-white">Get Your Free Quote</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container pt-4">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center gap-2 mb-4" href="#">
+                        <i class="bi bi-brightness-high-fill text-warning fs-3"></i>
+                        <div>
+                            <h3 class="m-0 fs-5 fw-bold text-white">ShriKrishna Solar</h3>
+                            <span class="d-block fs-8 text-light opacity-75">powering a brighter future</span>
+                        </div>
+                    </a>
+                    <p class="fs-8 text-light opacity-75 mb-4">Your trusted partner for rooftop solar solutions. We help you save more, save energy and build a sustainable future.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 offset-lg-1">
+                    <h5 class="fw-bold mb-4 fs-6 text-white">Quick Links</h5>
+                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
+                        <li><a href="#" class="text-reset text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-reset text-decoration-none">Residential Solar</a></li>
+                        <li><a href="#" class="text-reset text-decoration-none">Commercial Solar</a></li>
+                        <li><a href="#" class="text-reset text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 fs-6 text-white">Our Services</h5>
+                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
+                        <li>Rooftop Solar Installation</li>
+                        <li>System Design & Engineering</li>
+                        <li>Solar Maintenance (AMC)</li>
+                        <li>Subsidy Assistance</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 fs-6 text-white">Contact Info</h5>
+                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-buildings text-warning mt-1"></i> <span>Kharagpur, West Bengal - 721301</span></li>
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-telephone text-warning mt-1"></i> <span>+91 98765 43210</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-envelope text-warning mt-1"></i> <span>info@shrikrishnasolar.in</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-top border-secondary pt-3 mt-4 d-flex flex-column flex-md-row justify-content-between align-items-center fs-8 text-light opacity-75">
+                <p class="mb-2 mb-md-0">&copy; 2026 ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-reset text-decoration-none">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#" class="text-reset text-decoration-none">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

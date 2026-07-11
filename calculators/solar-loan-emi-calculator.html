@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Loan EMI Calculator 2026 | ShriKrishna Solar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
+            </a>
+
+            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                <a href="https://wa.me/919876543210"
+                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </a>
+                <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    Book Free Solar Consultation
+                </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                    aria-controls="navDrawer" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile / Tablet Drawer -->
+            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+                <div class="offcanvas-header border-bottom">
+                    <a href="../index.html" class="navbar-brand mb-0">
+                        <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Mobile-only CTA block -->
+                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                        <a href="../contact.html"
+                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                           data-bs-dismiss="offcanvas">
+                            Book Free Solar Consultation
+                        </a>
+                        <a href="https://wa.me/919876543210"
+                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919876543210"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section class="calc-detail-hero" aria-labelledby="calc-detail-title">
+    <div class="calc-detail-hero__bg" aria-hidden="true"></div>
+    <div class="container position-relative z-1">
+        <div class="calc-detail-hero__content" data-aos="fade-up">
+            <nav aria-label="breadcrumb" class="calc-detail-hero__breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../index.html">Home</a></li><li class="breadcrumb-item"><a href="../calculators.html">Solar Calculators</a></li><li class="breadcrumb-item active" aria-current="page">Solar Loan EMI Calculator</li></ol></nav>
+            <h1 class="calc-detail-hero__title" id="calc-detail-title"><span class="calc-detail-hero__accent">Solar Loan EMI Calculator</span></h1>
+            <p class="calc-detail-hero__desc">Calculate your solar loan EMI, total interest payable, and effective payback period. See how solar actually pays for itself through bill savings.</p>
+            <div class="calc-detail-hero__badges"><span class="calc-detail-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span><span class="calc-detail-hero__badge"><i class="bi bi-shield-check-fill"></i> Free Tool</span><span class="calc-detail-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="calc-detail-section py-5" id="calculator">
+    <div class="container">
+        <div class="calculator-detail-scope">
+<div class="grid grid-calc">
+            <!-- Left: Calculator Form -->
+            <div class="calculator-form-card">
+                <form id="loan-calc-form" autocomplete="off" data-gtm-form-interact-id="0">
+
+                    <!-- 1. System Size -->
+                    <div class="form-group">
+                        <label for="system_size">System Size (kW)</label>
+                        <div class="slider-wrapper">
+                            <input type="range" id="system_size_slider" min="1" max="10" step="0.5" value="3">
+                            <span class="slider-val" id="system_size_val">3 kW</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. System Cost -->
+                    <div class="form-group">
+                        <label for="system_cost">System Cost (₹)
+                            <span class="calc-inline-156">Auto-filled · editable</span>
+                        </label>
+                        <input type="number" id="system_cost" class="form-control" placeholder="e.g. 195000" min="10000" step="1000">
+                    </div>
+
+                    <!-- 3. PM Surya Ghar Subsidy -->
+                    <div class="form-group">
+                        <label for="subsidy">PM Surya Ghar Subsidy (₹)
+                            <span class="calc-inline-156">Auto-filled · editable</span>
+                        </label>
+                        <input type="number" id="subsidy" class="form-control" placeholder="e.g. 78000" min="0" step="1000">
+                        <p class="calc-inline-157">1 kW=₹30,000 · 2 kW=₹60,000 · 3 kW+=₹78,000</p>
+                    </div>
+
+                    <!-- 4. Down Payment -->
+                    <div class="form-group">
+                        <label>Down Payment (%)</label>
+                        <div class="slider-wrapper">
+                            <input type="range" id="down_pct_slider" min="0" max="50" step="5" value="10">
+                            <span class="slider-val" id="down_pct_val">10%</span>
+                        </div>
+                        <p class="calc-inline-158">Down Payment Amount: <strong id="down_amt_display">₹19,500</strong></p>
+                    </div>
+
+                    <!-- 5. Loan Amount -->
+                    <div class="form-group">
+                        <label for="loan_amount">Loan Amount (₹)
+                            <span class="calc-inline-156">Auto-calculated · editable</span>
+                        </label>
+                        <input type="number" id="loan_amount" class="form-control" placeholder="e.g. 107000" min="1000" step="1000" data-gtm-form-interact-field-id="0">
+                    </div>
+
+                    <!-- 6. Interest Rate -->
+                    <div class="form-group">
+                        <label for="interest_rate">Interest Rate (% per annum)</label>
+                        <div class="slider-wrapper">
+                            <input type="range" id="interest_rate_slider" min="6" max="18" step="0.25" value="7">
+                            <span class="slider-val" id="interest_rate_val">7%</span>
+                        </div>
+                        <input type="number" id="interest_rate" class="form-control calc-inline-159" step="0.25" min="1" max="36" value="7">
+                    </div>
+
+                    <!-- 7. Loan Tenure -->
+                    <div class="form-group">
+                        <label>Loan Tenure</label>
+                        <div class="tenure-options">
+                            <button type="button" class="tenure-btn active" data-years="5">5 Yrs</button>
+                            <button type="button" class="tenure-btn" data-years="7">7 Yrs</button>
+                            <button type="button" class="tenure-btn" data-years="10">10 Yrs</button>
+                            <button type="button" class="tenure-btn" data-years="15">15 Yrs</button>
+                        </div>
+                        <input type="hidden" id="loan_tenure" value="5">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary calc-inline-160">Calculate EMI</button>
+                </form>
+            </div>
+
+            <!-- Right: Results -->
+            <div id="result-box" class="result-container calc-inline-086">
+
+                <!-- Top KPIs -->
+                <div class="grid grid-2">
+                    <div class="metric-card featured calc-inline-161">
+                        <div class="metric-label calc-inline-162">Monthly EMI</div>
+                        <div class="metric-value calc-inline-117" id="res_emi">₹1,980</div>
+                        <div class="metric-sub">Fixed every month</div>
+                    </div>
+                    <div class="metric-card calc-inline-163">
+                        <div class="metric-label calc-inline-164">Monthly Savings</div>
+                        <div class="metric-value calc-inline-165" id="res_savings">₹2,520</div>
+                        <div class="metric-sub">Electricity bill cut</div>
+                    </div>
+                </div>
+
+                <!-- Repayment Summary -->
+                <div class="details-card-modern calc-inline-166">
+                    <div class="details-header-modern">
+                        <span class="calc-inline-032">📊</span> Repayment Summary
+                    </div>
+                    <div class="details-list">
+                        <div class="detail-row-modern">
+                            <span class="detail-label">Loan Amount</span>
+                            <span id="res_loan" class="detail-value">₹1,00,000</span>
+                        </div>
+                        <div class="detail-row-modern">
+                            <span class="detail-label">Total Interest Paid</span>
+                            <span id="res_interest" class="detail-value calc-inline-167">₹18,807</span>
+                        </div>
+                        <div class="detail-row-modern">
+                            <span class="detail-label">Total Amount Paid</span>
+                            <span id="res_total" class="detail-value">₹1,18,807</span>
+                        </div>
+                        <div class="detail-row-modern">
+                            <span class="detail-label">Payback Period</span>
+                            <span id="res_payback" class="detail-value calc-inline-168">3.9 years</span>
+                        </div>
+                    </div>
+
+                    <!-- Principal vs Interest bar -->
+                    <div class="calc-inline-166">
+                        <div class="calc-inline-169">
+                            <span>Principal vs Interest breakdown</span>
+                        </div>
+                        <div class="calc-inline-170">
+                            <div id="principal_bar" class="calc-inline-171"></div>
+                            <div id="interest_bar" class="calc-inline-172"></div>
+                        </div>
+                        <div class="calc-inline-173">
+                            <span><span class="calc-inline-174">●</span> Principal (<span id="principal_pct">84%</span>)</span>
+                            <span><span class="calc-inline-175">●</span> Interest (<span id="interest_pct">16%</span>)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EMI vs Savings comparison -->
+                <div class="comparison-highlight" id="emi_vs_savings_box">
+                    <div class="ch-title">💡 EMI vs Electricity Savings</div>
+                    <div class="ch-text" id="emi_vs_savings_text">Your EMI is ₹1,980 but you save ₹2,520/month on electricity — net gain of <strong>₹540/month</strong>. Solar pays for itself!</div>
+                </div>
+
+                <!-- Amortization -->
+                <div class="calc-inline-150">
+                    <button onclick="toggleAmort()" class="btn calc-inline-176" id="amort-toggle-btn">Show Year-by-Year Amortization</button>
+                    <div id="amort-container" class="calc-inline-177">
+                        <table class="amort-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Principal Paid</th>
+                                    <th>Interest Paid</th>
+                                    <th>Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody id="amort-body"><tr><td>Year 1</td><td>₹17,310</td><td>₹6,452</td><td>₹82,690</td></tr><tr><td>Year 2</td><td>₹18,561</td><td>₹5,200</td><td>₹64,129</td></tr><tr><td>Year 3</td><td>₹19,903</td><td>₹3,859</td><td>₹44,226</td></tr><tr><td>Year 4</td><td>₹21,342</td><td>₹2,420</td><td>₹22,884</td></tr><tr><td>Year 5</td><td>₹22,884</td><td>₹877</td><td>₹0</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Inline "Get 3 Free Quotes" CTA -->
+                <div id="lm-inline-cta" class="calc-inline-078">
+                    <div class="calc-inline-079">
+                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
+                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                    </div>
+                    <button onclick="window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{});" class="calc-inline-082">Get Free Quotes →</button>
+                </div>
+
+                <!-- Share / Print -->
+                <div class="calc-inline-178">
+                    <button id="whatsapp-share-btn" class="btn calc-inline-179">
+                        📱 Share on WhatsApp
+                    </button>
+                    <button onclick="window.print()" class="btn calc-inline-180">
+                        🖨️
+                    </button>
+                </div>
+
+                <p class="calc-inline-181">
+                    * EMI calculated using standard reducing balance formula. Savings estimated at ₹7/unit × 4 units/kW/day.
+                </p>
+            </div>
+
+            <!-- Default Empty State -->
+            <div id="empty-state" class="result-container calc-inline-155">
+                <img src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-182" alt="">
+                <h3>Calculate your Solar Loan EMI 💰</h3>
+                <p class="calc-inline-183">Enter system size and loan details to see your monthly installment vs electricity savings.</p>
+            </div>
+        </div>
+</div>
+   
+    </div>
+</section>
+
+<section class="cta-section py-4 bg-white">
+    <div class="container">
+        <div class="cta-banner" data-aos="fade-up">
+            <div class="cta-banner__content">
+                <h2 class="cta-banner__title">Ready to Go Solar?</h2>
+                <p class="cta-banner__text">Get a free site survey and precise quote from our expert solar team.</p>
+                <div class="cta-banner__actions"><a href="../contact.html" class="cta-banner__btn cta-banner__btn--primary">Book Free Consultation</a><a href="../calculators.html" class="cta-banner__btn cta-banner__btn--secondary">All Calculators</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="../index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="../assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../calculators.html">Solar Calculator</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="#">Privacy Policy</a><span>|</span>
+                <a href="#">Terms &amp; Conditions</a><span>|</span>
+                <a href="#">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/calculator-js/solar-loan-emi-calculator.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Battery Backup Calculator | ShriKrishna Solar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
+            </a>
+
+            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                <a href="https://wa.me/919876543210"
+                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </a>
+                <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    Book Free Solar Consultation
+                </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                    aria-controls="navDrawer" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile / Tablet Drawer -->
+            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+                <div class="offcanvas-header border-bottom">
+                    <a href="../index.html" class="navbar-brand mb-0">
+                        <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Mobile-only CTA block -->
+                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                        <a href="../contact.html"
+                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                           data-bs-dismiss="offcanvas">
+                            Book Free Solar Consultation
+                        </a>
+                        <a href="https://wa.me/919876543210"
+                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919876543210"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section class="calc-detail-hero" aria-labelledby="calc-detail-title">
+    <div class="calc-detail-hero__bg" aria-hidden="true"></div>
+    <div class="container position-relative z-1">
+        <div class="calc-detail-hero__content" data-aos="fade-up">
+            <nav aria-label="breadcrumb" class="calc-detail-hero__breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../index.html">Home</a></li><li class="breadcrumb-item"><a href="../calculators.html">Solar Calculators</a></li><li class="breadcrumb-item active" aria-current="page">Battery Backup Calculator</li></ol></nav>
+            <h1 class="calc-detail-hero__title" id="calc-detail-title"><span class="calc-detail-hero__accent">Solar Battery Backup Calculator</span></h1>
+            <p class="calc-detail-hero__desc">Calculate the right battery capacity for your solar system. Know exactly how long your batteries will last during a power cut.</p>
+            <div class="calc-detail-hero__badges"><span class="calc-detail-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span><span class="calc-detail-hero__badge"><i class="bi bi-shield-check-fill"></i> Free Tool</span><span class="calc-detail-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="calc-detail-section py-5" id="calculator">
+    <div class="container">
+        <div class="calculator-detail-scope">
+<div>
+        <p class="calc-inline-064">
+            <a href="/">Home</a> &gt; Solar Battery Calculator
+        </p>
+
+        <div class="hero-section calc-inline-065">
+            <h1 class="calc-inline-066">Solar Battery Backup Calculator</h1>
+            <p class="calc-inline-067">Find out how many batteries (Ah) you need to run your appliances during power cuts.
+            </p>
+        </div>
+
+        <div class="grid grid-calc">
+
+            <!-- Left: Calculator Form -->
+            <div class="calculator-form-card">
+                <form id="battery-calculator-form">
+                    <div class="form-group">
+                        <label>Total Load of Appliances (Watts)</label>
+                        <input type="number" id="total_load" class="form-control" placeholder="e.g. 400 (3 Fans, 4 Lights, 1 TV)" required="">
+                        <p class="calc-inline-068">Sum of wattages of all
+                            devices running simultaneously.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Required Backup Time (Hours)</label>
+                        <input type="number" id="backup_hours" class="form-control" placeholder="e.g. 4" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>System Voltage</label>
+                        <select id="battery_voltage" class="form-control">
+                            <option value="12" selected="">12V (Single Battery Inverter)</option>
+                            <option value="24">24V (Double Battery Inverter)</option>
+                            <option value="48">48V (Large Solar System)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary calc-inline-069">
+                        Calculate Battery Size
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Results Dashboard (Initially Hidden) -->
+            <div id="result-box" class="result-container calc-inline-023">
+
+                <!-- Top Key Metrics Row -->
+                <div class="grid grid-2">
+                    <div class="metric-card highlight">
+                        <div class="metric-label">Required Capacity</div>
+                        <div class="metric-value"><span id="res_ah">-</span> <span class="calc-inline-032">Ah</span>
+                        </div>
+                        <div class="metric-sub">Ampere Hours</div>
+                    </div>
+                    <div class="metric-card success">
+                        <div class="metric-label">Recommended Bank</div>
+                        <div class="metric-value"><span id="res_batteries">-</span></div>
+                        <div class="metric-sub">Standard 150Ah Batteries</div>
+                    </div>
+                </div>
+
+                <!-- Detailed Breakdown Table -->
+                <div class="details-card-modern">
+                    <div class="details-header-modern">
+                        <span class="calc-inline-032">⚡</span> Bank Configuration
+                    </div>
+                    <div class="calc-inline-095">
+                        <div class="breakdown-table-wrapper"><table class="breakdown-table">
+                            <tbody>
+                                <tr>
+                                    <td>System Voltage</td>
+                                    <td id="res_config" class="text-right">-</td>
+                                </tr>
+                                <tr class="final-row">
+                                    <td>
+                                        <span class="final-label">Total Bank Capacity</span>
+                                    </td>
+                                    <td id="res_total_capacity" class="text-right calc-inline-096">
+                                        -</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pro Tip -->
+                <div class="mt-4 calc-inline-097">
+                    <strong>Pro Tip:</strong> We added a <strong>30% buffer</strong> for "Depth of Discharge" (DoD). You
+                    should never drain a Lead Acid battery 100%, or it will die quickly. This calculation ensures long
+                    battery life.
+                </div>
+
+                <div class="mt-4 p-3 bg-light border rounded calc-inline-077">
+                    <strong>Disclaimer:</strong> This calculation is an approximation based on average solar generation
+                    numbers in India (4 units/kW/day). Actual generation may vary depending on your location, roof
+                    angle, and shadow conditions.
+                </div>
+
+                <!-- Inline "Get 3 Free Quotes" CTA -->
+                <div id="lm-inline-cta" class="calc-inline-078">
+                    <div class="calc-inline-079">
+                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
+                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                    </div>
+                    <button onclick="(function(){var s=document.getElementById('state'),c=document.getElementById('city'),k=document.getElementById('system_capacity');window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{state:s?s.options[s.selectedIndex].text:'',city:c&amp;&amp;c.value?c.options[c.selectedIndex].text:'',size:k?k.value:''});})();" class="calc-inline-082">Get Free Quotes →</button>
+                </div>
+
+            </div>
+
+            <!-- Default "Empty State" Right Side -->
+            <div id="empty-state" class="result-container calc-inline-083">
+                <img alt="" src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-084">
+                <h3>Ensure 24x7 Power 🔋</h3>
+            </div>
+
+        </div>
+
+        <!-- SEO Content -->
+        <article class="content-area mt-5">
+            <h2>Choosing the Right Battery: Lead Acid vs Lithium</h2>
+            <p>The battery bank is often the most expensive component of an Off-Grid or Hybrid solar system. While the
+                "Ah" rating matters, the chemistry matters more in 2026.</p>
+
+            <h3>1. Tubular Lead Acid Batteries (C10)</h3>
+            <p>These are the tall, heavy batteries you see in most Indian homes. They are reliable and cheap.</p>
+            <ul>
+                <li><strong>Life:</strong> 3-5 Years (approx 1200 cycles).</li>
+                <li><strong>Maintenance:</strong> High. Requires distilled water topping every 3-6 months.</li>
+                <li><strong>Efficiency:</strong> low (70%). You lose energy as heat during charging.</li>
+                <li><strong>Depth of Discharge (DoD):</strong> Can only use 70% of capacity. If you drain it more, life
+                    reduces drastically.</li>
+            </ul>
+
+            <h3>2. Lithium Ferro Phosphate (LFP)</h3>
+            <p>The modern choice. They work like your phone battery but bigger.</p>
+            <ul>
+                <li><strong>Life:</strong> 10-15 Years (4000+ cycles).</li>
+                <li><strong>Maintenance:</strong> Zero. Sealed unit.</li>
+                <li><strong>Efficiency:</strong> High (95%). Fast charging (can charge fully in 2 hours vs 10 hours for
+                    Lead Acid).</li>
+                <li><strong>Depth of Discharge (DoD):</strong> Can use 90-95% of capacity.</li>
+            </ul>
+
+            <h3>Sizing for Solar vs Regular Inverter</h3>
+            <p>Solar batteries are rated <strong>C10</strong>, meaning they are designed to discharge over 10 hours
+                (perfect for night loads). Regular inverter batteries are <strong>C20</strong> (discharging over 20
+                hours). Always insist on C10 Solar Batteries if you are connecting them to panels, as they handle the
+                daily charge-discharge cycle much better.</p>
+
+            <h3>How long will my battery last?</h3>
+            <p>If you have a 150Ah / 12V battery:</p>
+            <ul>
+                <li><strong>Load 200 Watts (Fans+Lights):</strong> Lasts ~7 hours.</li>
+                <li><strong>Load 400 Watts (TV+PC+Fans):</strong> Lasts ~3.5 hours.</li>
+                <li><strong>Load 800 Watts (Mixer/Iron):</strong> Lasts ~1.5 hours.</li>
+            </ul>
+        </article>
+    </div>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<section class="cta-section py-4 bg-white">
+    <div class="container">
+        <div class="cta-banner" data-aos="fade-up">
+            <div class="cta-banner__content">
+                <h2 class="cta-banner__title">Ready to Go Solar?</h2>
+                <p class="cta-banner__text">Get a free site survey and precise quote from our expert solar team.</p>
+                <div class="cta-banner__actions"><a href="../contact.html" class="cta-banner__btn cta-banner__btn--primary">Book Free Consultation</a><a href="../calculators.html" class="cta-banner__btn cta-banner__btn--secondary">All Calculators</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="../index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="../assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../calculators.html">Solar Calculator</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="#">Privacy Policy</a><span>|</span>
+                <a href="#">Terms &amp; Conditions</a><span>|</span>
+                <a href="#">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/calculator-js/solar-battery-backup-calculator.js"></script>
+</body>
+</html>
+

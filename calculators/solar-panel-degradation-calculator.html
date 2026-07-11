@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Panel Degradation Calculator | ShriKrishna Solar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
+            </a>
+
+            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                <a href="https://wa.me/919876543210"
+                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </a>
+                <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    Book Free Solar Consultation
+                </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                    aria-controls="navDrawer" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile / Tablet Drawer -->
+            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+                <div class="offcanvas-header border-bottom">
+                    <a href="../index.html" class="navbar-brand mb-0">
+                        <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Mobile-only CTA block -->
+                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                        <a href="../contact.html"
+                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                           data-bs-dismiss="offcanvas">
+                            Book Free Solar Consultation
+                        </a>
+                        <a href="https://wa.me/919876543210"
+                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919876543210"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section class="calc-detail-hero" aria-labelledby="calc-detail-title">
+    <div class="calc-detail-hero__bg" aria-hidden="true"></div>
+    <div class="container position-relative z-1">
+        <div class="calc-detail-hero__content" data-aos="fade-up">
+            <nav aria-label="breadcrumb" class="calc-detail-hero__breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../index.html">Home</a></li><li class="breadcrumb-item"><a href="../calculators.html">Solar Calculators</a></li><li class="breadcrumb-item active" aria-current="page">Panel Degradation Calculator</li></ol></nav>
+            <h1 class="calc-detail-hero__title" id="calc-detail-title"><span class="calc-detail-hero__accent">Solar Panel Degradation Calculator</span></h1>
+            <p class="calc-detail-hero__desc">Calculate how much your solar panels will degrade over 25 years and how panel efficiency loss affects your long-term generation and savings.</p>
+            <div class="calc-detail-hero__badges"><span class="calc-detail-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span><span class="calc-detail-hero__badge"><i class="bi bi-shield-check-fill"></i> Free Tool</span><span class="calc-detail-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="calc-detail-section py-5" id="calculator">
+    <div class="container">
+        <div class="calculator-detail-scope">
+<div>
+        <p class="calc-inline-222">
+            <a href="/">Home</a> &gt; Solar Panel Degradation Calculator
+        </p>
+
+        <div class="hero-section calc-inline-223">
+            <h1 class="calc-inline-224">Solar Panel Degradation &amp; Cleaning ROI Calculator</h1>
+            <p class="calc-inline-225">Find out exactly how much generation you're losing to panel aging and dust — and whether cleaning pays off financially.</p>
+        </div>
+
+        <div class="grid grid-calc">
+            <!-- Left: Form -->
+            <div class="calculator-form-card">
+                <form id="degradation-form">
+                    <div class="form-group">
+                        <label>System Capacity (kW)</label>
+                        <input type="number" id="system_kw" class="form-control" placeholder="e.g. 3" min="0.5" step="0.5" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Panel Age (Years)</label>
+                        <input type="number" id="panel_age" class="form-control" placeholder="e.g. 5" min="0" max="25" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Current Monthly Generation (kWh)</label>
+                        <input type="number" id="monthly_gen" class="form-control" placeholder="e.g. 360" min="1" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location Type</label>
+                        <select id="location_type" class="form-control">
+                            <option value="urban">Urban-Polluted (high dust/smog)</option>
+                            <option value="suburban" selected="">Suburban (moderate dust)</option>
+                            <option value="rural">Rural-Clean (low dust)</option>
+                            <option value="coastal">Coastal (salt &amp; humidity)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Months Since Last Cleaning</label>
+                        <input type="number" id="months_since_cleaning" class="form-control" placeholder="e.g. 3" min="0" max="24" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Electricity Tariff (₹/kWh)</label>
+                        <input type="number" id="tariff" class="form-control" value="7.50" min="1" step="0.1" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cleaning Cost Per Visit (₹)</label>
+                        <input type="number" id="cleaning_cost" class="form-control" value="1500" min="0" required="">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary calc-inline-099">Calculate Losses &amp; ROI →</button>
+                </form>
+            </div>
+
+            <!-- Right: Results -->
+            <div>
+                <div id="result-box" class="calc-inline-100">
+                    <div class="result-section">
+                        <h3>⚡ Generation Loss Analysis</h3>
+                        <div class="detail-row">
+                            <span class="label">Manufacturer Degradation (age)</span>
+                            <span class="value" id="res_mfr_deg">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Soiling Loss (location type)</span>
+                            <span class="value" id="res_soil_base">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Extra Soiling (since last cleaning)</span>
+                            <span class="value" id="res_soil_extra">-</span>
+                        </div>
+                        <div class="detail-row calc-inline-226">
+                            <span class="label calc-inline-227">Total Loss %</span>
+                            <span class="value calc-inline-228" id="res_total_loss">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Lost Generation / Month</span>
+                            <span class="value" id="res_lost_gen">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Lost Revenue / Month</span>
+                            <span class="value" id="res_lost_revenue">-</span>
+                        </div>
+                    </div>
+
+                    <div class="result-section">
+                        <h3>🧹 Cleaning ROI</h3>
+                        <div id="cleaning-roi-result"></div>
+                        <div class="calc-inline-229">
+                            <span class="calc-inline-230">Recommended cleaning frequency:</span><br>
+                            <span class="freq-badge" id="res_freq">-</span>
+                        </div>
+                    </div>
+
+                    <div class="result-section">
+                        <h3>📉 25-Year Generation Forecast</h3>
+                        <p class="calc-inline-231">Degraded output vs ideal output over panel lifetime</p>
+                        <div class="chart-container">
+                            <canvas id="degradationChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 calc-inline-109">
+                        <button id="whatsapp-share-btn" class="btn calc-inline-110">
+                            <span class="calc-inline-111">📱</span> Share Results on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <div id="lm-inline-cta" class="calc-inline-078">
+                    <div class="calc-inline-079">
+                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
+                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                    </div>
+                    <button onclick="(function(){var s=document.getElementById('state'),c=document.getElementById('city'),k=document.getElementById('system_capacity');window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{state:s?s.options[s.selectedIndex].text:'',city:c&amp;&amp;c.value?c.options[c.selectedIndex].text:'',size:k?k.value:''});})();" class="calc-inline-082">Get Free Quotes →</button>
+                </div>
+            </div>
+            <div id="empty-state" class="result-container calc-inline-112">
+                    <img alt="" src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-113">
+                    <h3>Enter your system details to see losses 🔍</h3>
+                </div>
+        </div>
+
+        <article class="content-area mt-5">
+            <h2>Understanding Solar Panel Degradation in India</h2>
+            <p>All solar panels degrade over time. The industry standard is 0.5% per year in output loss, guaranteed by most tier-1 manufacturers (Trina, Longi, Waaree, Adani). This means after 10 years, a 3kW system rated at 300 units/month will produce approximately 285 units. After 25 years, it still produces ~87.5% of its original capacity.</p>
+
+            <h3>Soiling — India's Hidden Performance Killer</h3>
+            <p>In India, dust, bird droppings, and air pollution are far more damaging to panel performance than in most other countries. Urban areas near construction zones or industrial belts can see soiling losses of 8% or more if panels go uncleaned for even a single month. Studies by NISE (National Institute of Solar Energy) show that panels in Delhi or Mumbai lose 6–10% generation per month without cleaning. In contrast, rural rooftops in Rajasthan lose 3–5% primarily from desert dust.</p>
+
+            <h3>Is Cleaning Worth It?</h3>
+            <p>At typical Indian tariff rates of ₹6–9/kWh, a professional cleaning costing ₹1,500–₹2,000 typically pays back within 15–30 days in recovered generation value. However, over-cleaning (daily wiping) can scratch anti-reflective coatings and accelerate performance loss. The sweet spot is cleaning frequency matched to your location type — monthly for urban/coastal, quarterly for rural clean environments.</p>
+        </article>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<section class="cta-section py-4 bg-white">
+    <div class="container">
+        <div class="cta-banner" data-aos="fade-up">
+            <div class="cta-banner__content">
+                <h2 class="cta-banner__title">Ready to Go Solar?</h2>
+                <p class="cta-banner__text">Get a free site survey and precise quote from our expert solar team.</p>
+                <div class="cta-banner__actions"><a href="../contact.html" class="cta-banner__btn cta-banner__btn--primary">Book Free Consultation</a><a href="../calculators.html" class="cta-banner__btn cta-banner__btn--secondary">All Calculators</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="../index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="../assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../calculators.html">Solar Calculator</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="#">Privacy Policy</a><span>|</span>
+                <a href="#">Terms &amp; Conditions</a><span>|</span>
+                <a href="#">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/calculator-js/solar-panel-degradation-calculator.js"></script>
+</body>
+</html>
+

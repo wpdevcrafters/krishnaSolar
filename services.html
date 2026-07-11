@@ -1,437 +1,285 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | ShriKrishna Solar</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Solar Services | ShriKrishna Solar</title>
+    <meta name="description" content="Explore ShriKrishna Solar rooftop, commercial, subsidy, maintenance, net metering, and turnkey EPC solar solutions.">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Icons -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <style>
-        /* Base Variables matching the design system */
-        :root {
-            --brand-success: #10b981; 
-            --brand-success-dark: #059669;
-            --brand-warning: #f59e0b; 
-            --brand-warning-hover: #d97706;
-            --brand-primary: #3b82f6;
-            --brand-purple: #8b5cf6;
-            --brand-dark: #0f172a;
-            --font-family-base: 'Outfit', sans-serif;
-            --bg-light: #f8fafc;
-        }
-
-        body {
-            font-family: var(--font-family-base);
-            color: #334155;
-            background-color: var(--bg-light);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Typography & Utilities */
-        .text-primary-dark { color: var(--brand-dark) !important; }
-        .text-success { color: var(--brand-success) !important; }
-        .bg-success { background-color: var(--brand-success) !important; }
-        .bg-warning { background-color: var(--brand-warning) !important; }
-
-        .fs-7 { font-size: 0.875rem !important; }
-        .fs-8 { font-size: 0.75rem !important; }
-        
-        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important; }
-
-        /* Buttons */
-        .btn-success {
-            background-color: var(--brand-success);
-            border-color: var(--brand-success);
-        }
-        .btn-success:hover {
-            background-color: var(--brand-success-dark);
-            border-color: var(--brand-success-dark);
-        }
-        .btn-warning {
-            background-color: var(--brand-warning);
-            border-color: var(--brand-warning);
-            color: #fff;
-        }
-        .btn-warning:hover {
-            background-color: var(--brand-warning-hover);
-            border-color: var(--brand-warning-hover);
-            color: #fff;
-        }
-
-        /* Header */
-        .navbar-nav .nav-link {
-            color: #475569;
-            font-size: 0.95rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            transition: color 0.2s;
-        }
-        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
-            color: var(--brand-success) !important;
-        }
-
-        /* Hero Section */
-        .services-hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://placehold.co/1920x600/10b981/ffffff?text=Solar+Panels+Roof') no-repeat center center;
-            background-size: cover;
-            padding: 6rem 0;
-            color: white;
-        }
-
-        /* Service Cards */
-        .service-card .card-img-wrapper {
-            position: relative;
-            overflow: hidden;
-            height: 220px;
-        }
-        .service-card .card-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .service-card:hover .card-img-wrapper img {
-            transform: scale(1.05);
-        }
-        .service-icon-badge {
-            position: absolute;
-            bottom: -20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background-color: white;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            z-index: 2;
-        }
-
-        /* Feature List in Cards */
-        .service-list li {
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            color: #475569;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-        }
-        .service-list li i {
-            color: var(--brand-success);
-            margin-top: 0.15rem;
-        }
-
-        /* Value Prop Section */
-        .value-prop-section {
-            background-color: #ffffff;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- ======================================== SECTION: Header ======================================== -->
+    <header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
+            </a>
 
-    <!-- Header / Navbar -->
-    <header class="header sticky-top bg-white shadow-sm border-bottom">
-        <nav class="navbar navbar-expand-xl py-3">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                    <i class="bi bi-brightness-high-fill text-warning fs-2"></i>
-                    <div>
-                        <h1 class="m-0 fs-5 fw-bold text-primary-dark lh-1">ShriKrishna Solar</h1>
-                        <span class="d-block text-muted" style="font-size: 0.65rem; letter-spacing: 0.5px;">powering a brighter future</span>
-                    </div>
+            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                <a href="https://wa.me/919876543210"
+                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Residential Solar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Commercial Solar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Solar Calculator</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    </ul>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="https://wa.me/1234567890" class="btn btn-light rounded-circle text-success fs-5 p-2 shadow-sm d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="#contact" class="btn btn-warning fw-semibold rounded-pill px-4 shadow-sm">Get Free Solar Consultation</a>
-                    </div>
-                </div>
+                <a href="contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    Book Free Solar Consultation
+                </a>
             </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="services-hero text-center">
-        <div class="container position-relative z-1">
-            <span class="badge bg-success mb-3 px-3 py-2 rounded-pill fs-8 fw-medium">End-to-End Solar Solutions</span>
-            <h1 class="display-4 fw-bold mb-3">Our Services & Expertise</h1>
-            <p class="lead opacity-75 col-md-8 mx-auto mb-0">From initial design and engineering to professional installation and lifetime maintenance, we provide comprehensive solar energy solutions for every sector.</p>
-        </div>
-    </section>
+            <!-- Hamburger -->
+            <button class="navbar-toggler d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                    aria-controls="navDrawer" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- Services Grid Section -->
-    <section class="py-5">
-        <div class="container py-4">
-            <div class="row g-4 mb-5">
-                
-                <!-- Service 1: Residential -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 service-card hover-lift bg-white">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/600x400/e2e8f0/475569?text=Residential+Rooftop" alt="Residential Solar">
-                            <div class="service-icon-badge text-success"><i class="bi bi-house-door-fill"></i></div>
-                        </div>
-                        <div class="card-body p-4 pt-4 d-flex flex-column">
-                            <h4 class="fw-bold text-primary-dark mb-3 mt-2">Residential Rooftop Solar</h4>
-                            <p class="text-muted fs-7 mb-4">Turn your empty roof into a power plant. We design highly efficient home solar systems that slash electricity bills and increase property value.</p>
-                            <ul class="list-unstyled service-list mb-4">
-                                <li><i class="bi bi-check-circle-fill"></i> Customized On-Grid & Hybrid Systems</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Complete Subsidy (MNRE) Assistance</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Premium Tier-1 Monocrystalline Panels</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-success rounded-pill mt-auto fw-medium w-100">Explore Residential</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 2: Commercial -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 service-card hover-lift bg-white">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/600x400/e2e8f0/475569?text=Commercial+Solar" alt="Commercial Solar">
-                            <div class="service-icon-badge text-primary"><i class="bi bi-buildings-fill"></i></div>
-                        </div>
-                        <div class="card-body p-4 pt-4 d-flex flex-column">
-                            <h4 class="fw-bold text-primary-dark mb-3 mt-2">Commercial & Industrial</h4>
-                            <p class="text-muted fs-7 mb-4">Maximize your business profitability by reducing operational overheads. We build robust MW-scale solar plants for factories and institutions.</p>
-                            <ul class="list-unstyled service-list mb-4">
-                                <li><i class="bi bi-check-circle-fill"></i> CAPEX & OPEX (PPA) Business Models</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Accelerated Depreciation Benefits</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Zero-Export Device Integration</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary rounded-pill mt-auto fw-medium w-100">Explore Commercial</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3: Operations & Maintenance -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 service-card hover-lift bg-white">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/600x400/e2e8f0/475569?text=Solar+Maintenance" alt="Operations and Maintenance">
-                            <div class="service-icon-badge text-warning"><i class="bi bi-tools"></i></div>
-                        </div>
-                        <div class="card-body p-4 pt-4 d-flex flex-column">
-                            <h4 class="fw-bold text-primary-dark mb-3 mt-2">Operations & Maintenance</h4>
-                            <p class="text-muted fs-7 mb-4">Ensure your solar plant operates at peak efficiency year-round. We provide comprehensive cleaning, monitoring, and repair services.</p>
-                            <ul class="list-unstyled service-list mb-4">
-                                <li><i class="bi bi-check-circle-fill"></i> Annual Maintenance Contracts (AMC)</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Professional Panel Cleaning Cycles</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Real-time IoT Fault Monitoring</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-warning rounded-pill mt-auto fw-medium w-100 text-dark">View AMC Plans</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4: Subsidy Assistance -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 service-card hover-lift bg-white">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/600x400/e2e8f0/475569?text=Govt+Subsidy" alt="Subsidy Assistance">
-                            <div class="service-icon-badge text-info"><i class="bi bi-file-earmark-check-fill"></i></div>
-                        </div>
-                        <div class="card-body p-4 pt-4 d-flex flex-column">
-                            <h4 class="fw-bold text-primary-dark mb-3 mt-2">Subsidy & Liaisoning</h4>
-                            <p class="text-muted fs-7 mb-4">Navigating government portals can be complex. As an approved vendor, we handle all the documentation to ensure you receive your financial incentives.</p>
-                            <ul class="list-unstyled service-list mb-4">
-                                <li><i class="bi bi-check-circle-fill"></i> National Rooftop Portal Registration</li>
-                                <li><i class="bi bi-check-circle-fill"></i> CEIG Approvals & Clearances</li>
-                                <li><i class="bi bi-check-circle-fill"></i> End-to-End File Processing</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-info rounded-pill mt-auto fw-medium w-100 text-dark">Check Eligibility</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 5: Net Metering -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 service-card hover-lift bg-white">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/600x400/e2e8f0/475569?text=Net+Metering" alt="Net Metering">
-                            <div class="service-icon-badge text-purple"><i class="bi bi-arrow-left-right"></i></div>
-                        </div>
-                        <div class="card-body p-4 pt-4 d-flex flex-column">
-                            <h4 class="fw-bold text-primary-dark mb-3 mt-2">Net Metering Integration</h4>
-                            <p class="text-muted fs-7 mb-4">Connect your solar system to the local utility grid seamlessly. Send excess power back to the grid and earn credits on your electricity bill.</p>
-                            <ul class="list-unstyled service-list mb-4">
-                                <li><i class="bi bi-check-circle-fill"></i> DISCOM Application & Processing</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Bi-directional Meter Procurement</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Grid Synchronization & Testing</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-secondary rounded-pill mt-auto fw-medium w-100">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 6: EPC Services -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 service-card hover-lift bg-white">
-                        <div class="card-img-wrapper">
-                            <img src="https://placehold.co/600x400/e2e8f0/475569?text=EPC+Engineering" alt="EPC Engineering">
-                            <div class="service-icon-badge text-danger"><i class="bi bi-gear-fill"></i></div>
-                        </div>
-                        <div class="card-body p-4 pt-4 d-flex flex-column">
-                            <h4 class="fw-bold text-primary-dark mb-3 mt-2">Turnkey EPC Solutions</h4>
-                            <p class="text-muted fs-7 mb-4">Engineering, Procurement, and Construction. We offer complete turnkey solutions executing projects from concept mapping to final commissioning.</p>
-                            <ul class="list-unstyled service-list mb-4">
-                                <li><i class="bi bi-check-circle-fill"></i> 3D Shadow Analysis & CAD Design</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Structural Load Bearing Reports</li>
-                                <li><i class="bi bi-check-circle-fill"></i> Safety & Quality Assurance Standards</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-danger rounded-pill mt-auto fw-medium w-100">Talk to Engineers</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Value Proposition / Quality Banner -->
-    <section class="value-prop-section py-5">
-        <div class="container py-3">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0 pe-lg-5">
-                    <h2 class="fw-bold text-primary-dark mb-4">We Don't Just Install Panels, We Engineer Performance.</h2>
-                    <p class="text-muted mb-4 fs-7">At ShriKrishna Solar, every component is rigorously tested to ensure it withstands extreme weather and delivers maximum output for 25+ years.</p>
-                    <div class="d-flex gap-4">
-                        <div>
-                            <h3 class="fw-bold text-success mb-0">25<span class="fs-6">Yrs</span></h3>
-                            <span class="fs-8 text-muted fw-medium">Performance Warranty</span>
-                        </div>
-                        <div class="border-start ps-4">
-                            <h3 class="fw-bold text-success mb-0">99<span class="fs-6">%</span></h3>
-                            <span class="fs-8 text-muted fw-medium">System Uptime</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <div class="p-3 bg-light rounded-4 d-flex align-items-center gap-3 h-100">
-                                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-sm text-primary" style="width: 48px; height: 48px; flex-shrink: 0;"><i class="bi bi-shield-check fs-5"></i></div>
-                                <span class="fw-semibold text-dark fs-7">Tier-1 ALMM Approved Panels</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="p-3 bg-light rounded-4 d-flex align-items-center gap-3 h-100">
-                                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-sm text-warning" style="width: 48px; height: 48px; flex-shrink: 0;"><i class="bi bi-lightning-charge fs-5"></i></div>
-                                <span class="fw-semibold text-dark fs-7">High Efficiency Inverters</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="p-3 bg-light rounded-4 d-flex align-items-center gap-3 h-100">
-                                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-sm text-success" style="width: 48px; height: 48px; flex-shrink: 0;"><i class="bi bi-building-up fs-5"></i></div>
-                                <span class="fw-semibold text-dark fs-7">Galvanized Iron (GI) Structures</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="p-3 bg-light rounded-4 d-flex align-items-center gap-3 h-100">
-                                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-sm text-danger" style="width: 48px; height: 48px; flex-shrink: 0;"><i class="bi bi-plug fs-5"></i></div>
-                                <span class="fw-semibold text-dark fs-7">UV Protected AC/DC Cables</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Banner -->
-    <section class="py-5 text-white text-center position-relative" style="background: linear-gradient(135deg, var(--brand-success-dark) 0%, var(--brand-success) 100%);">
-        <div class="container py-4">
-            <h2 class="display-6 fw-bold mb-3">Ready to switch to clean energy?</h2>
-            <p class="lead opacity-75 mb-4 col-md-6 mx-auto">Book a free site survey today. Our engineers will visit your property, assess your roof, and provide a detailed 3D technical proposal.</p>
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <button class="btn btn-warning rounded-pill px-5 py-3 fw-bold shadow-sm hover-lift text-white">Book Free Site Survey</button>
-                <button class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold shadow-sm hover-lift bg-white text-success border-white">Call Us: +91 98765 43210</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-3">
-        <div class="container pt-4">
-            <div class="row g-4 mb-5">
-                <div class="col-lg-3 col-md-6">
-                    <a class="navbar-brand d-flex align-items-center gap-2 mb-4" href="#">
-                        <i class="bi bi-brightness-high-fill text-warning fs-3"></i>
-                        <div>
-                            <h3 class="m-0 fs-5 fw-bold text-white">ShriKrishna Solar</h3>
-                            <span class="d-block fs-8 text-light opacity-75">powering a brighter future</span>
-                        </div>
+            <!-- Mobile / Tablet Drawer -->
+            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+                <div class="offcanvas-header border-bottom">
+                    <a href="index.html" class="navbar-brand mb-0">
+                        <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
                     </a>
-                    <p class="fs-8 text-light opacity-75 mb-4">Your trusted partner for rooftop solar solutions. We help you save more, save energy and build a sustainable future.</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                
-                <div class="col-lg-2 col-md-6 offset-lg-1">
-                    <h5 class="fw-bold mb-4 fs-6 text-white">Quick Links</h5>
-                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
-                        <li><a href="#" class="text-reset text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Residential Solar</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Commercial Solar</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Contact Us</a></li>
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calculators.html">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
                     </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold mb-4 fs-6 text-white">Our Services</h5>
-                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
-                        <li>Rooftop Solar Installation</li>
-                        <li>System Design & Engineering</li>
-                        <li>Solar Maintenance (AMC)</li>
-                        <li>Subsidy Assistance</li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold mb-4 fs-6 text-white">Contact Info</h5>
-                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
-                        <li class="d-flex gap-2 mb-2"><i class="bi bi-buildings text-warning mt-1"></i> <span>Kharagpur, West Bengal - 721301</span></li>
-                        <li class="d-flex gap-2 mb-2"><i class="bi bi-telephone text-warning mt-1"></i> <span>+91 98765 43210</span></li>
-                        <li class="d-flex gap-2"><i class="bi bi-envelope text-warning mt-1"></i> <span>info@shrikrishnasolar.in</span></li>
-                    </ul>
+                    <!-- Mobile-only CTA block -->
+                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                        <a href="contact.html"
+                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                           data-bs-dismiss="offcanvas">
+                            Book Free Solar Consultation
+                        </a>
+                        <a href="https://wa.me/919876543210"
+                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="border-top border-secondary pt-3 mt-4 d-flex flex-column flex-md-row justify-content-between align-items-center fs-8 text-light opacity-75">
-                <p class="mb-2 mb-md-0">&copy; 2026 ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
-                <div class="d-flex gap-3">
-                    <a href="#" class="text-reset text-decoration-none">Privacy Policy</a>
-                    <span>|</span>
-                    <a href="#" class="text-reset text-decoration-none">Terms & Conditions</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Desktop Nav -->
+            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculators.html">Solar Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919876543210"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+    <!-- /SECTION: Header -->
+
+    <main>
+        <!-- ======================================== SECTION: Services Hero ======================================== -->
+        <section class="services-page-hero" aria-labelledby="services-hero-title">
+            <div class="services-page-hero__bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="services-page-hero__content" data-aos="fade-up">
+                    <!-- WP: ACF services_hero_eyebrow --><span class="services-page-hero__eyebrow">End-to-end solar expertise</span><!-- /WP -->
+                    <!-- WP: ACF services_hero_heading --><h1 class="services-page-hero__title" id="services-hero-title">Solar solutions designed for every roof</h1><!-- /WP -->
+                    <!-- WP: ACF services_hero_description --><p class="services-page-hero__text">From residential rooftops to commercial solar plants, our team designs, installs, and maintains high-performance systems that reduce bills and simplify clean energy adoption.</p><!-- /WP -->
+                </div>
+            </div>
+        </section>
+        <!-- /SECTION: Services Hero -->
+
+        <!-- ======================================== SECTION: Solar Solutions ======================================== -->
+        <section class="services-solutions bg-white" id="solutions" aria-labelledby="services-solutions-title">
+            <div class="container">
+                <div class="services-solutions__header text-center" data-aos="fade-up">
+                    <!-- WP: ACF services_section_heading -->
+                    <span class="services-solutions__eyebrow">Solar Solutions</span>
+                    <h2 class="services-solutions__title" id="services-solutions-title">Complete solar services for homes, businesses, and institutions</h2>
+                    <p class="services-solutions__intro">Every service is planned for long-term performance, subsidy readiness, safer installation, and future dynamic integration through reusable content fields.</p>
+                    <!-- /WP -->
+                </div>
+                <div class="services-solutions__grid">
+                    <!-- WP: Loop Start - CPT sn_service -->
+                    <article class="service-solution-card" id="residential" data-aos="fade-up">
+                        <div class="service-solution-card__media"><img src="assets/image/sol1.png" alt="Residential rooftop solar installation" loading="lazy"><span class="service-solution-card__icon"><i class="bi bi-house-check-fill" aria-hidden="true"></i></span></div>
+                        <div class="service-solution-card__body"><span class="service-solution-card__tag">Homes &amp; apartments</span><h3>Residential Rooftop Solar</h3><p>Custom on-grid and hybrid solar systems for villas, independent houses, apartments, and gated communities.</p><ul class="service-solution-card__list"><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Site survey and shadow analysis</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Subsidy-ready documentation</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Premium panels and neat wiring</li></ul><a href="contact.html" class="service-solution-card__link">Explore Residential <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="service-solution-card" id="commercial" data-aos="fade-up" data-aos-delay="80">
+                        <div class="service-solution-card__media"><img src="assets/image/sol2.png" alt="Commercial solar system for business" loading="lazy"><span class="service-solution-card__icon service-solution-card__icon--blue"><i class="bi bi-buildings-fill" aria-hidden="true"></i></span></div>
+                        <div class="service-solution-card__body"><span class="service-solution-card__tag">Commercial &amp; industrial</span><h3>Commercial Solar Plants</h3><p>Scalable solar systems that reduce operating costs for factories, schools, offices, hospitals, and warehouses.</p><ul class="service-solution-card__list"><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> CAPEX and OPEX planning</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Load study and ROI projection</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Grid-compliant installation</li></ul><a href="contact.html" class="service-solution-card__link">Plan A Project <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="service-solution-card" data-aos="fade-up" data-aos-delay="160">
+                        <div class="service-solution-card__media"><img src="assets/image/sol3.png" alt="Solar subsidy assistance paperwork" loading="lazy"><span class="service-solution-card__icon service-solution-card__icon--amber"><i class="bi bi-file-earmark-check-fill" aria-hidden="true"></i></span></div>
+                        <div class="service-solution-card__body"><span class="service-solution-card__tag">Subsidy &amp; approvals</span><h3>Subsidy Assistance</h3><p>Portal registration, paperwork, DISCOM coordination, and approval tracking handled by an experienced local team.</p><ul class="service-solution-card__list"><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> National rooftop portal support</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Vendor and document guidance</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Transparent status updates</li></ul><a href="index.html#subsidy" class="service-solution-card__link">Check Subsidy <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="service-solution-card" data-aos="fade-up">
+                        <div class="service-solution-card__media"><img src="assets/image/sol4.png" alt="Solar maintenance and cleaning service" loading="lazy"><span class="service-solution-card__icon service-solution-card__icon--purple"><i class="bi bi-tools" aria-hidden="true"></i></span></div>
+                        <div class="service-solution-card__body"><span class="service-solution-card__tag">Care &amp; uptime</span><h3>Operations &amp; Maintenance</h3><p>Scheduled cleaning, inspection, issue resolution, and annual maintenance support to protect energy generation.</p><ul class="service-solution-card__list"><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> AMC plans for all system sizes</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Panel cleaning and health checks</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Inverter and wiring inspection</li></ul><a href="contact.html" class="service-solution-card__link">Request Maintenance <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="service-solution-card" data-aos="fade-up" data-aos-delay="80">
+                        <div class="service-solution-card__media"><img src="assets/image/sol1.png" alt="Net metering solar grid integration" loading="lazy"><span class="service-solution-card__icon service-solution-card__icon--blue"><i class="bi bi-arrow-left-right" aria-hidden="true"></i></span></div>
+                        <div class="service-solution-card__body"><span class="service-solution-card__tag">Grid connection</span><h3>Net Metering Support</h3><p>End-to-end coordination for meter application, inspection, commissioning, and grid synchronization.</p><ul class="service-solution-card__list"><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> DISCOM application assistance</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Bi-directional meter support</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Export-ready system checks</li></ul><a href="contact.html" class="service-solution-card__link">Start Net Metering <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="service-solution-card" data-aos="fade-up" data-aos-delay="160">
+                        <div class="service-solution-card__media"><img src="assets/image/sol2.png" alt="Turnkey EPC solar engineering" loading="lazy"><span class="service-solution-card__icon service-solution-card__icon--amber"><i class="bi bi-gear-fill" aria-hidden="true"></i></span></div>
+                        <div class="service-solution-card__body"><span class="service-solution-card__tag">Design to commissioning</span><h3>Turnkey EPC Solutions</h3><p>Engineering, procurement, construction, testing, and commissioning delivered through a single accountable team.</p><ul class="service-solution-card__list"><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> CAD layouts and structure planning</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Quality procurement workflows</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Commissioning and handover</li></ul><a href="contact.html" class="service-solution-card__link">Talk To Engineers <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="service-solution-card" data-aos="fade-up">
+                        <div class="service-solution-card__media"><img src="assets/image/sol3.png" alt="Solar financing consultation" loading="lazy"><span class="service-solution-card__icon"><i class="bi bi-cash-coin" aria-hidden="true"></i></span></div>
+                        <div class="service-solution-card__body"><span class="service-solution-card__tag">Easy payment options</span><h3>Solar Financing</h3><p>Flexible financing guidance that helps homeowners and businesses move to solar with clearer repayment planning and lower upfront pressure.</p><ul class="service-solution-card__list"><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> EMI and loan option guidance</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Savings and payback calculation</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Documentation support for approval</li></ul><a href="contact.html" class="service-solution-card__link">Discuss Financing <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="service-solution-card" data-aos="fade-up" data-aos-delay="80">
+                        <div class="service-solution-card__media"><img src="assets/image/sol4.png" alt="Solar system design and engineering" loading="lazy"><span class="service-solution-card__icon service-solution-card__icon--blue"><i class="bi bi-bounding-box-circles" aria-hidden="true"></i></span></div>
+                        <div class="service-solution-card__body"><span class="service-solution-card__tag">Engineering first</span><h3>Solar System Design</h3><p>Performance-focused solar design with roof mapping, component sizing, electrical planning, and clean installation layouts.</p><ul class="service-solution-card__list"><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Roof layout and panel placement</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Inverter, cable, and protection sizing</li><li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Generation estimate and design notes</li></ul><a href="contact.html" class="service-solution-card__link">Design My System <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <!-- WP: Loop End -->
+                </div>
+            </div>
+        </section>
+        <!-- /SECTION: Solar Solutions -->
+        <!-- ======================================== SECTION: Frequently Asked Questions ======================================== -->
+        <section class="faq-section py-5 bg-white" id="faq" aria-labelledby="faq-title">
+            <div class="container py-4">
+                <div class="text-center" data-aos="fade-up"><!-- WP: ACF faq_section_heading --><h2 class="faq-section__title" id="faq-title">Frequently Asked Questions</h2><!-- /WP --></div>
+                <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="accordion faq-accordion" id="servicesFaqAccordionLeft">
+                        <!-- WP: Loop Start - CPT sn_faq / first column -->
+                        <div class="accordion-item faq-item"><h3 class="accordion-header" id="servicesFaqHeadingOne"><button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#servicesFaqCollapseOne" aria-expanded="false" aria-controls="servicesFaqCollapseOne">How much does a solar system cost?</button></h3><div id="servicesFaqCollapseOne" class="accordion-collapse collapse" aria-labelledby="servicesFaqHeadingOne" data-bs-parent="#servicesFaqAccordionLeft"><div class="accordion-body faq-body">The final cost depends on system size, roof structure, inverter type, and subsidy eligibility. A site survey gives the most accurate estimate.</div></div></div>
+                        <div class="accordion-item faq-item"><h3 class="accordion-header" id="servicesFaqHeadingTwo"><button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#servicesFaqCollapseTwo" aria-expanded="false" aria-controls="servicesFaqCollapseTwo">What is the government subsidy for solar?</button></h3><div id="servicesFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="servicesFaqHeadingTwo" data-bs-parent="#servicesFaqAccordionLeft"><div class="accordion-body faq-body">Residential rooftop solar customers can receive subsidy support under applicable central and state schemes, subject to current policy and capacity limits.</div></div></div>
+                        <div class="accordion-item faq-item"><h3 class="accordion-header" id="servicesFaqHeadingThree"><button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#servicesFaqCollapseThree" aria-expanded="false" aria-controls="servicesFaqCollapseThree">What is net metering?</button></h3><div id="servicesFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="servicesFaqHeadingThree" data-bs-parent="#servicesFaqAccordionLeft"><div class="accordion-body faq-body">Net metering lets your system export unused solar energy to the grid and receive bill credits based on your local utility rules.</div></div></div>
+                        <!-- WP: Loop End -->
+                    </div>
+                    <div class="faq-column">
+                        <div class="accordion faq-accordion" id="servicesFaqAccordionRight">
+                            <!-- WP: Loop Start - CPT sn_faq / second column -->
+                            <div class="accordion-item faq-item"><h3 class="accordion-header" id="servicesFaqHeadingFour"><button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#servicesFaqCollapseFour" aria-expanded="false" aria-controls="servicesFaqCollapseFour">How much electricity can solar panels generate?</button></h3><div id="servicesFaqCollapseFour" class="accordion-collapse collapse" aria-labelledby="servicesFaqHeadingFour" data-bs-parent="#servicesFaqAccordionRight"><div class="accordion-body faq-body">A well-installed 1kW rooftop system typically generates around 4 to 5 units per day, depending on location, season, tilt, and shading.</div></div></div>
+                            <div class="accordion-item faq-item"><h3 class="accordion-header" id="servicesFaqHeadingFive"><button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#servicesFaqCollapseFive" aria-expanded="false" aria-controls="servicesFaqCollapseFive">What is the lifespan of solar panels?</button></h3><div id="servicesFaqCollapseFive" class="accordion-collapse collapse" aria-labelledby="servicesFaqHeadingFive" data-bs-parent="#servicesFaqAccordionRight"><div class="accordion-body faq-body">Tier-1 solar panels generally include long performance warranties and can continue producing power for 25 years or more with proper maintenance.</div></div></div>
+                            <div class="accordion-item faq-item"><h3 class="accordion-header" id="servicesFaqHeadingSix"><button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#servicesFaqCollapseSix" aria-expanded="false" aria-controls="servicesFaqCollapseSix">Do solar panels work on cloudy days?</button></h3><div id="servicesFaqCollapseSix" class="accordion-collapse collapse" aria-labelledby="servicesFaqHeadingSix" data-bs-parent="#servicesFaqAccordionRight"><div class="accordion-body faq-body">Yes. Solar panels still generate electricity in cloudy weather, though output is lower than on bright sunny days.</div></div></div>
+                            <!-- WP: Loop End -->
+                        </div>
+                        <div class="faq-actions"><a href="index.html#faq" class="faq-more-btn">View All FAQs <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /SECTION: Frequently Asked Questions -->
+
+        <!-- ======================================== SECTION: Final Call To Action ======================================== -->
+        <section class="cta-section py-4 bg-white" aria-labelledby="cta-title">
+            <div class="container"><div class="cta-banner" data-aos="fade-up"><div class="cta-banner__content">
+                <!-- WP: ACF cta_heading --><h2 class="cta-banner__title" id="cta-title">Start Saving with Solar Today</h2><!-- /WP -->
+                <!-- WP: ACF cta_description --><p class="cta-banner__text">Have a free consultation and discover how much you can save.</p><!-- /WP -->
+                <div class="cta-banner__actions"><!-- WP: ACF cta_primary_link --><a href="contact.html" class="cta-banner__btn cta-banner__btn--primary">Get Free Solar Consultation</a><!-- /WP --><!-- WP: ACF cta_secondary_link --><a href="calculators.html" class="cta-banner__btn cta-banner__btn--secondary">Calculate My Savings</a><!-- /WP --></div>
+            </div></div></div>
+        </section>
+        <!-- /SECTION: Final Call To Action -->
+    </main>
+
+    <!-- ======================================== SECTION: Footer ======================================== -->
+    <footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculators.html">Solar Calculator</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="#">Privacy Policy</a><span>|</span>
+                <a href="#">Terms &amp; Conditions</a><span>|</span>
+                <a href="#">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+    <!-- /SECTION: Footer -->
+    <a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
+

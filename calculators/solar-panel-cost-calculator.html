@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Panel Cost Calculator India 2026 | ShriKrishna Solar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
+            </a>
+
+            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                <a href="https://wa.me/919876543210"
+                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </a>
+                <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    Book Free Solar Consultation
+                </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                    aria-controls="navDrawer" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile / Tablet Drawer -->
+            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+                <div class="offcanvas-header border-bottom">
+                    <a href="../index.html" class="navbar-brand mb-0">
+                        <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Mobile-only CTA block -->
+                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                        <a href="../contact.html"
+                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                           data-bs-dismiss="offcanvas">
+                            Book Free Solar Consultation
+                        </a>
+                        <a href="https://wa.me/919876543210"
+                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919876543210"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section class="calc-detail-hero" aria-labelledby="calc-detail-title">
+    <div class="calc-detail-hero__bg" aria-hidden="true"></div>
+    <div class="container position-relative z-1">
+        <div class="calc-detail-hero__content" data-aos="fade-up">
+            <nav aria-label="breadcrumb" class="calc-detail-hero__breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../index.html">Home</a></li><li class="breadcrumb-item"><a href="../calculators.html">Solar Calculators</a></li><li class="breadcrumb-item active" aria-current="page">Solar Panel Cost Calculator</li></ol></nav>
+            <h1 class="calc-detail-hero__title" id="calc-detail-title"><span class="calc-detail-hero__accent">Solar Panel Cost Calculator</span></h1>
+            <p class="calc-detail-hero__desc">Calculate the total cost of your solar panel system in India with 2026 pricing, PM Surya Ghar subsidy deduction, and net cost after incentives.</p>
+            <div class="calc-detail-hero__badges"><span class="calc-detail-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span><span class="calc-detail-hero__badge"><i class="bi bi-shield-check-fill"></i> Free Tool</span><span class="calc-detail-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="calc-detail-section py-5 position-relative" id="calculator">
+    <div class="container">
+        <div class="calculator-detail-scope">
+            <div class="grid-calc">
+
+                <!-- Left: Calculator Form -->
+                <div class="calculator-form-card">
+                    <form id="cost-calculator-form" data-gtm-form-interact-id="0">
+                        <div class="form-group">
+                            <label>Select Your State</label>
+                            <select id="state" class="form-control" data-gtm-form-interact-field-id="0">
+                                <option value="">Select State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Puducherry">Puducherry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group calc-inline-086" id="city-group" style="display:none;">
+                            <label>Select City (Optional)</label>
+                            <select id="city" class="form-control"><option value="">All Cities</option></select>
+                            <small class="text-muted calc-inline-191">Showing cities with verified installers.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Calculation Method</label>
+                            <div class="calc-inline-192" role="radiogroup" aria-label="Calculation Method">
+                                <label class="calc-mode-option active">
+                                    <input type="radio" name="calc_mode" value="bill" checked>
+                                    <span>Monthly Bill</span>
+                                </label>
+                                <label class="calc-mode-option">
+                                    <input type="radio" name="calc_mode" value="kw">
+                                    <span>System Size (kW)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="input-bill-group">
+                            <label>Avg Monthly Electricity Bill (₹)</label>
+                            <input type="number" id="monthly_bill" class="form-control" placeholder="e.g. 2500" required="" data-gtm-form-interact-field-id="1">
+                        </div>
+
+                        <div class="form-group calc-inline-023" id="input-kw-group" style="display:none;">
+                            <label>System Capacity (kW)</label>
+                            <input type="number" id="system_capacity" class="form-control" placeholder="e.g. 3">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary calc-inline-194">
+                            ⚡ Get My Solar Quote
+                        </button>
+                    </form>
+
+                    <div class="mt-4 calc-inline-195">
+                        <strong>Note:</strong> Subsidy rates updated as per PM Surya Ghar 2026 notification. Prices from verified local installers.
+                        Subsidy data sourced from <a href="https://pmsuryaghar.gov.in" target="_blank" rel="noopener" class="calc-inline-196">MNRE PM Surya Ghar Yojana</a>, updated June 2026.
+                    </div>
+                </div>
+
+                <!-- Right: Results Dashboard (Initially Hidden) -->
+                <div id="result-box" class="result-container calc-inline-197">
+                    <div id="result-placeholder" class="result-placeholder">
+                        <div class="result-placeholder__icon">☀️</div>
+                        <h3>Fill up the form to get your solar quotetion!</h3>
+                        <p>Submit your details to see your estimated solar system size, subsidy impact, and savings outlook.</p>
+                    </div>
+
+                    <div id="result-content" class="result-content" style="display:none;">
+                        <!-- Top Key Metrics Row -->
+                        <div class="grid-3">
+                            <div class="metric-card highlight">
+                                <div class="metric-label">Recommended Size</div>
+                                <div class="metric-value"><span id="res_size">2</span> <span class="calc-inline-032">kW</span></div>
+                                <div class="metric-sub" id="res_panels">~4 Panels</div>
+                            </div>
+                            <div class="metric-card success">
+                                <div class="metric-label">Net Cost to You</div>
+                                <div class="metric-value">₹<span id="res_net_cost">70,000</span></div>
+                                <div class="metric-sub">After Subsidy</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">ROI Period</div>
+                                <div class="metric-value"><span id="res_roi">3.1</span> <span class="calc-inline-032">Yrs</span></div>
+                                <div class="metric-sub">Payback Time</div>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Breakdown Table -->
+                        <div class="details-card-modern">
+                            <div class="details-header-modern">
+                                <span class="calc-inline-198">📊</span> Cost &amp; Subsidy Breakdown
+                            </div>
+                            <div class="calc-inline-095">
+                                <div class="breakdown-table-wrapper">
+                                    <table class="breakdown-table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Gross System Cost (Market Rate)</td>
+                                                <td id="res_gross_cost" class="text-right">₹1,30,000</td>
+                                            </tr>
+                                            <tr class="subsidy-row">
+                                                <td>🎁 Less: Govt Subsidy (PM Surya Ghar)</td>
+                                                <td id="res_subsidy" class="text-right">- ₹60,000</td>
+                                            </tr>
+                                            <tr class="final-row">
+                                                <td>
+                                                    <span class="final-label">FINAL NET COST</span>
+                                                    <div class="final-sub">(What you pay)</div>
+                                                </td>
+                                                <td id="res_final_payable" class="text-right">₹70,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Savings Chart -->
+                        <div class="details-card-modern">
+                            <div class="details-header-modern">
+                                <span class="calc-inline-198">📈</span> Investment vs. Savings (25 Years)
+                            </div>
+                            <div class="calc-inline-095">
+                                <div class="calc-inline-199">
+                                    <canvas id="savingsChart" class="calc-inline-200" width="869" height="350"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Savings Summary -->
+                        <div class="details-card-modern">
+                            <div class="details-header-modern">
+                                <span class="calc-inline-198">💰</span> Your Financial Benefits
+                            </div>
+                            <div class="calc-inline-095">
+                                <div class="grid-3 calc-inline-201">
+                                    <div class="calc-inline-202">
+                                        <div class="calc-inline-203">Monthly Savings</div>
+                                        <div id="res_monthly_save" class="calc-inline-204">₹1,867</div>
+                                    </div>
+                                    <div class="calc-inline-205">
+                                        <div class="calc-inline-206">Lifetime Savings</div>
+                                        <div id="res_lifetime_save" class="calc-inline-207">₹5,60,000</div>
+                                    </div>
+                                    <div class="calc-inline-208">
+                                        <div class="calc-inline-209">CO₂ Saved</div>
+                                        <div class="calc-inline-210" id="res_co2">57 T</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 p-3 calc-inline-211">
+                            <strong>Disclaimer:</strong> This calculation is an approximation based on average solar generation (4 units/kW/day). Actual generation may vary by location, roof angle, and shading.
+                        </div>
+
+                        <!-- Inline "Get 3 Free Quotes" CTA -->
+                        <div id="lm-inline-cta" class="calc-inline-078">
+                            <div class="calc-inline-079">
+                                <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
+                                <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                            </div>
+                            <button onclick="(function(){var s=document.getElementById('state'),c=document.getElementById('city'),k=document.getElementById('system_capacity');window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{state:s?s.options[s.selectedIndex].text:'',city:c&amp;&amp;c.value?c.options[c.selectedIndex].text:'',size:k?k.value:''});})();" class="calc-inline-082">Get Free Quotes →</button>
+                        </div>
+
+                        <!-- Save Calculation Widget -->
+                        <div id="save-report-box" class="mt-4 p-4 border rounded calc-inline-212">
+                            <h4 class="calc-inline-213">📧 Keep these numbers for reference?</h4>
+                            <p class="calc-inline-214">We'll email you a beautiful custom PDF-ready feasibility report including pricing, subsidies, and regional installer details.</p>
+                            <div class="calc-inline-215">
+                                <input type="email" id="save-calc-email" placeholder="you@example.com" class="calc-inline-216" required="">
+                                <button id="save-calc-btn" onclick="handleSaveCalculation()" class="calc-inline-217">Send Report</button>
+                            </div>
+                            <p id="save-status-msg" class="calc-inline-218"></p>
+                        </div>
+
+                        <div id="verified-vendors-list" class="calc-inline-219"></div>
+                    </div>
+                </div>
+
+                <!-- Default Empty State Right Side -->
+                <div id="empty-state" class="result-container calc-inline-155">
+                    <img alt="" src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-084">
+                    <h3>Enter your bill details to see the magic ✨</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="calc-article-section">
+    <div class="container">
+        <article class="content-area" >
+            <h2>Comprehensive Guide to Solar Panel Pricing in India (2026)</h2>
+            <p>As electricity tariffs continue to rise across Indian states, rooftop solar is no longer a luxury—it is an absolute necessity for financial independence. The cost of installing a solar panel system has decreased significantly over the last decade thanks to improvements in manufacturing, mainly involving Mono-Crystalline PERC and TopCon cell technologies. Our cost calculator above serves as the ultimate benchmark tool to help you understand the exact capital you need to shift to green energy.</p>
+            
+            <h3>Why Solar Prices Dropped in 2026</h3>
+            <p>The primary reason for stabilized solar pricing in India is the maturation of domestic manufacturing stimulated by ALMM (Approved List of Models and Manufacturers) and PLI (Production Linked Incentive) schemes. High-efficiency modules (540Wp and above) are now available directly from Indian manufacturers at highly competitive rates ranging from ₹18 - ₹24 per watt, excluding taxes and Balance of System (BoS) components.</p>
+            
+            <h3>Understanding the Total System Cost</h3>
+            <p>When you get a quotation for a complete "On-Grid System", you are not just paying for panels. The total Turnkey Installation Cost (Design, Supply, Installation, Commissioning - DSIC) encapsulates:</p>
+            <ul>
+                <li><strong>Solar PV Modules (~45%):</strong> The panels themselves. High-efficiency half-cut Mono PERC panels cost slightly more but yield superior generation in low light and high temperatures.</li>
+                <li><strong>Solar Inverter (~20%):</strong> The "brain" of your system. Central string inverters are the standard. Premium brands like Fronius, SMA, or popular tier-1 brands like Growatt and Solis dominate this space.</li>
+                <li><strong>Mounting Structures (~10%):</strong> Galvanized Iron (GI) or aluminum structures. If you need elevated high-rise structures (e.g., 8-10 feet clearance to use the roof space below), the cost increases by roughly ₹3,000 - ₹5,000 per kW.</li>
+                <li><strong>Balance of System (BOS) (~15%):</strong> AC/DC cables, Distribution Boxes (ACDB/DCDB), Earthing kits, Lightning Arresters, and conduits.</li>
+                <li><strong>Installation, Net-Metering, &amp; Liaisoning (~10%):</strong> Labor charges and the documentation effort required to get approval from your local DISCOM.</li>
+            </ul>
+
+            <h3>The PM Surya Ghar Subsidy Impact</h3>
+            <p>The initial capital expenditure can be intimidating, which is exactly why the Government of India rolled out the PM Surya Ghar Muft Bijli Yojana. Under this scheme in 2026, residential homes receive a massive direct discount:</p>
+            <ul>
+                <li><strong>1kW System:</strong> ₹30,000 subsidy. (Average market cost: ₹65,000 › Net Cost: ₹35,000).</li>
+                <li><strong>2kW System:</strong> ₹60,000 subsidy. (Average market cost: ₹1,30,000 › Net Cost: ₹70,000).</li>
+                <li><strong>3kW System &amp; Above:</strong> Fixed ₹78,000 subsidy. (Average market cost for 3kW: ₹1,90,000 › Net Cost: ₹1,12,000).</li>
+            </ul>
+            <p>This massive Central Financial Assistance (CFA) cuts your immediate out-of-pocket expense directly. Once your system is commissioned and your net meter is installed, the National Portal releases the funds directly to your bank account within 30 days.</p>
+
+            <h3>How to Use Our Cost Calculator Effectively</h3>
+            <p>Our tool is designed for absolute transparency. Simply input your state (to pull relevant local labor/material variances) and your monthly electricity bill. The calculator's algorithm instantly reverse-engineers your required System Capacity based on a benchmark of 110-120 units generated per kW per month.</p>
+            <p>It then multiplies your required capacity by current 2026 benchmark market rates, minus the active PM Surya Ghar subsidy bracket, to show you the accurate Net Investment. Always ensure you consult with at least two empaneled vendors to compare structure heights and wiring quality alongside these estimated costs.</p>
+        </article>
+    </div>
+</section>
+<section class="faq-compact-section">
+    <div class="container">
+        <h2 style="font-size:1.5rem;font-weight:700;color:#1e293b;margin-bottom:20px;">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">How much does a 3kW solar system cost in India (2026)?</div>
+            <div class="faq-answer">The market price for a 3kW solar system is approximately ₹1.80 Lakhs to ₹2.00 Lakhs depending on the component quality. After the ₹78,000 PM Surya Ghar subsidy, the net cost comes down to approx ₹1.02 Lakhs.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What is the price of 1kW solar panel?</div>
+            <div class="faq-answer">For a complete 1kW on-grid system, the cost is around ₹60,000 - ₹70,000. With the subsidy of ₹30,000, the effective cost is roughly ₹30,000 - ₹40,000.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Which solar panel is best for home?</div>
+            <div class="faq-answer">Mono-crystalline PERC panels (typically 540W - 550W) are currently the standard benchmark for residential rooftops.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Does the cost include installation?</div>
+            <div class="faq-answer">Yes, standard quotations from empaneled vendors include Design, Supply, Installation, and Commissioning (DSIC), including structure, cables, and net metering application support.</div>
+        </div>
+    </div>
+</section>
+<section class="cta-section py-4 bg-white calc-cta-section">
+    <div class="container">
+        <div class="cta-banner" data-aos="fade-up">
+            <div class="cta-banner__content">
+                <h2 class="cta-banner__title">Ready to Go Solar?</h2>
+                <p class="cta-banner__text">Get a free site survey and precise quote from our expert solar team.</p>
+                <div class="cta-banner__actions"><a href="../contact.html" class="cta-banner__btn cta-banner__btn--primary">Book Free Consultation</a><a href="../calculators.html" class="cta-banner__btn cta-banner__btn--secondary">All Calculators</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="../index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="../assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../calculators.html">Solar Calculator</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="#">Privacy Policy</a><span>|</span>
+                <a href="#">Terms &amp; Conditions</a><span>|</span>
+                <a href="#">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/calculator-js/solar-panel-cost-calculator.js"></script>
+</body>
+</html>
+

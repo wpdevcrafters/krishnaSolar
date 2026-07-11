@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Metering Bill Calculator | ShriKrishna Solar</title>
+    <meta name="description" content="Calculate your solar net metering bill instantly. Enter import and export units to see your payable amount or banked credits — free tool by ShriKrishna Solar.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
+            </a>
+
+            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                <a href="https://wa.me/919876543210"
+                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </a>
+                <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    Book Free Solar Consultation
+                </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                    aria-controls="navDrawer" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile / Tablet Drawer -->
+            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+                <div class="offcanvas-header border-bottom">
+                    <a href="../index.html" class="navbar-brand mb-0">
+                        <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Mobile-only CTA block -->
+                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                        <a href="../contact.html"
+                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                           data-bs-dismiss="offcanvas">
+                            Book Free Solar Consultation
+                        </a>
+                        <a href="https://wa.me/919876543210"
+                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919876543210"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section class="calc-detail-hero" aria-labelledby="calc-detail-title">
+    <div class="calc-detail-hero__bg" aria-hidden="true"></div>
+    <div class="container position-relative z-1">
+        <div class="calc-detail-hero__content" data-aos="fade-up">
+            <nav aria-label="breadcrumb" class="calc-detail-hero__breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../calculators.html">Solar Calculators</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Net Metering Bill Calculator</li>
+                </ol>
+            </nav>
+            <h1 class="calc-detail-hero__title" id="calc-detail-title">🔄 <span class="calc-detail-hero__accent">Net Metering Bill Calculator</span></h1>
+            <p class="calc-detail-hero__desc">Verify your solar electricity bill. Calculate net units, payable amount, and banked credits based on your import and export readings.</p>
+            <div class="calc-detail-hero__badges">
+                <span class="calc-detail-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span>
+                <span class="calc-detail-hero__badge"><i class="bi bi-shield-check-fill"></i> Free Tool</span>
+                <span class="calc-detail-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="calc-detail-section py-5" id="calculator">
+    <div class="container">
+        <div class="calculator-detail-scope">
+            <div class="grid grid-calc">
+                <!-- Left: Form -->
+                <div class="calculator-form-card">
+                    <form id="netmetering-calculator-form">
+                        <div class="form-group">
+                            <label>Import Units (From Grid)</label>
+                            <input type="number" id="import_units" class="form-control" placeholder="e.g. 150 (Night Usage)" required>
+                            <p class="calc-inline-068">Units you consume from DISCOM.</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Export Units (To Grid)</label>
+                            <input type="number" id="export_units" class="form-control" placeholder="e.g. 200 (Day Surplus)" required>
+                            <p class="calc-inline-068">Solar units you send to DISCOM.</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Tariff Rate (₹/Unit)</label>
+                            <input type="number" id="tariff" class="form-control" value="8" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary calc-inline-069">Calculate Bill</button>
+                    </form>
+                </div>
+
+                <!-- Right: Results -->
+                <div>
+                    <div id="result-box" class="result-container calc-inline-023">
+                        <div class="grid grid-2">
+                            <div class="metric-card featured calc-inline-070">
+                                <div class="metric-label calc-inline-071">Estimated Bill</div>
+                                <div class="metric-value calc-inline-072">₹<span id="res_bill">-</span></div>
+                                <div class="metric-sub">Energy Charges</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-label">Units Banked</div>
+                                <div class="metric-value"><span id="res_banked">-</span></div>
+                                <div class="metric-sub">Carry Forward</div>
+                            </div>
+                        </div>
+                        <div class="calc-card-section mt-3">
+                            <h4 class="calc-inline-075">Bill Status</h4>
+                            <p id="bill_explanation" class="calc-inline-076">-</p>
+                        </div>
+                        <div class="alert alert-warning small mt-3">
+                            <strong>Disclaimer:</strong> This calculation is for Energy Charges only. Fixed charges, electricity duty, and other taxes are extra as per your state DISCOM.
+                        </div>
+                    </div>
+
+                    <!-- Get Free Quotes CTA -->
+                    <div class="calc-cta-strip mt-3">
+                        <div>
+                            <div class="fw-bold">📋 Get 3 Free Quotes from Local Installers</div>
+                            <div class="text-muted small">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                        </div>
+                        <a href="../contact.html" class="btn btn-warning text-white fw-bold">Get Free Quotes →</a>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div id="empty-state" class="calc-empty-placeholder">
+                        <h3>Check your Savings 🧾</h3>
+                        <p class="text-muted">Enter your import and export units above to calculate your net metering bill.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO Content -->
+            <div class="calc-seo-content mt-4">
+                <h2>Demystifying the Solar Bill</h2>
+                <p>After installing solar, your electricity bill changes format. It no longer just shows "Current Reading - Previous Reading". It now has sections for Import, Export, and Net.</p>
+                <h3>Key Terms in your Bill</h3>
+                <ul>
+                    <li><strong>Import (I):</strong> The electricity you consumed from the grid (mostly at night).</li>
+                    <li><strong>Export (E):</strong> The excess solar electricity you sent to the grid during the day.</li>
+                    <li><strong>Net (N):</strong> <code>I - E</code>. If Positive, you pay. If Negative, you get credit.</li>
+                    <li><strong>Banked Units:</strong> If you export more than you import, the extra units are preserved in your "Energy Bank" and can be used in future months.</li>
+                </ul>
+                <h3>Why am I still getting a bill?</h3>
+                <p>Even if your solar generation is high, you might receive a bill for:</p>
+                <ol>
+                    <li><strong>Fixed Charges:</strong> The rent for the connected load (kW).</li>
+                    <li><strong>Electricity Duty/Tax:</strong> Government tax on the units you consumed.</li>
+                    <li><strong>FACA:</strong> Fuel Adjustment Charges.</li>
+                </ol>
+                <p>However, the main energy component will be Zero.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-4 bg-white">
+    <div class="container">
+        <div class="cta-banner" data-aos="fade-up">
+            <div class="cta-banner__content">
+                <h2 class="cta-banner__title">Ready to Go Solar?</h2>
+                <p class="cta-banner__text">Get a free site survey and precise quote from our expert solar team.</p>
+                <div class="cta-banner__actions">
+                    <a href="../contact.html" class="cta-banner__btn cta-banner__btn--primary">Book Free Consultation</a>
+                    <a href="../calculators.html" class="cta-banner__btn cta-banner__btn--secondary">All Calculators</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="../index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="../assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../calculators.html">Solar Calculator</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="#">Privacy Policy</a><span>|</span>
+                <a href="#">Terms &amp; Conditions</a><span>|</span>
+                <a href="#">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/calculator-js/net-metering-savings-calculator.js"></script>
+</body>
+</html>
+

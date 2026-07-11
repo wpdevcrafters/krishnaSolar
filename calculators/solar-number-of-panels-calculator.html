@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Panel Count Calculator | ShriKrishna Solar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
+            </a>
+
+            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                <a href="https://wa.me/919876543210"
+                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </a>
+                <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    Book Free Solar Consultation
+                </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                    aria-controls="navDrawer" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile / Tablet Drawer -->
+            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+                <div class="offcanvas-header border-bottom">
+                    <a href="../index.html" class="navbar-brand mb-0">
+                        <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Mobile-only CTA block -->
+                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                        <a href="../contact.html"
+                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                           data-bs-dismiss="offcanvas">
+                            Book Free Solar Consultation
+                        </a>
+                        <a href="https://wa.me/919876543210"
+                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919876543210"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section class="calc-detail-hero" aria-labelledby="calc-detail-title">
+    <div class="calc-detail-hero__bg" aria-hidden="true"></div>
+    <div class="container position-relative z-1">
+        <div class="calc-detail-hero__content" data-aos="fade-up">
+            <nav aria-label="breadcrumb" class="calc-detail-hero__breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../index.html">Home</a></li><li class="breadcrumb-item"><a href="../calculators.html">Solar Calculators</a></li><li class="breadcrumb-item active" aria-current="page">Solar Panel Count Calculator</li></ol></nav>
+            <h1 class="calc-detail-hero__title" id="calc-detail-title"><span class="calc-detail-hero__accent">Solar Panel Count Calculator</span></h1>
+            <p class="calc-detail-hero__desc">Calculate exactly how many solar panels you need. Based on your monthly usage, roof area, and panel wattage, get an instant panel count.</p>
+            <div class="calc-detail-hero__badges"><span class="calc-detail-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span><span class="calc-detail-hero__badge"><i class="bi bi-shield-check-fill"></i> Free Tool</span><span class="calc-detail-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="calc-detail-section py-5" id="calculator">
+    <div class="container">
+        <div class="calculator-detail-scope">
+<div class="hero">
+  <h1>How Many Solar Panels Do I Need?</h1>
+  <p>Enter your monthly electricity bill or appliances and get the exact number of solar panels, system size and cost for your home.</p>
+</div>
+<div class="wrap">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/solar-calculator/">Calculators</a> › Number of Solar Panels Calculator</div>
+
+  <div class="calc-card">
+    <div class="tab-row">
+      <button class="tab-btn active" onclick="switchTab('bill',this)">By Electricity Bill</button>
+      <button class="tab-btn" onclick="switchTab('appliance',this)">By Appliances</button>
+    </div>
+
+    <!-- Tab 1: By Bill -->
+    <div id="tab-bill">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Monthly Electricity Bill (₹)</label>
+          <input type="number" id="bill" value="2500" min="200" step="100">
+        </div>
+        <div class="form-group">
+          <label>Electricity Tariff (₹/unit)</label>
+          <input type="number" id="tariff" value="7.0" min="2" max="15" step="0.5">
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: By Appliances -->
+    <div id="tab-appliance" class="calc-inline-100">
+      <div class="calc-inline-184">Enter appliances used daily:</div>
+      <div class="calc-inline-185" id="appliance-list">
+        <div class="form-group"><label>Fans (qty)</label><input type="number" id="a-fans" value="3" min="0" max="20" data-w="75"></div>
+        <div class="form-group"><label>LED Lights (qty)</label><input type="number" id="a-lights" value="8" min="0" max="50" data-w="10"></div>
+        <div class="form-group"><label>TV (qty)</label><input type="number" id="a-tv" value="1" min="0" max="5" data-w="100"></div>
+        <div class="form-group"><label>Fridge (qty)</label><input type="number" id="a-fridge" value="1" min="0" max="3" data-w="150"></div>
+        <div class="form-group"><label>Washing Machine (qty)</label><input type="number" id="a-wm" value="1" min="0" max="2" data-w="500"></div>
+        <div class="form-group"><label>1.5T AC (qty)</label><input type="number" id="a-ac15" value="0" min="0" max="5" data-w="1400"></div>
+        <div class="form-group"><label>Water Pump 0.5HP (qty)</label><input type="number" id="a-pump" value="1" min="0" max="5" data-w="373"></div>
+        <div class="form-group"><label>Microwave / OTG</label><input type="number" id="a-mw" value="0" min="0" max="2" data-w="1200"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Avg hours/day all appliances run</label>
+          <input type="number" id="app-hrs" value="8" min="1" max="24">
+        </div>
+        <div class="form-group">
+          <label>Electricity Tariff (₹/unit)</label>
+          <input type="number" id="tariff2" value="7.0" min="2" max="15" step="0.5">
+        </div>
+      </div>
+    </div>
+
+    <!-- Common inputs -->
+    <div class="form-row calc-inline-159">
+      <div class="form-group">
+        <label>Panel Wattage</label>
+        <select id="panel-w">
+          <option value="400" selected="">400W (standard)</option>
+          <option value="440">440W</option>
+          <option value="500">500W</option>
+          <option value="545">545W (premium)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Location (sunshine hours)</label>
+        <select id="psh">
+          <option value="6.5">Rajasthan / Gujarat — 6.5 hrs</option>
+          <option value="5.5">Delhi / Maharashtra / AP — 5.5 hrs</option>
+          <option value="5.0" selected="">National Average — 5.0 hrs</option>
+          <option value="4.5">North-East / Coastal — 4.5 hrs</option>
+        </select>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcPanels()">Calculate Panels →</button>
+
+    <div class="result-box" id="result-box">
+      <div class="result-hero">
+        <div class="calc-inline-186">You need</div>
+        <div class="big-num" id="r-panels">—</div>
+        <div class="big-lbl" id="r-panels-sub">solar panels</div>
+      </div>
+      <div class="panel-visual" id="panel-visual">
+        <div class="calc-inline-187">Panel layout (top view)</div>
+        <div class="panel-grid" id="panel-grid"></div>
+      </div>
+      <div class="result-grid" id="r-grid"></div>
+      <div class="calc-inline-188" id="r-note"></div>
+    </div>
+  </div>
+
+  <!-- Quick Ref -->
+  <h2 class="sec">📋 Solar Panels Needed — Quick Reference (India 2026)</h2>
+  <table class="ref-table">
+    <thead><tr><th>Monthly Bill</th><th>Units/Month</th><th>System Size</th><th>400W Panels</th><th>Roof Area</th><th>Cost (after subsidy)</th></tr></thead>
+    <tbody>
+      <tr><td>₹1,000</td><td>~143</td><td>1.5 kW</td><td>4 panels</td><td>~110 sq ft</td><td>₹35,000–₹45,000</td></tr>
+      <tr><td>₹1,500</td><td>~215</td><td>2 kW</td><td>5 panels</td><td>~140 sq ft</td><td>₹60,000–₹80,000</td></tr>
+      <tr class="best-row"><td><strong>₹2,000–₹2,500</strong></td><td>~285–360</td><td><strong>3 kW</strong></td><td><strong>7–8 panels</strong></td><td>~200 sq ft</td><td><strong>₹97K–₹1.3L</strong></td></tr>
+      <tr><td>₹3,000</td><td>~430</td><td>4 kW</td><td>10 panels</td><td>~280 sq ft</td><td>₹1.5L–₹1.8L</td></tr>
+      <tr><td>₹4,000–₹5,000</td><td>~570–715</td><td>5–6 kW</td><td>13–15 panels</td><td>~380 sq ft</td><td>₹2.0L–₹2.6L</td></tr>
+      <tr><td>₹7,000+</td><td>1000+</td><td>8–10 kW</td><td>20–25 panels</td><td>~550 sq ft</td><td>₹3.5L–₹4.5L</td></tr>
+    </tbody>
+  </table>
+  <p class="calc-inline-189">* Based on ₹7/unit tariff, 5.0 peak sunshine hours, 400W panels. Cost after ₹78,000 PM Surya Ghar subsidy.</p>
+
+  <h2 class="sec">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">How many solar panels for a 3 kW system?</div><div class="faq-a calc-inline-023">A 3 kW system needs 7–8 panels of 400W each (3000W ÷ 400W = 7.5, round up to 8). If you use 440W panels, you need 7 panels. Premium 545W panels need only 6 panels. More watt-per-panel = fewer panels but higher cost per panel.</div></div>
+  <div class="faq-item"><div class="faq-q">How much roof space do I need for solar panels?</div><div class="faq-a calc-inline-023">Each 400W solar panel requires about 25–30 sq ft of usable roof area including mounting clearance gaps. For a 3 kW system (8 panels): 200–240 sq ft. A standard Indian terraced roof of 600 sq ft can accommodate up to 6 kW (15–16 panels). Sloped/RCC roofs need slightly more clearance between rows.</div></div>
+  <div class="faq-item"><div class="faq-q">Should I get 400W or 545W solar panels?</div><div class="faq-a calc-inline-023">Both are good. 400W panels: wider availability, cheaper per panel, more vendors. 545W (bifacial/HJT): fewer panels needed, better in low-light, higher efficiency (21%+ vs 20%), but cost ₹2–4 per Watt more. For roof-limited installs, 545W makes sense. For standard roof sizes, 400W is more economical.</div></div>
+  <div class="faq-item"><div class="faq-q">Can I add more panels later to expand my system?</div><div class="faq-a calc-inline-023">Yes, most inverters support expansion. String inverters can be expanded by adding more panels to the array (up to their rated capacity). Hybrid inverters are the easiest to expand. Always size your inverter 10–20% larger than current panel capacity if you plan to expand.</div></div>
+
+  <div class="calc-inline-091">
+    <h3 class="calc-inline-092">Next Steps</h3>
+    <div class="calc-inline-093">
+      <a href="/solar-panel-cost-calculator/" class="calc-inline-094">🧮 Detailed Cost Calculator →</a>
+      <a href="/pm-surya-ghar-yojana/" class="calc-inline-094">🏛️ Check PM Subsidy →</a>
+      <a href="/solar-generation-calculator/" class="calc-inline-094">⚡ Generation Calculator →</a>
+      <a href="/marketplace/solar-panels/" class="calc-inline-094">🛒 Buy Solar Panels →</a>
+      <a href="/vendors/" class="calc-inline-094">🔍 Find Installers →</a>
+    </div>
+  </div>
+</div>
+</div>
+
+    </div>
+</section>
+
+<section class="cta-section py-4 bg-white">
+    <div class="container">
+        <div class="cta-banner" data-aos="fade-up">
+            <div class="cta-banner__content">
+                <h2 class="cta-banner__title">Ready to Go Solar?</h2>
+                <p class="cta-banner__text">Get a free site survey and precise quote from our expert solar team.</p>
+                <div class="cta-banner__actions"><a href="../contact.html" class="cta-banner__btn cta-banner__btn--primary">Book Free Consultation</a><a href="../calculators.html" class="cta-banner__btn cta-banner__btn--secondary">All Calculators</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="../index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="../assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../calculators.html">Solar Calculator</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="#">Privacy Policy</a><span>|</span>
+                <a href="#">Terms &amp; Conditions</a><span>|</span>
+                <a href="#">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/calculator-js/solar-number-of-panels-calculator.js"></script>
+</body>
+</html>
+

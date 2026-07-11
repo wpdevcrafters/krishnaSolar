@@ -107,11 +107,25 @@
                 emptyState.style.display = 'none';
             }
         };
+        const openInlineQuoteModal = () => {
+            if (!window.solarLeads || typeof window.solarLeads.showModal !== 'function') return;
+
+            const stateSelect = document.getElementById('state');
+            const citySelect = document.getElementById('city');
+            const systemCapacityInput = document.getElementById('system_capacity');
+
+            window.solarLeads.showModal('Inline CTA', {
+                state: stateSelect ? stateSelect.options[stateSelect.selectedIndex].text : '',
+                city: citySelect && citySelect.value ? citySelect.options[citySelect.selectedIndex].text : '',
+                size: systemCapacityInput ? systemCapacityInput.value : ''
+            });
+        };
 
         const initCostCalc = () => {
             const calcForm = document.getElementById('cost-calculator-form');
             const stateEl = document.getElementById('state');
             const modeInputs = document.querySelectorAll('input[name="calc_mode"]');
+            const inlineQuoteButton = document.getElementById('cost-inline-quote-btn');
 
             if (calcForm) {
                 calcForm.addEventListener('submit', (e) => {
@@ -129,6 +143,10 @@
                 stateEl.addEventListener('change', () => {
                     window.loadCities();
                 });
+            }
+
+            if (inlineQuoteButton) {
+                inlineQuoteButton.addEventListener('click', openInlineQuoteModal);
             }
 
             modeInputs.forEach((input) => {

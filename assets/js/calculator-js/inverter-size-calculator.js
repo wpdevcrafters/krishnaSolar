@@ -1,4 +1,4 @@
-/* Inverter Size Calculator JS — ShriKrishna Solar */
+﻿/* Inverter Size Calculator JS — ShriKrishna Solar */
 
 const PRESETS = [
     { id: 'fan',         name: 'Ceiling Fan',         watts: 75,   icon: '🌀' },
@@ -36,10 +36,10 @@ function renderPresets() {
     PRESETS.forEach(p => {
         const btn = document.createElement('button');
         btn.className = 'appliance-btn';
-        btn.onclick = () => addPreset(p);
+        btn.addEventListener('click', () => addPreset(p));
         btn.innerHTML = `
             <span class="btn-icon">${p.icon}</span>
-            <span>${p.name}</span>
+            <span class="appliance-btn__name">${p.name}</span>
             <span class="btn-watts">${p.watts}W</span>
         `;
         container.appendChild(btn);
@@ -107,13 +107,13 @@ function renderList() {
             <td class="text-muted">${item.watts}W</td>
             <td>
                 <div class="qty-control">
-                    <button class="qty-btn" onclick="changeQty(${item.id}, -1)">−</button>
+                    <button type="button" class="qty-btn" data-action="qty" data-id="${item.id}" data-delta="-1">-</button>
                     <span class="qty-value">${item.qty}</span>
-                    <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+                    <button type="button" class="qty-btn" data-action="qty" data-id="${item.id}" data-delta="1">+</button>
                 </div>
             </td>
             <td class="fw-bold text-success">${item.watts * item.qty}W</td>
-            <td><button class="remove-btn" onclick="removeAppliance(${item.id})" title="Remove">✕</button></td>
+            <td><button type="button" class="remove-btn" data-action="remove" data-id="${item.id}" title="Remove" aria-label="Remove ${item.name}">x</button></td>
         `;
         tbody.appendChild(row);
     });
@@ -185,7 +185,7 @@ function recalculate() {
     const re = document.getElementById('result-empty');
     const rc = document.getElementById('result-card');
     if (re) re.style.display = 'none';
-    if (rc) rc.style.display = '';
+    if (rc) rc.style.display = 'block';
 
     highlightSizeRow(selectedSize.va);
 }
@@ -208,4 +208,31 @@ function toggleFaq(questionEl) {
     if (answer) answer.classList.toggle('open');
 }
 
-document.addEventListener('DOMContentLoaded', renderPresets);
+document.addEventListener('DOMContentLoaded', () => {
+    renderPresets();
+
+    const addCustomBtn = document.getElementById('add-custom-appliance-btn');
+    if (addCustomBtn) addCustomBtn.addEventListener('click', addCustomAppliance);
+
+    const clearBtn = document.getElementById('clear-btn');
+    if (clearBtn) clearBtn.addEventListener('click', clearAll);
+
+    const backupHours = document.getElementById('backup-hours');
+    if (backupHours) backupHours.addEventListener('change', recalculate);
+
+    const applianceBody = document.getElementById('appliance-tbody');
+    if (applianceBody) {
+        applianceBody.addEventListener('click', (event) => {
+            const btn = event.target.closest('button[data-action]');
+            if (!btn) return;
+
+            const id = parseInt(btn.dataset.id, 10);
+            if (btn.dataset.action === 'qty') {
+                changeQty(id, parseInt(btn.dataset.delta, 10));
+            }
+            if (btn.dataset.action === 'remove') {
+                removeAppliance(id);
+            }
+        });
+    }
+});

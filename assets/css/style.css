@@ -4645,3 +4645,573 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 .data-table tbody tr:hover { background:#f8fafc; }
 @media (max-width:991.98px) { .calc-detail-hero{padding:5rem 0 3rem;} .calc-detail-grid{grid-template-columns:1fr;} .result-metrics-grid{grid-template-columns:1fr 1fr;} .cta-solar-card{flex-direction:column;text-align:center;} .vs-grid{grid-template-columns:1fr;} .form-row{grid-template-columns:1fr;} .calc-card-grid-3{grid-template-columns:1fr 1fr;} }
 @media (max-width:575.98px) { .calc-detail-hero{padding:4.5rem 0 2.5rem;} .calc-detail-hero__title{font-size:1.75rem;} .result-metrics-grid{grid-template-columns:1fr;} .custom-appliance-row{flex-direction:column;} .rh-grid{grid-template-columns:1fr 1fr;} .calc-card-grid-3{grid-template-columns:1fr;} }
+
+/* ===========================================================================
+   SOLAR PANEL COST CALCULATOR PAGE - Current Site Design Overrides
+   ========================================================================== */
+.calc-cost-page .calc-detail-hero {
+    background: linear-gradient(135deg, #f8fcff 0%, #eef9f2 54%, #fff7e8 100%);
+    padding: 7.4rem 0 4rem;
+}
+.calc-cost-page .calc-detail-hero__bg {
+    background:
+        radial-gradient(ellipse 44% 58% at 88% 18%, rgba(245, 158, 11, 0.20) 0%, transparent 68%),
+        radial-gradient(ellipse 45% 55% at 5% 86%, rgba(16, 185, 129, 0.17) 0%, transparent 70%),
+        url('../image/solarheroimg.png') no-repeat right center / cover;
+    opacity: 0.72;
+}
+.calc-cost-page .calc-detail-hero__content {
+    max-width: 760px;
+}
+.calc-cost-page .calc-detail-hero__breadcrumb .breadcrumb-item,
+.calc-cost-page .calc-detail-hero__breadcrumb .breadcrumb-item a {
+    color: #64748b;
+}
+.calc-cost-page .calc-detail-hero__breadcrumb .breadcrumb-item a:hover {
+    color: var(--brand-success-dark);
+}
+.calc-cost-page .calc-detail-hero__breadcrumb .breadcrumb-item.active {
+    color: #1f2937;
+}
+.calc-cost-page .calc-detail-hero__breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #94a3b8;
+}
+.calc-cost-page .calc-detail-hero__title {
+    color: #1f2937;
+    font-size: clamp(2.25rem, 4vw, 3.55rem);
+    letter-spacing: -0.045em;
+}
+.calc-cost-page .calc-detail-hero__accent {
+    background: linear-gradient(90deg, #1f2937 0%, var(--brand-success-dark) 62%, var(--brand-warning) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.calc-cost-page .calc-detail-hero__desc {
+    max-width: 660px;
+    color: #475569;
+    font-weight: 500;
+}
+.calc-cost-page .calc-detail-hero__badge {
+    background: rgba(255, 255, 255, 0.86);
+    border-color: rgba(16, 185, 129, 0.15);
+    color: #334155;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+.calc-cost-page .calc-detail-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+.calc-cost-page .calculator-detail-scope .calculator-form-card,
+.calc-cost-page .calculator-detail-scope .result-container,
+.calc-cost-page .content-area,
+.calc-cost-page .faq-item {
+    border-color: rgba(15, 23, 42, 0.07);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+.calc-cost-page .calculator-detail-scope .calculator-form-card {
+    position: sticky;
+    top: 104px;
+}
+.calc-cost-page .calculator-detail-scope .btn-primary {
+    background: var(--brand-warning);
+    box-shadow: 0 12px 26px rgba(245, 158, 11, 0.24);
+}
+.calc-cost-page .calculator-detail-scope .btn-primary:hover {
+    background: var(--brand-warning-hover);
+}
+.calc-cost-page .calculator-detail-scope .metric-card.highlight,
+.calc-cost-page .calculator-detail-scope .metric-card.success {
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.10), #ffffff);
+    border-color: rgba(16, 185, 129, 0.16);
+}
+.calc-cost-page .calculator-detail-scope .details-header-modern {
+    color: #1f2937;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.10), rgba(245, 158, 11, 0.10));
+}
+.calc-cost-page #city-group,
+.calc-cost-page #input-kw-group,
+.calc-cost-page .calc-cost-hidden {
+    display: none;
+}
+.calc-cost-page .faq-compact-title {
+    margin-bottom: 1.25rem;
+    color: #1f2937;
+    font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+@media (max-width: 991.98px) {
+    .calc-cost-page .calculator-detail-scope .calculator-form-card {
+        position: static;
+        top: auto;
+    }
+    .calc-cost-page .calc-detail-hero {
+        padding: 6.2rem 0 3.2rem;
+    }
+}.calc-cost-page .cost-faq-accordion {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.calc-cost-page .cost-faq-accordion .faq-button {
+    min-height: 44px;
+}
+
+/* ===========================================================================
+   SOLAR ROI CALCULATOR PAGE - Current Site Design Overrides
+   ========================================================================== */
+.calc-roi-page .calc-detail-hero {
+    background: linear-gradient(135deg, #f8fcff 0%, #eef9f2 54%, #fff7e8 100%);
+    padding: 7.4rem 0 4rem;
+}
+.calc-roi-page .calc-detail-hero__bg {
+    background:
+        radial-gradient(ellipse 44% 58% at 88% 18%, rgba(245, 158, 11, 0.20) 0%, transparent 68%),
+        radial-gradient(ellipse 45% 55% at 5% 86%, rgba(16, 185, 129, 0.17) 0%, transparent 70%);
+    opacity: 0.72;
+}
+.calc-roi-page .calc-detail-hero__content {
+    max-width: 760px;
+}
+.calc-roi-page .calc-detail-hero__breadcrumb .breadcrumb-item,
+.calc-roi-page .calc-detail-hero__breadcrumb .breadcrumb-item a {
+    color: #64748b;
+}
+.calc-roi-page .calc-detail-hero__breadcrumb .breadcrumb-item a:hover {
+    color: var(--brand-success-dark);
+}
+.calc-roi-page .calc-detail-hero__breadcrumb .breadcrumb-item.active {
+    color: #1f2937;
+}
+.calc-roi-page .calc-detail-hero__breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #94a3b8;
+}
+.calc-roi-page .calc-detail-hero__title {
+    color: #1f2937;
+    font-size: clamp(2.25rem, 4vw, 3.55rem);
+    letter-spacing: -0.045em;
+}
+.calc-roi-page .calc-detail-hero__accent {
+    background: linear-gradient(90deg, #1f2937 0%, var(--brand-success-dark) 62%, var(--brand-warning) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.calc-roi-page .calc-detail-hero__desc {
+    max-width: 660px;
+    color: #475569;
+    font-weight: 500;
+}
+.calc-roi-page .calc-detail-hero__badge {
+    background: rgba(255, 255, 255, 0.86);
+    border-color: rgba(16, 185, 129, 0.15);
+    color: #334155;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+.calc-roi-page .calc-detail-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+.calc-roi-page .calculator-detail-scope .calculator-form-card,
+.calc-roi-page .calculator-detail-scope .result-container,
+.calc-roi-page .content-area,
+.calc-roi-page .faq-item {
+    border-color: rgba(15, 23, 42, 0.07);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+.calc-roi-page .calculator-detail-scope .calculator-form-card {
+    position: sticky;
+    top: 104px;
+}
+.calc-roi-page .calculator-detail-scope .btn-primary {
+    background: var(--brand-warning);
+    box-shadow: 0 12px 26px rgba(245, 158, 11, 0.24);
+}
+.calc-roi-page .calculator-detail-scope .btn-primary:hover {
+    background: var(--brand-warning-hover);
+}
+.calc-roi-page .calculator-detail-scope .metric-card.featured {
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.10), #ffffff);
+    border-color: rgba(16, 185, 129, 0.22);
+}
+.calc-roi-page .calculator-detail-scope .details-header-modern {
+    color: #1f2937;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.10), rgba(245, 158, 11, 0.10));
+}
+.calc-roi-page .faq-compact-title {
+    margin-bottom: 1.25rem;
+    color: #1f2937;
+    font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+    letter-spacing: -0.025em;
+}
+.calc-roi-page .roi-faq-accordion {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.calc-roi-page .roi-faq-accordion .faq-button {
+    min-height: 44px;
+}
+@media (max-width: 991.98px) {
+    .calc-roi-page .calculator-detail-scope .calculator-form-card {
+        position: static;
+        top: auto;
+    }
+    .calc-roi-page .calc-detail-hero {
+        padding: 6.2rem 0 3.2rem;
+    }
+}
+
+.calc-roi-page .roi-result-box {
+    justify-content: center;
+    min-height: 360px;
+}
+.calc-roi-page .roi-empty-state {
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #1f2937;
+}
+.calc-roi-page .roi-empty-state h3 {
+    margin: 0;
+    color: #1f2937;
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+.calc-roi-page .roi-result-box.roi-result-box--active {
+    justify-content: flex-start;
+}
+
+/* ===========================================================================
+   SOLAR ROOFTOP SUBSIDY CALCULATOR PAGE - Current Site Design Overrides
+   ========================================================================== */
+.calc-subsidy-page .calc-detail-hero {
+    background: linear-gradient(135deg, #f8fcff 0%, #eef9f2 54%, #fff7e8 100%);
+    padding: 7.4rem 0 4rem;
+}
+.calc-subsidy-page .calc-detail-hero__bg {
+    background:
+        radial-gradient(ellipse 44% 58% at 88% 18%, rgba(245, 158, 11, 0.20) 0%, transparent 68%),
+        radial-gradient(ellipse 45% 55% at 5% 86%, rgba(16, 185, 129, 0.17) 0%, transparent 70%);
+    opacity: 0.72;
+}
+.calc-subsidy-page .calc-detail-hero__content {
+    max-width: 760px;
+}
+.calc-subsidy-page .calc-detail-hero__breadcrumb .breadcrumb-item,
+.calc-subsidy-page .calc-detail-hero__breadcrumb .breadcrumb-item a {
+    color: #64748b;
+}
+.calc-subsidy-page .calc-detail-hero__breadcrumb .breadcrumb-item a:hover {
+    color: var(--brand-success-dark);
+}
+.calc-subsidy-page .calc-detail-hero__breadcrumb .breadcrumb-item.active {
+    color: #1f2937;
+}
+.calc-subsidy-page .calc-detail-hero__breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #94a3b8;
+}
+.calc-subsidy-page .calc-detail-hero__title {
+    color: #1f2937;
+    font-size: clamp(2.25rem, 4vw, 3.55rem);
+    letter-spacing: -0.045em;
+}
+.calc-subsidy-page .calc-detail-hero__accent {
+    background: linear-gradient(90deg, #1f2937 0%, var(--brand-success-dark) 62%, var(--brand-warning) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.calc-subsidy-page .calc-detail-hero__desc {
+    max-width: 660px;
+    color: #475569;
+    font-weight: 500;
+}
+.calc-subsidy-page .calc-detail-hero__badge {
+    background: rgba(255, 255, 255, 0.86);
+    border-color: rgba(16, 185, 129, 0.15);
+    color: #334155;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+.calc-subsidy-page .calc-detail-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+.calc-subsidy-page .calculator-detail-scope .page-wrapper {
+    padding: 0;
+}
+.calc-subsidy-page .calculator-detail-scope .calculator-form-card,
+.calc-subsidy-page .calculator-detail-scope .result-container,
+.calc-subsidy-page .calculator-detail-scope .empty-state,
+.calc-subsidy-page .content-area,
+.calc-subsidy-page .faq-item {
+    border-color: rgba(15, 23, 42, 0.07);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+.calc-subsidy-page .calculator-detail-scope .calculator-form-card {
+    position: sticky;
+    top: 104px;
+}
+.calc-subsidy-page .calculator-detail-scope .btn-primary {
+    background: var(--brand-warning);
+    box-shadow: 0 12px 26px rgba(245, 158, 11, 0.24);
+}
+.calc-subsidy-page .calculator-detail-scope .btn-primary:hover {
+    background: var(--brand-warning-hover);
+}
+.calc-subsidy-page .calculator-detail-scope .details-header-modern {
+    color: #1f2937;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.10), rgba(245, 158, 11, 0.10));
+}
+.calc-subsidy-page .faq-compact-title {
+    margin-bottom: 1.25rem;
+    color: #1f2937;
+    font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+.calc-subsidy-page .subsidy-faq-accordion {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.calc-subsidy-page .subsidy-faq-accordion .faq-button {
+    min-height: 44px;
+}
+@media (max-width: 991.98px) {
+    .calc-subsidy-page .calculator-detail-scope .calculator-form-card {
+        position: static;
+        top: auto;
+    }
+    .calc-subsidy-page .calc-detail-hero {
+        padding: 6.2rem 0 3.2rem;
+    }
+}
+.calc-subsidy-page #empty-state {
+    display: block;
+}
+.calc-subsidy-page #result-box {
+    display: none;
+}
+
+/* ===========================================================================
+   INVERTER SIZE CALCULATOR PAGE - Current Site Design Overrides
+   ========================================================================== */
+.calc-inverter-page .calc-detail-hero {
+    background: linear-gradient(135deg, #f8fcff 0%, #eef9f2 54%, #fff7e8 100%);
+    padding: 7.4rem 0 4rem;
+}
+.calc-inverter-page .calc-detail-hero__bg {
+    background:
+        radial-gradient(ellipse 44% 58% at 88% 18%, rgba(245, 158, 11, 0.20) 0%, transparent 68%),
+        radial-gradient(ellipse 45% 55% at 5% 86%, rgba(16, 185, 129, 0.17) 0%, transparent 70%);
+    opacity: 0.72;
+}
+.calc-inverter-page .calc-detail-hero__content {
+    max-width: 760px;
+}
+.calc-inverter-page .calc-detail-hero__breadcrumb .breadcrumb-item,
+.calc-inverter-page .calc-detail-hero__breadcrumb .breadcrumb-item a {
+    color: #64748b;
+}
+.calc-inverter-page .calc-detail-hero__breadcrumb .breadcrumb-item a:hover {
+    color: var(--brand-success-dark);
+}
+.calc-inverter-page .calc-detail-hero__breadcrumb .breadcrumb-item.active {
+    color: #1f2937;
+}
+.calc-inverter-page .calc-detail-hero__breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #94a3b8;
+}
+.calc-inverter-page .calc-detail-hero__title {
+    color: #1f2937;
+    font-size: clamp(2.25rem, 4vw, 3.55rem);
+    letter-spacing: -0.045em;
+}
+.calc-inverter-page .calc-detail-hero__accent {
+    background: linear-gradient(90deg, #1f2937 0%, var(--brand-success-dark) 62%, var(--brand-warning) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.calc-inverter-page .calc-detail-hero__desc {
+    max-width: 660px;
+    color: #475569;
+    font-weight: 500;
+}
+.calc-inverter-page .calc-detail-hero__badge {
+    background: rgba(255, 255, 255, 0.86);
+    border-color: rgba(16, 185, 129, 0.15);
+    color: #334155;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+.calc-inverter-page .calc-detail-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+.calc-inverter-page .calculator-detail-scope .calc-inline-009,
+.calc-inverter-page .calculator-detail-scope .result-output-card,
+.calc-inverter-page .calculator-detail-scope .calc-info-section,
+.calc-inverter-page .calculator-detail-scope .calc-seo-content,
+.calc-inverter-page .calculator-detail-scope .brand-card,
+.calc-inverter-page .calculator-detail-scope .cta-solar-card,
+.calc-inverter-page .faq-item {
+    border-color: rgba(15, 23, 42, 0.07);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+.calc-inverter-page .calculator-detail-scope > .grid-calc > div:first-child {
+    position: sticky;
+    top: 104px;
+    align-self: start;
+}
+.calc-inverter-page .calc-inverter-result-card {
+    display: none;
+}
+.calc-inverter-page .calc-inline-018,
+.calc-inverter-page .calculator-detail-scope .btn-warning {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+.calc-inverter-page .calc-inline-018:hover,
+.calc-inverter-page .calculator-detail-scope .btn-warning:hover {
+    transform: translateY(-1px);
+}
+.calc-inverter-page .faq-compact-title {
+    margin-bottom: 1.25rem;
+    color: #1f2937;
+    font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+.calc-inverter-page .inverter-faq-accordion {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.calc-inverter-page .inverter-faq-accordion .faq-button {
+    min-height: 44px;
+}
+@media (max-width: 991.98px) {
+    .calc-inverter-page .calculator-detail-scope > .grid-calc > div:first-child {
+        position: static;
+        top: auto;
+    }
+    .calc-inverter-page .calc-detail-hero {
+        padding: 6.2rem 0 3.2rem;
+    }
+}
+
+/* Inverter calculator layout refinements from reference */
+.calc-inverter-page .calculator-detail-scope > .grid-calc {
+    grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+}
+.calc-inverter-page .appliance-preset-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.78rem;
+}
+.calc-inverter-page .appliance-btn {
+    width: 100%;
+    min-height: 78px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    color: #1f2937;
+    text-align: left;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.045);
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.calc-inverter-page .appliance-btn:hover,
+.calc-inverter-page .appliance-btn:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(16, 185, 129, 0.45);
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, #ffffff 100%);
+    box-shadow: 0 14px 28px rgba(16, 185, 129, 0.12);
+    outline: none;
+}
+.calc-inverter-page .appliance-btn .btn-icon {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(16, 185, 129, 0.10);
+    color: var(--brand-success-dark);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+.calc-inverter-page .appliance-btn .appliance-btn__name {
+    display: block;
+    font-size: 0.93rem;
+    font-weight: 800;
+    color: #1f2937;
+    line-height: 1.15;
+}
+.calc-inverter-page .appliance-btn .btn-watts {
+    justify-self: end;
+    border-radius: 999px;
+    padding: 0.28rem 0.56rem;
+    background: rgba(245, 158, 11, 0.12);
+    color: #92400e;
+    font-size: 0.76rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.calc-inverter-page #result-section {
+    min-height: 260px;
+}
+.calc-inverter-page #result-empty {
+    display: block;
+    min-height: 260px;
+    border: 2px dashed rgba(148, 163, 184, 0.35);
+    background: rgba(255, 255, 255, 0.65);
+}
+.calc-inverter-page #result-empty .empty-state {
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    opacity: 1;
+    text-align: center;
+}
+.calc-inverter-page #result-empty .empty-icon {
+    margin-bottom: 1rem;
+    color: var(--brand-warning);
+    font-size: 2.55rem;
+    line-height: 1;
+}
+.calc-inverter-page #result-empty .calc-inline-036 {
+    margin-bottom: 0.42rem;
+    color: #334155;
+    font-weight: 800;
+}
+.calc-inverter-page #result-empty .calc-inline-037 {
+    max-width: 440px;
+    color: #64748b;
+}
+@media (min-width: 1200px) {
+    .calc-inverter-page .calculator-detail-scope > .grid-calc {
+        grid-template-columns: 360px minmax(0, 1fr);
+    }
+}
+@media (max-width: 991.98px) {
+    .calc-inverter-page .calculator-detail-scope > .grid-calc {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 575.98px) {
+    .calc-inverter-page .appliance-btn {
+        grid-template-columns: auto 1fr;
+    }
+    .calc-inverter-page .appliance-btn .btn-watts {
+        grid-column: 2;
+        justify-self: start;
+    }
+}

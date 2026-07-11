@@ -10,22 +10,23 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="calc-subsidy-page">
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
         <div class="container">
+
             <!-- Logo -->
             <a class="navbar-brand" href="../index.html">
                 <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
             </a>
 
-            <!-- Tablet: WhatsApp + CTA (md to xl) -->
+            <!-- Tablet header bar actions (768px - 1199px) -->
             <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
                 <a href="https://wa.me/919876543210"
                    class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-                    <i class="bi bi-whatsapp fs-5"></i>
+                    <i class="bi bi-whatsapp fs-5" aria-hidden="true"></i>
                 </a>
                 <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
                     Book Free Solar Consultation
@@ -49,20 +50,24 @@
                 </div>
                 <div class="offcanvas-body d-flex flex-column p-0">
                     <ul class="navbar-nav px-3 py-2 flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Home</a>
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="../services.html" data-submenu-toggle>
+                                Services
+                                <i class="bi bi-chevron-down submenu-toggle-icon" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu nav flex-column ps-3">
+                                <li class="nav-item"><a class="nav-link" href="../services.html#residential">Residential</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../services.html#commercial">Commercial</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../services.html">Industrial</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contact.html">Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="../calculators.html" aria-current="page">Calculators</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#subsidy">Subsidy Information</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#projects">Success Stories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
                     </ul>
-                    <!-- Mobile-only CTA block -->
                     <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
                         <a href="../contact.html"
                            class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
@@ -72,7 +77,7 @@
                         <a href="https://wa.me/919876543210"
                            class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
                            target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                            <i class="bi bi-whatsapp fs-5" aria-hidden="true"></i> WhatsApp Us
                         </a>
                     </div>
                 </div>
@@ -81,24 +86,26 @@
             <!-- Desktop Nav -->
             <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item has-submenu position-static">
                         <a class="nav-link" href="../services.html">Services</a>
+                        <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                            <li><a class="dropdown-item" href="../services.html#residential">Residential</a></li>
+                            <li><a class="dropdown-item" href="../services.html#commercial">Commercial</a></li>
+                            <li><a class="dropdown-item" href="../services.html">Industrial</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="../calculators.html" aria-current="page">Calculators</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#subsidy">Subsidy Information</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#projects">Success Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <a href="https://wa.me/919876543210"
                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-                        <i class="bi bi-whatsapp fs-5"></i>
+                        <i class="bi bi-whatsapp fs-5" aria-hidden="true"></i>
                     </a>
                     <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
                         Book Free Solar Consultation
@@ -122,29 +129,13 @@
     </div>
 </section>
 
-<section class="calc-detail-section py-5" id="calculator">
+
+<section class="calc-detail-section py-5 position-relative" id="calculator">
     <div class="container">
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PM Surya Ghar: Muft Bijli Yojana — Solar Subsidy Calculator</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body class="calculator-detail-scope">
-
-<div class="page-wrapper">
-
-  <!-- ===== HERO ===== -->
-  <div class="hero">
-    <div class="hero-badge">🇮🇳 Government of India &nbsp;·&nbsp; MNRE Scheme</div>
-    <h1>PM Surya Ghar: <span>Muft Bijli Yojana</span><br>Solar Subsidy Calculator</h1>
-    <p>Calculate your eligible central government subsidy for rooftop solar in seconds — based on official PM Surya Ghar Yojana guidelines.</p>
-  </div>
-
-  <!-- ===== MAIN GRID ===== -->
+        <div class="calculator-detail-scope">
+            <div class="page-wrapper">
+<!-- ===== MAIN GRID ===== -->
   <div class="grid-calc">
 
     <!-- LEFT: Form -->
@@ -153,11 +144,11 @@
         <span>☀️</span> Check Your Subsidy
       </div>
 
-      <form id="subsidy-calculator-form" onsubmit="return false;">
+      <form id="subsidy-calculator-form">
 
         <div class="form-group">
           <label>State (Select for Accurate Vendors)</label>
-          <select id="state" class="form-control" onchange="loadCities()" required>
+          <select id="state" class="form-control" required>
             <option value="">Select State</option>
             <option>Andhra Pradesh</option><option>Arunachal Pradesh</option>
             <option>Assam</option><option>Bihar</option>
@@ -200,14 +191,12 @@
           </select>
         </div>
 
-        <button type="submit" class="btn-primary" onclick="calculateSubsidy()">
-          <span>⚡</span> Check Subsidy Amount
-        </button>
+        <button type="submit" class="btn-primary"><span><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></span> Check Subsidy Amount</button>
         <p class="btn-note">Based on PM Surya Ghar: Muft Bijli Yojana Guidelines</p>
 
         <!-- Scheme quick facts -->
         <div class="scheme-pills">
-          <span class="pill">✅ Up to ₹78,000 Subsidy</span>
+          <span class="pill">✅ Up to &#8377;78,000 Subsidy</span>
           <span class="pill">✅ DCR Panels Required</span>
           <span class="pill">✅ Direct Bank Transfer</span>
           <span class="pill">✅ DISCOM Approval</span>
@@ -221,7 +210,7 @@
       <!-- Empty state -->
       <div id="empty-state" class="empty-state">
         <div class="big-emoji">☀️</div>
-        <h3>Get up to ₹78,000 Subsidy 🇮🇳</h3>
+        <h3>Get up to &#8377;78,000 Subsidy 🇮🇳</h3>
         <p>Fill in the form to instantly calculate your eligible subsidy under PM Surya Ghar Yojana.</p>
         <div class="subsidy-steps">
           <div class="step"><div class="step-num">1</div><span>Select your state &amp; system size</span></div>
@@ -238,12 +227,12 @@
         <div class="grid-2 animate-in">
           <div class="metric-card featured">
             <div class="metric-label calc-inline-104">Eligible Subsidy</div>
-            <div class="metric-value calc-inline-365">₹<span id="res_subsidy_amount">-</span></div>
+            <div class="metric-value calc-inline-365">&#8377;<span id="res_subsidy_amount">-</span></div>
             <div class="metric-sub">Direct Bank Transfer</div>
           </div>
           <div class="metric-card">
             <div class="metric-label">Net Investment</div>
-            <div class="metric-value">₹<span id="res_net_cost">-</span></div>
+            <div class="metric-value">&#8377;<span id="res_net_cost">-</span></div>
             <div class="metric-sub">After Subsidy</div>
           </div>
         </div>
@@ -256,21 +245,21 @@
             <div class="progress-bar-track">
               <div class="progress-bar-fill calc-inline-366" id="bar_cost"></div>
             </div>
-            <div class="progress-val" id="bar_cost_val">₹0</div>
+            <div class="progress-val" id="bar_cost_val">&#8377;0</div>
           </div>
           <div class="progress-row">
             <div class="progress-label">Subsidy Amount</div>
             <div class="progress-bar-track">
               <div class="progress-bar-fill calc-inline-367" id="bar_sub"></div>
             </div>
-            <div class="progress-val calc-inline-104" id="bar_sub_val">₹0</div>
+            <div class="progress-val calc-inline-104" id="bar_sub_val">&#8377;0</div>
           </div>
           <div class="progress-row">
             <div class="progress-label">Your Share</div>
             <div class="progress-bar-track">
               <div class="progress-bar-fill calc-inline-368" id="bar_net"></div>
             </div>
-            <div class="progress-val" id="bar_net_val">₹0</div>
+            <div class="progress-val" id="bar_net_val">&#8377;0</div>
           </div>
         </div>
 
@@ -296,7 +285,7 @@
             </div>
             <div class="detail-row-modern">
               <span class="detail-label">Estimated Project Cost</span>
-              <span class="detail-value">₹<span id="res_est_cost">-</span></span>
+              <span class="detail-value">&#8377;<span id="res_est_cost">-</span></span>
             </div>
             <div class="detail-row-modern calc-inline-370">
               <span class="detail-label">Remarks</span>
@@ -334,11 +323,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr id="slab-row-1"><td>Up to 1 kW</td><td>₹30,000 / kW</td><td class="green-val">₹30,000</td></tr>
-              <tr id="slab-row-2"><td>1 kW – 2 kW</td><td>₹30,000 / kW</td><td class="green-val">₹60,000</td></tr>
-              <tr id="slab-row-3"><td>2 kW – 3 kW</td><td>₹18,000 / kW (additional)</td><td class="green-val">₹78,000</td></tr>
-              <tr id="slab-row-4"><td>Above 3 kW</td><td>Capped at 3 kW</td><td class="green-val">₹78,000</td></tr>
-              <tr><td colspan="3" class="calc-inline-372">RWA / Housing Society: ₹18,000/kW for common area, up to 500 kW. Commercial: No direct subsidy.</td></tr>
+              <tr id="slab-row-1"><td>Up to 1 kW</td><td>&#8377;30,000 / kW</td><td class="green-val">&#8377;30,000</td></tr>
+              <tr id="slab-row-2"><td>1 kW &ndash; 2 kW</td><td>&#8377;30,000 / kW</td><td class="green-val">&#8377;60,000</td></tr>
+              <tr id="slab-row-3"><td>2 kW &ndash; 3 kW</td><td>&#8377;18,000 / kW (additional)</td><td class="green-val">&#8377;78,000</td></tr>
+              <tr id="slab-row-4"><td>Above 3 kW</td><td>Capped at 3 kW</td><td class="green-val">&#8377;78,000</td></tr>
+              <tr><td colspan="3" class="calc-inline-372">RWA / Housing Society: &#8377;18,000/kW for common area, up to 500 kW. Commercial: No direct subsidy.</td></tr>
             </tbody>
           </table>
         </div>
@@ -358,7 +347,7 @@
             <h4>📋 Get 3 Free Quotes from Local Installers</h4>
             <p>Compare prices from verified solar installers in your area. Free, no obligation.</p>
           </div>
-          <button class="btn-cta-green" onclick="handleGetQuotes()">Get Free Quotes →</button>
+          <button type="button" class="btn-cta-green" id="subsidy-quote-btn">Get Free Quotes <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
         </div>
 
         <!-- Save report -->
@@ -367,7 +356,7 @@
           <p>We'll email you a beautiful custom PDF-ready feasibility report including pricing, subsidies, and regional installer details.</p>
           <div class="save-email-row">
             <input type="email" id="save-calc-email" placeholder="you@example.com" required>
-            <button class="btn-send" id="save-calc-btn" onclick="handleSaveCalculation()">Send Report</button>
+            <button type="button" class="btn-send" id="save-calc-btn">Send Report</button>
           </div>
           <p id="save-status-msg" class="save-status"></p>
         </div>
@@ -381,20 +370,87 @@
     </div>
   </div>
 </div>
+        </div>
+        <article class="content-area mt-5">
+            <h2>The Ultimate Guide to PM Surya Ghar Subsidy (2026)</h2>
+            <p>Transitioning to renewable energy in India is heavily incentivized. At the forefront of this green revolution is the <strong>PM Surya Ghar Muft Bijli Yojana</strong>, a massive initiative designed to solarize 1 crore households. This page is dedicated to helping you accurately calculate the exact subsidy amount you are eligible for, ensuring you maximize your financial benefits.</p>
 
-<!-- ===== CITIES DATA ===== -->
+            <h3>What is the PM Surya Ghar Scheme?</h3>
+            <p>Launched to reduce the carbon footprint and empower households with free electricity, the PM Surya Ghar scheme provides Central Financial Assistance (CFA) directly to residential consumers who install grid-tied rooftop solar systems. Unlike older schemes, the 2026 process runs through a centralised National Portal where applications are tracked online and subsidies are disbursed directly to your Aadhaar-linked bank account.</p>
 
+            <h3>Subsidy Slabs Explained</h3>
+            <p>The subsidy is strictly capacity-based, heavily favoring the 1kW to 3kW range which aligns with the average consumption of middle-class Indian households:</p>
+            <ul>
+                <li><strong>Up to 2kW:</strong> You receive &#8377;30,000 per kW. For a 2kW system, this totals &#8377;60,000.</li>
+                <li><strong>Between 2kW and 3kW:</strong> You receive &#8377;60,000 for the first 2kW, plus &#8377;18,000 for the third kW. This caps the subsidy for a 3kW system at exactly &#8377;78,000.</li>
+                <li><strong>Above 3kW:</strong> The subsidy remains strictly capped at &#8377;78,000. Installing a 5kW or 10kW system will still yield a maximum central subsidy of &#8377;78,000.</li>
+            </ul>
 
-<!-- ===== CALCULATOR LOGIC ===== -->
+            <h3>Group Housing Societies (GHS) &amp; Resident Welfare Associations (RWA)</h3>
+            <p>Are you living in an apartment complex? You aren't left out. RWAs can install solar for common facilities (like lifts, water pumps, and hallway lighting) and receive an incentive of &#8377;18,000 per kW, up to a maximum of 500kW capacity (which equates to an upper limit of &#8377;90 Lakhs). This is a phenomenal way to reduce maintenance fees across the building.</p>
 
+            <h3>How the National Portal Disbursement Process Works</h3>
+            <p>The process of claiming the money is completely digitized to eliminate middlemen. Once you use our calculator to determine your eligibility, here are the exact steps you will follow in reality:</p>
+            <ol>
+                <li><strong>Registration:</strong> Register on pmsuryaghar.gov.in using your electricity consumer number.</li>
+                <li><strong>Feasibility Approval:</strong> Select your local DISCOM. They will remotely approve technical feasibility within 15 days.</li>
+                <li><strong>Installation:</strong> Hire a registered, empaneled vendor. They will install the system using indigenous DCR (Domestic Content Requirement) ALMM-approved panels. <i>*Using imported panels will void your subsidy.*</i></li>
+                <li><strong>Commissioning:</strong> The vendor submits the completion report, and the DISCOM installs your Net Meter.</li>
+                <li><strong>Fund Disbursal:</strong> Upload a few documents and a picture of the setup to the portal. The &#8377;78,000 is wired directly to your account.</li>
+            </ol>
 
-</body>
-</html>
-
+            <h3>Crucial: The DCR / ALMM Requirement</h3>
+            <p>To qualify for the money shown in our calculator, you absolutely must use ALMM (Approved List of Models and Manufacturers) registered modules. These are essentially panels where the solar cells are manufactured safely within India (DCR - Domestic Content Requirement). Our calculator assumes you are opting for DCR panels, as do all verified vendors participating in the scheme.</p>
+        </article>
     </div>
 </section>
-
-<section class="cta-section py-4 bg-white">
+<section class="faq-compact-section faq-section bg-white" id="subsidy-faq" aria-labelledby="subsidy-faq-title">
+    <div class="container">
+        <h2 class="faq-compact-title faq-section__title" id="subsidy-faq-title">Frequently Asked Questions</h2>
+        <div class="accordion faq-accordion subsidy-faq-accordion" id="subsidyFaqAccordion">
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="subsidyFaqHeadingOne">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#subsidyFaqCollapseOne" aria-expanded="false" aria-controls="subsidyFaqCollapseOne">
+                        How to apply for PM Surya Ghar subsidy?
+                    </button>
+                </h3>
+                <div id="subsidyFaqCollapseOne" class="accordion-collapse collapse" aria-labelledby="subsidyFaqHeadingOne" data-bs-parent="#subsidyFaqAccordion">
+                    <div class="accordion-body faq-body">The entire process is online. Register on pmsuryaghar.gov.in, submit your application with electricity bill details, get feasibility approval from your DISCOM, install through a registered vendor, apply for net metering, and submit bank details after commissioning to receive the subsidy.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="subsidyFaqHeadingTwo">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#subsidyFaqCollapseTwo" aria-expanded="false" aria-controls="subsidyFaqCollapseTwo">
+                        What is the maximum subsidy amount for residential homes?
+                    </button>
+                </h3>
+                <div id="subsidyFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="subsidyFaqHeadingTwo" data-bs-parent="#subsidyFaqAccordion">
+                    <div class="accordion-body faq-body">The maximum subsidy is capped at &#8377;78,000 for systems of 3kW and above. For 1kW it is &#8377;30,000, and for 2kW it is &#8377;60,000.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="subsidyFaqHeadingThree">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#subsidyFaqCollapseThree" aria-expanded="false" aria-controls="subsidyFaqCollapseThree">
+                        Are commercial buildings eligible for subsidy?
+                    </button>
+                </h3>
+                <div id="subsidyFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="subsidyFaqHeadingThree" data-bs-parent="#subsidyFaqAccordion">
+                    <div class="accordion-body faq-body">No, commercial, industrial, and institutional buildings are not eligible for Central Financial Assistance under PM Surya Ghar Yojana. They may still be able to use business tax benefits such as accelerated depreciation and GST input credit where applicable.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="subsidyFaqHeadingFour">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#subsidyFaqCollapseFour" aria-expanded="false" aria-controls="subsidyFaqCollapseFour">
+                        What is DCR (Domestic Content Requirement)?
+                    </button>
+                </h3>
+                <div id="subsidyFaqCollapseFour" class="accordion-collapse collapse" aria-labelledby="subsidyFaqHeadingFour" data-bs-parent="#subsidyFaqAccordion">
+                    <div class="accordion-body faq-body">To be eligible for subsidy, the solar panels used must be manufactured in India, including both cells and modules. These are called DCR panels, and imported panels do not qualify for the subsidy.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section class="cta-section py-4 bg-white calc-cta-section">
     <div class="container">
         <div class="cta-banner" data-aos="fade-up">
             <div class="cta-banner__content">

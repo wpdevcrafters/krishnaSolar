@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="calc-roi-page">
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -25,7 +25,7 @@
                 <a href="https://wa.me/919876543210"
                    class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-                    <i class="bi bi-whatsapp fs-5"></i>
+                    <i class="bi bi-whatsapp fs-5" aria-hidden="true"></i>
                 </a>
                 <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
                     Book Free Solar Consultation
@@ -53,10 +53,33 @@
                             <a class="nav-link" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../services.html">Services</a>
+                            <a class="nav-link" href="../about.html">About</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="../services.html" data-submenu-toggle>
+                                Services
+                                <i class="bi bi-chevron-down submenu-toggle-icon" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu nav flex-column ps-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../services.html#residential">Residential</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../services.html#commercial">Commercial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../services.html">Industrial</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                            <a class="nav-link active" href="../calculators.html" aria-current="page">Calculators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#projects">Success Stories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../contact.html">Contact</a>
@@ -72,7 +95,7 @@
                         <a href="https://wa.me/919876543210"
                            class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
                            target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                            <i class="bi bi-whatsapp fs-5" aria-hidden="true"></i> WhatsApp Us
                         </a>
                     </div>
                 </div>
@@ -85,10 +108,24 @@
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item has-submenu position-static">
                         <a class="nav-link" href="../services.html">Services</a>
+                        <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                            <li><a class="dropdown-item" href="../services.html#residential">Residential</a></li>
+                            <li><a class="dropdown-item" href="../services.html#commercial">Commercial</a></li>
+                            <li><a class="dropdown-item" href="../services.html">Industrial</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="../calculators.html">Solar Calculator</a>
+                        <a class="nav-link active" href="../calculators.html" aria-current="page">Calculators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#projects">Success Stories</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../contact.html">Contact</a>
@@ -98,7 +135,7 @@
                     <a href="https://wa.me/919876543210"
                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-                        <i class="bi bi-whatsapp fs-5"></i>
+                        <i class="bi bi-whatsapp fs-5" aria-hidden="true"></i>
                     </a>
                     <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
                         Book Free Solar Consultation
@@ -122,195 +159,259 @@
     </div>
 </section>
 
-<section class="calc-detail-section py-5" id="calculator">
+<section class="calc-detail-section py-5 position-relative" id="calculator">
     <div class="container">
         <div class="calculator-detail-scope">
-<div class="grid grid-calc">
-            <!-- Left: Calculator Form -->
-            <div class="calculator-form-card">
-                <form id="roi-calculator-form">
-                    <div class="form-group">
-                        <label>Total System Cost (After Subsidy) ₹</label>
-                        <input type="number" id="total_cost" class="form-control" placeholder="e.g. 150000" required="">
-                    </div>
+            <div class="grid-calc">
+                <!-- Left: Calculator Form -->
+                <div class="calculator-form-card">
+                    <form id="roi-calculator-form">
+                        <div class="form-group">
+                            <label>Total System Cost (After Subsidy) &#8377;</label>
+                            <input type="number" id="total_cost" class="form-control" placeholder="e.g. 150000" required="">
+                        </div>
 
-                    <div class="form-group">
-                        <label>Current Monthly Electricity Bill ₹</label>
-                        <input type="number" id="monthly_bill" class="form-control" placeholder="e.g. 3000" required="">
-                        <p class="calc-inline-341">
-                            This is the amount you will SAVE every month.
-                        </p>
-                    </div>
+                        <div class="form-group">
+                            <label>Current Monthly Electricity Bill &#8377;</label>
+                            <input type="number" id="monthly_bill" class="form-control" placeholder="e.g. 3000" required="">
+                            <p class="calc-inline-341">
+                                This is the amount you will SAVE every month.
+                            </p>
+                        </div>
 
-                    <div class="form-group">
-                        <label>Select Your State (For Vendors)</label>
-                        <select id="state" class="form-control" onchange="loadCities()" required="">
-                            <option value="">Select State</option>
-                            <option value="Andhra Pradesh">Andhra Pradesh</option>
-                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                            <option value="Assam">Assam</option>
-                            <option value="Bihar">Bihar</option>
-                            <option value="Chandigarh">Chandigarh</option>
-                            <option value="Chhattisgarh">Chhattisgarh</option>
-                            <option value="Delhi">Delhi</option>
-                            <option value="Goa">Goa</option>
-                            <option value="Gujarat">Gujarat</option>
-                            <option value="Haryana">Haryana</option>
-                            <option value="Himachal Pradesh">Himachal Pradesh</option>
-                            <option value="Jharkhand">Jharkhand</option>
-                            <option value="Karnataka">Karnataka</option>
-                            <option value="Kerala">Kerala</option>
-                            <option value="Madhya Pradesh">Madhya Pradesh</option>
-                            <option value="Maharashtra">Maharashtra</option>
-                            <option value="Manipur">Manipur</option>
-                            <option value="Meghalaya">Meghalaya</option>
-                            <option value="Mizoram">Mizoram</option>
-                            <option value="Nagaland">Nagaland</option>
-                            <option value="Odisha">Odisha</option>
-                            <option value="Puducherry">Puducherry</option>
-                            <option value="Punjab">Punjab</option>
-                            <option value="Rajasthan">Rajasthan</option>
-                            <option value="Sikkim">Sikkim</option>
-                            <option value="Tamil Nadu">Tamil Nadu</option>
-                            <option value="Telangana">Telangana</option>
-                            <option value="Tripura">Tripura</option>
-                            <option value="Uttar Pradesh">Uttar Pradesh</option>
-                            <option value="Uttarakhand">Uttarakhand</option>
-                            <option value="West Bengal">West Bengal</option>
-                        </select>
-                    </div>
+                        <div class="form-group">
+                            <label>Select Your State (For Vendors)</label>
+                            <select id="state" class="form-control" required="">
+                                <option value="">Select State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                        </div>
 
-                    <div class="form-group calc-inline-023" id="city-group">
-                        <label>Select City (Optional)</label>
-                        <select id="city" class="form-control">
-                            <option value="">All Cities</option>
-                        </select>
-                    </div>
+                        <div class="form-group calc-inline-023" id="city-group">
+                            <label>Select City (Optional)</label>
+                            <select id="city" class="form-control">
+                                <option value="">All Cities</option>
+                            </select>
+                        </div>
 
-                    <button type="submit" class="btn btn-primary calc-inline-069">Analyze
-                        Returns</button>
-                </form>
-            </div>
-
-            <!-- Right: Results -->
-            <div id="result-box" class="result-container calc-inline-023">
-
-                <div class="grid grid-2">
-                    <div class="metric-card featured calc-inline-070">
-                        <div class="metric-label calc-inline-071">Payback Period</div>
-                        <div class="metric-value calc-inline-342"><span id="res_payback">-</span> <span class="calc-inline-343">Yrs</span></div>
-                        <div class="metric-sub">Full Recovery Time</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-label">ROI Percentage</div>
-                        <div class="metric-value"><span id="res_roi_percent">-</span>%</div>
-                        <div class="metric-sub">Total Return</div>
-                    </div>
+                        <button type="submit" class="btn btn-primary calc-inline-069">Analyze
+                            Returns</button>
+                    </form>
                 </div>
 
-                <div class="details-card-modern">
-                    <div class="details-header-modern">
-                        <span class="calc-inline-032">💰</span> Savings Projection
+                <!-- Right: Results -->
+                <div id="result-box" class="result-container roi-result-box">
+                    <div id="roi-empty-state" class="roi-empty-state">
+                        <h3>See how much money you can save &#128184;</h3>
                     </div>
-                    <div class="details-list">
-                        <div class="detail-row-modern">
-                            <span class="detail-label">Annual Savings</span>
-                            <span id="res_annual" class="detail-value">-</span>
-                        </div>
-                        <div class="detail-row-modern">
-                            <span class="detail-label">Lifetime Savings (25 Yrs)</span>
-                            <span id="res_lifetime" class="detail-value calc-inline-344">-</span>
-                        </div>
-                        <div class="detail-row-modern calc-inline-345">
-                            <span class="detail-label calc-inline-346">Net Profit
-                                (Projected)</span>
-                            <span id="res_profit" class="detail-value calc-inline-347">-</span>
-                        </div>
-                    </div>
-                </div>
+                    <div id="roi-results-content" class="calc-inline-023">
 
-                <!-- Investment Comparison -->
-                <div class="investment-comparison mt-4 calc-inline-348">
-                    <h3 class="calc-inline-349">🛡️ Solar vs Traditional Investments</h3>
-                    <div class="comparison-row calc-inline-350">
-                        <div class="calc-inline-351">
-                            <span class="calc-inline-352">Solar IRR</span>
-                            <span id="irr_val" class="calc-inline-353">28%</span>
+                    <div class="grid grid-2">
+                        <div class="metric-card featured calc-inline-070">
+                            <div class="metric-label calc-inline-071">Payback Period</div>
+                            <div class="metric-value calc-inline-342"><span id="res_payback">-</span> <span class="calc-inline-343">Yrs</span></div>
+                            <div class="metric-sub">Full Recovery Time</div>
                         </div>
-                        <div class="calc-inline-354">
-                            <div id="irr_bar" class="calc-inline-355"></div>
-                        </div>
-                    </div>
-                    <div class="comparison-row calc-inline-350">
-                        <div class="calc-inline-351">
-                            <span>Fixed Deposit (FD)</span>
-                            <span class="calc-inline-356">7.1%</span>
-                        </div>
-                        <div class="calc-inline-354">
-                            <div class="calc-inline-357"></div>
+                        <div class="metric-card">
+                            <div class="metric-label">ROI Percentage</div>
+                            <div class="metric-value"><span id="res_roi_percent">-</span>%</div>
+                            <div class="metric-sub">Total Return</div>
                         </div>
                     </div>
-                    <div class="comparison-row">
-                        <div class="calc-inline-351">
-                            <span>Mutual Funds (Avg)</span>
-                            <span class="calc-inline-356">12.5%</span>
+
+                    <div class="details-card-modern">
+                        <div class="details-header-modern">
+                            <i class="bi bi-cash-coin" aria-hidden="true"></i> Savings Projection
                         </div>
-                        <div class="calc-inline-354">
-                            <div class="calc-inline-358">
+                        <div class="details-list">
+                            <div class="detail-row-modern">
+                                <span class="detail-label">Annual Savings</span>
+                                <span id="res_annual" class="detail-value">-</span>
+                            </div>
+                            <div class="detail-row-modern">
+                                <span class="detail-label">Lifetime Savings (25 Yrs)</span>
+                                <span id="res_lifetime" class="detail-value calc-inline-344">-</span>
+                            </div>
+                            <div class="detail-row-modern calc-inline-345">
+                                <span class="detail-label calc-inline-346">Net Profit
+                                    (Projected)</span>
+                                <span id="res_profit" class="detail-value calc-inline-347">-</span>
                             </div>
                         </div>
                     </div>
-                    <p class="calc-inline-359">
-                        💡 <strong>Note:</strong> Solar returns are tax-free and based on electricity bill savings.
-                    </p>
-                </div>
 
-                <!-- Viral Share -->
-                <div class="mt-4 calc-inline-360">
-                    <button id="whatsapp-share-btn" class="btn calc-inline-361">
-                        <span class="calc-inline-362">📱</span> Share on WhatsApp
-                    </button>
-                    <button onclick="window.print()" class="btn calc-inline-363">
-                        🖨️
-                    </button>
-                </div>
-
-                <div class="mt-4 p-3 bg-light border rounded calc-inline-077">
-                    <strong>Investment Rating:</strong>
-                    <ul class="calc-inline-364">
-                        <li><strong>3-4 Years:</strong> <span class="text-success">Excellent Investment</span></li>
-                        <li><strong>4-5 Years:</strong> <span class="calc-inline-344">Good Standard</span></li>
-                        <li><strong>&gt; 6 Years:</strong> Average Return</li>
-                    </ul>
-                </div>
-
-                                <!-- Inline "Get 3 Free Quotes" CTA -->
-                <div id="lm-inline-cta" class="calc-inline-078">
-                    <div class="calc-inline-079">
-                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
-                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                    <!-- Investment Comparison -->
+                    <div class="investment-comparison mt-4 calc-inline-348">
+                        <h3 class="calc-inline-349"><i class="bi bi-shield-check" aria-hidden="true"></i> Solar vs Traditional Investments</h3>
+                        <div class="comparison-row calc-inline-350">
+                            <div class="calc-inline-351">
+                                <span class="calc-inline-352">Solar IRR</span>
+                                <span id="irr_val" class="calc-inline-353">28%</span>
+                            </div>
+                            <div class="calc-inline-354">
+                                <div id="irr_bar" class="calc-inline-355"></div>
+                            </div>
+                        </div>
+                        <div class="comparison-row calc-inline-350">
+                            <div class="calc-inline-351">
+                                <span>Fixed Deposit (FD)</span>
+                                <span class="calc-inline-356">7.1%</span>
+                            </div>
+                            <div class="calc-inline-354">
+                                <div class="calc-inline-357"></div>
+                            </div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="calc-inline-351">
+                                <span>Mutual Funds (Avg)</span>
+                                <span class="calc-inline-356">12.5%</span>
+                            </div>
+                            <div class="calc-inline-354">
+                                <div class="calc-inline-358">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="calc-inline-359">
+                            <i class="bi bi-lightbulb" aria-hidden="true"></i> <strong>Note:</strong> Solar returns are tax-free and based on electricity bill savings.
+                        </p>
                     </div>
-                    <button onclick="(function(){var s=document.getElementById('state'),c=document.getElementById('city'),k=document.getElementById('system_capacity');window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{state:s?s.options[s.selectedIndex].text:'',city:c&amp;&amp;c.value?c.options[c.selectedIndex].text:'',size:k?k.value:''});})();" class="calc-inline-082">Get Free Quotes →</button>
-                </div>
 
-<!-- Marketplace Injection -->
-                <div id="vendor-quotes-list" class="mt-4">
-                    <!-- Vendors will be loaded here via vendor-integration.js?v=20260613 -->
-                </div>
-            </div>
+                    <!-- Viral Share -->
+                    <div class="mt-4 calc-inline-360">
+                        <button id="whatsapp-share-btn" class="btn calc-inline-361">
+                            <span class="calc-inline-362"><i class="bi bi-whatsapp" aria-hidden="true"></i></span> Share on WhatsApp
+                        </button>
+                        <button type="button" id="roi-print-btn" class="btn calc-inline-363" aria-label="Print ROI report">
+                            <i class="bi bi-printer" aria-hidden="true"></i>
+                        </button>
+                    </div>
 
-            <!-- Default Empty State -->
-            <div id="empty-state" class="result-container calc-inline-083">
-                <img alt="" src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-084">
-                <h3>See how much money you can save 💸</h3>
+                    <div class="mt-4 p-3 bg-light border rounded calc-inline-077">
+                        <strong>Investment Rating:</strong>
+                        <ul class="calc-inline-364">
+                            <li><strong>3-4 Years:</strong> <span class="text-success">Excellent Investment</span></li>
+                            <li><strong>4-5 Years:</strong> <span class="calc-inline-344">Good Standard</span></li>
+                            <li><strong>&gt; 6 Years:</strong> Average Return</li>
+                        </ul>
+                    </div>
+
+                                    <!-- Inline "Get 3 Free Quotes" CTA -->
+                    <div id="lm-inline-cta" class="calc-inline-078">
+                        <div class="calc-inline-079">
+                            <div class="calc-inline-080">Get 3 Free Quotes from Local Installers</div>
+                            <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                        </div>
+                        <button type="button" id="roi-inline-quote-btn" class="calc-inline-082">Get Free Quotes <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+
+    <!-- Marketplace Injection -->
+                    <div id="vendor-quotes-list" class="mt-4">
+                        <!-- Vendors will be loaded here via vendor-integration.js?v=20260613 -->
+                    </div>
+                </div>
             </div>
         </div>
-</div>
+        </div>
+        <article class="content-area mt-5">
+            <h2>Deep Analysis: Calculating Your Solar ROI &amp; Payback Period</h2>
+            <p>Installing a rooftop solar system is fundamentally an investment &mdash; one that has delivered strong returns for millions of Indian homeowners. While not risk-free (risks include inverter replacement, panel degradation, and DISCOM policy changes), a well-installed system typically outperforms savings instruments over its 25-year life. Our Solar ROI (Return on Investment) Calculator is engineered to calculate exactly when your system "pays for itself" and how much pure profit it generates over its 25-year lifespan.</p>
 
+            <h3>The Mechanics of Solar Payback</h3>
+            <p>The 'Payback Period' is the amount of time it takes for your upfront net cost (Total Cost minus Subsidy) to be entirely recovered through monthly electricity bill savings. In India, under the 2026 tariff structures and the PM Surya Ghar subsidy levels, residential payback periods have plummeted to unprecedented lows.</p>
+            <ul>
+                <li><strong>Average Payback Time:</strong> Currently hovering between <strong>2.8 to 4 years</strong> depending on your state's tariff rate.</li>
+                <li><strong>What this means:</strong> For the remaining 20+ years of the panel's lifespan, the electricity generated is effectively 100% free money.</li>
+            </ul>
+
+            <h3>Factors Dramatically Influencing Your ROI</h3>
+            <p>Several underlying vectors drive the mathematics behind our ROI calculator. If you want to optimize your financial returns, you need to understand these variables:</p>
+
+            <h4>1. Your Local Electricity Tariff Slab</h4>
+            <p>DISCOMs use telescopic billing. If you use 600 units, the first 100 might cost &#8377;4/unit, but the last 100 might cost &#8377;9/unit. When solar kills the top tier of your consumption via net-metering, your savings are calculated against that expensive &#8377;9/unit rate! The higher your state's tariff, the faster your payback.</p>
+
+            <h4>2. Shadow-Free Roof Area (Tilt and Azimuth)</h4>
+            <p>A 3kW system is rated to produce roughly 12 units a day under ideal conditions. However, if your roof is partially shaded by a water tank or neighboring building, or if your panels don't face true South, generation decreases. A 10% drop in generation extends your payback period by approximately 5 months.</p>
+
+            <h4>3. Escalating Electricity Costs</h4>
+            <p>One critical thing many homeowners forget: electricity prices NEVER stay flat. Historically, grid electricity costs in India rise by roughly 4-6% annually. A bill of &#8377;3,000 today will likely be &#8377;4,500 in five years. Our advanced calculator factors in this inflation rate, demonstrating how solar acts as an incredible hedge against future utility hikes.</p>
+
+            <h3>Understanding Lifetime Savings</h3>
+            <p>Solar panels sold in India today come with a minimum 25-year performance guarantee (80% output at year 25) plus a 10&ndash;12 year product/workmanship warranty. After your 3-year payback period, you enter the "Profit Zone."</p>
+            <p>If a 3kW setup saves you roughly &#8377;35,000 a year today, after factoring in a conservative 4% annual tariff hike, that same system will be saving you nearly &#8377;85,000 a year by year 20. When accumulated over 25 years, a modest &#8377;1.1 Lakh investment can yield over <strong>&#8377;15 Lakhs to &#8377;20 Lakhs in projected cumulative savings</strong> (assuming 4% annual tariff increase and stable generation &mdash; actual results vary by location and system quality). Solar delivers strong, consistent returns that are often difficult to match with traditional savings instruments &mdash; especially with rising electricity tariffs.</p>
+
+            <h3>Maintenance and Ongoing Costs (OPEX)</h3>
+            <p>To keep the ROI calculation honest, one must consider OPEX (Operating Expenses). Fortunately, on-grid solar has zero moving parts. Your only real OPEX is wiping dust off the panels with a microfiber map every 2 weeks (which is free if done manually) and replacing the inverter once around Year 12-15 (which costs roughly 20% of the initial system cost). Our long-term models account for these minor adjustments, ensuring the numbers you see are realistic and attainable.</p>
+        </article>
     </div>
 </section>
-
-<section class="cta-section py-4 bg-white">
+<section class="faq-compact-section faq-section bg-white" id="roi-faq" aria-labelledby="roi-faq-title">
+    <div class="container">
+        <h2 class="faq-compact-title faq-section__title" id="roi-faq-title">Frequently Asked Questions</h2>
+        <div class="accordion faq-accordion roi-faq-accordion" id="roiFaqAccordion">
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="roiFaqHeadingOne">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#roiFaqCollapseOne" aria-expanded="false" aria-controls="roiFaqCollapseOne">
+                        What is a good ROI for a solar system in India?
+                    </button>
+                </h3>
+                <div id="roiFaqCollapseOne" class="accordion-collapse collapse" aria-labelledby="roiFaqHeadingOne" data-bs-parent="#roiFaqAccordion">
+                    <div class="accordion-body faq-body">A good ROI for a residential solar system in India is typically between 20% to 30%. This translates to a payback period of 3 to 5 years. Any payback period under 5 years is considered an excellent return on a home improvement investment. Note: solar is not a financial instrument &mdash; actual returns depend on your electricity tariff, location, system quality, and future DISCOM policy. Consult a financial advisor for personalised investment advice.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="roiFaqHeadingTwo">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#roiFaqCollapseTwo" aria-expanded="false" aria-controls="roiFaqCollapseTwo">
+                        Does the PM Surya Ghar subsidy improve ROI?
+                    </button>
+                </h3>
+                <div id="roiFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="roiFaqHeadingTwo" data-bs-parent="#roiFaqAccordion">
+                    <div class="accordion-body faq-body">Yes, significantly. The PM Surya Ghar Muft Bijli Yojana provides subsidies up to &#8377;78,000 for systems up to 3kW. This reduces the upfront capital cost, thereby reducing the payback period by 1-2 years and increasing the overall ROI.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="roiFaqHeadingThree">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#roiFaqCollapseThree" aria-expanded="false" aria-controls="roiFaqCollapseThree">
+                        How do I calculate the Payback Period?
+                    </button>
+                </h3>
+                <div id="roiFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="roiFaqHeadingThree" data-bs-parent="#roiFaqAccordion">
+                    <div class="accordion-body faq-body">The simple payback period is calculated by dividing the Net System Cost (after subsidy) by the Annual Savings on electricity bills. For example, if your system costs &#8377;1.5 Lakhs and saves &#8377;50,000 per year, your payback period is 3 years.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-section py-4 bg-white calc-cta-section">
     <div class="container">
         <div class="cta-banner" data-aos="fade-up">
             <div class="cta-banner__content">

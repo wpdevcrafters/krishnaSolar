@@ -5,7 +5,7 @@
             Calculates Payback Period and Internal Rate of Return (IRR) with UI Logic.
             */
 
-            if (typeof SUBSIDY_MAX_KW === 'undefined') { var SUBSIDY_MAX_KW = 78000; } // PM Surya Ghar max subsidy (â‚¹78,000 for â‰¥3kW)
+            if (typeof SUBSIDY_MAX_KW === 'undefined') { var SUBSIDY_MAX_KW = 78000; } // PM Surya Ghar max subsidy (Rs. 78,000 for >=3kW)
 
             document.addEventListener('DOMContentLoaded', () => {
                 const calcForm = document.getElementById('roi-calculator-form');
@@ -13,6 +13,33 @@
                     calcForm.addEventListener('submit', (e) => {
                         e.preventDefault();
                         calculateROI();
+                    });
+                }
+
+                const stateSelect = document.getElementById('state');
+                if (stateSelect && typeof loadCities === 'function') {
+                    stateSelect.addEventListener('change', loadCities);
+                }
+
+                const printBtn = document.getElementById('roi-print-btn');
+                if (printBtn) {
+                    printBtn.addEventListener('click', () => window.print());
+                }
+
+                const quoteBtn = document.getElementById('roi-inline-quote-btn');
+                if (quoteBtn) {
+                    quoteBtn.addEventListener('click', () => {
+                        const state = document.getElementById('state');
+                        const city = document.getElementById('city');
+                        const cost = document.getElementById('total_cost');
+
+                        if (window.solarLeads) {
+                            window.solarLeads.showModal('Inline CTA', {
+                                state: state ? state.options[state.selectedIndex].text : '',
+                                city: city && city.value ? city.options[city.selectedIndex].text : '',
+                                size: cost ? cost.value : ''
+                            });
+                        }
                     });
                 }
             });
@@ -34,15 +61,19 @@
                 const roiPercent = (netProfit / cost) * 100;
 
                 // Display
-                const emptyState = document.getElementById('empty-state');
+                const emptyState = document.getElementById('roi-empty-state');
                 if (emptyState) emptyState.style.display = 'none';
+
+                const resultContent = document.getElementById('roi-results-content');
+                if (resultContent) resultContent.style.display = 'block';
 
                 const resultBox = document.getElementById('result-box');
                 resultBox.style.display = 'block';
+                resultBox.classList.add('roi-result-box--active');
 
                 const formatMoney = (amount) => {
                     const sign = amount < 0 ? '-' : '';
-                    return `${sign}â‚¹${Math.abs(Math.round(amount)).toLocaleString('en-IN')}`;
+                    return `${sign}\u20B9${Math.abs(Math.round(amount)).toLocaleString('en-IN')}`;
                 };
 
                 document.getElementById('res_payback').innerText = `${paybackYears.toFixed(1)}`;

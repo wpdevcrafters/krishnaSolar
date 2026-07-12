@@ -2891,7 +2891,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
     position: relative;
     padding: 7rem 0 4.5rem;
     overflow: hidden;
-    background: linear-gradient(135deg, #0b1d0f 0%, #0b7a54 55%, var(--brand-success-dark) 100%);
+    background: linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%);
 }
 .calc-page-hero__bg {
     position: absolute;
@@ -4330,7 +4330,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 /* ==========================================================================
    CALCULATOR DETAIL PAGES — Shared Styles
    ========================================================================== */
-.calc-detail-hero { position:relative; padding:5.5rem 0 3.5rem; overflow:hidden; background:linear-gradient(135deg,#0b1d0f 0%,#0b7a54 55%,#059669 100%); }
+.calc-detail-hero { position:relative; padding:5.5rem 0 3.5rem; overflow:hidden; background:linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%); }
 .calc-detail-hero__bg { position:absolute; inset:0; background: radial-gradient(ellipse 55% 65% at 85% 15%,rgba(245,158,11,.14) 0%,transparent 65%), radial-gradient(ellipse 45% 55% at 5% 85%,rgba(16,185,129,.15) 0%,transparent 65%); pointer-events:none; }
 .calc-detail-hero__content { position:relative; z-index:1; max-width:820px; }
 .calc-detail-hero__breadcrumb .breadcrumb-item, .calc-detail-hero__breadcrumb .breadcrumb-item a { color:rgba(255,255,255,.6); font-size:.85rem; text-decoration:none; transition:color .2s; }
@@ -4650,7 +4650,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
    SOLAR PANEL COST CALCULATOR PAGE - Current Site Design Overrides
    ========================================================================== */
 .calc-cost-page .calc-detail-hero {
-    background: linear-gradient(135deg, #f8fcff 0%, #eef9f2 54%, #fff7e8 100%);
+    background: linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%);
     padding: 7.4rem 0 4rem;
 }
 .calc-cost-page .calc-detail-hero__bg {
@@ -4760,7 +4760,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
    SOLAR ROI CALCULATOR PAGE - Current Site Design Overrides
    ========================================================================== */
 .calc-roi-page .calc-detail-hero {
-    background: linear-gradient(135deg, #f8fcff 0%, #eef9f2 54%, #fff7e8 100%);
+    background: linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%);
     padding: 7.4rem 0 4rem;
 }
 .calc-roi-page .calc-detail-hero__bg {
@@ -4886,7 +4886,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
    SOLAR ROOFTOP SUBSIDY CALCULATOR PAGE - Current Site Design Overrides
    ========================================================================== */
 .calc-subsidy-page .calc-detail-hero {
-    background: linear-gradient(135deg, #f8fcff 0%, #eef9f2 54%, #fff7e8 100%);
+    background: linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%);
     padding: 7.4rem 0 4rem;
 }
 .calc-subsidy-page .calc-detail-hero__bg {
@@ -4996,7 +4996,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
    INVERTER SIZE CALCULATOR PAGE - Current Site Design Overrides
    ========================================================================== */
 .calc-inverter-page .calc-detail-hero {
-    background: linear-gradient(135deg, #f8fcff 0%, #eef9f2 54%, #fff7e8 100%);
+    background: linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%);
     padding: 7.4rem 0 4rem;
 }
 .calc-inverter-page .calc-detail-hero__bg {
@@ -5213,5 +5213,1364 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
     .calc-inverter-page .appliance-btn .btn-watts {
         grid-column: 2;
         justify-self: start;
+    }
+}
+/* Inverter calculator layout and content polish */
+.calc-inverter-page .calc-detail-section {
+    background: linear-gradient(180deg, #f7faf9 0%, #f8fafc 48%, #ffffff 100%);
+}
+.calc-inverter-page .calculator-detail-scope > .inverter-layout-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+.calc-inverter-page .inverter-controls-left,
+.calc-inverter-page .inverter-controls-right {
+    min-width: 0;
+    max-width: none;
+}
+.calc-inverter-page .calculator-detail-scope > .inverter-layout-grid > .inverter-controls-left {
+    position: static;
+    top: auto;
+    height: auto;
+}
+.calc-inverter-page .inverter-controls-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.calc-inverter-page .calculator-detail-scope .calc-inline-009,
+.calc-inverter-page .calculator-detail-scope .calc-inline-030 {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e5edf4;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+}
+.calc-inverter-page .inverter-controls-right .calc-inline-009,
+.calc-inverter-page .inverter-controls-right .calc-inline-030 {
+    margin-bottom: 0;
+}
+.calc-inverter-page .inverter-controls-right .calc-inline-009 {
+    min-height: 275px;
+}
+.calc-inverter-page .calc-inline-010,
+.calc-inverter-page .calc-inline-020 {
+    font-size: 0.94rem;
+    font-weight: 800;
+}
+.calc-inverter-page .calc-inline-011,
+.calc-inverter-page .calc-inline-013,
+.calc-inverter-page .calc-inline-021 {
+    width: 21px;
+    height: 21px;
+    font-size: 0.72rem;
+}
+.calc-inverter-page .calc-inline-012 {
+    padding-left: 29px;
+    margin-bottom: 0.85rem;
+    font-size: 0.74rem;
+}
+.calc-inverter-page .appliance-preset-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.65rem;
+}
+.calc-inverter-page .appliance-btn {
+    position: relative;
+    width: 100%;
+    min-height: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.45rem;
+    padding: 0.7rem;
+    border: 1px solid #e5edf4;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fffb 100%);
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.04);
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.calc-inverter-page .appliance-btn:hover,
+.calc-inverter-page .appliance-btn:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(16, 185, 129, 0.45);
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, #ffffff 100%);
+    box-shadow: 0 14px 28px rgba(16, 185, 129, 0.12);
+    outline: none;
+}
+.calc-inverter-page .appliance-btn .btn-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(16, 185, 129, 0.10);
+    box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.08);
+    font-size: 1rem;
+    line-height: 1;
+}
+.calc-inverter-page .appliance-btn .appliance-btn__name {
+    max-width: calc(100% - 42px);
+    color: #172033;
+    font-size: 0.74rem;
+    font-weight: 900;
+    line-height: 1.18;
+}
+.calc-inverter-page .appliance-btn .btn-watts {
+    position: absolute;
+    top: 0.62rem;
+    right: 0.55rem;
+    border-radius: 999px;
+    padding: 0.2rem 0.42rem;
+    background: rgba(245, 158, 11, 0.14);
+    color: #b45309;
+    font-size: 0.62rem;
+    font-weight: 900;
+}
+.calc-inverter-page .custom-appliance-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(120px, 0.8fr) minmax(90px, 0.55fr);
+    gap: 0.85rem;
+    align-items: end;
+}
+.calc-inverter-page .custom-appliance-row .form-group {
+    margin-bottom: 0;
+}
+.calc-inverter-page .custom-appliance-row label,
+.calc-inverter-page .calc-inline-033 {
+    color: #334155;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+}
+.calc-inverter-page .custom-appliance-row input,
+.calc-inverter-page .calc-inline-034 {
+    width: 100%;
+    min-height: 38px;
+    border: 1px solid #dbe3ef;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1f2937;
+    font-size: 0.8rem;
+}
+.calc-inverter-page .calc-inline-014,
+.calc-inverter-page .calc-inline-015,
+.calc-inverter-page .calc-inline-016 {
+    width: 100%;
+    max-width: none;
+}
+.calc-inverter-page .calc-inline-016 {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}
+.calc-inverter-page .calc-inline-017 {
+    display: none;
+}
+.calc-inverter-page .calc-inline-018 {
+    width: min(220px, 100%);
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    border-radius: 8px;
+    padding: 0.48rem 0.78rem;
+    background: var(--brand-warning);
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(245, 158, 11, 0.22);
+}
+.calc-inverter-page .calc-inline-019 {
+    margin-bottom: 0.75rem;
+}
+.calc-inverter-page #appliance-list-table {
+    overflow-x: auto;
+}
+.calc-inverter-page #list-empty-state {
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.4rem 0.8rem;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    text-align: center;
+    opacity: 1;
+}
+.calc-inverter-page #list-empty-state .empty-icon {
+    margin-bottom: 0.65rem;
+    color: #111827;
+    font-size: 2rem;
+}
+.calc-inverter-page #list-empty-state p {
+    margin: 0 auto;
+    max-width: 190px;
+    color: #64748b;
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+.calc-inverter-page .selected-appliances-table {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 9px;
+    font-size: 0.76rem;
+}
+.calc-inverter-page .selected-appliances-table th {
+    padding: 0.5rem 0.4rem;
+    background: rgba(16, 185, 129, 0.10);
+    color: #334155;
+    font-size: 0.66rem;
+    white-space: nowrap;
+}
+.calc-inverter-page .selected-appliances-table td {
+    padding: 0.5rem 0.4rem;
+    vertical-align: middle;
+}
+.calc-inverter-page .selected-appliances-table th:first-child,
+.calc-inverter-page .selected-appliances-table td:first-child {
+    min-width: 82px;
+}
+.calc-inverter-page .selected-appliances-table th:nth-child(2),
+.calc-inverter-page .selected-appliances-table td:nth-child(2),
+.calc-inverter-page .selected-appliances-table th:nth-child(3),
+.calc-inverter-page .selected-appliances-table td:nth-child(3),
+.calc-inverter-page .selected-appliances-table th:nth-child(4),
+.calc-inverter-page .selected-appliances-table td:nth-child(4) {
+    text-align: center;
+}
+.calc-inverter-page .qty-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.calc-inverter-page .qty-btn,
+.calc-inverter-page .remove-btn {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #dbe3ef;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 0.72rem;
+    line-height: 1;
+}
+.calc-inverter-page .qty-value {
+    min-width: 14px;
+    text-align: center;
+}
+.calc-inverter-page .calc-inline-031 {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.55rem;
+}
+.calc-inverter-page .calc-inline-034 {
+    grid-column: 2;
+    max-width: 170px;
+}
+.calc-inverter-page .inverter-layout-grid #result-section {
+    grid-column: 1 / -1;
+    position: static;
+    top: auto;
+    min-height: 0;
+    margin-top: 0.35rem;
+}
+.calc-inverter-page .inverter-layout-grid #result-empty,
+.calc-inverter-page .inverter-layout-grid #result-card > .result-output-card {
+    min-height: 310px;
+}
+.calc-inverter-page .inverter-layout-grid #result-empty .empty-state {
+    min-height: 248px;
+}
+.calc-inverter-page #result-card > .result-output-card {
+    display: flex;
+    flex-direction: column;
+}
+.calc-inverter-page .result-output-header {
+    padding: 1.65rem 1.25rem;
+    border-radius: 10px;
+}
+.calc-inverter-page .result-kva {
+    font-size: clamp(2.6rem, 5vw, 4rem);
+}
+.calc-inverter-page .result-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+.calc-inverter-page .result-metric-item {
+    min-height: 90px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+.calc-inverter-page .calc-info-section {
+    border-radius: 18px;
+    border-color: #dde8f2;
+    padding: 2.15rem;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.04);
+}
+.calc-inverter-page #sizes-reference {
+    margin-top: 2rem;
+}
+.calc-inverter-page .calc-info-title {
+    color: #172033;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+.calc-inverter-page .sizes-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.92rem;
+}
+.calc-inverter-page .sizes-table th {
+    padding: 1rem 1.1rem;
+    background: #eef3f8;
+    color: #334155;
+    font-weight: 800;
+}
+.calc-inverter-page .sizes-table td {
+    padding: 1rem 1.1rem;
+    border-bottom: 1px solid #edf2f7;
+    color: #334155;
+}
+.calc-inverter-page .sizes-table tbody tr:hover {
+    background: #f8fafc;
+}
+.calc-inverter-page .sizes-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+.calc-inverter-page .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+.calc-inverter-page .brand-card {
+    min-height: 180px;
+    padding: 1.25rem;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 12px;
+    background: #ffffff;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.calc-inverter-page .brand-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(16, 185, 129, 0.28);
+    box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
+}
+.calc-inverter-page .brand-name {
+    margin-bottom: 0.7rem;
+    color: #172033;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+.calc-inverter-page .brand-tag {
+    display: inline-flex;
+    margin-bottom: 0.8rem;
+    border-radius: 999px;
+    padding: 0.22rem 0.58rem;
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--brand-success-dark);
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+.calc-inverter-page .brand-desc {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+.calc-inverter-page .cta-solar-card {
+    margin-top: 2rem;
+    padding: 1.65rem 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #fff3d8, #ffd89a);
+    color: #ea580c;
+    box-shadow: none;
+}
+.calc-inverter-page .cta-solar-card h3 {
+    color: #ea580c;
+    font-size: 1.35rem;
+}
+.calc-inverter-page .cta-solar-card p {
+    color: #c2410c;
+    font-size: 1rem;
+}
+.calc-inverter-page .cta-solar-card .btn {
+    background: #ea580c;
+    border-color: #ea580c;
+    color: #ffffff !important;
+}
+.calc-inverter-page .calc-seo-content {
+    max-width: 100%;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 2.4rem 0 0;
+}
+.calc-inverter-page .calc-seo-content h2 {
+    margin-top: 2.2rem;
+    color: #172033;
+    font-size: clamp(1.75rem, 3vw, 2.55rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+}
+.calc-inverter-page .calc-seo-content h2:first-child {
+    margin-top: 0;
+}
+.calc-inverter-page .calc-seo-content p,
+.calc-inverter-page .calc-seo-content li {
+    color: #64748b;
+    font-size: 1.06rem;
+    line-height: 1.8;
+}
+.calc-inverter-page .calc-formula-box {
+    margin: 1rem 0 1.35rem;
+    border-left-width: 4px;
+    border-radius: 8px;
+    padding: 1.05rem 1.25rem;
+    background: #f1f5f9;
+    color: #334155;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.92rem;
+}
+.calc-inverter-page .calc-formula-box:nth-of-type(1) {
+    border-left-color: var(--brand-success);
+}
+.calc-inverter-page .calc-formula-box:nth-of-type(2) {
+    border-left-color: #3b82f6;
+}
+.calc-inverter-page .calc-formula-box:nth-of-type(3) {
+    border-left-color: var(--brand-warning);
+}
+@media (max-width: 1199.98px) {
+    .calc-inverter-page .appliance-preset-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .calc-inverter-page .brands-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (max-width: 991.98px) {
+    .calc-inverter-page .calculator-detail-scope > .inverter-layout-grid {
+        grid-template-columns: 1fr;
+    }
+    .calc-inverter-page .custom-appliance-row {
+        grid-template-columns: minmax(0, 1.25fr) minmax(110px, 0.75fr) minmax(90px, 0.55fr);
+    }
+    .calc-inverter-page .result-metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 767.98px) {
+    .calc-inverter-page .appliance-preset-grid,
+    .calc-inverter-page .brands-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .calc-inverter-page .custom-appliance-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .calc-inverter-page .custom-appliance-row .form-group:first-child,
+    .calc-inverter-page .calc-inline-016 {
+        grid-column: 1 / -1;
+    }
+    .calc-inverter-page .cta-solar-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+@media (max-width: 575.98px) {
+    .calc-inverter-page .appliance-preset-grid,
+    .calc-inverter-page .brands-grid,
+    .calc-inverter-page .custom-appliance-row,
+    .calc-inverter-page .result-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    .calc-inverter-page .custom-appliance-row .form-group:first-child,
+    .calc-inverter-page .calc-inline-016 {
+        grid-column: auto;
+    }
+    .calc-inverter-page .calc-inline-018 {
+        width: 100%;
+    }
+    .calc-inverter-page .calc-info-section,
+    .calc-inverter-page #sizes-reference {
+        padding: 1.25rem;
+    }
+}
+
+/* Solar loan EMI calculator polish */
+.calc-loan-page .calc-detail-hero {
+    background: linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%);
+}
+.calc-loan-page .calc-detail-hero__bg {
+    background:
+        radial-gradient(ellipse 55% 70% at 82% 18%, rgba(245, 158, 11, 0.22) 0%, transparent 64%),
+        radial-gradient(ellipse 42% 58% at 8% 86%, rgba(255, 255, 255, 0.16) 0%, transparent 68%);
+}
+.calc-loan-page .calc-detail-hero__accent {
+    background: linear-gradient(90deg, #ffffff, #fff7cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.calc-loan-page .calc-detail-section {
+    background: linear-gradient(180deg, #f7faf9 0%, #ffffff 100%);
+}
+.calc-loan-page .calc-loan-grid {
+    grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+.calc-loan-page .calculator-detail-scope .calculator-form-card {
+    width: 100%;
+    max-width: 420px;
+}
+.calc-loan-page .calculator-form-card,
+.calc-loan-page .calculator-detail-scope .result-container {
+    border: 1px solid #e1ebdf;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.06);
+}
+.calc-loan-page .calculator-form-card {
+    padding: 1.45rem;
+}
+.calc-loan-page .calculator-form-card .form-group {
+    margin-bottom: 1rem;
+}
+.calc-loan-page .calculator-form-card label {
+    color: #172033;
+    font-weight: 800;
+}
+.calc-loan-page .slider-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.8rem;
+    align-items: center;
+}
+.calc-loan-page input[type="range"] {
+    accent-color: #159a65;
+}
+.calc-loan-page .slider-val {
+    min-width: 72px;
+    border-radius: 999px;
+    padding: 0.35rem 0.65rem;
+    background: rgba(16, 185, 129, 0.12);
+    color: #0f7a50;
+    font-weight: 900;
+    text-align: center;
+}
+.calc-loan-page .form-control {
+    min-height: 46px;
+    border-color: #dce8dd;
+    border-radius: 10px;
+}
+.calc-loan-page .form-control:focus {
+    border-color: #159a65;
+    box-shadow: 0 0 0 0.18rem rgba(21, 154, 101, 0.14);
+}
+.calc-loan-page .tenure-options {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.65rem;
+}
+.calc-loan-page .tenure-btn {
+    border: 1px solid #dce8dd;
+    border-radius: 10px;
+    padding: 0.68rem 0.55rem;
+    background: #f8fafc;
+    color: #334155;
+    font-weight: 800;
+}
+.calc-loan-page .tenure-btn.active,
+.calc-loan-page .tenure-btn:hover {
+    border-color: #159a65;
+    background: #159a65;
+    color: #ffffff;
+}
+.calc-loan-page .calc-inline-160 {
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    box-shadow: 0 14px 24px rgba(245, 158, 11, 0.24);
+    font-weight: 900;
+}
+.calc-loan-page #result-box {
+    display: none;
+}
+.calc-loan-page #empty-state {
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    opacity: 1;
+}
+.calc-loan-page #empty-state::before {
+    content: "₹";
+    width: 76px;
+    height: 76px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(245, 158, 11, 0.18));
+    color: #159a65;
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+.calc-loan-page #empty-state h3 {
+    color: #172033;
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+.calc-loan-page #empty-state p {
+    max-width: 390px;
+    color: #64748b;
+}
+.calc-loan-page .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+.calc-loan-page .metric-card {
+    border-radius: 14px;
+    padding: 1.2rem;
+    text-align: center;
+}
+.calc-loan-page .calc-inline-161 {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(167, 212, 195, 0.25));
+    border-color: rgba(16, 185, 129, 0.32);
+}
+.calc-loan-page .calc-inline-163 {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(255, 247, 204, 0.38));
+    border-color: rgba(245, 158, 11, 0.26);
+}
+.calc-loan-page .metric-value {
+    color: #172033;
+    font-size: clamp(1.8rem, 3vw, 2.55rem);
+    font-weight: 900;
+}
+.calc-loan-page .details-card-modern,
+.calc-loan-page .comparison-highlight {
+    border-radius: 14px;
+    border: 1px solid #e1ebdf;
+    background: #ffffff;
+    padding: 1.15rem;
+}
+.calc-loan-page .details-header-modern {
+    color: #172033;
+    font-weight: 900;
+}
+.calc-loan-page .detail-row-modern {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.72rem 0;
+    border-bottom: 1px solid #edf4ef;
+}
+.calc-loan-page .detail-row-modern:last-child {
+    border-bottom: 0;
+}
+.calc-loan-page .detail-label {
+    color: #64748b;
+}
+.calc-loan-page .detail-value {
+    color: #172033;
+    font-weight: 900;
+}
+.calc-loan-page .comparison-highlight {
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #f0fdf4, #fffbeb);
+}
+.calc-loan-page .ch-title {
+    color: #0f7a50;
+    font-weight: 900;
+    margin-bottom: 0.35rem;
+}
+.calc-loan-page .ch-text {
+    color: #475569;
+}
+.calc-loan-page .amort-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+}
+.calc-loan-page .amort-table th {
+    background: #eef5f1;
+    color: #334155;
+    padding: 0.75rem;
+}
+.calc-loan-page .amort-table td {
+    border-bottom: 1px solid #edf4ef;
+    padding: 0.72rem;
+}
+.calc-loan-page #lm-inline-cta {
+    border-radius: 14px;
+    background: linear-gradient(135deg, #10251a, #356c45);
+}
+.calc-loan-page .loan-bank-section,
+.calc-loan-page .loan-content-area {
+    margin-top: 2rem;
+    border: 1px solid #e1ebdf;
+    border-radius: 18px;
+    background: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.04);
+}
+.calc-loan-page .loan-bank-section h2,
+.calc-loan-page .loan-content-area h2 {
+    color: #172033;
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    font-weight: 900;
+}
+.calc-loan-page .loan-section-lead,
+.calc-loan-page .loan-content-area p,
+.calc-loan-page .loan-content-area li {
+    color: #64748b;
+    line-height: 1.75;
+}
+.calc-loan-page .loan-bank-list {
+    display: grid;
+    gap: 0.8rem;
+}
+.calc-loan-page .bank-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 1px solid #edf4ef;
+    border-radius: 12px;
+    padding: 1rem;
+    background: #fbfdfc;
+}
+.calc-loan-page .bank-name {
+    color: #172033;
+    font-weight: 900;
+}
+.calc-loan-page .bank-rate {
+    color: #64748b;
+    font-size: 0.92rem;
+}
+.calc-loan-page .bank-badge {
+    flex: 0 0 auto;
+    border-radius: 999px;
+    padding: 0.34rem 0.7rem;
+    background: rgba(245, 158, 11, 0.14);
+    color: #b45309;
+    font-size: 0.78rem;
+    font-weight: 900;
+}
+.calc-loan-page .bank-badge.govt {
+    background: rgba(16, 185, 129, 0.13);
+    color: #0f7a50;
+}
+.calc-loan-page .loan-tip {
+    margin: 1rem 0 0;
+    border: 1px solid rgba(245, 158, 11, 0.28);
+    border-radius: 12px;
+    padding: 0.95rem 1rem;
+    background: #fffbeb;
+    color: #92400e;
+}
+.calc-loan-page .loan-calculator-strip {
+    margin-top: 2rem;
+    border-color: rgba(16, 185, 129, 0.22);
+    background: linear-gradient(135deg, #f0fdf4, #fffbeb);
+}
+.calc-loan-page .loan-formula-box {
+    border-left: 4px solid #159a65;
+    border-radius: 8px;
+    padding: 1rem 1.15rem;
+    background: #f1f5f9;
+    color: #334155;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.calc-loan-page .loan-faq-accordion {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.calc-loan-page .loan-faq-accordion .faq-button {
+    color: #172033;
+    font-weight: 800;
+}
+@media (max-width: 991.98px) {
+    .calc-loan-page .calc-loan-grid {
+        grid-template-columns: 1fr;
+    }
+    .calc-loan-page #empty-state {
+        min-height: 360px;
+    }
+}
+@media (max-width: 575.98px) {
+    .calc-loan-page .grid-2,
+    .calc-loan-page .tenure-options {
+        grid-template-columns: 1fr;
+    }
+    .calc-loan-page .bank-card,
+    .calc-loan-page .detail-row-modern {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .calc-loan-page .loan-bank-section,
+    .calc-loan-page .loan-content-area {
+        padding: 1.25rem;
+    }
+}
+
+/* Solar panel price list page polish */
+.calc-price-list-page .calc-detail-hero {
+    background: linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%);
+}
+.calc-price-list-page .calc-detail-hero__bg {
+    background:
+        radial-gradient(ellipse 48% 62% at 88% 18%, rgba(245, 158, 11, 0.22) 0%, transparent 68%),
+        radial-gradient(ellipse 44% 56% at 5% 86%, rgba(255, 255, 255, 0.16) 0%, transparent 70%);
+}
+.calc-price-list-page .calc-detail-section {
+    background: linear-gradient(180deg, #f7faf9 0%, #ffffff 100%);
+}
+.calc-price-list-page .calculator-detail-scope > .calc-inline-233 {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(16, 185, 129, 0.16);
+    border-radius: 20px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 58%, #fffbeb 100%);
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.06);
+}
+.calc-price-list-page .calc-inline-233 > .container,
+.calc-price-list-page .calc-inline-244 {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.calc-price-list-page .calc-inline-234 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    background: rgba(16, 185, 129, 0.12);
+    color: #0f7a50;
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+.calc-price-list-page .calc-inline-235 {
+    max-width: 840px;
+    margin: 1rem 0 0.75rem;
+    color: #172033;
+    font-size: clamp(1.75rem, 3.4vw, 3rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+.calc-price-list-page .calc-inline-236 {
+    max-width: 790px;
+    color: #64748b;
+    font-size: 1.04rem;
+    line-height: 1.7;
+}
+.calc-price-list-page .calc-inline-237 {
+    color: #0f7a50;
+}
+.calc-price-list-page .calc-inline-238 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.35rem;
+}
+.calc-price-list-page .calc-inline-239 {
+    border: 1px solid #e1ebdf;
+    border-radius: 14px;
+    padding: 1rem;
+    background: #ffffff;
+}
+.calc-price-list-page .calc-inline-240,
+.calc-price-list-page .calc-inline-242,
+.calc-price-list-page .calc-inline-243 {
+    color: #172033;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    font-weight: 900;
+}
+.calc-price-list-page .calc-inline-241 {
+    color: #64748b;
+    font-weight: 700;
+}
+.calc-price-list-page .calc-inline-245,
+.calc-price-list-page .calc-inline-285,
+.calc-price-list-page .calc-inline-333 {
+    margin-top: 1.5rem;
+    border: 1px solid #e1ebdf;
+    border-radius: 18px;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.04);
+}
+.calc-price-list-page .calc-inline-246,
+.calc-price-list-page .calc-inline-286,
+.calc-price-list-page .calc-inline-309,
+.calc-price-list-page .calc-inline-321,
+.calc-price-list-page .calc-inline-334 {
+    color: #172033;
+    font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+    font-weight: 900;
+    letter-spacing: -0.025em;
+}
+.calc-price-list-page .calc-inline-247,
+.calc-price-list-page .calc-inline-273,
+.calc-price-list-page .calc-inline-287,
+.calc-price-list-page .calc-inline-313,
+.calc-price-list-page .calc-inline-322,
+.calc-price-list-page .calc-inline-339 {
+    color: #64748b;
+    line-height: 1.7;
+}
+.calc-price-list-page .calc-inline-248 {
+    overflow-x: auto;
+    border: 1px solid #edf4ef;
+    border-radius: 14px;
+}
+.calc-price-list-page table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+.calc-price-list-page th {
+    padding: 1rem;
+    background: #eef5f1;
+    color: #334155;
+    font-weight: 900;
+    white-space: nowrap;
+}
+.calc-price-list-page td {
+    padding: 0.95rem 1rem;
+    border-bottom: 1px solid #edf4ef;
+    color: #334155;
+}
+.calc-price-list-page tbody tr:last-child td {
+    border-bottom: 0;
+}
+.calc-price-list-page tbody tr:hover {
+    background: #fbfdfc;
+}
+.calc-price-list-page .calc-inline-255,
+.calc-price-list-page .calc-inline-266,
+.calc-price-list-page .calc-inline-270,
+.calc-price-list-page .calc-inline-280 {
+    color: #172033;
+    font-weight: 900;
+}
+.calc-price-list-page .calc-inline-256,
+.calc-price-list-page .calc-inline-260,
+.calc-price-list-page .calc-inline-262,
+.calc-price-list-page .calc-inline-268,
+.calc-price-list-page .calc-inline-271,
+.calc-price-list-page .calc-inline-283 {
+    color: #0f7a50;
+    font-weight: 900;
+}
+.calc-price-list-page .calc-inline-263,
+.calc-price-list-page .calc-inline-284 {
+    margin-top: 0.9rem;
+    color: #64748b;
+    font-size: 0.86rem;
+}
+.calc-price-list-page .calc-inline-274 {
+    display: flex;
+    gap: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(245, 158, 11, 0.28);
+    border-radius: 12px;
+    padding: 1rem;
+    background: #fffbeb;
+}
+.calc-price-list-page .calc-inline-275 {
+    flex: 0 0 auto;
+}
+.calc-price-list-page .calc-inline-276 {
+    margin: 0;
+    color: #92400e;
+    line-height: 1.65;
+}
+.calc-price-list-page .calc-inline-285 {
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+.calc-price-list-page .calc-inline-288 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+}
+.calc-price-list-page .calc-inline-289 {
+    display: block;
+    color: #172033;
+    font-weight: 900;
+    margin-bottom: 0.42rem;
+}
+.calc-price-list-page .calc-inline-290,
+.calc-price-list-page .calc-inline-292 {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #dce8dd;
+    border-radius: 10px;
+    padding: 0.65rem 0.85rem;
+    color: #172033;
+    background: #ffffff;
+}
+.calc-price-list-page .calc-inline-291 {
+    margin-top: 0.35rem;
+    color: #64748b;
+    font-size: 0.83rem;
+}
+.calc-price-list-page .calc-inline-293 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 12px;
+    padding: 0.85rem 1.35rem;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #ffffff;
+    font-weight: 900;
+    box-shadow: 0 14px 24px rgba(245, 158, 11, 0.24);
+}
+.calc-price-list-page #calc-results {
+    display: none;
+    margin-top: 1.4rem;
+}
+.calc-price-list-page .calc-inline-296 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+.calc-price-list-page .calc-inline-297,
+.calc-price-list-page .calc-inline-300,
+.calc-price-list-page .calc-inline-303 {
+    border: 1px solid #e1ebdf;
+    border-radius: 14px;
+    padding: 1rem;
+    background: #ffffff;
+}
+.calc-price-list-page .calc-inline-303 {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), #ffffff);
+}
+.calc-price-list-page .calc-inline-298,
+.calc-price-list-page .calc-inline-301,
+.calc-price-list-page .calc-inline-304 {
+    color: #64748b;
+    font-size: 0.84rem;
+    font-weight: 800;
+}
+.calc-price-list-page .calc-inline-299,
+.calc-price-list-page .calc-inline-302,
+.calc-price-list-page .calc-inline-305,
+.calc-price-list-page .calc-inline-306,
+.calc-price-list-page .calc-inline-307 {
+    color: #172033;
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+.calc-price-list-page .calc-inline-308 {
+    margin-top: 1rem;
+    border-left: 4px solid #159a65;
+    border-radius: 8px;
+    padding: 0.95rem 1rem;
+    background: #f1f5f9;
+    color: #475569;
+}
+.calc-price-list-page .calc-inline-310,
+.calc-price-list-page .calc-inline-335 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+.calc-price-list-page .calc-inline-311,
+.calc-price-list-page .calc-inline-314,
+.calc-price-list-page .calc-inline-315,
+.calc-price-list-page .calc-inline-316,
+.calc-price-list-page .calc-inline-317,
+.calc-price-list-page .calc-inline-318,
+.calc-price-list-page .calc-inline-336,
+.calc-price-list-page .calc-inline-340 {
+    border: 1px solid #e1ebdf;
+    border-radius: 14px;
+    padding: 1.15rem;
+    background: #fbfdfc;
+    text-decoration: none;
+}
+.calc-price-list-page .calc-inline-312,
+.calc-price-list-page .calc-inline-338 {
+    color: #172033;
+    font-size: 1.05rem;
+    font-weight: 900;
+}
+.calc-price-list-page .calc-inline-319 {
+    margin-top: 1.5rem;
+    border-radius: 18px;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #10251a, #356c45);
+    color: #ffffff;
+}
+.calc-price-list-page .calc-inline-321,
+.calc-price-list-page .calc-inline-322 {
+    color: #ffffff;
+}
+.calc-price-list-page .calc-inline-323,
+.calc-price-list-page .calc-inline-326 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.calc-price-list-page .calc-inline-324,
+.calc-price-list-page .calc-inline-325 {
+    border-radius: 10px;
+    padding: 0.75rem 1.1rem;
+    text-decoration: none;
+    font-weight: 900;
+}
+.calc-price-list-page .calc-inline-324 {
+    background: #f59e0b;
+    color: #ffffff;
+}
+.calc-price-list-page .calc-inline-325 {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+}
+.calc-price-list-page .price-list-faq-accordion {
+    margin-top: 1rem;
+}
+.calc-price-list-page .price-list-faq-accordion .faq-button {
+    color: #172033;
+    font-weight: 800;
+}
+@media (max-width: 991.98px) {
+    .calc-price-list-page .calc-inline-238,
+    .calc-price-list-page .calc-inline-288,
+    .calc-price-list-page .calc-inline-296,
+    .calc-price-list-page .calc-inline-310,
+    .calc-price-list-page .calc-inline-335 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 575.98px) {
+    .calc-price-list-page .calculator-detail-scope > .calc-inline-233,
+    .calc-price-list-page .calc-inline-245,
+    .calc-price-list-page .calc-inline-285,
+    .calc-price-list-page .calc-inline-319,
+    .calc-price-list-page .calc-inline-333 {
+        padding: 1.2rem;
+    }
+    .calc-price-list-page .calc-inline-238,
+    .calc-price-list-page .calc-inline-288,
+    .calc-price-list-page .calc-inline-296,
+    .calc-price-list-page .calc-inline-310,
+    .calc-price-list-page .calc-inline-335 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Solar panel price list hero-from-content layout */
+.calc-price-list-page .calc-detail-section {
+    padding-top: 0 !important;
+    background: #f4f7f8;
+}
+.calc-price-list-page .calculator-detail-scope > .calc-inline-233 {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 2.2rem;
+    border: 0;
+    border-radius: 0;
+    padding: 4.7rem 0 3.15rem;
+    background: linear-gradient(135deg, #356c45 0%, #a7d4c3 55%, #565014 100%);
+    box-shadow: none;
+    text-align: left;
+}
+.calc-price-list-page .calculator-detail-scope > .calc-inline-233 > .price-list-hero-inner {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+    padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+}
+.calc-price-list-page .calc-inline-234 {
+    background: rgba(16, 185, 129, 0.18);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    color: #5ee7a7;
+    font-size: 0.72rem;
+}
+.calc-price-list-page .calc-inline-235 {
+    max-width: 850px;
+    margin: 1rem 0 0.8rem;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.035em;
+}
+.calc-price-list-page .calc-inline-236 {
+    max-width: 680px;
+    margin: 0;
+    color: rgba(226, 232, 240, 0.82);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+.calc-price-list-page .calc-inline-237 {
+    color: #22c77a;
+}
+.calc-price-list-page .calc-inline-238 {
+    max-width: 520px;
+    margin: 1.45rem 0 0;
+    gap: 0.85rem;
+}
+.calc-price-list-page .calc-inline-239 {
+    border-color: rgba(255, 255, 255, 0.10);
+    border-radius: 8px;
+    padding: 0.85rem 0.8rem;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.calc-price-list-page .calc-inline-240,
+.calc-price-list-page .calc-inline-242,
+.calc-price-list-page .calc-inline-243 {
+    color: #14d48a;
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+}
+.calc-price-list-page .calc-inline-243 {
+    color: #f59e0b;
+}
+.calc-price-list-page .calc-inline-241 {
+    color: rgba(226, 232, 240, 0.75);
+    font-size: 0.73rem;
+}
+@media (min-width: 576px) {
+    .calc-price-list-page .calculator-detail-scope > .calc-inline-233 > .price-list-hero-inner {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .calc-price-list-page .calculator-detail-scope > .calc-inline-233 > .price-list-hero-inner {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .calc-price-list-page .calculator-detail-scope > .calc-inline-233 > .price-list-hero-inner {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .calc-price-list-page .calculator-detail-scope > .calc-inline-233 > .price-list-hero-inner {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .calc-price-list-page .calculator-detail-scope > .calc-inline-233 > .price-list-hero-inner {
+        max-width: 1320px;
+    }
+}
+.calc-price-list-page .calc-inline-244 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+.calc-price-list-page .calc-inline-245,
+.calc-price-list-page .calc-inline-333 {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+.calc-price-list-page .calc-inline-245 + .calc-inline-245,
+.calc-price-list-page .calc-inline-245 + .calc-inline-285,
+.calc-price-list-page .calc-inline-319,
+.calc-price-list-page .calc-inline-333 {
+    margin-top: 2.25rem;
+}
+.calc-price-list-page .calc-inline-246,
+.calc-price-list-page .calc-inline-309,
+.calc-price-list-page .calc-inline-334 {
+    font-size: clamp(1.28rem, 2vw, 1.65rem);
+}
+.calc-price-list-page .calc-inline-247,
+.calc-price-list-page .calc-inline-273 {
+    margin-bottom: 1rem;
+    font-size: 0.92rem;
+}
+.calc-price-list-page .calc-inline-248 {
+    border: 0;
+    border-radius: 5px;
+}
+.calc-price-list-page table {
+    min-width: 760px;
+    font-size: 0.86rem;
+}
+.calc-price-list-page th {
+    background: #152238;
+    color: #ffffff;
+    padding: 0.82rem 0.9rem;
+}
+.calc-price-list-page td {
+    padding: 0.82rem 0.9rem;
+}
+.calc-price-list-page .calc-inline-264 th {
+    background: #0ea86f;
+}
+.calc-price-list-page .calc-inline-269 {
+    background: rgba(16, 185, 129, 0.10);
+    border-left: 3px solid #10b981;
+}
+.calc-price-list-page .calc-inline-285 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #10b981;
+    border-radius: 10px;
+    padding: 2rem;
+    background: #ecfdf5;
+    text-align: center;
+}
+.calc-price-list-page .calc-inline-319 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #152238, #132337);
+}
+.calc-price-list-page .price-list-faq-accordion .accordion-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e8eef3;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+}
+.calc-price-list-page .price-list-faq-accordion .faq-button {
+    min-height: 58px;
+    background: #ffffff;
+}
+@media (max-width: 991.98px) {
+    .calc-price-list-page .calculator-detail-scope > .calc-inline-233 {
+        padding-top: 4rem;
+    }
+}
+@media (max-width: 575.98px) {
+    .calc-price-list-page .calc-inline-238 {
+        grid-template-columns: 1fr;
+        max-width: 260px;
     }
 }

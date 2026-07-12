@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="calc-loan-page">
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -162,199 +162,330 @@
 <section class="calc-detail-section py-5" id="calculator">
     <div class="container">
         <div class="calculator-detail-scope">
-<div class="grid grid-calc">
-            <!-- Left: Calculator Form -->
-            <div class="calculator-form-card">
-                <form id="loan-calc-form" autocomplete="off" data-gtm-form-interact-id="0">
+            <div class="grid grid-calc calc-loan-grid">
+                        <!-- Left: Calculator Form -->
+                        <div class="calculator-form-card">
+                            <form id="loan-calc-form" autocomplete="off">
 
-                    <!-- 1. System Size -->
-                    <div class="form-group">
-                        <label for="system_size">System Size (kW)</label>
-                        <div class="slider-wrapper">
-                            <input type="range" id="system_size_slider" min="1" max="10" step="0.5" value="3">
-                            <span class="slider-val" id="system_size_val">3 kW</span>
+                                <!-- 1. System Size -->
+                                <div class="form-group">
+                                    <label for="system_size">System Size (kW)</label>
+                                    <div class="slider-wrapper">
+                                        <input type="range" id="system_size_slider" min="1" max="10" step="0.5" value="3">
+                                        <span class="slider-val" id="system_size_val">3 kW</span>
+                                    </div>
+                                </div>
+
+                                <!-- 2. System Cost -->
+                                <div class="form-group">
+                                    <label for="system_cost">System Cost (₹)
+                                        <span class="calc-inline-156">Auto-filled · editable</span>
+                                    </label>
+                                    <input type="number" id="system_cost" class="form-control" placeholder="e.g. 195000" min="10000" step="1000">
+                                </div>
+
+                                <!-- 3. PM Surya Ghar Subsidy -->
+                                <div class="form-group">
+                                    <label for="subsidy">PM Surya Ghar Subsidy (₹)
+                                        <span class="calc-inline-156">Auto-filled · editable</span>
+                                    </label>
+                                    <input type="number" id="subsidy" class="form-control" placeholder="e.g. 78000" min="0" step="1000">
+                                    <p class="calc-inline-157">1 kW=₹30,000 · 2 kW=₹60,000 · 3 kW+=₹78,000</p>
+                                </div>
+
+                                <!-- 4. Down Payment -->
+                                <div class="form-group">
+                                    <label>Down Payment (%)</label>
+                                    <div class="slider-wrapper">
+                                        <input type="range" id="down_pct_slider" min="0" max="50" step="5" value="10">
+                                        <span class="slider-val" id="down_pct_val">10%</span>
+                                    </div>
+                                    <p class="calc-inline-158">Down Payment Amount: <strong id="down_amt_display">₹19,500</strong></p>
+                                </div>
+
+                                <!-- 5. Loan Amount -->
+                                <div class="form-group">
+                                    <label for="loan_amount">Loan Amount (₹)
+                                        <span class="calc-inline-156">Auto-calculated · editable</span>
+                                    </label>
+                                    <input type="number" id="loan_amount" class="form-control" placeholder="e.g. 107000" min="1000" step="1000">
+                                </div>
+
+                                <!-- 6. Interest Rate -->
+                                <div class="form-group">
+                                    <label for="interest_rate">Interest Rate (% per annum)</label>
+                                    <div class="slider-wrapper">
+                                        <input type="range" id="interest_rate_slider" min="6" max="18" step="0.25" value="7">
+                                        <span class="slider-val" id="interest_rate_val">7%</span>
+                                    </div>
+                                    <input type="number" id="interest_rate" class="form-control calc-inline-159" step="0.25" min="1" max="36" value="7">
+                                </div>
+
+                                <!-- 7. Loan Tenure -->
+                                <div class="form-group">
+                                    <label>Loan Tenure</label>
+                                    <div class="tenure-options">
+                                        <button type="button" class="tenure-btn active" data-years="5">5 Yrs</button>
+                                        <button type="button" class="tenure-btn" data-years="7">7 Yrs</button>
+                                        <button type="button" class="tenure-btn" data-years="10">10 Yrs</button>
+                                        <button type="button" class="tenure-btn" data-years="15">15 Yrs</button>
+                                    </div>
+                                    <input type="hidden" id="loan_tenure" value="5">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary calc-inline-160">Calculate EMI</button>
+                            </form>
+                        </div>
+
+                        <!-- Right: Results -->
+                        <div id="result-box" class="result-container calc-inline-086">
+
+                            <!-- Top KPIs -->
+                            <div class="grid grid-2">
+                                <div class="metric-card featured calc-inline-161">
+                                    <div class="metric-label calc-inline-162">Monthly EMI</div>
+                                    <div class="metric-value calc-inline-117" id="res_emi">₹1,980</div>
+                                    <div class="metric-sub">Fixed every month</div>
+                                </div>
+                                <div class="metric-card calc-inline-163">
+                                    <div class="metric-label calc-inline-164">Monthly Savings</div>
+                                    <div class="metric-value calc-inline-165" id="res_savings">₹2,520</div>
+                                    <div class="metric-sub">Electricity bill cut</div>
+                                </div>
+                            </div>
+
+                            <!-- Repayment Summary -->
+                            <div class="details-card-modern calc-inline-166">
+                                <div class="details-header-modern">
+                                    <span class="calc-inline-032">📊</span> Repayment Summary
+                                </div>
+                                <div class="details-list">
+                                    <div class="detail-row-modern">
+                                        <span class="detail-label">Loan Amount</span>
+                                        <span id="res_loan" class="detail-value">₹1,00,000</span>
+                                    </div>
+                                    <div class="detail-row-modern">
+                                        <span class="detail-label">Total Interest Paid</span>
+                                        <span id="res_interest" class="detail-value calc-inline-167">₹18,807</span>
+                                    </div>
+                                    <div class="detail-row-modern">
+                                        <span class="detail-label">Total Amount Paid</span>
+                                        <span id="res_total" class="detail-value">₹1,18,807</span>
+                                    </div>
+                                    <div class="detail-row-modern">
+                                        <span class="detail-label">Payback Period</span>
+                                        <span id="res_payback" class="detail-value calc-inline-168">3.9 years</span>
+                                    </div>
+                                </div>
+
+                                <!-- Principal vs Interest bar -->
+                                <div class="calc-inline-166">
+                                    <div class="calc-inline-169">
+                                        <span>Principal vs Interest breakdown</span>
+                                    </div>
+                                    <div class="calc-inline-170">
+                                        <div id="principal_bar" class="calc-inline-171"></div>
+                                        <div id="interest_bar" class="calc-inline-172"></div>
+                                    </div>
+                                    <div class="calc-inline-173">
+                                        <span><span class="calc-inline-174">●</span> Principal (<span id="principal_pct">84%</span>)</span>
+                                        <span><span class="calc-inline-175">●</span> Interest (<span id="interest_pct">16%</span>)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- EMI vs Savings comparison -->
+                            <div class="comparison-highlight" id="emi_vs_savings_box">
+                                <div class="ch-title">💡 EMI vs Electricity Savings</div>
+                                <div class="ch-text" id="emi_vs_savings_text">Your EMI is ₹1,980 but you save ₹2,520/month on electricity — net gain of <strong>₹540/month</strong>. Solar pays for itself!</div>
+                            </div>
+
+                            <!-- Amortization -->
+                            <div class="calc-inline-150">
+                                <button type="button" class="btn calc-inline-176" id="amort-toggle-btn">Show Year-by-Year Amortization</button>
+                                <div id="amort-container" class="calc-inline-177">
+                                    <table class="amort-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Principal Paid</th>
+                                                <th>Interest Paid</th>
+                                                <th>Balance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="amort-body"><tr><td>Year 1</td><td>₹17,310</td><td>₹6,452</td><td>₹82,690</td></tr><tr><td>Year 2</td><td>₹18,561</td><td>₹5,200</td><td>₹64,129</td></tr><tr><td>Year 3</td><td>₹19,903</td><td>₹3,859</td><td>₹44,226</td></tr><tr><td>Year 4</td><td>₹21,342</td><td>₹2,420</td><td>₹22,884</td></tr><tr><td>Year 5</td><td>₹22,884</td><td>₹877</td><td>₹0</td></tr></tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Inline "Get 3 Free Quotes" CTA -->
+                            <div id="lm-inline-cta" class="calc-inline-078">
+                                <div class="calc-inline-079">
+                                    <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
+                                    <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                                </div>
+                                <button type="button" id="loan-inline-quote-btn" class="calc-inline-082">Get Free Quotes →</button>
+                            </div>
+
+                            <!-- Share / Print -->
+                            <div class="calc-inline-178">
+                                <button id="whatsapp-share-btn" class="btn calc-inline-179">
+                                    📱 Share on WhatsApp
+                                </button>
+                                <button type="button" id="loan-print-btn" class="btn calc-inline-180">
+                                    🖨️
+                                </button>
+                            </div>
+
+                            <p class="calc-inline-181">
+                                * EMI calculated using standard reducing balance formula. Savings estimated at ₹7/unit × 4 units/kW/day.
+                            </p>
+                        </div>
+
+                        <!-- Default Empty State -->
+                        <div id="empty-state" class="result-container calc-inline-155">
+
+                            <h3>Calculate your Solar Loan EMI 💰</h3>
+                            <p class="calc-inline-183">Enter system size and loan details to see your monthly installment vs electricity savings.</p>
                         </div>
                     </div>
+            </div>
+            <section class="loan-bank-section" aria-labelledby="loan-bank-title">
+                <h2 id="loan-bank-title">Banks Offering Solar Loans in India (2026)</h2>
+                <p class="loan-section-lead">Government banks offer the lowest rates under the PM Surya Ghar scheme. Compare before applying.</p>
 
-                    <!-- 2. System Cost -->
-                    <div class="form-group">
-                        <label for="system_cost">System Cost (₹)
-                            <span class="calc-inline-156">Auto-filled · editable</span>
-                        </label>
-                        <input type="number" id="system_cost" class="form-control" placeholder="e.g. 195000" min="10000" step="1000">
-                    </div>
-
-                    <!-- 3. PM Surya Ghar Subsidy -->
-                    <div class="form-group">
-                        <label for="subsidy">PM Surya Ghar Subsidy (₹)
-                            <span class="calc-inline-156">Auto-filled · editable</span>
-                        </label>
-                        <input type="number" id="subsidy" class="form-control" placeholder="e.g. 78000" min="0" step="1000">
-                        <p class="calc-inline-157">1 kW=₹30,000 · 2 kW=₹60,000 · 3 kW+=₹78,000</p>
-                    </div>
-
-                    <!-- 4. Down Payment -->
-                    <div class="form-group">
-                        <label>Down Payment (%)</label>
-                        <div class="slider-wrapper">
-                            <input type="range" id="down_pct_slider" min="0" max="50" step="5" value="10">
-                            <span class="slider-val" id="down_pct_val">10%</span>
+                <div class="loan-bank-list">
+                    <div class="bank-card">
+                        <div>
+                            <div class="bank-name">State Bank of India (SBI)</div>
+                            <div class="bank-rate">7% - 8.5% per annum · Up to 15 years</div>
                         </div>
-                        <p class="calc-inline-158">Down Payment Amount: <strong id="down_amt_display">₹19,500</strong></p>
+                        <span class="bank-badge govt">Lowest Rate</span>
                     </div>
-
-                    <!-- 5. Loan Amount -->
-                    <div class="form-group">
-                        <label for="loan_amount">Loan Amount (₹)
-                            <span class="calc-inline-156">Auto-calculated · editable</span>
-                        </label>
-                        <input type="number" id="loan_amount" class="form-control" placeholder="e.g. 107000" min="1000" step="1000" data-gtm-form-interact-field-id="0">
-                    </div>
-
-                    <!-- 6. Interest Rate -->
-                    <div class="form-group">
-                        <label for="interest_rate">Interest Rate (% per annum)</label>
-                        <div class="slider-wrapper">
-                            <input type="range" id="interest_rate_slider" min="6" max="18" step="0.25" value="7">
-                            <span class="slider-val" id="interest_rate_val">7%</span>
+                    <div class="bank-card">
+                        <div>
+                            <div class="bank-name">Bank of Baroda</div>
+                            <div class="bank-rate">7.5% - 9% per annum · Up to 10 years</div>
                         </div>
-                        <input type="number" id="interest_rate" class="form-control calc-inline-159" step="0.25" min="1" max="36" value="7">
+                        <span class="bank-badge govt">Govt Bank</span>
                     </div>
-
-                    <!-- 7. Loan Tenure -->
-                    <div class="form-group">
-                        <label>Loan Tenure</label>
-                        <div class="tenure-options">
-                            <button type="button" class="tenure-btn active" data-years="5">5 Yrs</button>
-                            <button type="button" class="tenure-btn" data-years="7">7 Yrs</button>
-                            <button type="button" class="tenure-btn" data-years="10">10 Yrs</button>
-                            <button type="button" class="tenure-btn" data-years="15">15 Yrs</button>
+                    <div class="bank-card">
+                        <div>
+                            <div class="bank-name">Punjab National Bank (PNB)</div>
+                            <div class="bank-rate">7.5% - 9.5% per annum · Up to 10 years</div>
                         </div>
-                        <input type="hidden" id="loan_tenure" value="5">
+                        <span class="bank-badge govt">Govt Bank</span>
                     </div>
+                    <div class="bank-card">
+                        <div>
+                            <div class="bank-name">Canara Bank</div>
+                            <div class="bank-rate">8% - 10% per annum · Up to 7 years</div>
+                        </div>
+                        <span class="bank-badge govt">Govt Bank</span>
+                    </div>
+                    <div class="bank-card">
+                        <div>
+                            <div class="bank-name">HDFC Bank</div>
+                            <div class="bank-rate">10% - 12% per annum · Up to 7 years (unsecured)</div>
+                        </div>
+                        <span class="bank-badge">Private Bank</span>
+                    </div>
+                </div>
 
-                    <button type="submit" class="btn btn-primary calc-inline-160">Calculate EMI</button>
-                </form>
+                <p class="loan-tip"><strong>Tip:</strong> Government banks (SBI, BOB, PNB, Canara) offer the lowest interest rates specifically for PM Surya Ghar empanelled installations. Always apply through your DISCOM's approved installer list to qualify.</p>
+            </section>
+
+            <div class="cta-strip loan-calculator-strip">
+                <h3>Explore More Solar Calculators</h3>
+                <p>Check how much subsidy you qualify for, or estimate your system cost and ROI before taking a loan.</p>
+                <div class="cta-btns">
+                    <a href="../calculators/solar-rooftop-subsidy-calculator.html">Check Subsidy Amount</a>
+                    <a href="../calculators/solar-panel-cost-calculator.html" class="alt">Estimate System Cost</a>
+                    <a href="../calculators/solar-roi-calculator.html" class="alt">ROI &amp; Payback Calculator</a>
+                </div>
             </div>
 
-            <!-- Right: Results -->
-            <div id="result-box" class="result-container calc-inline-086">
+            <article class="content-area loan-content-area mt-5">
+                <h2>How to Finance a Solar System in India: A Complete Guide</h2>
+                <p>Installing a rooftop solar system is one of the best financial decisions an Indian household can make in 2026, but the upfront cost of ₹80,000 to ₹3,00,000 can be a barrier. <strong>Solar financing</strong> through a dedicated solar loan bridges this gap, letting you pay in manageable EMIs while saving on electricity from day one.</p>
 
-                <!-- Top KPIs -->
-                <div class="grid grid-2">
-                    <div class="metric-card featured calc-inline-161">
-                        <div class="metric-label calc-inline-162">Monthly EMI</div>
-                        <div class="metric-value calc-inline-117" id="res_emi">₹1,980</div>
-                        <div class="metric-sub">Fixed every month</div>
-                    </div>
-                    <div class="metric-card calc-inline-163">
-                        <div class="metric-label calc-inline-164">Monthly Savings</div>
-                        <div class="metric-value calc-inline-165" id="res_savings">₹2,520</div>
-                        <div class="metric-sub">Electricity bill cut</div>
-                    </div>
-                </div>
+                <h3>Understanding Solar Loan EMI</h3>
+                <p>A solar loan EMI is calculated using the standard reducing-balance formula:</p>
+                <p class="loan-formula-box">EMI = P x r x (1 + r)<sup>n</sup> / ((1 + r)<sup>n</sup> - 1)<br>Where: P = Loan Amount, r = Monthly Interest Rate (Annual Rate / 12), n = Total Months</p>
+                <p>Because the outstanding balance reduces each month as you repay principal, the interest component of each EMI shrinks over time. This is the reducing-balance method used by Indian banks.</p>
 
-                <!-- Repayment Summary -->
-                <div class="details-card-modern calc-inline-166">
-                    <div class="details-header-modern">
-                        <span class="calc-inline-032">📊</span> Repayment Summary
-                    </div>
-                    <div class="details-list">
-                        <div class="detail-row-modern">
-                            <span class="detail-label">Loan Amount</span>
-                            <span id="res_loan" class="detail-value">₹1,00,000</span>
-                        </div>
-                        <div class="detail-row-modern">
-                            <span class="detail-label">Total Interest Paid</span>
-                            <span id="res_interest" class="detail-value calc-inline-167">₹18,807</span>
-                        </div>
-                        <div class="detail-row-modern">
-                            <span class="detail-label">Total Amount Paid</span>
-                            <span id="res_total" class="detail-value">₹1,18,807</span>
-                        </div>
-                        <div class="detail-row-modern">
-                            <span class="detail-label">Payback Period</span>
-                            <span id="res_payback" class="detail-value calc-inline-168">3.9 years</span>
-                        </div>
-                    </div>
+                <h3>PM Surya Ghar Subsidy and Your Solar Loan</h3>
+                <p>The PM Surya Ghar Muft Bijli Yojana offers central government subsidies up to ₹78,000 for residential rooftop solar installations up to 3 kW. This subsidy:</p>
+                <ul>
+                    <li>Directly reduces the effective cost of your system</li>
+                    <li>Can be deducted from the loan principal, reducing your EMI</li>
+                    <li>Is credited to your bank account after installation, while some banks offer bridge financing</li>
+                </ul>
 
-                    <!-- Principal vs Interest bar -->
-                    <div class="calc-inline-166">
-                        <div class="calc-inline-169">
-                            <span>Principal vs Interest breakdown</span>
-                        </div>
-                        <div class="calc-inline-170">
-                            <div id="principal_bar" class="calc-inline-171"></div>
-                            <div id="interest_bar" class="calc-inline-172"></div>
-                        </div>
-                        <div class="calc-inline-173">
-                            <span><span class="calc-inline-174">●</span> Principal (<span id="principal_pct">84%</span>)</span>
-                            <span><span class="calc-inline-175">●</span> Interest (<span id="interest_pct">16%</span>)</span>
-                        </div>
-                    </div>
-                </div>
+                <h3>Comparing Solar Loan Options</h3>
+                <p>The choice of lender significantly impacts your total interest outgo. For a ₹1,00,000 loan over 7 years:</p>
+                <ul>
+                    <li>At <strong>7% (SBI)</strong>: EMI around ₹1,511, Total Interest around ₹26,892</li>
+                    <li>At <strong>9% (BOB/PNB)</strong>: EMI around ₹1,603, Total Interest around ₹34,652</li>
+                    <li>At <strong>11% (HDFC)</strong>: EMI around ₹1,699, Total Interest around ₹42,716</li>
+                </ul>
+                <p>The difference between the cheapest and most expensive loan for the same amount is over ₹15,000 in extra interest. Government bank solar loan schemes are usually the best first option.</p>
 
-                <!-- EMI vs Savings comparison -->
-                <div class="comparison-highlight" id="emi_vs_savings_box">
-                    <div class="ch-title">💡 EMI vs Electricity Savings</div>
-                    <div class="ch-text" id="emi_vs_savings_text">Your EMI is ₹1,980 but you save ₹2,520/month on electricity — net gain of <strong>₹540/month</strong>. Solar pays for itself!</div>
-                </div>
-
-                <!-- Amortization -->
-                <div class="calc-inline-150">
-                    <button onclick="toggleAmort()" class="btn calc-inline-176" id="amort-toggle-btn">Show Year-by-Year Amortization</button>
-                    <div id="amort-container" class="calc-inline-177">
-                        <table class="amort-table">
-                            <thead>
-                                <tr>
-                                    <th>Year</th>
-                                    <th>Principal Paid</th>
-                                    <th>Interest Paid</th>
-                                    <th>Balance</th>
-                                </tr>
-                            </thead>
-                            <tbody id="amort-body"><tr><td>Year 1</td><td>₹17,310</td><td>₹6,452</td><td>₹82,690</td></tr><tr><td>Year 2</td><td>₹18,561</td><td>₹5,200</td><td>₹64,129</td></tr><tr><td>Year 3</td><td>₹19,903</td><td>₹3,859</td><td>₹44,226</td></tr><tr><td>Year 4</td><td>₹21,342</td><td>₹2,420</td><td>₹22,884</td></tr><tr><td>Year 5</td><td>₹22,884</td><td>₹877</td><td>₹0</td></tr></tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Inline "Get 3 Free Quotes" CTA -->
-                <div id="lm-inline-cta" class="calc-inline-078">
-                    <div class="calc-inline-079">
-                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
-                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
-                    </div>
-                    <button onclick="window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{});" class="calc-inline-082">Get Free Quotes →</button>
-                </div>
-
-                <!-- Share / Print -->
-                <div class="calc-inline-178">
-                    <button id="whatsapp-share-btn" class="btn calc-inline-179">
-                        📱 Share on WhatsApp
-                    </button>
-                    <button onclick="window.print()" class="btn calc-inline-180">
-                        🖨️
-                    </button>
-                </div>
-
-                <p class="calc-inline-181">
-                    * EMI calculated using standard reducing balance formula. Savings estimated at ₹7/unit × 4 units/kW/day.
-                </p>
-            </div>
-
-            <!-- Default Empty State -->
-            <div id="empty-state" class="result-container calc-inline-155">
-                <img src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-182" alt="">
-                <h3>Calculate your Solar Loan EMI 💰</h3>
-                <p class="calc-inline-183">Enter system size and loan details to see your monthly installment vs electricity savings.</p>
-            </div>
+                <h3>When Does Solar Become Cash-Flow Positive?</h3>
+                <p>In many Indian states with tariffs above ₹6/unit, electricity savings from a correctly sized system can exceed the monthly EMI. This means the system may become cash-flow positive from the first month.</p>
+                <p>Our calculator shows this EMI vs savings comparison automatically. A 3 kW system saves approximately ₹2,520/month (3 kW x 4 units/day x 30 days x ₹7/unit). If your EMI is ₹2,000, your net monthly gain is ₹520.</p>
+            </article>
         </div>
-</div>
-   
     </div>
 </section>
 
-<section class="cta-section py-4 bg-white">
+<section class="faq-compact-section faq-section bg-white loan-faq-section" id="loan-faq" aria-labelledby="loan-faq-title">
+    <div class="container">
+        <h2 class="faq-compact-title faq-section__title" id="loan-faq-title">Frequently Asked Questions — Solar Financing in India</h2>
+        <div class="accordion faq-accordion loan-faq-accordion" id="loanFaqAccordion">
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="loanFaqHeadingOne">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#loanFaqCollapseOne" aria-expanded="false" aria-controls="loanFaqCollapseOne">What is the interest rate for solar loans in India in 2026?</button>
+                </h3>
+                <div id="loanFaqCollapseOne" class="accordion-collapse collapse" aria-labelledby="loanFaqHeadingOne" data-bs-parent="#loanFaqAccordion">
+                    <div class="accordion-body faq-body">Government banks like SBI offer solar loans at <strong>7-8.5% per annum</strong> under the PM Surya Ghar scheme. Bank of Baroda and PNB offer rates between 7.5-9.5%. Private banks like HDFC charge 10-12% for unsecured loans.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="loanFaqHeadingTwo">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#loanFaqCollapseTwo" aria-expanded="false" aria-controls="loanFaqCollapseTwo">How much PM Surya Ghar subsidy can I claim on a solar loan?</button>
+                </h3>
+                <div id="loanFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="loanFaqHeadingTwo" data-bs-parent="#loanFaqAccordion">
+                    <div class="accordion-body faq-body">Under PM Surya Ghar Muft Bijli Yojana, you get <strong>₹30,000 for 1 kW, ₹60,000 for 2 kW, and ₹78,000 for 3 kW and above</strong> systems. This subsidy is credited directly to your bank account after installation.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="loanFaqHeadingThree">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#loanFaqCollapseThree" aria-expanded="false" aria-controls="loanFaqCollapseThree">Can my electricity savings cover the solar EMI?</button>
+                </h3>
+                <div id="loanFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="loanFaqHeadingThree" data-bs-parent="#loanFaqAccordion">
+                    <div class="accordion-body faq-body">Yes, in many cases. A 3 kW system generates roughly 360 units/month and can save around ₹2,500-₹3,500/month depending on your tariff rate.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="loanFaqHeadingFour">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#loanFaqCollapseFour" aria-expanded="false" aria-controls="loanFaqCollapseFour">What documents are required for a solar loan in India?</button>
+                </h3>
+                <div id="loanFaqCollapseFour" class="accordion-collapse collapse" aria-labelledby="loanFaqHeadingFour" data-bs-parent="#loanFaqAccordion">
+                    <div class="accordion-body faq-body">Typically: KYC, income proof, recent bank statements, property ownership proof, electricity bill, and a quotation from an empanelled solar installer.</div>
+                </div>
+            </div>
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="loanFaqHeadingFive">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#loanFaqCollapseFive" aria-expanded="false" aria-controls="loanFaqCollapseFive">What is the maximum loan tenure for solar panels in India?</button>
+                </h3>
+                <div id="loanFaqCollapseFive" class="accordion-collapse collapse" aria-labelledby="loanFaqHeadingFive" data-bs-parent="#loanFaqAccordion">
+                    <div class="accordion-body faq-body">SBI offers solar loans for up to 15 years. Bank of Baroda and PNB offer up to 10 years, while Canara Bank and HDFC commonly offer up to 7 years.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section class="cta-section py-4 bg-white">
     <div class="container">
         <div class="cta-banner" data-aos="fade-up">
             <div class="cta-banner__content">
@@ -437,4 +568,3 @@
 <script src="../assets/js/calculator-js/solar-loan-emi-calculator.js"></script>
 </body>
 </html>
-

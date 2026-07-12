@@ -6,7 +6,7 @@ function toggleFaq(btn) {
   var icon = btn.querySelector('span');
   var isOpen = answer.style.display === 'block';
   answer.style.display = isOpen ? 'none' : 'block';
-  icon.textContent = isOpen ? '+' : 'âˆ’';
+  icon.textContent = isOpen ? '+' : '−';
 }
 
 // Solar Price Calculator
@@ -32,9 +32,9 @@ function getSubsidy(kw) {
 function formatINR(n) {
   if (n >= 100000) {
     var lakhs = (n / 100000).toFixed(2);
-    return 'â‚¹' + lakhs + ' L';
+    return '₹' + lakhs + ' L';
   }
-  return 'â‚¹' + n.toLocaleString('en-IN');
+  return '₹' + n.toLocaleString('en-IN');
 }
 
 function calculateSolar() {
@@ -65,7 +65,7 @@ function calculateSolar() {
   var subsidy = getSubsidy(kw);
   var netCost = Math.max(totalCost - subsidy, 0);
 
-  // Monthly savings: assume 4 sun hours/day, â‚¹8/unit avg tariff
+  // Monthly savings: assume 4 sun hours/day, ₹8/unit avg tariff
   var monthlyUnits = kw * 4 * 30;
   var monthlySavings = Math.min(Math.round(monthlyUnits * 8), monthlyBill);
   var annualSavings = monthlySavings * 12;
@@ -73,7 +73,7 @@ function calculateSolar() {
 
   document.getElementById('res-panel-cost').textContent = formatINR(panelCost);
   document.getElementById('res-total-cost').textContent = formatINR(totalCost);
-  document.getElementById('res-subsidy').textContent = 'âˆ’' + formatINR(subsidy);
+  document.getElementById('res-subsidy').textContent = '−' + formatINR(subsidy);
   document.getElementById('res-net-cost').textContent = formatINR(netCost);
   document.getElementById('res-monthly-savings').textContent = formatINR(monthlySavings) + '/mo';
   document.getElementById('res-payback').textContent = paybackYears + ' yrs';
@@ -87,5 +87,16 @@ function calculateSolar() {
   document.getElementById('calc-results').style.display = 'block';
 }
 
-// Run on load for default values
-calculateSolar();
+document.addEventListener('DOMContentLoaded', function () {
+  var kwInput = document.getElementById('calc-kw');
+  var panelType = document.getElementById('calc-panel-type');
+  var billInput = document.getElementById('calc-bill');
+  var calcBtn = document.getElementById('price-calc-btn');
+
+  if (kwInput) kwInput.addEventListener('input', calculateSolar);
+  if (panelType) panelType.addEventListener('change', calculateSolar);
+  if (billInput) billInput.addEventListener('input', calculateSolar);
+  if (calcBtn) calcBtn.addEventListener('click', calculateSolar);
+
+  calculateSolar();
+});

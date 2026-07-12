@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="calc-price-list-page">
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -147,23 +147,11 @@
     </nav>
 </header>
 
-<section class="calc-detail-hero" aria-labelledby="calc-detail-title">
-    <div class="calc-detail-hero__bg" aria-hidden="true"></div>
-    <div class="container position-relative z-1">
-        <div class="calc-detail-hero__content" data-aos="fade-up">
-            <nav aria-label="breadcrumb" class="calc-detail-hero__breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../index.html">Home</a></li><li class="breadcrumb-item"><a href="../calculators.html">Solar Calculators</a></li><li class="breadcrumb-item active" aria-current="page">Solar Panel Price List</li></ol></nav>
-            <h1 class="calc-detail-hero__title" id="calc-detail-title"><span class="calc-detail-hero__accent">Solar Panel Price List India 2026</span></h1>
-            <p class="calc-detail-hero__desc">Complete solar panel price list for India 2026. Prices per watt, per panel, and per complete kW system with top brand comparison.</p>
-            <div class="calc-detail-hero__badges"><span class="calc-detail-hero__badge"><i class="bi bi-lightning-charge-fill"></i> Instant Results</span><span class="calc-detail-hero__badge"><i class="bi bi-shield-check-fill"></i> Free Tool</span><span class="calc-detail-hero__badge"><i class="bi bi-graph-up-arrow"></i> MNRE Data 2026</span></div>
-        </div>
-    </div>
-</section>
-
 <section class="calc-detail-section py-5" id="calculator">
     <div class="container">
         <div class="calculator-detail-scope">
 <section class="calc-inline-233">
-  <div class="container">
+  <div class="price-list-hero-inner">
     <div class="calc-inline-234">
       <span>🔄</span> Updated June 2026 — Latest Market Prices
     </div>
@@ -189,7 +177,7 @@
     </div>
   </div>
 </section>
-<main class="container calc-inline-244">
+<main class="calc-inline-244">
 
   <!-- Price Per Watt Table -->
   <section class="calc-inline-245">
@@ -409,12 +397,12 @@
     <div class="calc-inline-288">
       <div>
         <label class="calc-inline-289">System Size (kW)</label>
-        <input type="number" id="calc-kw" value="3" min="1" max="10" step="0.5" class="calc-inline-290" oninput="calculateSolar()">
+        <input type="number" id="calc-kw" value="3" min="1" max="10" step="0.5" class="calc-inline-290">
         <div class="calc-inline-291">1 kW to 10 kW for residential</div>
       </div>
       <div>
         <label class="calc-inline-289">Panel Type</label>
-        <select id="calc-panel-type" class="calc-inline-292" onchange="calculateSolar()">
+        <select id="calc-panel-type" class="calc-inline-292">
           <option value="poly">Polycrystalline (Budget)</option>
           <option value="mono" selected="">Monocrystalline PERC (Popular)</option>
           <option value="halfcut">Half-cut PERC (Premium)</option>
@@ -423,12 +411,12 @@
       </div>
       <div>
         <label class="calc-inline-289">Monthly Bill (₹)</label>
-        <input type="number" id="calc-bill" value="3000" min="500" step="500" class="calc-inline-290" oninput="calculateSolar()">
+        <input type="number" id="calc-bill" value="3000" min="500" step="500" class="calc-inline-290">
         <div class="calc-inline-291">Your current electricity bill</div>
       </div>
     </div>
 
-    <button onclick="calculateSolar()" class="calc-inline-293">
+    <button type="button" id="price-calc-btn" class="calc-inline-293">
       Calculate My Solar Cost →
     </button>
 
@@ -502,10 +490,10 @@
     <h2 class="calc-inline-321">Get Quotes from Verified Installers in Your City</h2>
     <p class="calc-inline-322">Compare 3 quotes from MNRE-empanelled installers near you. Free service, no spam, guaranteed transparency on pricing.</p>
     <div class="calc-inline-323">
-      <a href="/solar-rooftop-subsidy-calculator/" class="calc-inline-324">
+      <a href="../calculators/solar-rooftop-subsidy-calculator.html" class="calc-inline-324">
         Check My Subsidy →
       </a>
-      <a href="/solar-panel-cost-calculator/" class="calc-inline-325">
+      <a href="../calculators/solar-panel-cost-calculator.html" class="calc-inline-325">
         Calculate Full Cost
       </a>
     </div>
@@ -518,60 +506,49 @@
   </section>
 
   <!-- FAQ Section -->
-  <section class="calc-inline-245">
-    <h2 class="calc-inline-309">Frequently Asked Questions — Solar Panel Price India 2026</h2>
-    <div class="calc-inline-327">
-
-      <div class="faq-item calc-inline-328">
-        <button onclick="toggleFaq(this)" class="calc-inline-329">
-          What is the current solar panel price per watt in India in 2026?
-          <span class="calc-inline-330">+</span>
-        </button>
-        <div class="faq-answer calc-inline-331">
-          In 2026, solar panel prices in India (panel only, ex-GST) are: PERC (P-type): ₹18–₹24/Wp; TOPCon (N-type): ₹20–₹28/Wp; HJT (N-type premium): ₹32–₹45/Wp. Polycrystalline panels are now largely obsolete in India — most new installations use PERC or TOPCon. For a complete installed system (panels + inverter + mounting + wiring + installation), budget ₹55,000–₹75,000 per kW before subsidy.
+  <section class="price-list-faq-section calc-inline-245" aria-labelledby="price-list-faq-title">
+    <h2 class="calc-inline-309" id="price-list-faq-title">Frequently Asked Questions &mdash; Solar Panel Price India 2026</h2>
+    <div class="accordion faq-accordion price-list-faq-accordion" id="priceListFaqAccordion">
+      <div class="accordion-item faq-item">
+        <h3 class="accordion-header" id="priceFaqHeadingOne">
+          <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#priceFaqCollapseOne" aria-expanded="false" aria-controls="priceFaqCollapseOne">What is the current solar panel price per watt in India in 2026?</button>
+        </h3>
+        <div id="priceFaqCollapseOne" class="accordion-collapse collapse" aria-labelledby="priceFaqHeadingOne" data-bs-parent="#priceListFaqAccordion">
+          <div class="accordion-body faq-body">In 2026, solar panel prices in India are typically &#8377;18-&#8377;24/Wp for PERC, &#8377;20-&#8377;28/Wp for TOPCon, and &#8377;32-&#8377;45/Wp for premium HJT panels. Complete installed systems usually cost &#8377;55,000-&#8377;75,000 per kW before subsidy.</div>
         </div>
       </div>
-
-      <div class="faq-item calc-inline-332">
-        <button onclick="toggleFaq(this)" class="calc-inline-329">
-          How much does a 3kW solar system cost after PM Surya Ghar subsidy?
-          <span class="calc-inline-330">+</span>
-        </button>
-        <div class="faq-answer calc-inline-331">
-          A 3kW solar system costs approximately <strong>₹1.80–₹2.10 lakh</strong> before subsidy in India in 2026. Under PM Surya Ghar Muft Bijli Yojana, the government provides ₹78,000 subsidy for systems 3kW and above. Net cost after subsidy: <strong>₹1.02–₹1.32 lakh</strong>, with a typical payback period of 3–5 years.
+      <div class="accordion-item faq-item">
+        <h3 class="accordion-header" id="priceFaqHeadingTwo">
+          <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#priceFaqCollapseTwo" aria-expanded="false" aria-controls="priceFaqCollapseTwo">How much does a 3kW solar system cost after PM Surya Ghar subsidy?</button>
+        </h3>
+        <div id="priceFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="priceFaqHeadingTwo" data-bs-parent="#priceListFaqAccordion">
+          <div class="accordion-body faq-body">A 3kW solar system costs approximately &#8377;1.80-&#8377;2.10 lakh before subsidy. With the &#8377;78,000 PM Surya Ghar subsidy, the net cost usually comes to around &#8377;1.02-&#8377;1.32 lakh.</div>
         </div>
       </div>
-
-      <div class="faq-item calc-inline-332">
-        <button onclick="toggleFaq(this)" class="calc-inline-329">
-          Which solar panel brand is best in India in 2026?
-          <span class="calc-inline-330">+</span>
-        </button>
-        <div class="faq-answer calc-inline-331">
-          Popular solar panel brands available in India in 2026 include <strong>Adani Solar, Tata Power Solar, Waaree Energies, Vikram Solar,</strong> and <strong>Luminous</strong>. Specifications, pricing and suitability vary by model and region. Always verify current specifications and pricing directly with authorised dealers or the brand's official website before purchase.
+      <div class="accordion-item faq-item">
+        <h3 class="accordion-header" id="priceFaqHeadingThree">
+          <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#priceFaqCollapseThree" aria-expanded="false" aria-controls="priceFaqCollapseThree">Which solar panel brand is best in India in 2026?</button>
+        </h3>
+        <div id="priceFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="priceFaqHeadingThree" data-bs-parent="#priceListFaqAccordion">
+          <div class="accordion-body faq-body">Popular brands include Adani Solar, Tata Power Solar, Waaree Energies, Vikram Solar, and Luminous. The best option depends on model availability, warranty, installer support, and current regional pricing.</div>
         </div>
       </div>
-
-      <div class="faq-item calc-inline-332">
-        <button onclick="toggleFaq(this)" class="calc-inline-329">
-          What is the PM Surya Ghar subsidy amount in 2026?
-          <span class="calc-inline-330">+</span>
-        </button>
-        <div class="faq-answer calc-inline-331">
-          Under PM Surya Ghar Muft Bijli Yojana 2026, the subsidy is <strong>₹30,000 for 1kW</strong> systems, <strong>₹60,000 for 2kW</strong> systems, and <strong>₹78,000 for 3kW and above</strong> (up to 10kW residential systems). The subsidy is credited directly to your bank account after installation through an empanelled DISCOM installer.
+      <div class="accordion-item faq-item">
+        <h3 class="accordion-header" id="priceFaqHeadingFour">
+          <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#priceFaqCollapseFour" aria-expanded="false" aria-controls="priceFaqCollapseFour">What is the PM Surya Ghar subsidy amount in 2026?</button>
+        </h3>
+        <div id="priceFaqCollapseFour" class="accordion-collapse collapse" aria-labelledby="priceFaqHeadingFour" data-bs-parent="#priceListFaqAccordion">
+          <div class="accordion-body faq-body">The subsidy is &#8377;30,000 for 1kW systems, &#8377;60,000 for 2kW systems, and &#8377;78,000 for 3kW and above, subject to scheme rules and installation through approved channels.</div>
         </div>
       </div>
-
-      <div class="faq-item calc-inline-332">
-        <button onclick="toggleFaq(this)" class="calc-inline-329">
-          How many solar panels do I need for a 5kW system?
-          <span class="calc-inline-330">+</span>
-        </button>
-        <div class="faq-answer calc-inline-331">
-          For a 5kW solar system in India, you typically need <strong>12–15 solar panels</strong> depending on panel wattage. If using 400W panels, you need 12–13 panels; with 350W panels, you need about 14–15 panels. Each panel requires approximately 2 sq. meters of roof space, so you need at least <strong>25–30 sq. meters</strong> of shade-free rooftop area for a 5kW installation.
+      <div class="accordion-item faq-item">
+        <h3 class="accordion-header" id="priceFaqHeadingFive">
+          <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#priceFaqCollapseFive" aria-expanded="false" aria-controls="priceFaqCollapseFive">How many solar panels do I need for a 5kW system?</button>
+        </h3>
+        <div id="priceFaqCollapseFive" class="accordion-collapse collapse" aria-labelledby="priceFaqHeadingFive" data-bs-parent="#priceListFaqAccordion">
+          <div class="accordion-body faq-body">A 5kW system typically needs 12-15 panels depending on panel wattage. With 400W panels, you need about 12-13 panels and roughly 25-30 square meters of shade-free rooftop area.</div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -579,22 +556,22 @@
   <section class="calc-inline-333">
     <h2 class="calc-inline-334">Related Solar Tools</h2>
     <div class="calc-inline-335">
-      <a href="/solar-panel-cost-calculator/" class="calc-inline-336">
+      <a href="../calculators/solar-panel-cost-calculator.html" class="calc-inline-336">
         <div class="calc-inline-337">🔢</div>
         <div class="calc-inline-338">Cost Calculator</div>
         <div class="calc-inline-339">Full system cost estimate</div>
       </a>
-      <a href="/solar-rooftop-subsidy-calculator/" class="calc-inline-340">
+      <a href="../calculators/solar-rooftop-subsidy-calculator.html" class="calc-inline-340">
         <div class="calc-inline-337">💰</div>
         <div class="calc-inline-338">Subsidy Calculator</div>
         <div class="calc-inline-339">Check PM Surya Ghar eligibility</div>
       </a>
-      <a href="/solar-roi-calculator/" class="calc-inline-340">
+      <a href="../calculators/solar-roi-calculator.html" class="calc-inline-340">
         <div class="calc-inline-337">📈</div>
         <div class="calc-inline-338">ROI Calculator</div>
         <div class="calc-inline-339">Calculate returns &amp; payback</div>
       </a>
-      <a href="/solar-loan-emi-calculator/" class="calc-inline-340">
+      <a href="../calculators/solar-loan-emi-calculator.html" class="calc-inline-340">
         <div class="calc-inline-337">🏦</div>
         <div class="calc-inline-338">EMI Calculator</div>
         <div class="calc-inline-339">Solar loan EMI estimates</div>

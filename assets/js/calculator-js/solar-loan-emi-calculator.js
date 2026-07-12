@@ -5,7 +5,7 @@
 
         /* ---- Utility ---- */
         function fmt(n) {
-            return 'â‚¹' + Math.round(n).toLocaleString('en-IN');
+            return '₹' + Math.round(n).toLocaleString('en-IN');
         }
 
         /* ---- Subsidy lookup ---- */
@@ -122,7 +122,7 @@
             var kw = parseFloat(sizeSlider.value) || 3;
 
             if (P <= 0) {
-                alert('Please enter a valid loan amount greater than â‚¹0.');
+                alert('Please enter a valid loan amount greater than ₹0.');
                 return;
             }
 
@@ -132,7 +132,7 @@
             var principalPct = Math.round((P / totalPaid) * 100);
             var interestPct = 100 - principalPct;
 
-            // Monthly savings: kW Ã— 4 units/day Ã— 30 days Ã— â‚¹7/unit
+            // Monthly savings: kW x 4 units/day x 30 days x ₹7/unit
             var monthlySavings = kw * 4 * 30 * 7;
 
             // Payback: net cost / annual savings
@@ -141,7 +141,7 @@
             var downPct = parseFloat(downSlider.value) || 0;
             var downAmt = cost * downPct / 100;
             var netCost = cost - sub;
-            var paybackYrs = netCost > 0 && monthlySavings > 0 ? (netCost / (monthlySavings * 12)).toFixed(1) : 'â€”';
+            var paybackYrs = netCost > 0 && monthlySavings > 0 ? (netCost / (monthlySavings * 12)).toFixed(1) : '—';
 
             // Update DOM
             document.getElementById('res_emi').textContent = fmt(emi);
@@ -149,7 +149,7 @@
             document.getElementById('res_loan').textContent = fmt(P);
             document.getElementById('res_interest').textContent = fmt(totalInterest);
             document.getElementById('res_total').textContent = fmt(totalPaid);
-            document.getElementById('res_payback').textContent = paybackYrs !== 'â€”' ? paybackYrs + ' years' : 'â€”';
+            document.getElementById('res_payback').textContent = paybackYrs !== '—' ? paybackYrs + ' years' : '—';
 
             document.getElementById('principal_bar').style.width = principalPct + '%';
             document.getElementById('interest_bar').style.width = interestPct + '%';
@@ -161,10 +161,10 @@
             var evsText;
             if (diff >= 0) {
                 evsText = 'Your EMI is ' + fmt(emi) + ' but you save ' + fmt(monthlySavings) +
-                    '/month on electricity â€” net gain of <strong>' + fmt(diff) + '/month</strong>. Solar pays for itself!';
+                    '/month on electricity — net gain of <strong>' + fmt(diff) + '/month</strong>. Solar pays for itself!';
             } else {
                 evsText = 'Your EMI is ' + fmt(emi) + ' but you save ' + fmt(monthlySavings) +
-                    '/month on electricity â€” net extra cost is only <strong>' + fmt(Math.abs(diff)) + '/month</strong>.';
+                    '/month on electricity — net extra cost is only <strong>' + fmt(Math.abs(diff)) + '/month</strong>.';
             }
             document.getElementById('emi_vs_savings_text').innerHTML = evsText;
 
@@ -227,6 +227,26 @@
         };
 
         /* ---- Init with defaults ---- */
+        var resultBox = document.getElementById('result-box');
+        var emptyState = document.getElementById('empty-state');
+        if (resultBox) resultBox.style.display = 'none';
+        if (emptyState) emptyState.style.display = 'flex';
+
+        var amortToggle = document.getElementById('amort-toggle-btn');
+        if (amortToggle) amortToggle.addEventListener('click', window.toggleAmort);
+
+        var printBtn = document.getElementById('loan-print-btn');
+        if (printBtn) printBtn.addEventListener('click', function () {
+            window.print();
+        });
+
+        var inlineQuoteBtn = document.getElementById('loan-inline-quote-btn');
+        if (inlineQuoteBtn) {
+            inlineQuoteBtn.addEventListener('click', function () {
+                if (window.solarLeads) window.solarLeads.showModal('Inline CTA', {});
+            });
+        }
+
         updateFromSize();
 
     })();

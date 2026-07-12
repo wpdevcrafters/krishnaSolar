@@ -178,9 +178,9 @@
         <div class="calculator-detail-scope">
 
             <!-- Main grid: form + result -->
-            <div class="grid-calc">
-                <!-- Left: Calculator -->
-                <div>
+            <div class="grid-calc inverter-layout-grid">
+                <!-- Left: Appliance inputs -->
+                <div class="inverter-controls-left">
                     <!-- Step 1: Preset Appliances -->
                     <div class="calc-inline-009">
                         <h2 class="calc-inline-010">
@@ -218,7 +218,10 @@
                         </div>
                     </div>
 
-                    <!-- Step 3: Selected list -->
+                </div>
+
+                <!-- Right: Selected list and backup duration -->
+                <div class="inverter-controls-right">
                     <div class="calc-inline-009">
                         <div class="calc-inline-019">
                             <h2 class="calc-inline-020">
@@ -272,7 +275,7 @@
                     </div>
                 </div>
 
-                <!-- Right: Results -->
+                <!-- Full-width result section -->
                 <div id="result-section">
                     <!-- Empty state -->
                     <div id="result-empty" class="result-output-card calc-inline-035">

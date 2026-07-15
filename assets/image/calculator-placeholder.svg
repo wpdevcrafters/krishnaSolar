@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="160" viewBox="0 0 220 160" role="img" aria-labelledby="title desc">
+  <title id="title">Calculator result placeholder</title>
+  <desc id="desc">A simple solar calculator illustration shown before results are calculated.</desc>
+  <rect width="220" height="160" rx="24" fill="#F0FDF4"/>
+  <circle cx="168" cy="42" r="20" fill="#F59E0B" opacity=".22"/>
+  <circle cx="168" cy="42" r="10" fill="#F59E0B"/>
+  <rect x="38" y="52" width="82" height="58" rx="8" fill="#FFFFFF" stroke="#10B981" stroke-width="3"/>
+  <path d="M52 72h54M52 91h54M70 58v48M92 58v48" stroke="#10B981" stroke-width="2" opacity=".55"/>
+  <rect x="103" y="75" width="58" height="44" rx="8" fill="#FFFFFF" stroke="#0F172A" stroke-width="3"/>
+  <circle cx="118" cy="90" r="4" fill="#10B981"/>
+  <circle cx="134" cy="90" r="4" fill="#10B981"/>
+  <circle cx="150" cy="90" r="4" fill="#F59E0B"/>
+  <path d="M116 108h36" stroke="#0F172A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M122 52l22-24-8 20h20l-24 29 8-25h-18z" fill="#F59E0B" stroke="#0F172A" stroke-width="3" stroke-linejoin="round"/>
+</svg>

@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar vs Grid Calculator - Compare Costs | ShriKrishna Solar</title>
+    <meta name="description" content="Compare the total cost of solar power vs grid electricity over 25 years. See your break-even point and total lifetime savings.">
+    <link rel="canonical" href="https://shrikrishnasolar.in/calculators/solar-vs-grid-calculator.html">
+    <meta property="og:title" content="Solar vs Grid Calculator - Compare Costs | ShriKrishna Solar">
+    <meta property="og:description" content="Compare the total cost of solar power vs grid electricity over 25 years. See your break-even point and total lifetime savings.">
+    <meta property="og:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
+    <meta property="og:url" content="https://shrikrishnasolar.in/calculators/solar-vs-grid-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShriKrishna Solar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solar vs Grid Calculator - Compare Costs | ShriKrishna Solar">
+    <meta name="twitter:description" content="Compare the total cost of solar power vs grid electricity over 25 years. See your break-even point and total lifetime savings.">
+    <meta name="twitter:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/image/favicon.png">
 </head>
-<body>
+<body class="calc-vs-grid-page calc-legacy-calculator-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -22,7 +36,7 @@
 
             <!-- Tablet: WhatsApp + CTA (md to xl) -->
             <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
-                <a href="https://wa.me/919876543210"
+                <a href="https://wa.me/919547243120"
                    class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                     <i class="bi bi-whatsapp fs-5"></i>
@@ -62,13 +76,13 @@
                             </a>
                             <ul class="submenu nav flex-column ps-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#residential">Residential</a>
+                                    <a class="nav-link" href="../services/residential.html">Residential</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#commercial">Commercial</a>
+                                    <a class="nav-link" href="../services/commercial.html">Commercial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html">Industrial</a>
+                                    <a class="nav-link" href="../services/Industrial.html">Industrial</a>
                                 </li>
                             </ul>
                         </li>
@@ -76,7 +90,7 @@
                             <a class="nav-link active" href="../calculators.html">Calculators</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                            <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -92,7 +106,7 @@
                            data-bs-dismiss="offcanvas">
                             Book Free Solar Consultation
                         </a>
-                        <a href="https://wa.me/919876543210"
+                        <a href="https://wa.me/919547243120"
                            class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
                            target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
@@ -113,16 +127,16 @@
                     <li class="nav-item has-submenu position-static">
                         <a class="nav-link" href="../services.html">Services</a>
                         <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
-                            <li><a class="dropdown-item" href="../services.html#residential">Residential</a></li>
-                            <li><a class="dropdown-item" href="../services.html#commercial">Commercial</a></li>
-                            <li><a class="dropdown-item" href="../services.html">Industrial</a></li>
+                            <li><a class="dropdown-item" href="../services/residential.html">Residential</a></li>
+                            <li><a class="dropdown-item" href="../services/commercial.html">Commercial</a></li>
+                            <li><a class="dropdown-item" href="../services/Industrial.html">Industrial</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="../calculators.html">Calculators</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                        <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -132,7 +146,7 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="https://wa.me/919876543210"
+                    <a href="https://wa.me/919547243120"
                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <i class="bi bi-whatsapp fs-5"></i>
@@ -146,6 +160,7 @@
         </div>
     </nav>
 </header>
+    <main id="main-content">
 
 <section class="calc-detail-hero" aria-labelledby="calc-detail-title">
     <div class="calc-detail-hero__bg" aria-hidden="true"></div>
@@ -163,60 +178,61 @@
     <div class="container">
         <div class="calculator-detail-scope">
 <div class="hero">
-  <h1>Solar vs Grid Electricity Calculator</h1>
+  <h2>Solar vs Grid Electricity Calculator</h2>
   <p>See exactly when solar pays back and how much you save over 25 years compared to grid electricity in India.</p>
 </div>
 
 <div class="wrap">
   
 
-  <div class="calc-card">
-    <div class="calc-inline-121">⚖️ Solar vs Grid Comparison</div>
-    <div class="form-row">
+  <div class="grid-calc legacy-cost-layout">
+  <div class="calculator-form-card">
+<div class="form-card-title">⚖️ Solar vs Grid Comparison</div>
+<div class="form-row">
       <div class="form-group">
-        <label>Monthly Electricity Bill (₹)</label>
+        <label for="bill">Monthly Electricity Bill (₹)</label>
         <input type="number" id="bill" value="3000" min="200" step="100">
       </div>
       <div class="form-group">
-        <label>Current Tariff (₹/unit)</label>
+        <label for="tariff">Current Tariff (₹/unit)</label>
         <input type="number" id="tariff" value="7.0" min="2" max="15" step="0.5">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label>Expected Tariff Increase (% per year)</label>
+        <label for="tariff-inc">Expected Tariff Increase (% per year)</label>
         <input type="number" id="tariff-inc" value="5" min="0" max="15" step="0.5">
       </div>
       <div class="form-group">
-        <label>Solar System Size (kW)</label>
+        <label for="sys-kw">Solar System Size (kW)</label>
         <input type="number" id="sys-kw" value="3" min="1" max="100" step="0.5">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label>Solar Installation Cost (₹)</label>
+        <label for="install-cost">Solar Installation Cost (₹)</label>
         <input type="number" id="install-cost" value="175000" min="50000" step="5000">
       </div>
       <div class="form-group">
-        <label>PM Surya Ghar Subsidy (₹)</label>
+        <label for="subsidy">PM Surya Ghar Subsidy (₹)</label>
         <input type="number" id="subsidy" value="78000" min="0" step="1000">
       </div>
     </div>
-    <button class="calc-btn" onclick="calcVsGrid()">Compare Solar vs Grid →</button>
-
-    <div id="results" class="calc-inline-100">
+    <button type="button" class="calc-btn" data-click-action="calcVsGrid">Compare Solar vs Grid →</button>
+  </div>
+  <div id="results" class="result-container legacy-result-content" aria-live="polite" aria-atomic="true">
       <div class="verdict" id="verdict">
-        <div class="calc-inline-375">Solar pays back in</div>
+        <div>Solar pays back in</div>
         <div class="verdict-big" id="payback-yr">—</div>
         <div class="verdict-sub" id="verdict-sub">—</div>
       </div>
       <div class="vs-grid">
         <div class="vs-card solar">
-          <div class="vs-header calc-inline-104">☀️ Solar (25 years)</div>
+          <div class="vs-header">☀️ Solar (25 years)</div>
           <div id="solar-rows"></div>
         </div>
         <div class="vs-card grid">
-          <div class="vs-header calc-inline-376">🔌 Grid (25 years)</div>
+          <div class="vs-header">🔌 Grid (25 years)</div>
           <div id="grid-rows"></div>
         </div>
       </div>
@@ -228,7 +244,12 @@
         </table>
       </div>
     </div>
+  <div id="empty-state" class="result-container result-placeholder calculator-empty-state" aria-live="polite" aria-atomic="true">
+    <div class="result-placeholder__icon"><i class="bi bi-sun-fill" aria-hidden="true"></i></div>
+    <h3>Compare solar vs grid after calculation</h3>
+    <p>Fill up the form and calculate to view your personalized result.</p>
   </div>
+</div>
 
   <div id="in-content-ad-anchor"></div>
   
@@ -236,13 +257,13 @@
   
   
 
-  <div class="calc-inline-091">
-    <h3 class="calc-inline-092">Dig Deeper</h3>
-    <div class="calc-inline-093">
-      <a href="/solar-roi-calculator/" class="calc-inline-094">📈 ROI Calculator →</a>
-      <a href="/solar-loan-emi-calculator/" class="calc-inline-094">🏦 Loan EMI Calculator →</a>
-      <a href="/solar-panel-cost-calculator/" class="calc-inline-094">🧮 Full Cost Calculator →</a>
-      <a href="/pm-surya-ghar-yojana/" class="calc-inline-094">🏛️ PM Surya Ghar →</a>
+  <div>
+    <h3>Dig Deeper</h3>
+    <div>
+      <a href="/solar-roi-calculator/">📈 ROI Calculator →</a>
+      <a href="/solar-loan-emi-calculator/">🏦 Loan EMI Calculator →</a>
+      <a href="/solar-panel-cost-calculator/">🧮 Full Cost Calculator →</a>
+      <a href="/pm-surya-ghar-yojana/">🏛️ PM Surya Ghar →</a>
     </div>
   </div>
 </div>
@@ -252,6 +273,49 @@
     </div>
 </section>
 
+<section class="faq-compact-section faq-section bg-white" id="vsGridFaq-section" aria-labelledby="vsGridFaq-title">
+    <div class="container">
+        <h2 class="faq-compact-title faq-section__title" id="vsGridFaq-title">Solar vs Grid FAQs</h2>
+        <div class="accordion faq-accordion cost-faq-accordion" id="vsGridFaq">
+            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="vsGridFaqHeading1">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#vsGridFaqCollapse1" aria-expanded="false" aria-controls="vsGridFaqCollapse1">
+                        Is solar cheaper than grid electricity?
+                    </button>
+                </h3>
+                <div id="vsGridFaqCollapse1" class="accordion-collapse collapse" aria-labelledby="vsGridFaqHeading1" data-bs-parent="#vsGridFaq">
+                    <div class="accordion-body">Over the full system life, rooftop solar is usually cheaper because it offsets rising electricity tariffs after the payback period.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="vsGridFaqHeading2">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#vsGridFaqCollapse2" aria-expanded="false" aria-controls="vsGridFaqCollapse2">
+                        What affects solar payback period?
+                    </button>
+                </h3>
+                <div id="vsGridFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="vsGridFaqHeading2" data-bs-parent="#vsGridFaq">
+                    <div class="accordion-body">System cost, subsidy, electricity tariff, monthly consumption, generation, maintenance, and tariff escalation all affect payback.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="vsGridFaqHeading3">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#vsGridFaqCollapse3" aria-expanded="false" aria-controls="vsGridFaqCollapse3">
+                        Should I compare solar over 25 years?
+                    </button>
+                </h3>
+                <div id="vsGridFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="vsGridFaqHeading3" data-bs-parent="#vsGridFaq">
+                    <div class="accordion-body">Yes. Solar panels are long-life assets, so lifetime savings are best understood over 20 to 25 years.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="vsGridFaqHeading4">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#vsGridFaqCollapse4" aria-expanded="false" aria-controls="vsGridFaqCollapse4">
+                        Does grid tariff increase improve solar savings?
+                    </button>
+                </h3>
+                <div id="vsGridFaqCollapse4" class="accordion-collapse collapse" aria-labelledby="vsGridFaqHeading4" data-bs-parent="#vsGridFaq">
+                    <div class="accordion-body">Yes. Higher future grid tariffs generally improve solar lifetime savings and shorten effective payback.</div>
+                </div>
+            </div>        </div>
+    </div>
+</section>
 <section class="cta-section py-4 bg-white">
     <div class="container">
         <div class="cta-banner" data-aos="fade-up">
@@ -264,6 +328,8 @@
     </div>
 </section>
 
+    </main>
+
 <footer class="site-footer" role="contentinfo">
     <div class="container">
         <div class="site-footer__grid">
@@ -274,10 +340,10 @@
                 </a>
                 <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
                 <ul class="site-footer__social list-unstyled" aria-label="Social media links">
-                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a aria-label="Facebook" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-facebook"></i></a></li>
+                    <li><a aria-label="Instagram" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-instagram"></i></a></li>
+                    <li><a aria-label="YouTube" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-youtube"></i></a></li>
+                    <li><a aria-label="LinkedIn" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-linkedin"></i></a></li>
                 </ul>
             </div>
             <!-- Quick Links -->
@@ -309,24 +375,37 @@
                         <i class="bi bi-geo-alt-fill"></i>
                         <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
                     </li>
-                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919547243120">+91 98765 43210</a></li>
                     <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
                     <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
                 </ul>
             </address>
+            <!-- Location -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Location</h2>
+                <div class="site-footer__map">
+                    <iframe
+                        title="Map showing ShriKrishna Solar location at Kuanpar, Sauri, Belda, Paschim Medinipur 721445"
+                        src="https://www.google.com/maps?q=Kuanpar%2C%20Sauri%2C%20Belda%2C%20Paschim%20Medinipur%20721445&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
         <div class="site-footer__bottom">
             <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
             <nav class="site-footer__legal" aria-label="Footer legal links">
-                <a href="#">Privacy Policy</a><span>|</span>
-                <a href="#">Terms &amp; Conditions</a><span>|</span>
-                <a href="#">Refund Policy</a>
+                <a href="../privacy-policy.html">Privacy Policy</a><span>|</span>
+                <a href="../terms-conditions.html">Terms &amp; Conditions</a><span>|</span>
+                <a href="../refund-policy.html">Refund Policy</a>
             </nav>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+<a href="https://wa.me/919547243120" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Load Calculator - Calculate Your System Size | ShriKrishna Solar</title>
+    <meta name="description" content="Calculate the exact solar system size you need. Add your appliances and get an instant recommendation for kW capacity, panels, and cost.">
+    <link rel="canonical" href="https://shrikrishnasolar.in/calculators/solar-load-calculator.html">
+    <meta property="og:title" content="Solar Load Calculator - Calculate Your System Size | ShriKrishna Solar">
+    <meta property="og:description" content="Calculate the exact solar system size you need. Add your appliances and get an instant recommendation for kW capacity, panels, and cost.">
+    <meta property="og:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
+    <meta property="og:url" content="https://shrikrishnasolar.in/calculators/solar-load-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShriKrishna Solar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solar Load Calculator - Calculate Your System Size | ShriKrishna Solar">
+    <meta name="twitter:description" content="Calculate the exact solar system size you need. Add your appliances and get an instant recommendation for kW capacity, panels, and cost.">
+    <meta name="twitter:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/image/favicon.png">
 </head>
-<body>
+<body class="calc-load-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -22,7 +36,7 @@
 
             <!-- Tablet: WhatsApp + CTA (md to xl) -->
             <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
-                <a href="https://wa.me/919876543210"
+                <a href="https://wa.me/919547243120"
                    class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                     <i class="bi bi-whatsapp fs-5"></i>
@@ -62,13 +76,13 @@
                             </a>
                             <ul class="submenu nav flex-column ps-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#residential">Residential</a>
+                                    <a class="nav-link" href="../services/residential.html">Residential</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#commercial">Commercial</a>
+                                    <a class="nav-link" href="../services/commercial.html">Commercial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html">Industrial</a>
+                                    <a class="nav-link" href="../services/Industrial.html">Industrial</a>
                                 </li>
                             </ul>
                         </li>
@@ -76,7 +90,7 @@
                             <a class="nav-link active" href="../calculators.html">Calculators</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                            <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -92,7 +106,7 @@
                            data-bs-dismiss="offcanvas">
                             Book Free Solar Consultation
                         </a>
-                        <a href="https://wa.me/919876543210"
+                        <a href="https://wa.me/919547243120"
                            class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
                            target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
@@ -113,16 +127,16 @@
                     <li class="nav-item has-submenu position-static">
                         <a class="nav-link" href="../services.html">Services</a>
                         <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
-                            <li><a class="dropdown-item" href="../services.html#residential">Residential</a></li>
-                            <li><a class="dropdown-item" href="../services.html#commercial">Commercial</a></li>
-                            <li><a class="dropdown-item" href="../services.html">Industrial</a></li>
+                            <li><a class="dropdown-item" href="../services/residential.html">Residential</a></li>
+                            <li><a class="dropdown-item" href="../services/commercial.html">Commercial</a></li>
+                            <li><a class="dropdown-item" href="../services/Industrial.html">Industrial</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="../calculators.html">Calculators</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                        <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -132,7 +146,7 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="https://wa.me/919876543210"
+                    <a href="https://wa.me/919547243120"
                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <i class="bi bi-whatsapp fs-5"></i>
@@ -146,6 +160,7 @@
         </div>
     </nav>
 </header>
+    <main id="main-content">
 
 <section class="calc-detail-hero" aria-labelledby="calc-detail-title">
     <div class="calc-detail-hero__bg" aria-hidden="true"></div>
@@ -167,25 +182,25 @@
             <a href="/">Home</a> &gt; Solar Load Calculator
         </p>
 
-        <div class="hero-section calc-inline-065">
-            <h1 class="calc-inline-066">Solar Load Calculator ⚡</h1>
-            <p class="calc-inline-067">Select your appliances to find out how much solar power you need.</p>
+        <div class="hero-section">
+            <h2>Solar Load Calculator ⚡</h2>
+            <p>Select your appliances to find out how much solar power you need.</p>
         </div>
 
         <div class="grid grid-calc">
             <!-- Left: Calculator Form -->
-            <div class="calculator-form-card calc-inline-145">
-                <div class="calc-inline-146">
-                    <h3 class="calc-inline-147">Select Your Appliances</h3>
-                    <p class="calc-inline-148">Click on categories below to add items and see your
+            <div class="calculator-form-card">
+                <div>
+                    <h3>Select Your Appliances</h3>
+                    <p>Click on categories below to add items and see your
                         total load in real-time.</p>
                 </div>
                 <div id="appliance-list-container"><div class="load-category-section">
-            <div class="category-header" onclick="toggleCategory(0)">
+            <div class="category-header" data-click-action="toggleCategory" data-category-index="0">
                 <span>❄️ Cooling &amp; Ventilation</span>
                 <span class="category-toggle-icon">▼</span>
             </div>
-            <div id="category-items-0" class="category-items calc-inline-023">
+            <div id="category-items-0" class="category-items">
                 
                     <div class="load-item-row">
                         <div class="load-item-info">
@@ -193,9 +208,9 @@
                             <span class="load-item-watts">75W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Ceiling Fan', 75, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Ceiling Fan" data-watts="75" data-delta="-1">-</button>
                             <span id="qty-Ceiling-Fan" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Ceiling Fan', 75, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Ceiling Fan" data-watts="75" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -205,9 +220,9 @@
                             <span class="load-item-watts">50W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Table Fan', 50, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Table Fan" data-watts="50" data-delta="-1">-</button>
                             <span id="qty-Table-Fan" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Table Fan', 50, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Table Fan" data-watts="50" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -217,9 +232,9 @@
                             <span class="load-item-watts">100W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Pedestal Fan', 100, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Pedestal Fan" data-watts="100" data-delta="-1">-</button>
                             <span id="qty-Pedestal-Fan" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Pedestal Fan', 100, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Pedestal Fan" data-watts="100" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -229,9 +244,9 @@
                             <span class="load-item-watts">150W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Air Cooler (Small)', 150, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Air Cooler (Small)" data-watts="150" data-delta="-1">-</button>
                             <span id="qty-Air-Cooler-(Small)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Air Cooler (Small)', 150, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Air Cooler (Small)" data-watts="150" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -241,9 +256,9 @@
                             <span class="load-item-watts">250W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Air Cooler (Desert)', 250, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Air Cooler (Desert)" data-watts="250" data-delta="-1">-</button>
                             <span id="qty-Air-Cooler-(Desert)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Air Cooler (Desert)', 250, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Air Cooler (Desert)" data-watts="250" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -253,9 +268,9 @@
                             <span class="load-item-watts">1000W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Air Conditioner (1 Ton)', 1000, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Air Conditioner (1 Ton)" data-watts="1000" data-delta="-1">-</button>
                             <span id="qty-Air-Conditioner-(1-Ton)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Air Conditioner (1 Ton)', 1000, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Air Conditioner (1 Ton)" data-watts="1000" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -265,19 +280,19 @@
                             <span class="load-item-watts">1500W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Air Conditioner (1.5 Ton)', 1500, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Air Conditioner (1.5 Ton)" data-watts="1500" data-delta="-1">-</button>
                             <span id="qty-Air-Conditioner-(1.5-Ton)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Air Conditioner (1.5 Ton)', 1500, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Air Conditioner (1.5 Ton)" data-watts="1500" data-delta="1">+</button>
                         </div>
                     </div>
                 
             </div>
         </div><div class="load-category-section">
-            <div class="category-header" onclick="toggleCategory(1)">
+            <div class="category-header" data-click-action="toggleCategory" data-category-index="1">
                 <span>💡 Lighting</span>
                 <span class="category-toggle-icon">▼</span>
             </div>
-            <div id="category-items-1" class="category-items calc-inline-023">
+            <div id="category-items-1" class="category-items">
                 
                     <div class="load-item-row">
                         <div class="load-item-info">
@@ -285,9 +300,9 @@
                             <span class="load-item-watts">9W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('LED Bulb (9W)', 9, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="LED Bulb (9W)" data-watts="9" data-delta="-1">-</button>
                             <span id="qty-LED-Bulb-(9W)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('LED Bulb (9W)', 9, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="LED Bulb (9W)" data-watts="9" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -297,9 +312,9 @@
                             <span class="load-item-watts">15W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('LED Bulb (15W)', 15, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="LED Bulb (15W)" data-watts="15" data-delta="-1">-</button>
                             <span id="qty-LED-Bulb-(15W)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('LED Bulb (15W)', 15, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="LED Bulb (15W)" data-watts="15" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -309,9 +324,9 @@
                             <span class="load-item-watts">20W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Tube Light', 20, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Tube Light" data-watts="20" data-delta="-1">-</button>
                             <span id="qty-Tube-Light" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Tube Light', 20, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Tube Light" data-watts="20" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -321,9 +336,9 @@
                             <span class="load-item-watts">25W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('CFL', 25, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="CFL" data-watts="25" data-delta="-1">-</button>
                             <span id="qty-CFL" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('CFL', 25, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="CFL" data-watts="25" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -333,19 +348,19 @@
                             <span class="load-item-watts">5W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Night Lamp', 5, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Night Lamp" data-watts="5" data-delta="-1">-</button>
                             <span id="qty-Night-Lamp" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Night Lamp', 5, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Night Lamp" data-watts="5" data-delta="1">+</button>
                         </div>
                     </div>
                 
             </div>
         </div><div class="load-category-section">
-            <div class="category-header" onclick="toggleCategory(2)">
+            <div class="category-header" data-click-action="toggleCategory" data-category-index="2">
                 <span>🍳 Kitchen Appliances</span>
                 <span class="category-toggle-icon">▼</span>
             </div>
-            <div id="category-items-2" class="category-items calc-inline-023">
+            <div id="category-items-2" class="category-items">
                 
                     <div class="load-item-row">
                         <div class="load-item-info">
@@ -353,9 +368,9 @@
                             <span class="load-item-watts">200W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Refrigerator (Single Door)', 200, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Refrigerator (Single Door)" data-watts="200" data-delta="-1">-</button>
                             <span id="qty-Refrigerator-(Single-Door)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Refrigerator (Single Door)', 200, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Refrigerator (Single Door)" data-watts="200" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -365,9 +380,9 @@
                             <span class="load-item-watts">350W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Refrigerator (Double Door)', 350, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Refrigerator (Double Door)" data-watts="350" data-delta="-1">-</button>
                             <span id="qty-Refrigerator-(Double-Door)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Refrigerator (Double Door)', 350, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Refrigerator (Double Door)" data-watts="350" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -377,9 +392,9 @@
                             <span class="load-item-watts">1200W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Microwave Oven', 1200, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Microwave Oven" data-watts="1200" data-delta="-1">-</button>
                             <span id="qty-Microwave-Oven" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Microwave Oven', 1200, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Microwave Oven" data-watts="1200" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -389,9 +404,9 @@
                             <span class="load-item-watts">500W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Mixer Grinder', 500, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Mixer Grinder" data-watts="500" data-delta="-1">-</button>
                             <span id="qty-Mixer-Grinder" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Mixer Grinder', 500, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Mixer Grinder" data-watts="500" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -401,9 +416,9 @@
                             <span class="load-item-watts">800W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Toaster', 800, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Toaster" data-watts="800" data-delta="-1">-</button>
                             <span id="qty-Toaster" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Toaster', 800, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Toaster" data-watts="800" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -413,9 +428,9 @@
                             <span class="load-item-watts">1500W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Electric Kettle', 1500, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Electric Kettle" data-watts="1500" data-delta="-1">-</button>
                             <span id="qty-Electric-Kettle" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Electric Kettle', 1500, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Electric Kettle" data-watts="1500" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -425,9 +440,9 @@
                             <span class="load-item-watts">2000W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Induction Cooktop', 2000, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Induction Cooktop" data-watts="2000" data-delta="-1">-</button>
                             <span id="qty-Induction-Cooktop" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Induction Cooktop', 2000, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Induction Cooktop" data-watts="2000" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -437,19 +452,19 @@
                             <span class="load-item-watts">1200W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Dishwasher', 1200, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Dishwasher" data-watts="1200" data-delta="-1">-</button>
                             <span id="qty-Dishwasher" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Dishwasher', 1200, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Dishwasher" data-watts="1200" data-delta="1">+</button>
                         </div>
                     </div>
                 
             </div>
         </div><div class="load-category-section">
-            <div class="category-header" onclick="toggleCategory(3)">
+            <div class="category-header" data-click-action="toggleCategory" data-category-index="3">
                 <span>💻 Entertainment &amp; IT</span>
                 <span class="category-toggle-icon">▼</span>
             </div>
-            <div id="category-items-3" class="category-items calc-inline-023">
+            <div id="category-items-3" class="category-items">
                 
                     <div class="load-item-row">
                         <div class="load-item-info">
@@ -457,9 +472,9 @@
                             <span class="load-item-watts">50W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('LED TV (32 inch)', 50, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="LED TV (32 inch)" data-watts="50" data-delta="-1">-</button>
                             <span id="qty-LED-TV-(32-inch)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('LED TV (32 inch)', 50, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="LED TV (32 inch)" data-watts="50" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -469,9 +484,9 @@
                             <span class="load-item-watts">100W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('LED TV (50 inch)', 100, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="LED TV (50 inch)" data-watts="100" data-delta="-1">-</button>
                             <span id="qty-LED-TV-(50-inch)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('LED TV (50 inch)', 100, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="LED TV (50 inch)" data-watts="100" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -481,9 +496,9 @@
                             <span class="load-item-watts">20W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Set Top Box', 20, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Set Top Box" data-watts="20" data-delta="-1">-</button>
                             <span id="qty-Set-Top-Box" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Set Top Box', 20, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Set Top Box" data-watts="20" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -493,9 +508,9 @@
                             <span class="load-item-watts">65W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Laptop', 65, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Laptop" data-watts="65" data-delta="-1">-</button>
                             <span id="qty-Laptop" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Laptop', 65, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Laptop" data-watts="65" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -505,9 +520,9 @@
                             <span class="load-item-watts">250W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Desktop PC', 250, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Desktop PC" data-watts="250" data-delta="-1">-</button>
                             <span id="qty-Desktop-PC" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Desktop PC', 250, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Desktop PC" data-watts="250" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -517,9 +532,9 @@
                             <span class="load-item-watts">10W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Wi-Fi Router', 10, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Wi-Fi Router" data-watts="10" data-delta="-1">-</button>
                             <span id="qty-Wi-Fi-Router" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Wi-Fi Router', 10, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Wi-Fi Router" data-watts="10" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -529,19 +544,19 @@
                             <span class="load-item-watts">150W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Gaming Console', 150, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Gaming Console" data-watts="150" data-delta="-1">-</button>
                             <span id="qty-Gaming-Console" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Gaming Console', 150, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Gaming Console" data-watts="150" data-delta="1">+</button>
                         </div>
                     </div>
                 
             </div>
         </div><div class="load-category-section">
-            <div class="category-header" onclick="toggleCategory(4)">
+            <div class="category-header" data-click-action="toggleCategory" data-category-index="4">
                 <span>🚿 Heavy Loads</span>
-                <span class="category-toggle-icon calc-inline-149">▼</span>
+                <span class="category-toggle-icon">▼</span>
             </div>
-            <div id="category-items-4" class="category-items calc-inline-086">
+            <div id="category-items-4" class="category-items">
                 
                     <div class="load-item-row">
                         <div class="load-item-info">
@@ -549,9 +564,9 @@
                             <span class="load-item-watts">2000W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Water Geyser', 2000, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Water Geyser" data-watts="2000" data-delta="-1">-</button>
                             <span id="qty-Water-Geyser" class="load-item-qty">1</span>
-                            <button class="control-btn plus" onclick="updateQty('Water Geyser', 2000, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Water Geyser" data-watts="2000" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -561,9 +576,9 @@
                             <span class="load-item-watts">500W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Washing Machine', 500, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Washing Machine" data-watts="500" data-delta="-1">-</button>
                             <span id="qty-Washing-Machine" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Washing Machine', 500, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Washing Machine" data-watts="500" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -573,9 +588,9 @@
                             <span class="load-item-watts">1000W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Iron', 1000, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Iron" data-watts="1000" data-delta="-1">-</button>
                             <span id="qty-Iron" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Iron', 1000, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Iron" data-watts="1000" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -585,9 +600,9 @@
                             <span class="load-item-watts">375W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Water Pump (0.5 HP)', 375, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Water Pump (0.5 HP)" data-watts="375" data-delta="-1">-</button>
                             <span id="qty-Water-Pump-(0.5-HP)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Water Pump (0.5 HP)', 375, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Water Pump (0.5 HP)" data-watts="375" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -597,9 +612,9 @@
                             <span class="load-item-watts">750W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Water Pump (1 HP)', 750, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Water Pump (1 HP)" data-watts="750" data-delta="-1">-</button>
                             <span id="qty-Water-Pump-(1-HP)" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Water Pump (1 HP)', 750, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Water Pump (1 HP)" data-watts="750" data-delta="1">+</button>
                         </div>
                     </div>
                 
@@ -609,37 +624,37 @@
                             <span class="load-item-watts">1000W</span>
                         </div>
                         <div class="load-item-controls">
-                            <button class="control-btn minus" onclick="updateQty('Vacuum Cleaner', 1000, -1)">-</button>
+                            <button type="button" class="control-btn minus" data-click-action="updateQty" data-appliance-name="Vacuum Cleaner" data-watts="1000" data-delta="-1">-</button>
                             <span id="qty-Vacuum-Cleaner" class="load-item-qty">0</span>
-                            <button class="control-btn plus" onclick="updateQty('Vacuum Cleaner', 1000, 1)">+</button>
+                            <button type="button" class="control-btn plus" data-click-action="updateQty" data-appliance-name="Vacuum Cleaner" data-watts="1000" data-delta="1">+</button>
                         </div>
                     </div>
                 
             </div>
-        </div><div class="calc-inline-150">
-        <button onclick="addCustomAppliancePrompt()" class="btn btn-outline calc-inline-151">+ Add Other Appliance</button>
+        </div><div>
+        <button type="button" data-click-action="addCustomAppliancePrompt" class="btn btn-outline">+ Add Other Appliance</button>
     </div></div>
             </div>
 
             <!-- Right: Results -->
-            <div id="result-box" class="result-container calc-inline-086">
+            <div id="result-box" class="result-container" aria-live="polite" aria-atomic="true">
 
                 <div class="grid grid-2">
                     <div class="metric-card highlight">
                         <div class="metric-label">Recommended System</div>
-                        <div class="metric-value calc-inline-152"><span id="res_system_size">2.5</span> <span class="calc-inline-153">kW</span></div>
+                        <div class="metric-value"><span id="res_system_size">2.5</span> <span>kW</span></div>
                         <div class="metric-sub">PV Capacity</div>
                     </div>
                     <div class="metric-card success">
                         <div class="metric-label">Daily Consumption</div>
-                        <div class="metric-value"><span id="res_daily_units">12.0</span> <span class="calc-inline-153">Units</span></div>
+                        <div class="metric-value"><span id="res_daily_units">12.0</span> <span>Units</span></div>
                         <div class="metric-sub">Energy Use</div>
                     </div>
                 </div>
 
                 <div class="details-card-modern">
                     <div class="details-header-modern">
-                        <span class="calc-inline-032">🔌</span> Load Analysis
+                        <span>🔌</span> Load Analysis
                     </div>
                     <div class="details-list">
                         <div class="detail-row-modern">
@@ -648,7 +663,7 @@
                         </div>
                         <div class="detail-row-modern">
                             <span class="detail-label-modern">Approx Monthly Bill</span>
-                            <span id="res_monthly_bill" class="detail-value-modern calc-inline-154">₹2,880</span>
+                            <span id="res_monthly_bill" class="detail-value-modern">₹2,880</span>
                         </div>
                         <div class="detail-row-modern">
                             <span class="detail-label-modern">Est. Generation</span>
@@ -657,7 +672,7 @@
                     </div>
                 </div>
 
-                <div class="mt-4 p-3 bg-light border rounded calc-inline-077">
+                <div class="mt-4 p-3 bg-light border rounded">
                     <strong>Disclaimer:</strong> based on average appliance wattage. Actual power consumption may vary.
                 </div>
 
@@ -665,16 +680,16 @@
             </div>
 
                             <!-- Inline "Get 3 Free Quotes" CTA -->
-                <div id="lm-inline-cta" class="calc-inline-078">
-                    <div class="calc-inline-079">
-                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
-                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                <div id="lm-inline-cta">
+                    <div>
+                        <div>📋 Get 3 Free Quotes from Local Installers</div>
+                        <div>Compare prices from verified solar installers in your area. Free, no obligation.</div>
                     </div>
-                    <button onclick="(function(){var s=document.getElementById('state'),c=document.getElementById('city'),k=document.getElementById('system_capacity');window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{state:s?s.options[s.selectedIndex].text:'',city:c&amp;&amp;c.value?c.options[c.selectedIndex].text:'',size:k?k.value:''});})();" class="calc-inline-082">Get Free Quotes →</button>
+                    <button type="button" data-click-action="solarLeadModal">Get Free Quotes →</button>
                 </div>
             <!-- Default Empty State -->
-            <div id="empty-state" class="result-container calc-inline-155">
-                <img alt="" src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-084">
+            <div id="empty-state" class="result-container" aria-live="polite" aria-atomic="true">
+                <img alt="" src="../assets/image/calculator-placeholder.svg" loading="lazy" decoding="async">
                 <h3>Add appliances to see load ⚡</h3>
             </div>
         </div>
@@ -705,6 +720,8 @@
     </div>
 </section>
 
+    </main>
+
 <footer class="site-footer" role="contentinfo">
     <div class="container">
         <div class="site-footer__grid">
@@ -715,10 +732,10 @@
                 </a>
                 <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
                 <ul class="site-footer__social list-unstyled" aria-label="Social media links">
-                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a aria-label="Facebook" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-facebook"></i></a></li>
+                    <li><a aria-label="Instagram" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-instagram"></i></a></li>
+                    <li><a aria-label="YouTube" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-youtube"></i></a></li>
+                    <li><a aria-label="LinkedIn" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-linkedin"></i></a></li>
                 </ul>
             </div>
             <!-- Quick Links -->
@@ -750,24 +767,37 @@
                         <i class="bi bi-geo-alt-fill"></i>
                         <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
                     </li>
-                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919547243120">+91 98765 43210</a></li>
                     <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
                     <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
                 </ul>
             </address>
+            <!-- Location -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Location</h2>
+                <div class="site-footer__map">
+                    <iframe
+                        title="Map showing ShriKrishna Solar location at Kuanpar, Sauri, Belda, Paschim Medinipur 721445"
+                        src="https://www.google.com/maps?q=Kuanpar%2C%20Sauri%2C%20Belda%2C%20Paschim%20Medinipur%20721445&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
         <div class="site-footer__bottom">
             <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
             <nav class="site-footer__legal" aria-label="Footer legal links">
-                <a href="#">Privacy Policy</a><span>|</span>
-                <a href="#">Terms &amp; Conditions</a><span>|</span>
-                <a href="#">Refund Policy</a>
+                <a href="../privacy-policy.html">Privacy Policy</a><span>|</span>
+                <a href="../terms-conditions.html">Terms &amp; Conditions</a><span>|</span>
+                <a href="../refund-policy.html">Refund Policy</a>
             </nav>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+<a href="https://wa.me/919547243120" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

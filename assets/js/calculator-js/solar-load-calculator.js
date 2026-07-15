@@ -3,7 +3,7 @@
 const applianceCategories = [
             {
                 category: 'Cooling & Ventilation',
-                icon: 'â„ï¸',
+                icon: '<i class="bi bi-snow" aria-hidden="true"></i>',
                 items: [
                     { name: 'Ceiling Fan', watts: 75 },
                     { name: 'Table Fan', watts: 50 },
@@ -16,7 +16,7 @@ const applianceCategories = [
             },
             {
                 category: 'Lighting',
-                icon: 'ðŸ’¡',
+                icon: '<i class="bi bi-lightbulb" aria-hidden="true"></i>',
                 items: [
                     { name: 'LED Bulb (9W)', watts: 9 },
                     { name: 'LED Bulb (15W)', watts: 15 },
@@ -27,7 +27,7 @@ const applianceCategories = [
             },
             {
                 category: 'Kitchen Appliances',
-                icon: 'ðŸ³',
+                icon: '<i class="bi bi-cup-hot" aria-hidden="true"></i>',
                 items: [
                     { name: 'Refrigerator (Single Door)', watts: 200 },
                     { name: 'Refrigerator (Double Door)', watts: 350 },
@@ -41,7 +41,7 @@ const applianceCategories = [
             },
             {
                 category: 'Entertainment & IT',
-                icon: 'ðŸ’»',
+                icon: '<i class="bi bi-pc-display" aria-hidden="true"></i>',
                 items: [
                     { name: 'LED TV (32 inch)', watts: 50 },
                     { name: 'LED TV (50 inch)', watts: 100 },
@@ -54,7 +54,7 @@ const applianceCategories = [
             },
             {
                 category: 'Heavy Loads',
-                icon: 'ðŸš¿',
+                icon: '<i class="bi bi-lightning-charge" aria-hidden="true"></i>',
                 items: [
                     { name: 'Water Geyser', watts: 2000 },
                     { name: 'Washing Machine', watts: 500 },
@@ -83,9 +83,9 @@ const applianceCategories = [
                 categoryDiv.innerHTML = `
                     <div class="category-header" onclick="toggleCategory(${catIdx})">
                         <span>${cat.icon} ${cat.category}</span>
-                        <span class="category-toggle-icon">â–¼</span>
+                        <span class="category-toggle-icon"><i class="bi bi-chevron-down" aria-hidden="true"></i></span>
                     </div>
-                    <div id="category-items-${catIdx}" class="category-items calc-inline-023">
+                    <div id="category-items-${catIdx}" class="category-items${catIdx === 0 ? '' : ' is-collapsed'}">
                         ${cat.items.map(item => `
                             <div class="load-item-row">
                                 <div class="load-item-info">
@@ -106,16 +106,17 @@ const applianceCategories = [
 
             // Option for custom appliance
             const customDiv = document.createElement('div');
-            customDiv.style.marginTop = '20px';
+            customDiv.className = 'load-custom-action';
             customDiv.innerHTML = `
-                <button onclick="addCustomAppliancePrompt()" class="btn btn-outline calc-inline-151">+ Add Other Appliance</button>
+                <button onclick="addCustomAppliancePrompt()" class="btn btn-outline">+ Add Other Appliance</button>
             `;
             container.appendChild(customDiv);
         }
 
         function toggleCategory(idx) {
             const itemsDiv = document.getElementById(`category-items-${idx}`);
-            const isHidden = itemsDiv.style.display === 'none';
+            const isHidden = itemsDiv.classList.contains('is-collapsed') || window.getComputedStyle(itemsDiv).display === 'none';
+            itemsDiv.classList.toggle('is-collapsed', !isHidden);
             itemsDiv.style.display = isHidden ? 'block' : 'none';
 
             // Rotate icon
@@ -160,7 +161,7 @@ const applianceCategories = [
 
             document.getElementById('res_system_size').innerText = recommendedKw;
             document.getElementById('res_daily_units').innerText = dailyUnits.toFixed(1);
-            document.getElementById('res_monthly_bill').innerText = `â‚¹${Math.round(dailyUnits * 30 * 8).toLocaleString()}`;
+            document.getElementById('res_monthly_bill').innerText = `₹${Math.round(dailyUnits * 30 * 8).toLocaleString()}`;
             document.getElementById('res_gen_units').innerText = Math.round(recommendedKw * 4 * 30);
 
             // Show result box if load > 0

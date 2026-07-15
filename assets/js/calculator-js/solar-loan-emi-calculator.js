@@ -190,12 +190,12 @@
 
             // WhatsApp share
             document.getElementById('whatsapp-share-btn').onclick = function () {
-                var msg = 'My Solar Loan EMI on SolarCalculators.in:\n' +
+                var msg = 'My Solar Loan EMI on shrikrishnasolar.in:\n' +
                     'Loan: ' + fmt(P) + '\n' +
                     'Monthly EMI: ' + fmt(emi) + '\n' +
                     'Electricity Savings: ' + fmt(monthlySavings) + '/month\n' +
                     'Total Interest: ' + fmt(totalInterest) + '\n' +
-                    'Calculate yours: https://solarcalculators.in/solar-loan-emi-calculator/';
+                    'Calculate yours: https://shrikrishnasolar.in/solar-loan-emi-calculator/';
                 window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
             };
         });

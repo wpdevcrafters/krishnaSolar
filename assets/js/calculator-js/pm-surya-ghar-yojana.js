@@ -1,3 +1,22 @@
+
+function showCalculatorResult(resultId) {
+  var resultBox = document.getElementById(resultId || 'result-box');
+  var emptyState = document.getElementById('empty-state');
+
+  document.body.classList.add('is-calculated');
+
+  if (emptyState) {
+    emptyState.style.setProperty('display', 'none', 'important');
+    emptyState.setAttribute('aria-hidden', 'true');
+  }
+
+  if (resultBox) {
+    resultBox.hidden = false;
+    resultBox.removeAttribute('aria-hidden');
+    resultBox.style.setProperty('display', 'block', 'important');
+  }
+}
+
 ﻿/* pm-surya-ghar-yojana.html JS - ShriKrishna Solar */
 
 var TARIFFS = {maharashtra:8.5,gujarat:5.5,rajasthan:6.5,up:6.0,delhi:8.0,karnataka:7.0,tamilnadu:5.0,andhra:6.5,telangana:7.5,mp:6.0,haryana:7.5,punjab:7.0,westbengal:7.5,other:7.0};
@@ -36,11 +55,11 @@ function calcSubsidy() {
 
   var items = [
     {val: recommended + ' kW',    lbl: 'Recommended Size'},
-    {val: 'â‚¹' + (centralSub/1000).toFixed(0) + 'K',   lbl: 'Central Subsidy'},
-    {val: totalSub > centralSub ? 'â‚¹' + (totalSub/1000).toFixed(0) + 'K' : 'â‚¹' + (centralSub/1000).toFixed(0) + 'K', lbl: 'Total Subsidy'},
-    {val: 'â‚¹' + Math.round(afterSub/1000) + 'K',   lbl: 'Cost After Subsidy'},
+    {val: '₹' + (centralSub/1000).toFixed(0) + 'K',   lbl: 'Central Subsidy'},
+    {val: totalSub > centralSub ? '₹' + (totalSub/1000).toFixed(0) + 'K' : '₹' + (centralSub/1000).toFixed(0) + 'K', lbl: 'Total Subsidy'},
+    {val: '₹' + Math.round(afterSub/1000) + 'K',   lbl: 'Cost After Subsidy'},
     {val: unitsGen + ' units',    lbl: 'Generation/Month'},
-    {val: 'â‚¹' + monthlySaving,    lbl: 'Monthly Savings'},
+    {val: '₹' + monthlySaving,    lbl: 'Monthly Savings'},
     {val: paybackYrs + ' years',  lbl: 'Payback Period'},
   ];
 
@@ -49,11 +68,11 @@ function calcSubsidy() {
   }).join('');
   var note = 'ðŸ’¡ A ' + recommended + ' kW system in ' + stateEl.options[stateEl.selectedIndex].text +
     ' generates ~' + unitsGen + ' units/month against your consumption of ~' + Math.round(unitsMonth) +
-    ' units. After â‚¹' + (totalSub/1000).toFixed(0) + 'K subsidy, you pay ~â‚¹' + Math.round(afterSub/1000) +
-    'K and recover it in ' + paybackYrs + ' years through electricity savings of â‚¹' + monthlySaving + '/month.';
-  if (stateSub > 0) note += ' Your state ('+stateEl.options[stateEl.selectedIndex].text+') adds â‚¹' + (stateSub/1000).toFixed(0) + 'K extra subsidy.';
+    ' units. After ₹' + (totalSub/1000).toFixed(0) + 'K subsidy, you pay ~₹' + Math.round(afterSub/1000) +
+    'K and recover it in ' + paybackYrs + ' years through electricity savings of ₹' + monthlySaving + '/month.';
+  if (stateSub > 0) note += ' Your state ('+stateEl.options[stateEl.selectedIndex].text+') adds ₹' + (stateSub/1000).toFixed(0) + 'K extra subsidy.';
   document.getElementById('r-note').textContent = note;
-  document.getElementById('result-box').style.display = 'block';
+  showCalculatorResult('result-box');
   if(window.gtag) gtag('event','pm_surya_calc',{recommended_kw:recommended,subsidy:totalSub});
 }
 

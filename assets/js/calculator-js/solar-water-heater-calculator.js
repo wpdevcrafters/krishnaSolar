@@ -1,80 +1,80 @@
-﻿/* solar-water-heater-calculator.html JS - ShriKrishna Solar */
+/* Solar water heater calculator - ShriKrishna Solar */
 
-/*
-        Solar Water Heater Calculator (Premium)
-        Calculates LPD req based on family size.
-        */
+function getWaterHeaterElement(id) {
+  return document.getElementById(id);
+}
 
-        const initSWHCalc = () => {
-            const calcForm = document.getElementById('swh-calculator-form');
-            if (calcForm) {
-                calcForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    calculateSWH();
-                });
-            }
-        };
+function showWaterHeaterResult() {
+  const resultBox = getWaterHeaterElement('result-box');
+  const emptyState = getWaterHeaterElement('empty-state');
 
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initSWHCalc);
-        } else {
-            initSWHCalc();
-        }
+  document.body.classList.add('is-calculated');
 
-        function calculateSWH() {
-            const members = parseInt(document.getElementById('family_members').value);
-            const usage = document.getElementById('usage_type').value;
-            const type = document.getElementById('heater_type').value;
+  if (emptyState) {
+    emptyState.hidden = true;
+    emptyState.setAttribute('aria-hidden', 'true');
+    emptyState.style.setProperty('display', 'none', 'important');
+  }
 
-            if (!members || members < 1) return;
+  if (resultBox) {
+    resultBox.hidden = false;
+    resultBox.removeAttribute('aria-hidden');
+    resultBox.style.setProperty('display', 'block', 'important');
+  }
+}
 
-            // 1. Calculate LPD
-            let lpdPerPerson = 40; // Low
-            if (usage === 'medium') lpdPerPerson = 50;
-            if (usage === 'high') lpdPerPerson = 75;
+function calculateSWH() {
+  const members = parseInt(getWaterHeaterElement('family_members')?.value, 10);
+  const usage = getWaterHeaterElement('usage_type')?.value || 'medium';
+  const type = getWaterHeaterElement('heater_type')?.value || 'ETC';
 
-            let totalLPD = members * lpdPerPerson;
+  if (!members || members < 1) return;
 
-            // Round to nearest standard size (100, 150, 200, 250, 300, 500)
-            let recommendedLPD = 100;
-            if (totalLPD > 100 && totalLPD <= 150) recommendedLPD = 150;
-            else if (totalLPD > 150 && totalLPD <= 200) recommendedLPD = 200;
-            else if (totalLPD > 200 && totalLPD <= 250) recommendedLPD = 250;
-            else if (totalLPD > 250 && totalLPD <= 300) recommendedLPD = 300;
-            else if (totalLPD > 300) recommendedLPD = 500;
+  let lpdPerPerson = 40;
+  if (usage === 'medium') lpdPerPerson = 50;
+  if (usage === 'high') lpdPerPerson = 75;
 
-            // 2. Cost Estimation
-            let costPerLPD = (type === 'ETC') ? 220 : 350; // ETC ~22k for 100L, FPC ~35k for 100L
-            // Discount for larger systems slightly
-            if (recommendedLPD >= 200) costPerLPD *= 0.9;
+  const totalLPD = members * lpdPerPerson;
 
-            const totalCost = recommendedLPD * costPerLPD;
+  let recommendedLPD = 100;
+  if (totalLPD > 100 && totalLPD <= 150) recommendedLPD = 150;
+  else if (totalLPD > 150 && totalLPD <= 200) recommendedLPD = 200;
+  else if (totalLPD > 200 && totalLPD <= 250) recommendedLPD = 250;
+  else if (totalLPD > 250 && totalLPD <= 300) recommendedLPD = 300;
+  else if (totalLPD > 300) recommendedLPD = 500;
 
-            // 3. Savings (Assume Geyser Usage Replacement)
-            // 100L hot water needs ~4 kWh electricity
-            const unitsSavedPerDay = (recommendedLPD / 100) * 3.5; // Conservative
-            const daysUsed = 250; // Sunny days usable
-            const annualUnitsSaved = Math.round(unitsSavedPerDay * daysUsed);
-            const unitRate = 8;
-            const annualMoneySaved = annualUnitsSaved * unitRate;
+  let costPerLPD = type === 'ETC' ? 220 : 350;
+  if (recommendedLPD >= 200) costPerLPD *= 0.9;
 
-            const roiYears = totalCost / annualMoneySaved;
+  const totalCost = recommendedLPD * costPerLPD;
+  const unitsSavedPerDay = (recommendedLPD / 100) * 3.5;
+  const daysUsed = 250;
+  const annualUnitsSaved = Math.round(unitsSavedPerDay * daysUsed);
+  const unitRate = 8;
+  const annualMoneySaved = annualUnitsSaved * unitRate;
+  const roiYears = totalCost / annualMoneySaved;
 
-            // 4. UI Update
-            const emptyState = document.getElementById('empty-state');
-            if (emptyState) emptyState.style.display = 'none';
+  getWaterHeaterElement('res_lpd').innerText = recommendedLPD;
+  getWaterHeaterElement('res_cost').innerText = Math.round(totalCost).toLocaleString('en-IN');
+  getWaterHeaterElement('res_units_saved').innerText = `${annualUnitsSaved} kWh`;
+  getWaterHeaterElement('res_money_saved').innerText = `₹${annualMoneySaved.toLocaleString('en-IN')}`;
+  getWaterHeaterElement('res_roi').innerText = `${roiYears.toFixed(1)} Years`;
 
-            const resultBox = document.getElementById('result-box');
-            resultBox.style.display = 'block';
+  showWaterHeaterResult();
 
-            document.getElementById('res_lpd').innerText = recommendedLPD;
-            document.getElementById('res_cost').innerText = `${Math.round(totalCost).toLocaleString('en-IN')}`;
+  const resultBox = getWaterHeaterElement('result-box');
+  if (resultBox && window.innerWidth < 768) {
+    resultBox.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-            document.getElementById('res_units_saved').innerText = `${annualUnitsSaved} kWh`;
-            document.getElementById('res_money_saved').innerText = `â‚¹${annualMoneySaved.toLocaleString('en-IN')}`;
-            document.getElementById('res_roi').innerText = `${roiYears.toFixed(1)} Years`;
+document.addEventListener('DOMContentLoaded', function () {
+  const calcForm = getWaterHeaterElement('swh-calculator-form');
 
-            if (window.innerWidth < 768) {
-                resultBox.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+  if (calcForm) {
+    calcForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      calculateSWH();
+    });
+  }
+});

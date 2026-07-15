@@ -7,6 +7,12 @@
         */
 
         const initBatteryCalc = () => {
+            const resultBox = document.getElementById('result-box');
+            const emptyState = document.getElementById('empty-state');
+
+            if (resultBox) resultBox.style.display = 'none';
+            if (emptyState) emptyState.style.display = 'flex';
+
             const calcForm = document.getElementById('battery-calculator-form');
             if (calcForm) {
                 calcForm.addEventListener('submit', (e) => {

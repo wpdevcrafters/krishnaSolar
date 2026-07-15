@@ -1,5 +1,24 @@
 /* Net Metering Savings Calculator JS — ShriKrishna Solar */
 
+
+function showCalculatorResult(resultId) {
+  var resultBox = document.getElementById(resultId || 'result-box');
+  var emptyState = document.getElementById('empty-state');
+
+  document.body.classList.add('is-calculated');
+
+  if (emptyState) {
+    emptyState.style.setProperty('display', 'none', 'important');
+    emptyState.setAttribute('aria-hidden', 'true');
+  }
+
+  if (resultBox) {
+    resultBox.hidden = false;
+    resultBox.removeAttribute('aria-hidden');
+    resultBox.style.setProperty('display', 'block', 'important');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const calcForm = document.getElementById('netmetering-calculator-form');
     if (calcForm) {
@@ -37,12 +56,8 @@ async function calculateNetMetering() {
         statusColor = '#198754';
         statusText = 'Credit';
     }
-
-    const emptyState = document.getElementById('empty-state');
-    if (emptyState) emptyState.style.display = 'none';
-
-    const resultBox = document.getElementById('result-box');
-    resultBox.style.display = 'block';
+            showCalculatorResult('result-box');
+            const resultBox = document.getElementById('result-box');
 
     document.getElementById('res_bill').innerText = `${Math.round(billAmount)}`;
     document.getElementById('res_banked').innerText = `${bankUnits}`;

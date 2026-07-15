@@ -24,7 +24,7 @@ function calcVsGrid() {
     var gridYear = monthlyUnits * currentTariff * 12;
     gridCumul += gridYear;
 
-    // Solar: small maintenance (â‚¹2000/yr), occasional panel replacement after 12 yrs
+    // Solar: small maintenance (₹2000/yr), occasional panel replacement after 12 yrs
     var maint = 2000;
     if (yr === 12) maint += 8000; // inverter service
     solarCumul += maint;
@@ -57,24 +57,24 @@ function calcVsGrid() {
 
   document.getElementById('payback-yr').textContent = paybackYears + ' years';
   document.getElementById('verdict-sub').textContent =
-    '25-year savings: â‚¹' + Math.round((gridTotal25 - solarTotal25)/1000) + ',000 vs grid';
+    '25-year savings: ₹' + Math.round((gridTotal25 - solarTotal25)/1000) + ',000 vs grid';
   document.getElementById('verdict').style.display = 'block';
 
   var sRows = [
-    {l:'Installation', v:'â‚¹'+install.toLocaleString('en-IN')},
-    {l:'PM Subsidy',   v:'âˆ’ â‚¹'+sub.toLocaleString('en-IN'), cls:'solar'},
-    {l:'Net Investment', v:'â‚¹'+netCost.toLocaleString('en-IN')},
-    {l:'Maintenance (25yr)', v:'â‚¹'+(2000*25+8000).toLocaleString('en-IN')},
-    {l:'Total 25yr Cost', v:'â‚¹'+solarTotal25.toLocaleString('en-IN'), cls:'solar'},
-    {l:'Monthly Savings', v:'â‚¹'+Math.round(annualSavings/12), cls:'solar'},
+    {l:'Installation', v:'₹'+install.toLocaleString('en-IN')},
+    {l:'PM Subsidy',   v:'âˆ’ ₹'+sub.toLocaleString('en-IN'), cls:'solar'},
+    {l:'Net Investment', v:'₹'+netCost.toLocaleString('en-IN')},
+    {l:'Maintenance (25yr)', v:'₹'+(2000*25+8000).toLocaleString('en-IN')},
+    {l:'Total 25yr Cost', v:'₹'+solarTotal25.toLocaleString('en-IN'), cls:'solar'},
+    {l:'Monthly Savings', v:'₹'+Math.round(annualSavings/12), cls:'solar'},
   ];
   var gRows = [
-    {l:'Current Monthly Bill', v:'â‚¹'+bill},
+    {l:'Current Monthly Bill', v:'₹'+bill},
     {l:'Tariff Increase', v:Math.round(inc*100)+'% per year'},
-    {l:'Year 10 Monthly Bill', v:'â‚¹'+Math.round(bill*Math.pow(1+inc,9))},
-    {l:'Year 25 Monthly Bill', v:'â‚¹'+Math.round(bill*Math.pow(1+inc,24))},
-    {l:'Total 25yr Cost', v:'â‚¹'+Math.round(gridTotal25/1000)+'K', cls:'grid'},
-    {l:'Wasted to Grid', v:'â‚¹'+Math.round((gridTotal25-solarTotal25)/1000)+'K extra', cls:'grid'},
+    {l:'Year 10 Monthly Bill', v:'₹'+Math.round(bill*Math.pow(1+inc,9))},
+    {l:'Year 25 Monthly Bill', v:'₹'+Math.round(bill*Math.pow(1+inc,24))},
+    {l:'Total 25yr Cost', v:'₹'+Math.round(gridTotal25/1000)+'K', cls:'grid'},
+    {l:'Wasted to Grid', v:'₹'+Math.round((gridTotal25-solarTotal25)/1000)+'K extra', cls:'grid'},
   ];
 
   document.getElementById('solar-rows').innerHTML = sRows.map(function(r){
@@ -102,15 +102,18 @@ function calcVsGrid() {
     if (yr2 % 5 === 0 || yr2 === 1 || isPayback) {
       tbody += '<tr'+(isPayback?' class="payback-row"':'')+'>'
         +'<td>'+yr2+(isPayback?' ðŸŽ¯':'')+' </td>'
-        +'<td class="calc-inline-104">â‚¹'+Math.round(sCum/1000)+'K</td>'
-        +'<td class="calc-inline-376">â‚¹'+Math.round(gCum/1000)+'K</td>'
-        +'<td class="calc-inline-377">'+( saving>0?'+':'' )+'â‚¹'+Math.round(saving/1000)+'K</td>'
-        +'<td class="bar-cell"><div class="bar-wrap"><div class="bar-s calc-inline-378" title="Solar"></div><div class="bar-g calc-inline-379" title="Grid"></div></div></td>'
+        +'<td>₹'+Math.round(sCum/1000)+'K</td>'
+        +'<td>₹'+Math.round(gCum/1000)+'K</td>'
+        +'<td>'+( saving>0?'+':'' )+'₹'+Math.round(saving/1000)+'K</td>'
+        +'<td class="bar-cell"><div class="bar-wrap"><div class="bar-s" style="--solar-width:'+sW+'%" title="Solar"></div><div class="bar-g" style="--grid-width:'+gW+'%" title="Grid"></div></div></td>'
         +'</tr>';
     }
   }
   document.getElementById('year-tbody').innerHTML = tbody;
   document.getElementById('results').style.display = 'block';
+  var emptyState = document.getElementById('empty-state');
+  if (emptyState) emptyState.style.display = 'none';
+  document.body.classList.add('is-calculated');
   if(window.gtag) gtag('event','vs_grid_calc',{bill:bill,payback:paybackYears});
 }
 

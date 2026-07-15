@@ -8,6 +8,18 @@
             if (typeof SUBSIDY_MAX_KW === 'undefined') { var SUBSIDY_MAX_KW = 78000; } // PM Surya Ghar max subsidy (Rs. 78,000 for >=3kW)
 
             document.addEventListener('DOMContentLoaded', () => {
+                const resultBox = document.getElementById('result-box');
+                const emptyState = document.getElementById('roi-empty-state');
+                const resultContent = document.getElementById('roi-results-content');
+
+                if (resultBox) {
+                    resultBox.style.display = 'block';
+                    resultBox.classList.remove('roi-result-box--active');
+                }
+
+                if (emptyState) emptyState.style.display = 'flex';
+                if (resultContent) resultContent.style.display = 'none';
+
                 const calcForm = document.getElementById('roi-calculator-form');
                 if (calcForm) {
                     calcForm.addEventListener('submit', (e) => {

@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Generation Calculator India | ShriKrishna Solar</title>
+    <meta name="description" content="Calculate how many units (kWh) your solar panel system will generate per day, month, and year in your city.">
+    <link rel="canonical" href="https://shrikrishnasolar.in/calculators/solar-generation-calculator.html">
+    <meta property="og:title" content="Solar Generation Calculator India | ShriKrishna Solar">
+    <meta property="og:description" content="Calculate how many units (kWh) your solar panel system will generate per day, month, and year in your city.">
+    <meta property="og:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
+    <meta property="og:url" content="https://shrikrishnasolar.in/calculators/solar-generation-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShriKrishna Solar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solar Generation Calculator India | ShriKrishna Solar">
+    <meta name="twitter:description" content="Calculate how many units (kWh) your solar panel system will generate per day, month, and year in your city.">
+    <meta name="twitter:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/image/favicon.png">
 </head>
-<body>
+<body class="calc-generation-page calc-legacy-calculator-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -22,7 +36,7 @@
 
             <!-- Tablet: WhatsApp + CTA (md to xl) -->
             <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
-                <a href="https://wa.me/919876543210"
+                <a href="https://wa.me/919547243120"
                    class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                     <i class="bi bi-whatsapp fs-5"></i>
@@ -62,13 +76,13 @@
                             </a>
                             <ul class="submenu nav flex-column ps-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#residential">Residential</a>
+                                    <a class="nav-link" href="../services/residential.html">Residential</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#commercial">Commercial</a>
+                                    <a class="nav-link" href="../services/commercial.html">Commercial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html">Industrial</a>
+                                    <a class="nav-link" href="../services/Industrial.html">Industrial</a>
                                 </li>
                             </ul>
                         </li>
@@ -76,7 +90,7 @@
                             <a class="nav-link active" href="../calculators.html">Calculators</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                            <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -92,7 +106,7 @@
                            data-bs-dismiss="offcanvas">
                             Book Free Solar Consultation
                         </a>
-                        <a href="https://wa.me/919876543210"
+                        <a href="https://wa.me/919547243120"
                            class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
                            target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
@@ -113,16 +127,16 @@
                     <li class="nav-item has-submenu position-static">
                         <a class="nav-link" href="../services.html">Services</a>
                         <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
-                            <li><a class="dropdown-item" href="../services.html#residential">Residential</a></li>
-                            <li><a class="dropdown-item" href="../services.html#commercial">Commercial</a></li>
-                            <li><a class="dropdown-item" href="../services.html">Industrial</a></li>
+                            <li><a class="dropdown-item" href="../services/residential.html">Residential</a></li>
+                            <li><a class="dropdown-item" href="../services/commercial.html">Commercial</a></li>
+                            <li><a class="dropdown-item" href="../services/Industrial.html">Industrial</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="../calculators.html">Calculators</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                        <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -132,7 +146,7 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="https://wa.me/919876543210"
+                    <a href="https://wa.me/919547243120"
                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <i class="bi bi-whatsapp fs-5"></i>
@@ -146,6 +160,7 @@
         </div>
     </nav>
 </header>
+    <main id="main-content">
 
 <section class="calc-detail-hero" aria-labelledby="calc-detail-title">
     <div class="calc-detail-hero__bg" aria-hidden="true"></div>
@@ -163,22 +178,23 @@
     <div class="container">
         <div class="calculator-detail-scope">
 <div class="hero">
-  <h1>Solar Generation Calculator India</h1>
+  <h2>Solar Generation Calculator India</h2>
   <p>Find out exactly how many units (kWh) your solar system will generate per day, month and year — based on your city's actual sunshine data.</p>
 </div>
 
 <div class="wrap">
   
 
-  <div class="calc-card">
-    <div class="calc-inline-121">⚡ Calculate Solar Output</div>
-    <div class="form-row">
+  <div class="grid-calc legacy-cost-layout">
+  <div class="calculator-form-card">
+<div class="form-card-title">⚡ Calculate Solar Output</div>
+<div class="form-row">
       <div class="form-group">
-        <label>Solar System Size (kW)</label>
+        <label for="sys-kw">Solar System Size (kW)</label>
         <input type="number" id="sys-kw" value="3" min="0.5" max="500" step="0.5">
       </div>
       <div class="form-group">
-        <label>Your City / Location</label>
+        <label for="city-sel">Your City / Location</label>
         <select id="city-sel">
           <option value="6.5">Rajasthan (Jodhpur, Jaipur, Bikaner)</option>
           <option value="6.2">Gujarat (Ahmedabad, Surat, Vadodara)</option>
@@ -186,7 +202,7 @@
           <option value="5.5">Delhi / NCR (Noida, Gurgaon)</option>
           <option value="5.5">Haryana (Chandigarh, Hisar)</option>
           <option value="5.5">Maharashtra (Pune, Nagpur, Nashik)</option>
-          <option value="5.3" selected="">Maharashtra (Mumbai, Thane)</option>
+          <option value="5.3">Maharashtra (Mumbai, Thane)</option>
           <option value="5.5">Andhra Pradesh (Vijayawada, Vizag)</option>
           <option value="5.5">Telangana (Hyderabad)</option>
           <option value="5.3">Karnataka (Bangalore, Mysore)</option>
@@ -194,7 +210,7 @@
           <option value="5.0">Kerala (Kochi, Trivandrum)</option>
           <option value="5.2">Uttar Pradesh (Lucknow, Agra, Kanpur)</option>
           <option value="4.8">Bihar (Patna)</option>
-          <option value="4.8">West Bengal (Kolkata)</option>
+          <option value="4.8" selected="">West Bengal (Kolkata)</option>
           <option value="5.0">Odisha (Bhubaneswar)</option>
           <option value="4.5">Assam / North-East</option>
           <option value="4.5">Jharkhand / Chhattisgarh</option>
@@ -205,7 +221,7 @@
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label>Panel Type</label>
+        <label for="panel-type">Panel Type</label>
         <select id="panel-type">
           <option value="0.82">Mono PERC (most common)</option>
           <option value="0.80">Polycrystalline</option>
@@ -214,7 +230,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label>Shading on Roof</label>
+        <label for="shading">Shading on Roof</label>
         <select id="shading">
           <option value="1.0">No shading (open roof)</option>
           <option value="0.95">Minimal (1–2 hrs shade/day)</option>
@@ -223,24 +239,29 @@
         </select>
       </div>
     </div>
-    <button class="calc-btn" onclick="calcGeneration()">Calculate Generation →</button>
-
-    <div class="result-box" id="result-box">
+    <button type="button" id="calculateGenerationBtn" class="calc-btn" data-click-action="calcGeneration">Calculate Generation →</button>
+  </div>
+  <div class="result-container legacy-result-content" id="result-box" aria-live="polite" aria-atomic="true">
       <div class="result-hero">
-        <div class="calc-inline-122">Your Solar System Generates</div>
+        <div>Your Solar System Generates</div>
         <div class="big" id="r-daily">—</div>
         <div class="unit">units (kWh) per day</div>
       </div>
       <div class="result-grid" id="r-grid"></div>
       <div class="r-note" id="r-note"></div>
     </div>
+  <div id="empty-state" class="result-container result-placeholder calculator-empty-state" aria-live="polite" aria-atomic="true">
+    <div class="result-placeholder__icon"><i class="bi bi-sun-fill" aria-hidden="true"></i></div>
+    <h3>Your solar generation result will appear here</h3>
+    <p>Fill up the form and calculate to view your personalized result.</p>
   </div>
+</div>
 
   <!-- City reference table -->
   <h2 class="sec">☀️ City-wise Solar Generation Reference (per kW installed)</h2>
   <table class="city-table">
     <thead><tr><th>City / Region</th><th>Peak Sun Hours</th><th>1 kW/Day</th><th>3 kW/Month</th><th>5 kW/Year</th><th>Radiation</th></tr></thead>
-    <tbody id="city-table-body"><tr><td>Jodhpur / Bikaner (Rajasthan)</td><td>6.5 hrs<div class="bar"><div class="bar-fill calc-inline-123"></div></div></td><td>5.3 units</td><td>480 units</td><td>9,727 units</td><td>2373 kWh/m²</td></tr><tr><td>Ahmedabad / Surat (Gujarat)</td><td>6.2 hrs<div class="bar"><div class="bar-fill calc-inline-124"></div></div></td><td>5.1 units</td><td>458 units</td><td>9,278 units</td><td>2263 kWh/m²</td></tr><tr><td>Bhopal / Indore (MP)</td><td>5.8 hrs<div class="bar"><div class="bar-fill calc-inline-125"></div></div></td><td>4.8 units</td><td>428 units</td><td>8,680 units</td><td>2117 kWh/m²</td></tr><tr><td>Delhi / NCR</td><td>5.5 hrs<div class="bar"><div class="bar-fill calc-inline-126"></div></div></td><td>4.5 units</td><td>406 units</td><td>8,231 units</td><td>2008 kWh/m²</td></tr><tr><td>Hyderabad (Telangana)</td><td>5.5 hrs<div class="bar"><div class="bar-fill calc-inline-126"></div></div></td><td>4.5 units</td><td>406 units</td><td>8,231 units</td><td>2008 kWh/m²</td></tr><tr><td>Vijayawada (AP)</td><td>5.5 hrs<div class="bar"><div class="bar-fill calc-inline-126"></div></div></td><td>4.5 units</td><td>406 units</td><td>8,231 units</td><td>2008 kWh/m²</td></tr><tr><td>Pune / Nagpur (Maharashtra)</td><td>5.5 hrs<div class="bar"><div class="bar-fill calc-inline-126"></div></div></td><td>4.5 units</td><td>406 units</td><td>8,231 units</td><td>2008 kWh/m²</td></tr><tr><td>Bangalore (Karnataka)</td><td>5.3 hrs<div class="bar"><div class="bar-fill calc-inline-127"></div></div></td><td>4.3 units</td><td>391 units</td><td>7,931 units</td><td>1935 kWh/m²</td></tr><tr><td>Mumbai (Maharashtra)</td><td>5.3 hrs<div class="bar"><div class="bar-fill calc-inline-127"></div></div></td><td>4.3 units</td><td>391 units</td><td>7,931 units</td><td>1935 kWh/m²</td></tr><tr><td>Lucknow / Agra (UP)</td><td>5.2 hrs<div class="bar"><div class="bar-fill calc-inline-128"></div></div></td><td>4.3 units</td><td>384 units</td><td>7,782 units</td><td>1898 kWh/m²</td></tr><tr><td>Chennai (Tamil Nadu)</td><td>5 hrs<div class="bar"><div class="bar-fill calc-inline-129"></div></div></td><td>4.1 units</td><td>369 units</td><td>7,483 units</td><td>1825 kWh/m²</td></tr><tr><td>Kochi (Kerala)</td><td>5 hrs<div class="bar"><div class="bar-fill calc-inline-129"></div></div></td><td>4.1 units</td><td>369 units</td><td>7,483 units</td><td>1825 kWh/m²</td></tr><tr><td>Kolkata (West Bengal)</td><td>4.8 hrs<div class="bar"><div class="bar-fill calc-inline-130"></div></div></td><td>3.9 units</td><td>354 units</td><td>7,183 units</td><td>1752 kWh/m²</td></tr><tr><td>Patna (Bihar)</td><td>4.8 hrs<div class="bar"><div class="bar-fill calc-inline-130"></div></div></td><td>3.9 units</td><td>354 units</td><td>7,183 units</td><td>1752 kWh/m²</td></tr><tr><td>Guwahati (Assam)</td><td>4.5 hrs<div class="bar"><div class="bar-fill calc-inline-131"></div></div></td><td>3.7 units</td><td>332 units</td><td>6,734 units</td><td>1643 kWh/m²</td></tr></tbody>
+    <tbody id="city-table-body"><tr><td>Jodhpur / Bikaner (Rajasthan)</td><td>6.5 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>5.3 units</td><td>480 units</td><td>9,727 units</td><td>2373 kWh/m²</td></tr><tr><td>Ahmedabad / Surat (Gujarat)</td><td>6.2 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>5.1 units</td><td>458 units</td><td>9,278 units</td><td>2263 kWh/m²</td></tr><tr><td>Bhopal / Indore (MP)</td><td>5.8 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.8 units</td><td>428 units</td><td>8,680 units</td><td>2117 kWh/m²</td></tr><tr><td>Delhi / NCR</td><td>5.5 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.5 units</td><td>406 units</td><td>8,231 units</td><td>2008 kWh/m²</td></tr><tr><td>Hyderabad (Telangana)</td><td>5.5 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.5 units</td><td>406 units</td><td>8,231 units</td><td>2008 kWh/m²</td></tr><tr><td>Vijayawada (AP)</td><td>5.5 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.5 units</td><td>406 units</td><td>8,231 units</td><td>2008 kWh/m²</td></tr><tr><td>Pune / Nagpur (Maharashtra)</td><td>5.5 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.5 units</td><td>406 units</td><td>8,231 units</td><td>2008 kWh/m²</td></tr><tr><td>Bangalore (Karnataka)</td><td>5.3 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.3 units</td><td>391 units</td><td>7,931 units</td><td>1935 kWh/m²</td></tr><tr><td>Mumbai (Maharashtra)</td><td>5.3 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.3 units</td><td>391 units</td><td>7,931 units</td><td>1935 kWh/m²</td></tr><tr><td>Lucknow / Agra (UP)</td><td>5.2 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.3 units</td><td>384 units</td><td>7,782 units</td><td>1898 kWh/m²</td></tr><tr><td>Chennai (Tamil Nadu)</td><td>5 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.1 units</td><td>369 units</td><td>7,483 units</td><td>1825 kWh/m²</td></tr><tr><td>Kochi (Kerala)</td><td>5 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>4.1 units</td><td>369 units</td><td>7,483 units</td><td>1825 kWh/m²</td></tr><tr><td>Kolkata (West Bengal)</td><td>4.8 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>3.9 units</td><td>354 units</td><td>7,183 units</td><td>1752 kWh/m²</td></tr><tr><td>Patna (Bihar)</td><td>4.8 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>3.9 units</td><td>354 units</td><td>7,183 units</td><td>1752 kWh/m²</td></tr><tr><td>Guwahati (Assam)</td><td>4.5 hrs<div class="bar"><div class="bar-fill"></div></div></td><td>3.7 units</td><td>332 units</td><td>6,734 units</td><td>1643 kWh/m²</td></tr></tbody>
   </table>
 
   
@@ -249,14 +270,14 @@
   
   
 
-  <div class="calc-inline-091">
-    <h3 class="calc-inline-092">Use Your Generation Data In</h3>
-    <div class="calc-inline-093">
-      <a href="/solar-roi-calculator/" class="calc-inline-094">📈 ROI &amp; Payback Calculator →</a>
-      <a href="/solar-energy-savings-calculator/" class="calc-inline-094">💡 Savings Calculator →</a>
-      <a href="/net-metering-savings-calculator/" class="calc-inline-094">🔌 Net Metering Savings →</a>
-      <a href="/solar-bill-simulator/" class="calc-inline-094">🧾 Bill Simulator →</a>
-      <a href="/solar-panel-cost-calculator/" class="calc-inline-094">🧮 Cost Calculator →</a>
+  <div class="generation-links-block">
+    <h3>Use Your Generation Data In</h3>
+    <div>
+      <a href="/solar-roi-calculator/">📈 ROI &amp; Payback Calculator →</a>
+      <a href="/solar-energy-savings-calculator/">💡 Savings Calculator →</a>
+      <a href="/net-metering-savings-calculator/">🔌 Net Metering Savings →</a>
+      <a href="/solar-bill-simulator/">🧾 Bill Simulator →</a>
+      <a href="/solar-panel-cost-calculator/">🧮 Cost Calculator →</a>
     </div>
   </div>
 </div>
@@ -266,6 +287,62 @@
     </div>
 </section>
 
+<section class="faq-section py-5 bg-white" id="generationFaq-section" aria-labelledby="generationFaq-title">
+    <div class="container py-4">
+        <div class="text-center" data-aos="fade-up">
+            <h2 class="faq-section__title" id="generationFaq-title">Solar Generation Calculator FAQs</h2>
+        </div>
+        <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="accordion faq-accordion" id="generationFaqLeft">
+<div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="generationFaqHeading1">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#generationFaqCollapse1" aria-expanded="false" aria-controls="generationFaqCollapse1">
+                        How many units does a 1 kW solar system generate?
+                    </button>
+                </h3>
+                <div id="generationFaqCollapse1" class="accordion-collapse collapse" aria-labelledby="generationFaqHeading1" data-bs-parent="#generationFaqLeft">
+                    <div class="accordion-body">In most Indian cities, 1 kW of rooftop solar generates roughly 3.5 to 5 units per day depending on sunlight, panel quality, and shading.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="generationFaqHeading2">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#generationFaqCollapse2" aria-expanded="false" aria-controls="generationFaqCollapse2">
+                        Why does solar generation vary by city?
+                    </button>
+                </h3>
+                <div id="generationFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="generationFaqHeading2" data-bs-parent="#generationFaqLeft">
+                    <div class="accordion-body">Generation depends on peak sun hours, weather, temperature, roof angle, and local shading conditions.</div>
+                </div>
+            </div>            
+            </div>
+            <div class="faq-column">
+                <div class="accordion faq-accordion" id="generationFaqRight">
+<div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="generationFaqHeading3">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#generationFaqCollapse3" aria-expanded="false" aria-controls="generationFaqCollapse3">
+                        Does panel type affect generation?
+                    </button>
+                </h3>
+                <div id="generationFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="generationFaqHeading3" data-bs-parent="#generationFaqRight">
+                    <div class="accordion-body">Yes. Higher-efficiency mono PERC, TOPCon, bifacial, or HJT panels can generate more from the same roof area.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="generationFaqHeading4">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#generationFaqCollapse4" aria-expanded="false" aria-controls="generationFaqCollapse4">
+                        Can monthly generation be different from calculator output?
+                    </button>
+                </h3>
+                <div id="generationFaqCollapse4" class="accordion-collapse collapse" aria-labelledby="generationFaqHeading4" data-bs-parent="#generationFaqRight">
+                    <div class="accordion-body">Yes. Actual output varies by season, maintenance, dust, inverter performance, and site conditions.</div>
+                </div>
+            </div>        
+                </div>
+                <div class="faq-actions">
+                    <a href="../contact.html" class="faq-more-btn">View All FAQs <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="cta-section py-4 bg-white">
     <div class="container">
         <div class="cta-banner" data-aos="fade-up">
@@ -278,6 +355,8 @@
     </div>
 </section>
 
+    </main>
+
 <footer class="site-footer" role="contentinfo">
     <div class="container">
         <div class="site-footer__grid">
@@ -288,10 +367,10 @@
                 </a>
                 <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
                 <ul class="site-footer__social list-unstyled" aria-label="Social media links">
-                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a aria-label="Facebook" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-facebook"></i></a></li>
+                    <li><a aria-label="Instagram" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-instagram"></i></a></li>
+                    <li><a aria-label="YouTube" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-youtube"></i></a></li>
+                    <li><a aria-label="LinkedIn" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-linkedin"></i></a></li>
                 </ul>
             </div>
             <!-- Quick Links -->
@@ -323,24 +402,37 @@
                         <i class="bi bi-geo-alt-fill"></i>
                         <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
                     </li>
-                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919547243120">+91 98765 43210</a></li>
                     <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
                     <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
                 </ul>
             </address>
+            <!-- Location -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Location</h2>
+                <div class="site-footer__map">
+                    <iframe
+                        title="Map showing ShriKrishna Solar location at Kuanpar, Sauri, Belda, Paschim Medinipur 721445"
+                        src="https://www.google.com/maps?q=Kuanpar%2C%20Sauri%2C%20Belda%2C%20Paschim%20Medinipur%20721445&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
         <div class="site-footer__bottom">
             <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
             <nav class="site-footer__legal" aria-label="Footer legal links">
-                <a href="#">Privacy Policy</a><span>|</span>
-                <a href="#">Terms &amp; Conditions</a><span>|</span>
-                <a href="#">Refund Policy</a>
+                <a href="../privacy-policy.html">Privacy Policy</a><span>|</span>
+                <a href="../terms-conditions.html">Terms &amp; Conditions</a><span>|</span>
+                <a href="../refund-policy.html">Refund Policy</a>
             </nav>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+<a href="https://wa.me/919547243120" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -349,4 +441,3 @@
 <script src="../assets/js/calculator-js/solar-generation-calculator.js"></script>
 </body>
 </html>
-

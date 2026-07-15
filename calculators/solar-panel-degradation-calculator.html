@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Panel Degradation Calculator | ShriKrishna Solar</title>
+    <meta name="description" content="Calculate how much your solar panels will degrade over 25 years and how panel efficiency loss affects your long-term generation and savings.">
+    <link rel="canonical" href="https://shrikrishnasolar.in/calculators/solar-panel-degradation-calculator.html">
+    <meta property="og:title" content="Solar Panel Degradation Calculator | ShriKrishna Solar">
+    <meta property="og:description" content="Calculate how much your solar panels will degrade over 25 years and how panel efficiency loss affects your long-term generation and savings.">
+    <meta property="og:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
+    <meta property="og:url" content="https://shrikrishnasolar.in/calculators/solar-panel-degradation-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShriKrishna Solar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solar Panel Degradation Calculator | ShriKrishna Solar">
+    <meta name="twitter:description" content="Calculate how much your solar panels will degrade over 25 years and how panel efficiency loss affects your long-term generation and savings.">
+    <meta name="twitter:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/image/favicon.png">
 </head>
-<body>
+<body class="calc-degradation-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -22,7 +36,7 @@
 
             <!-- Tablet: WhatsApp + CTA (md to xl) -->
             <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
-                <a href="https://wa.me/919876543210"
+                <a href="https://wa.me/919547243120"
                    class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                     <i class="bi bi-whatsapp fs-5"></i>
@@ -62,13 +76,13 @@
                             </a>
                             <ul class="submenu nav flex-column ps-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#residential">Residential</a>
+                                    <a class="nav-link" href="../services/residential.html">Residential</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#commercial">Commercial</a>
+                                    <a class="nav-link" href="../services/commercial.html">Commercial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html">Industrial</a>
+                                    <a class="nav-link" href="../services/Industrial.html">Industrial</a>
                                 </li>
                             </ul>
                         </li>
@@ -76,7 +90,7 @@
                             <a class="nav-link active" href="../calculators.html">Calculators</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                            <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -92,7 +106,7 @@
                            data-bs-dismiss="offcanvas">
                             Book Free Solar Consultation
                         </a>
-                        <a href="https://wa.me/919876543210"
+                        <a href="https://wa.me/919547243120"
                            class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
                            target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
@@ -113,16 +127,16 @@
                     <li class="nav-item has-submenu position-static">
                         <a class="nav-link" href="../services.html">Services</a>
                         <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
-                            <li><a class="dropdown-item" href="../services.html#residential">Residential</a></li>
-                            <li><a class="dropdown-item" href="../services.html#commercial">Commercial</a></li>
-                            <li><a class="dropdown-item" href="../services.html">Industrial</a></li>
+                            <li><a class="dropdown-item" href="../services/residential.html">Residential</a></li>
+                            <li><a class="dropdown-item" href="../services/commercial.html">Commercial</a></li>
+                            <li><a class="dropdown-item" href="../services/Industrial.html">Industrial</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="../calculators.html">Calculators</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                        <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -132,7 +146,7 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="https://wa.me/919876543210"
+                    <a href="https://wa.me/919547243120"
                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <i class="bi bi-whatsapp fs-5"></i>
@@ -146,6 +160,7 @@
         </div>
     </nav>
 </header>
+    <main id="main-content">
 
 <section class="calc-detail-hero" aria-labelledby="calc-detail-title">
     <div class="calc-detail-hero__bg" aria-hidden="true"></div>
@@ -163,36 +178,33 @@
     <div class="container">
         <div class="calculator-detail-scope">
 <div>
-        <p class="calc-inline-222">
+        <p>
             <a href="/">Home</a> &gt; Solar Panel Degradation Calculator
         </p>
 
-        <div class="hero-section calc-inline-223">
-            <h1 class="calc-inline-224">Solar Panel Degradation &amp; Cleaning ROI Calculator</h1>
-            <p class="calc-inline-225">Find out exactly how much generation you're losing to panel aging and dust — and whether cleaning pays off financially.</p>
-        </div>
+        
 
         <div class="grid grid-calc">
             <!-- Left: Form -->
             <div class="calculator-form-card">
                 <form id="degradation-form">
                     <div class="form-group">
-                        <label>System Capacity (kW)</label>
+                        <label for="system_kw">System Capacity (kW)</label>
                         <input type="number" id="system_kw" class="form-control" placeholder="e.g. 3" min="0.5" step="0.5" required="">
                     </div>
 
                     <div class="form-group">
-                        <label>Panel Age (Years)</label>
+                        <label for="panel_age">Panel Age (Years)</label>
                         <input type="number" id="panel_age" class="form-control" placeholder="e.g. 5" min="0" max="25" required="">
                     </div>
 
                     <div class="form-group">
-                        <label>Current Monthly Generation (kWh)</label>
+                        <label for="monthly_gen">Current Monthly Generation (kWh)</label>
                         <input type="number" id="monthly_gen" class="form-control" placeholder="e.g. 360" min="1" required="">
                     </div>
 
                     <div class="form-group">
-                        <label>Location Type</label>
+                        <label for="location_type">Location Type</label>
                         <select id="location_type" class="form-control">
                             <option value="urban">Urban-Polluted (high dust/smog)</option>
                             <option value="suburban" selected="">Suburban (moderate dust)</option>
@@ -202,27 +214,27 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Months Since Last Cleaning</label>
+                        <label for="months_since_cleaning">Months Since Last Cleaning</label>
                         <input type="number" id="months_since_cleaning" class="form-control" placeholder="e.g. 3" min="0" max="24" required="">
                     </div>
 
                     <div class="form-group">
-                        <label>Your Electricity Tariff (₹/kWh)</label>
+                        <label for="tariff">Your Electricity Tariff (₹/kWh)</label>
                         <input type="number" id="tariff" class="form-control" value="7.50" min="1" step="0.1" required="">
                     </div>
 
                     <div class="form-group">
-                        <label>Cleaning Cost Per Visit (₹)</label>
+                        <label for="cleaning_cost">Cleaning Cost Per Visit (₹)</label>
                         <input type="number" id="cleaning_cost" class="form-control" value="1500" min="0" required="">
                     </div>
 
-                    <button type="submit" class="btn btn-primary calc-inline-099">Calculate Losses &amp; ROI →</button>
+                    <button type="submit" id="calculateDegradationBtn" class="btn btn-primary" data-click-action="calculateDegradation">Calculate Losses &amp; ROI <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
                 </form>
             </div>
 
             <!-- Right: Results -->
-            <div>
-                <div id="result-box" class="calc-inline-100">
+            <div class="calculator-result-panel">
+                <div id="result-box" class="result-container" aria-live="polite" aria-atomic="true">
                     <div class="result-section">
                         <h3>⚡ Generation Loss Analysis</h3>
                         <div class="detail-row">
@@ -237,9 +249,9 @@
                             <span class="label">Extra Soiling (since last cleaning)</span>
                             <span class="value" id="res_soil_extra">-</span>
                         </div>
-                        <div class="detail-row calc-inline-226">
-                            <span class="label calc-inline-227">Total Loss %</span>
-                            <span class="value calc-inline-228" id="res_total_loss">-</span>
+                        <div class="detail-row detail-row--loss">
+                            <span class="label">Total Loss %</span>
+                            <span class="value" id="res_total_loss">-</span>
                         </div>
                         <div class="detail-row">
                             <span class="label">Lost Generation / Month</span>
@@ -254,39 +266,31 @@
                     <div class="result-section">
                         <h3>🧹 Cleaning ROI</h3>
                         <div id="cleaning-roi-result"></div>
-                        <div class="calc-inline-229">
-                            <span class="calc-inline-230">Recommended cleaning frequency:</span><br>
+                        <div>
+                            <span>Recommended cleaning frequency:</span><br>
                             <span class="freq-badge" id="res_freq">-</span>
                         </div>
                     </div>
 
                     <div class="result-section">
                         <h3>📉 25-Year Generation Forecast</h3>
-                        <p class="calc-inline-231">Degraded output vs ideal output over panel lifetime</p>
+                        <p>Degraded output vs ideal output over panel lifetime</p>
                         <div class="chart-container">
                             <canvas id="degradationChart"></canvas>
                         </div>
                     </div>
 
-                    <div class="mt-4 calc-inline-109">
-                        <button id="whatsapp-share-btn" class="btn calc-inline-110">
-                            <span class="calc-inline-111">📱</span> Share Results on WhatsApp
+                    <div class="mt-4">
+                        <button type="button" id="whatsapp-share-btn" class="btn">
+                            <span>📱</span> Share Results on WhatsApp
                         </button>
                     </div>
                 </div>
-
-                <div id="lm-inline-cta" class="calc-inline-078">
-                    <div class="calc-inline-079">
-                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
-                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
-                    </div>
-                    <button onclick="(function(){var s=document.getElementById('state'),c=document.getElementById('city'),k=document.getElementById('system_capacity');window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{state:s?s.options[s.selectedIndex].text:'',city:c&amp;&amp;c.value?c.options[c.selectedIndex].text:'',size:k?k.value:''});})();" class="calc-inline-082">Get Free Quotes →</button>
+                <div id="empty-state" class="result-container" aria-live="polite" aria-atomic="true">
+                    <img alt="" src="../assets/image/calculator-placeholder.svg" loading="lazy" decoding="async">
+                    <h3>Enter your system details to see losses %</h3>
                 </div>
             </div>
-            <div id="empty-state" class="result-container calc-inline-112">
-                    <img alt="" src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-113">
-                    <h3>Enter your system details to see losses 🔍</h3>
-                </div>
         </div>
 
         <article class="content-area mt-5">
@@ -305,6 +309,62 @@
     </div>
 </section>
 
+<section class="faq-section py-5 bg-white" id="degradationFaq-section" aria-labelledby="degradationFaq-title">
+    <div class="container py-4">
+        <div class="text-center" data-aos="fade-up">
+            <h2 class="faq-section__title" id="degradationFaq-title">Solar Panel Degradation FAQs</h2>
+        </div>
+        <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="accordion faq-accordion" id="degradationFaqLeft">
+<div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="degradationFaqHeading1">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#degradationFaqCollapse1" aria-expanded="false" aria-controls="degradationFaqCollapse1">
+                        How much do solar panels degrade every year?
+                    </button>
+                </h3>
+                <div id="degradationFaqCollapse1" class="accordion-collapse collapse" aria-labelledby="degradationFaqHeading1" data-bs-parent="#degradationFaqLeft">
+                    <div class="accordion-body">Most good-quality panels degrade by around 0.5% per year after the first-year stabilization period.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="degradationFaqHeading2">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#degradationFaqCollapse2" aria-expanded="false" aria-controls="degradationFaqCollapse2">
+                        Does dust reduce solar generation?
+                    </button>
+                </h3>
+                <div id="degradationFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="degradationFaqHeading2" data-bs-parent="#degradationFaqLeft">
+                    <div class="accordion-body">Yes. Dust, pollution, leaves, and bird droppings can reduce generation until panels are cleaned.</div>
+                </div>
+            </div>            
+            </div>
+            <div class="faq-column">
+                <div class="accordion faq-accordion" id="degradationFaqRight">
+<div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="degradationFaqHeading3">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#degradationFaqCollapse3" aria-expanded="false" aria-controls="degradationFaqCollapse3">
+                        How often should solar panels be cleaned?
+                    </button>
+                </h3>
+                <div id="degradationFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="degradationFaqHeading3" data-bs-parent="#degradationFaqRight">
+                    <div class="accordion-body">Cleaning frequency depends on location. Dusty, urban, and coastal areas may need more frequent cleaning.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="degradationFaqHeading4">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#degradationFaqCollapse4" aria-expanded="false" aria-controls="degradationFaqCollapse4">
+                        Can cleaning improve ROI?
+                    </button>
+                </h3>
+                <div id="degradationFaqCollapse4" class="accordion-collapse collapse" aria-labelledby="degradationFaqHeading4" data-bs-parent="#degradationFaqRight">
+                    <div class="accordion-body">Yes, when recovered generation value is higher than cleaning cost. The calculator estimates this tradeoff.</div>
+                </div>
+            </div>        
+                </div>
+                <div class="faq-actions">
+                    <a href="../contact.html" class="faq-more-btn">View All FAQs <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="cta-section py-4 bg-white">
     <div class="container">
         <div class="cta-banner" data-aos="fade-up">
@@ -317,6 +377,8 @@
     </div>
 </section>
 
+    </main>
+
 <footer class="site-footer" role="contentinfo">
     <div class="container">
         <div class="site-footer__grid">
@@ -327,10 +389,10 @@
                 </a>
                 <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
                 <ul class="site-footer__social list-unstyled" aria-label="Social media links">
-                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a aria-label="Facebook" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-facebook"></i></a></li>
+                    <li><a aria-label="Instagram" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-instagram"></i></a></li>
+                    <li><a aria-label="YouTube" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-youtube"></i></a></li>
+                    <li><a aria-label="LinkedIn" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-linkedin"></i></a></li>
                 </ul>
             </div>
             <!-- Quick Links -->
@@ -362,30 +424,43 @@
                         <i class="bi bi-geo-alt-fill"></i>
                         <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
                     </li>
-                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919547243120">+91 98765 43210</a></li>
                     <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
                     <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
                 </ul>
             </address>
+            <!-- Location -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Location</h2>
+                <div class="site-footer__map">
+                    <iframe
+                        title="Map showing ShriKrishna Solar location at Kuanpar, Sauri, Belda, Paschim Medinipur 721445"
+                        src="https://www.google.com/maps?q=Kuanpar%2C%20Sauri%2C%20Belda%2C%20Paschim%20Medinipur%20721445&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
         <div class="site-footer__bottom">
             <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
             <nav class="site-footer__legal" aria-label="Footer legal links">
-                <a href="#">Privacy Policy</a><span>|</span>
-                <a href="#">Terms &amp; Conditions</a><span>|</span>
-                <a href="#">Refund Policy</a>
+                <a href="../privacy-policy.html">Privacy Policy</a><span>|</span>
+                <a href="../terms-conditions.html">Terms &amp; Conditions</a><span>|</span>
+                <a href="../refund-policy.html">Refund Policy</a>
             </nav>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+<a href="https://wa.me/919547243120" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
 
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/calculator-js/solar-panel-degradation-calculator.js"></script>
 </body>
 </html>
-

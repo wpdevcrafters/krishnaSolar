@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "test:static": "node tests/calculator-smoke-tests.js",
+    "test:js": "node tests/js-syntax-check.js",
+    "test:quality": "node tests/project-quality-check.js",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0"
+  }
+}

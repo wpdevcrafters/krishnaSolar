@@ -1,3 +1,22 @@
+
+function showCalculatorResult(resultId) {
+  var resultBox = document.getElementById(resultId || 'result-box');
+  var emptyState = document.getElementById('empty-state');
+
+  document.body.classList.add('is-calculated');
+
+  if (emptyState) {
+    emptyState.style.setProperty('display', 'none', 'important');
+    emptyState.setAttribute('aria-hidden', 'true');
+  }
+
+  if (resultBox) {
+    resultBox.hidden = false;
+    resultBox.removeAttribute('aria-hidden');
+    resultBox.style.setProperty('display', 'block', 'important');
+  }
+}
+
 ﻿/* solar-panel-for-ac-calculator.html JS - ShriKrishna Solar */
 
 function calcACSolar() {
@@ -36,26 +55,26 @@ function calcACSolar() {
   document.getElementById('rh-grid').innerHTML = [
     {val: sysKw + ' kW', lbl: 'System Size'},
     {val: panels400 + ' panels', lbl: '400W Panels'},
-    {val: 'â‚¹' + Math.round(afterSub/1000) + 'K', lbl: 'Cost After Subsidy'},
+    {val: '₹' + Math.round(afterSub/1000) + 'K', lbl: 'Cost After Subsidy'},
   ].map(function(i){return '<div><div class="rh-val">'+i.val+'</div><div class="rh-lbl">'+i.lbl+'</div></div>';}).join('');
 
   document.getElementById('r-grid').innerHTML = [
     {val: totalLoad.toFixed(1)+' kW',  lbl: 'Total Load'},
     {val: dailyKwh.toFixed(1)+' kWh',  lbl: 'Daily Consumption'},
     {val: roofSqFt+' sq ft',            lbl: 'Roof Area Needed'},
-    {val: 'â‚¹'+rawCost.toLocaleString('en-IN'), lbl: 'System Cost'},
-    {val: 'â‚¹'+(subsidy/1000).toFixed(0)+'K',  lbl: 'PM Subsidy'},
+    {val: '₹'+rawCost.toLocaleString('en-IN'), lbl: 'System Cost'},
+    {val: '₹'+(subsidy/1000).toFixed(0)+'K',  lbl: 'PM Subsidy'},
     {val: monthlyUnits+' units',        lbl: 'Monthly Generation'},
-    {val: 'â‚¹'+monthlySaving,            lbl: 'Monthly Savings'},
+    {val: '₹'+monthlySaving,            lbl: 'Monthly Savings'},
     {val: paybackYrs+' years',          lbl: 'Payback Period'},
   ].map(function(i){return '<div class="r-item"><div class="r-val">'+i.val+'</div><div class="r-lbl">'+i.lbl+'</div></div>';}).join('');
 
   document.getElementById('r-note').textContent =
     'For '+count+'Ã—'+ton+'T AC ('+totalAcKw.toFixed(1)+' kW) + '+other+' kW home load running '+hrs+' hrs/day: '+
     'you need a '+sysKw+' kW system with '+panels400+' Ã— 400W panels on ~'+roofSqFt+' sq ft of roof. '+
-    'After â‚¹'+(subsidy/1000).toFixed(0)+'K PM Surya Ghar subsidy, cost is â‚¹'+Math.round(afterSub/1000)+'K. '+
-    'Monthly savings: â‚¹'+monthlySaving+'. Payback: '+paybackYrs+' years.';
-  document.getElementById('result-box').style.display = 'block';
+    'After ₹'+(subsidy/1000).toFixed(0)+'K PM Surya Ghar subsidy, cost is ₹'+Math.round(afterSub/1000)+'K. '+
+    'Monthly savings: ₹'+monthlySaving+'. Payback: '+paybackYrs+' years.';
+  showCalculatorResult('result-box');
   if(window.gtag) gtag('event','ac_solar_calc',{ton:ton,count:count,sys_kw:sysKw});
 }
 

@@ -263,13 +263,13 @@
                 saveReportBox.style.background = "linear-gradient(135deg, #f8fafc, #f1f5f9)";
                 saveReportBox.style.border = "1.5px dashed #cbd5e1";
                 saveReportBox.innerHTML = `
-                    <h4 class="calc-inline-213">ðŸ“§ Keep these numbers for reference?</h4>
-                    <p class="calc-inline-214">We'll email you a beautiful custom PDF-ready feasibility report including pricing, subsidies, and regional installer details.</p>
-                    <div class="calc-inline-215">
-                        <input type="email" id="save-calc-email" placeholder="you@example.com" class="calc-inline-216" required>
-                        <button id="save-calc-btn" onclick="handleSaveCalculation()" class="calc-inline-217">Send Report</button>
+                    <h4>ðŸ“§ Keep these numbers for reference?</h4>
+                    <p>We'll email you a beautiful custom PDF-ready feasibility report including pricing, subsidies, and regional installer details.</p>
+                    <div>
+                        <input type="email" id="save-calc-email" placeholder="you@example.com"  required>
+                        <button id="save-calc-btn" onclick="handleSaveCalculation()">Send Report</button>
                     </div>
-                    <p id="save-status-msg" class="calc-inline-218"></p>
+                    <p id="save-status-msg"></p>
                 `;
             }
 
@@ -475,8 +475,8 @@
                             box.style.background = "#f0fdf4";
                             box.style.border = "1.5px solid #bbf7d0";
                             box.innerHTML = `
-                                <h4 class="calc-inline-220">ðŸŽ‰ Report Emailed Successfully!</h4>
-                                <p class="calc-inline-221">A beautifully detailed breakdown has been sent to <b>${email}</b>. You can print or download the PDF directly from your mailbox.</p>
+                                <h4>ðŸŽ‰ Report Emailed Successfully!</h4>
+                                <p>A beautifully detailed breakdown has been sent to <b>${email}</b>. You can print or download the PDF directly from your mailbox.</p>
                             `;
                         }
                     }, 1500);

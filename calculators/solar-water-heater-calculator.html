@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Water Heater Calculator | ShriKrishna Solar</title>
+    <meta name="description" content="Calculate your savings from a solar water heater. Find out the payback period, annual savings, and right system size for your family.">
+    <link rel="canonical" href="https://shrikrishnasolar.in/calculators/solar-water-heater-calculator.html">
+    <meta property="og:title" content="Solar Water Heater Calculator | ShriKrishna Solar">
+    <meta property="og:description" content="Calculate your savings from a solar water heater. Find out the payback period, annual savings, and right system size for your family.">
+    <meta property="og:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
+    <meta property="og:url" content="https://shrikrishnasolar.in/calculators/solar-water-heater-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShriKrishna Solar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solar Water Heater Calculator | ShriKrishna Solar">
+    <meta name="twitter:description" content="Calculate your savings from a solar water heater. Find out the payback period, annual savings, and right system size for your family.">
+    <meta name="twitter:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/image/favicon.png">
 </head>
-<body>
+<body class="calc-water-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -22,7 +36,7 @@
 
             <!-- Tablet: WhatsApp + CTA (md to xl) -->
             <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
-                <a href="https://wa.me/919876543210"
+                <a href="https://wa.me/919547243120"
                    class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                     <i class="bi bi-whatsapp fs-5"></i>
@@ -69,7 +83,7 @@
                            data-bs-dismiss="offcanvas">
                             Book Free Solar Consultation
                         </a>
-                        <a href="https://wa.me/919876543210"
+                        <a href="https://wa.me/919547243120"
                            class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
                            target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
@@ -95,7 +109,7 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="https://wa.me/919876543210"
+                    <a href="https://wa.me/919547243120"
                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <i class="bi bi-whatsapp fs-5"></i>
@@ -109,6 +123,7 @@
         </div>
     </nav>
 </header>
+    <main id="main-content">
 
 <section class="calc-detail-hero" aria-labelledby="calc-detail-title">
     <div class="calc-detail-hero__bg" aria-hidden="true"></div>
@@ -126,14 +141,11 @@
     <div class="container">
         <div class="calculator-detail-scope">
 <div>
-        <p class="calc-inline-064">
+        <p>
             <a href="/">Home</a> &gt; Solar Water Heater Calculator
         </p>
 
-        <div class="hero-section calc-inline-065">
-            <h1 class="calc-inline-066">Solar Water Heater Calculator</h1>
-            <p class="calc-inline-067">Calculate the perfect Liters Per Day (LPD) capacity for your home bath needs.</p>
-        </div>
+        
 
         <div class="grid grid-calc">
 
@@ -141,12 +153,12 @@
             <div class="calculator-form-card">
                 <form id="swh-calculator-form">
                     <div class="form-group">
-                        <label>Number of Family Members</label>
+                        <label for="family_members">Number of Family Members</label>
                         <input type="number" id="family_members" class="form-control" placeholder="e.g. 4" required="" min="1">
                     </div>
 
                     <div class="form-group">
-                        <label>Hot Water Usage Habit</label>
+                        <label for="usage_type">Hot Water Usage Habit</label>
                         <select id="usage_type" class="form-control">
                             <option value="low">Low (Bucket Bath)</option>
                             <option value="medium" selected="">Medium (Mix of Bucket/Shower)</option>
@@ -155,95 +167,86 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Heater Type Preference</label>
+                        <label for="heater_type">Heater Type Preference</label>
                         <select id="heater_type" class="form-control">
                             <option value="ETC">ETC (Evacuated Tube) - Economical</option>
                             <option value="FPC">FPC (Flat Plate) - Durable/Premium</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary calc-inline-069">
-                        Calculate Capacity
-                    </button>
+                    <button type="submit" class="btn btn-primary">Calculate Capacity</button>
                 </form>
             </div>
 
-            <!-- Right: Results Dashboard (Initially Hidden) -->
-            <div id="result-box" class="result-container calc-inline-023">
-
-                <!-- Top Key Metrics Row -->
-                <div class="grid grid-2">
-                    <div class="metric-card highlight">
-                        <div class="metric-label">Recommended Capacity</div>
-                        <div class="metric-value"><span id="res_lpd">200</span> <span class="calc-inline-032">LPD</span></div>
-                        <div class="metric-sub">Liters Per Day</div>
+            <!-- Right: Results Dashboard -->
+            <div class="calculator-result-panel">
+                <div id="result-box" class="result-container" aria-live="polite" aria-atomic="true">
+                    <div class="grid grid-2">
+                        <div class="metric-card highlight">
+                            <div class="metric-label">Recommended Capacity</div>
+                            <div class="metric-value"><span id="res_lpd">200</span> <span>LPD</span></div>
+                            <div class="metric-sub">Liters Per Day</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Estimated Cost</div>
+                            <div class="metric-value">₹<span id="res_cost">-</span></div>
+                            <div class="metric-sub">Including Installation</div>
+                        </div>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-label">Estimated Cost</div>
-                        <div class="metric-value calc-inline-152">₹<span id="res_cost">-</span></div>
-                        <div class="metric-sub">Including Installation</div>
+
+                    <div class="details-card-modern">
+                        <div class="details-header-modern">
+                            <span><i class="bi bi-droplet-fill" aria-hidden="true"></i></span> Usage &amp; Savings Analysis
+                        </div>
+                        <div>
+                            <div class="breakdown-table-wrapper">
+                                <table class="breakdown-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>Electricity Units Saved/Year</td>
+                                            <td id="res_units_saved" class="text-right">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Money Saved/Year</td>
+                                            <td id="res_money_saved" class="text-right">-</td>
+                                        </tr>
+                                        <tr class="final-row">
+                                            <td><span class="final-label">ROI Period</span></td>
+                                            <td id="res_roi" class="text-right">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h4>ETC vs FPC?</h4>
+                        <p><strong>ETC:</strong> Glass tubes, cheaper, good for hard water, fragile.</p>
+                        <p><strong>FPC:</strong> Metal plates, expensive, very durable, needs soft water.</p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-light border rounded">
+                        <strong>Disclaimer:</strong> This calculation is an approximation based on average solar generation
+                        numbers in India (4 units/kW/day). Actual generation may vary depending on your location, roof
+                        angle, and shadow conditions.
                     </div>
                 </div>
 
-                <!-- Detailed Breakdown Table -->
-                <div class="details-card-modern">
-                    <div class="details-header-modern">
-                        <span class="calc-inline-032">💧</span> Usage &amp; Savings Analysis
-                    </div>
-                    <div class="calc-inline-095">
-                        <div class="breakdown-table-wrapper"><table class="breakdown-table">
-                            <tbody>
-                                <tr>
-                                    <td>Electricity Units Saved/Year</td>
-                                    <td id="res_units_saved" class="text-right">-</td>
-                                </tr>
-                                <tr>
-                                    <td>Money Saved/Year</td>
-                                    <td id="res_money_saved" class="text-right calc-inline-096">-
-                                    </td>
-                                </tr>
-                                <tr class="final-row">
-                                    <td>
-                                        <span class="final-label">ROI Period</span>
-                                    </td>
-                                    <td id="res_roi" class="text-right calc-inline-380">-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div id="empty-state" class="result-container" aria-live="polite" aria-atomic="true">
+                    <img alt="" src="../assets/image/calculator-placeholder.svg" loading="lazy" decoding="async">
+                    <h3>Get hot water for free</h3>
+                    <p class="text-muted">Enter your family size and usage preference to calculate the right water heater capacity.</p>
                 </div>
 
-                <!-- Info Card -->
-                <div class="mt-4 calc-inline-097">
-                    <h4 class="calc-inline-381">ETC vs FPC?</h4>
-                    <p class="calc-inline-066"><strong>ETC:</strong> Glass tubes, cheaper, good for hard water,
-                        fragile.</p>
-                    <p class="calc-inline-067"><strong>FPC:</strong> Metal plates, expensive, very durable, needs soft water.
-                    </p>
-                </div>
-
-                <div class="mt-4 p-3 bg-light border rounded calc-inline-077">
-                    <strong>Disclaimer:</strong> This calculation is an approximation based on average solar generation
-                    numbers in India (4 units/kW/day). Actual generation may vary depending on your location, roof
-                    angle, and shadow conditions.
-                </div>
-
-            </div>
-
-            <!-- Default "Empty State" Right Side -->
-                <div id="lm-inline-cta" class="calc-inline-078">
-                    <div class="calc-inline-079">
-                        <div class="calc-inline-080">📋 Get 3 Free Quotes from Local Installers</div>
-                        <div class="calc-inline-081">Compare prices from verified solar installers in your area. Free, no obligation.</div>
+                <div id="lm-inline-cta">
+                    <div>
+                        <div><i class="bi bi-clipboard-check" aria-hidden="true"></i> Get 3 Free Quotes from Local Installers</div>
+                        <div>Compare prices from verified solar installers in your area. Free, no obligation.</div>
                     </div>
-                    <button onclick="(function(){var s=document.getElementById('state'),c=document.getElementById('city'),k=document.getElementById('system_capacity');window.solarLeads&amp;&amp;window.solarLeads.showModal('Inline CTA',{state:s?s.options[s.selectedIndex].text:'',city:c&amp;&amp;c.value?c.options[c.selectedIndex].text:'',size:k?k.value:''});})();" class="calc-inline-082">Get Free Quotes →</button>
+                    <button type="button" data-click-action="solarLeadModal">Get Free Quotes →</button>
                 </div>
             </div>
-            <div id="empty-state" class="result-container calc-inline-083">
-                <img alt="" src="/assets/images/calculator-placeholder.svg" onerror="this.style.display='none'" class="calc-inline-084">
-                <h3>Get hot water for free 🚿</h3>
-            </div>
-
         </div>
 
         <!-- SEO Content -->
@@ -281,6 +284,62 @@
     </div>
 </section>
 
+<section class="faq-section py-5 bg-white" id="waterHeaterFaq-section" aria-labelledby="waterHeaterFaq-title">
+    <div class="container py-4">
+        <div class="text-center" data-aos="fade-up">
+            <h2 class="faq-section__title" id="waterHeaterFaq-title">Solar Water Heater FAQs</h2>
+        </div>
+        <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="accordion faq-accordion" id="waterHeaterFaqLeft">
+<div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="waterHeaterFaqHeading1">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#waterHeaterFaqCollapse1" aria-expanded="false" aria-controls="waterHeaterFaqCollapse1">
+                        Is a solar water heater worth it?
+                    </button>
+                </h3>
+                <div id="waterHeaterFaqCollapse1" class="accordion-collapse collapse" aria-labelledby="waterHeaterFaqHeading1" data-bs-parent="#waterHeaterFaqLeft">
+                    <div class="accordion-body">It can be cost-effective for homes that use electric geysers frequently, especially for larger families or daily hot water demand.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="waterHeaterFaqHeading2">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#waterHeaterFaqCollapse2" aria-expanded="false" aria-controls="waterHeaterFaqCollapse2">
+                        What size solar water heater do I need?
+                    </button>
+                </h3>
+                <div id="waterHeaterFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="waterHeaterFaqHeading2" data-bs-parent="#waterHeaterFaqLeft">
+                    <div class="accordion-body">Common homes use 100 to 300 LPD systems depending on family size and hot water usage.</div>
+                </div>
+            </div>            
+            </div>
+            <div class="faq-column">
+                <div class="accordion faq-accordion" id="waterHeaterFaqRight">
+<div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="waterHeaterFaqHeading3">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#waterHeaterFaqCollapse3" aria-expanded="false" aria-controls="waterHeaterFaqCollapse3">
+                        Does a solar water heater work in winter?
+                    </button>
+                </h3>
+                <div id="waterHeaterFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="waterHeaterFaqHeading3" data-bs-parent="#waterHeaterFaqRight">
+                    <div class="accordion-body">Yes, though output can reduce on cloudy or very cold days. Many systems include electric backup.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="waterHeaterFaqHeading4">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#waterHeaterFaqCollapse4" aria-expanded="false" aria-controls="waterHeaterFaqCollapse4">
+                        Which is better, ETC or FPC?
+                    </button>
+                </h3>
+                <div id="waterHeaterFaqCollapse4" class="accordion-collapse collapse" aria-labelledby="waterHeaterFaqHeading4" data-bs-parent="#waterHeaterFaqRight">
+                    <div class="accordion-body">ETC is common and economical, while FPC systems are more robust and often preferred in certain high-use applications.</div>
+                </div>
+            </div>        
+                </div>
+                <div class="faq-actions">
+                    <a href="../contact.html" class="faq-more-btn">View All FAQs <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="cta-section py-4 bg-white">
     <div class="container">
         <div class="cta-banner" data-aos="fade-up">
@@ -293,6 +352,8 @@
     </div>
 </section>
 
+    </main>
+
 <footer class="site-footer" role="contentinfo">
     <div class="container">
         <div class="site-footer__grid">
@@ -303,10 +364,10 @@
                 </a>
                 <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
                 <ul class="site-footer__social list-unstyled" aria-label="Social media links">
-                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a aria-label="Facebook" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-facebook"></i></a></li>
+                    <li><a aria-label="Instagram" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-instagram"></i></a></li>
+                    <li><a aria-label="YouTube" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-youtube"></i></a></li>
+                    <li><a aria-label="LinkedIn" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-linkedin"></i></a></li>
                 </ul>
             </div>
             <!-- Quick Links -->
@@ -338,24 +399,37 @@
                         <i class="bi bi-geo-alt-fill"></i>
                         <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
                     </li>
-                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919547243120">+91 98765 43210</a></li>
                     <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
                     <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
                 </ul>
             </address>
+            <!-- Location -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Location</h2>
+                <div class="site-footer__map">
+                    <iframe
+                        title="Map showing ShriKrishna Solar location at Kuanpar, Sauri, Belda, Paschim Medinipur 721445"
+                        src="https://www.google.com/maps?q=Kuanpar%2C%20Sauri%2C%20Belda%2C%20Paschim%20Medinipur%20721445&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
         <div class="site-footer__bottom">
             <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
             <nav class="site-footer__legal" aria-label="Footer legal links">
-                <a href="#">Privacy Policy</a><span>|</span>
-                <a href="#">Terms &amp; Conditions</a><span>|</span>
-                <a href="#">Refund Policy</a>
+                <a href="../privacy-policy.html">Privacy Policy</a><span>|</span>
+                <a href="../terms-conditions.html">Terms &amp; Conditions</a><span>|</span>
+                <a href="../refund-policy.html">Refund Policy</a>
             </nav>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+<a href="https://wa.me/919547243120" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | ShriKrishna Solar</title>
+    <meta name="description" content="We are passionate engineers, designers, and solar experts dedicated to making renewable energy accessible, affordable, and reliable for everyone.">
+    <link rel="canonical" href="https://shrikrishnasolar.in/about.html">
+    <meta property="og:title" content="About Us | ShriKrishna Solar">
+    <meta property="og:description" content="We are passionate engineers, designers, and solar experts dedicated to making renewable energy accessible, affordable, and reliable for everyone.">
+    <meta property="og:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
+    <meta property="og:url" content="https://shrikrishnasolar.in/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShriKrishna Solar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | ShriKrishna Solar">
+    <meta name="twitter:description" content="We are passionate engineers, designers, and solar experts dedicated to making renewable energy accessible, affordable, and reliable for everyone.">
+    <meta name="twitter:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,139 +25,165 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
-    <style>
-        /* Exact Colors Extracted from Homepage Image */
-        :root {
-            --brand-success: #10b981; /* Primary Green */
-            --brand-success-dark: #059669;
-            --brand-warning: #f59e0b; /* Accent Orange/Yellow */
-            --brand-warning-hover: #d97706;
-            --brand-dark: #0f172a; /* Slate Dark */
-            --font-family-base: 'Outfit', sans-serif;
-            --bg-light: #f8fafc;
-        }
 
-        body {
-            font-family: var(--font-family-base);
-            color: #334155;
-            background-color: var(--bg-light);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Utilities */
-        .text-primary-dark { color: var(--brand-dark) !important; }
-        .text-success { color: var(--brand-success) !important; }
-        .text-warning { color: var(--brand-warning) !important; }
-        .bg-success { background-color: var(--brand-success) !important; }
-        .bg-warning { background-color: var(--brand-warning) !important; }
-
-        .fs-7 { font-size: 0.875rem !important; }
-        .fs-8 { font-size: 0.75rem !important; }
-        
-        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important; }
-
-        /* Buttons (Matching Homepage) */
-        .btn-success { background-color: var(--brand-success); border-color: var(--brand-success); color: white; }
-        .btn-success:hover { background-color: var(--brand-success-dark); border-color: var(--brand-success-dark); color: white; }
-        .btn-warning { background-color: var(--brand-warning); border-color: var(--brand-warning); color: #fff; }
-        .btn-warning:hover { background-color: var(--brand-warning-hover); border-color: var(--brand-warning-hover); color: #fff; }
-
-        /* Header Navigation */
-        .navbar-nav .nav-link {
-            color: #475569;
-            font-size: 0.95rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            transition: color 0.2s;
-        }
-        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
-            color: var(--brand-success) !important;
-        }
-
-        /* About Hero Section */
-        .about-hero {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(16, 185, 129, 0.85) 100%), url('https://placehold.co/1920x600/e2e8f0/475569?text=Solar+Installation+Team') center/cover no-repeat;
-            padding: 6rem 0;
-            color: white;
-            position: relative;
-        }
-        
-        /* Stat Cards */
-        .stat-card {
-            background: white;
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 4px solid var(--brand-warning);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        /* Core Value Cards */
-        .value-icon-box {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Image Masking */
-        .img-mask-rounded {
-            border-radius: 2rem;
-            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
-        }
-    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/png" href="assets/image/favicon.png">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="header sticky-top bg-white shadow-sm border-bottom">
-        <nav class="navbar navbar-expand-xl py-3">
+    <header class="header">
+        <nav class="navbar navbar-expand-xl navbar-light">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                    <i class="bi bi-brightness-high-fill text-warning fs-2"></i>
-                    <div>
-                        <h1 class="m-0 fs-5 fw-bold text-primary-dark lh-1">ShriKrishna Solar</h1>
-                        <span class="d-block text-muted" style="font-size: 0.65rem; letter-spacing: 0.5px;">powering a brighter future</span>
-                    </div>
+
+                <!-- ── Logo ── -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+
+                <!-- ── Tablet header bar actions (768 px – 1199 px): WhatsApp + CTA next to hamburger ── -->
+                <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                    <a href="https://wa.me/919547243120"
+                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
+                </div>
+
+                <!-- ── Hamburger (visible on mobile & tablet, hidden on desktop) ── -->
+                <button class="navbar-toggler d-xl-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                        aria-controls="navDrawer" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <!-- ══════════════════════════════════════════════════════════
+                     RIGHT-SIDE OFFCANVAS DRAWER — mobile + tablet (< xl)
+                     Bootstrap controls display; no d-xl-none here so JS
+                     doesn't fight with utility classes.
+                ══════════════════════════════════════════════════════════ -->
+                <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1"
+                     id="navDrawer" aria-labelledby="navDrawerLabel">
+
+                    <div class="offcanvas-header border-bottom">
+                        <a href="index.html" class="navbar-brand mb-0"><img src="assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo" />
+                        </a>
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column p-0">
+
+                        <!-- Nav links (all breakpoints inside drawer) -->
+                        <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link d-flex justify-content-between align-items-center"
+                                   href="services.html" data-submenu-toggle>
+                                    Services
+                                    <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                </a>
+                                <ul class="submenu nav flex-column ps-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="services/residential.html">Residential</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="services/commercial.html">Commercial</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="services/Industrial.html">Industrial</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="calculators.html">Calculators</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="subsidy-information.html">Subsidy Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#projects">Success Stories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                        <!-- Mobile-only CTA block (< 768 px): shown only on phones -->
+                        <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                            <a href="contact.html"
+                               class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                               data-bs-dismiss="offcanvas">
+                                Book Free Solar Consultation
+                            </a>
+                            <a href="https://wa.me/919547243120"
+                               class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                               target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                            </a>
+                        </div>
+
+                    </div><!-- /.offcanvas-body -->
+                </div><!-- /#navDrawer -->
+
+                <!-- ══════════════════════════════════════════════════════════
+                     DESKTOP NAV — visible only at ≥ 1200 px (xl)
+                ══════════════════════════════════════════════════════════ -->
+                <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="services.html" id="aboutServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                            <ul class="dropdown-menu" aria-labelledby="aboutServicesDropdown">
-                                <li><a class="dropdown-item" href="services.html#residential">Residential</a></li>
-                                <li><a class="dropdown-item" href="services.html#commercial">Commercial</a></li>
-                                <li><a class="dropdown-item" href="services.html">Industrial</a></li>
+                        <li class="nav-item has-submenu position-static">
+                            <a class="nav-link" href="services.html">Services</a>
+                            <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                                <li><a class="dropdown-item" href="services/residential.html">Residential</a></li>
+                                <li><a class="dropdown-item" href="services/commercial.html">Commercial</a></li>
+                                <li><a class="dropdown-item" href="services/Industrial.html">Industrial</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="calculators.html">Calculators</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#subsidy">Subsidy Information</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#projects">Success Stories</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calculators.html">Calculators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="subsidy-information.html">Subsidy Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#projects">Success Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
                     </ul>
                     <div class="d-flex align-items-center gap-3">
-                        <a href="https://wa.me/1234567890" class="btn btn-light rounded-circle text-success fs-5 p-2 shadow-sm d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="#contact" class="btn btn-warning fw-semibold rounded-pill px-4 shadow-sm">Get Free Consultation</a>
+                        <a href="https://wa.me/919547243120"
+                           class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                           target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                            <i class="bi bi-whatsapp fs-5"></i>
+                        </a>
+                        <a href="contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                            Book Free Solar Consultation
+                        </a>
                     </div>
-                </div>
-            </div>
+                </div><!-- /#mainNav -->
+
+            </div><!-- /.container -->
         </nav>
     </header>
+    <main id="main-content">
 
-    <section class="about-hero text-center">
-        <div class="container position-relative z-1">
-            <span class="badge bg-warning mb-3 px-3 py-2 rounded-pill fs-8 fw-medium text-dark">Who We Are</span>
-            <h1 class="display-4 fw-bold mb-3">Accelerating India's Transition <br>to Clean Energy</h1>
-            <p class="lead opacity-75 col-md-8 mx-auto mb-0">We are passionate engineers, designers, and solar experts dedicated to making renewable energy accessible, affordable, and reliable for everyone.</p>
+    <section class="services-page-hero" aria-labelledby="about-hero-title">
+        <div class="services-page-hero__bg" aria-hidden="true"></div>
+        <div class="container">
+            <div class="services-page-hero__content" data-aos="fade-up">
+                <span class="services-page-hero__eyebrow">Who We Are</span>
+                <h1 class="services-page-hero__title" id="about-hero-title">Accelerating India's Transition <br>to Clean Energy</h1>
+                <p class="services-page-hero__text">We are passionate engineers, designers, and solar experts dedicated to making renewable energy accessible, affordable, and reliable for everyone.</p>
+            </div>
         </div>
     </section>
 
@@ -154,7 +192,7 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 position-relative">
                     <div class="position-absolute top-0 start-0 w-100 h-100 bg-success bg-opacity-10 rounded-circle" style="transform: scale(0.9); z-index: 0; filter: blur(40px);"></div>
-                    <img src="https://placehold.co/800x900/e2e8f0/475569?text=Solar+Engineers" class="img-fluid img-mask-rounded position-relative z-1" alt="Our Story">
+                    <img src="https://placehold.co/800x900/e2e8f0/475569?text=Solar+Engineers" class="img-fluid img-mask-rounded position-relative z-1" alt="Our Story" loading="lazy" decoding="async">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="fw-bold text-primary-dark mb-4">Our Journey</h2>
@@ -260,71 +298,119 @@
         </div>
     </section>
 
-    <section class="py-5 text-white text-center position-relative" style="background: linear-gradient(135deg, var(--brand-success-dark) 0%, var(--brand-success) 100%);">
-        <div class="container py-4">
-            <h2 class="display-6 fw-bold mb-3">Be Part of the Solar Revolution</h2>
-            <p class="lead opacity-75 mb-4 col-md-6 mx-auto">Join thousands of happy homeowners and businesses who trust ShriKrishna Solar.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <button class="btn btn-warning rounded-pill px-5 py-3 fw-bold shadow-sm hover-lift text-white">Get Your Free Quote</button>
+    <!-- ========================================
+         SECTION: Final Call To Action
+    ======================================== -->
+    <section class="cta-section py-4 bg-white" aria-labelledby="cta-title">
+        <div class="container">
+            <div class="cta-banner" data-aos="fade-up">
+                <div class="cta-banner__content">
+                    <!-- WP: ACF cta_heading -->
+                    <h2 class="cta-banner__title" id="cta-title">Start Saving with Solar Today</h2>
+                    <!-- /WP -->
+
+                    <!-- WP: ACF cta_description -->
+                    <p class="cta-banner__text">Have a free consultation and discover how much you can save.</p>
+                    <!-- /WP -->
+
+                    <div class="cta-banner__actions">
+                        <!-- WP: ACF cta_primary_link -->
+                        <a href="contact.html" class="cta-banner__btn cta-banner__btn--primary">Get Free Solar Consultation</a>
+                        <!-- /WP -->
+
+                        <!-- WP: ACF cta_secondary_link -->
+                        <a href="calculators.html" class="cta-banner__btn cta-banner__btn--secondary">Calculate My Savings</a>
+                        <!-- /WP -->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <!-- /SECTION: Final Call To Action -->
+    <!-- ========================================
+         SECTION: Footer
+    ======================================== -->
+        </main>
 
-    <footer class="bg-dark text-white pt-5 pb-3">
-        <div class="container pt-4">
-            <div class="row g-4 mb-5">
-                <div class="col-lg-3 col-md-6">
-                    <a class="navbar-brand d-flex align-items-center gap-2 mb-4" href="#">
-                        <i class="bi bi-brightness-high-fill text-warning fs-3"></i>
-                        <div>
-                            <h3 class="m-0 fs-5 fw-bold text-white">ShriKrishna Solar</h3>
-                            <span class="d-block fs-8 text-light opacity-75">powering a brighter future</span>
-                        </div>
-                    </a>
-                    <p class="fs-8 text-light opacity-75 mb-4">Your trusted partner for rooftop solar solutions. We help you save more, save energy and build a sustainable future.</p>
-                </div>
-                
-                <div class="col-lg-2 col-md-6 offset-lg-1">
-                    <h5 class="fw-bold mb-4 fs-6 text-white">Quick Links</h5>
-                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
-                        <li><a href="#" class="text-reset text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Residential Solar</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Commercial Solar</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold mb-4 fs-6 text-white">Our Services</h5>
-                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
-                        <li>Rooftop Solar Installation</li>
-                        <li>System Design & Engineering</li>
-                        <li>Solar Maintenance (AMC)</li>
-                        <li>Subsidy Assistance</li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold mb-4 fs-6 text-white">Contact Info</h5>
-                    <ul class="list-unstyled fs-8 text-light opacity-75 lh-lg">
-                        <li class="d-flex gap-2 mb-2"><i class="bi bi-buildings text-warning mt-1"></i> <span>Kharagpur, West Bengal - 721301</span></li>
-                        <li class="d-flex gap-2 mb-2"><i class="bi bi-telephone text-warning mt-1"></i> <span>+91 98765 43210</span></li>
-                        <li class="d-flex gap-2"><i class="bi bi-envelope text-warning mt-1"></i> <span>info@shrikrishnasolar.in</span></li>
-                    </ul>
-                </div>
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-footer__grid">
+            <!-- Brand -->
+            <div class="site-footer__brand">
+                <a href="index.html" class="site-footer__logo" aria-label="ShriKrishna Solar home">
+                    <img src="assets/image/footerlogo.png" alt="ShriKrishna Solar" width="855" height="292" loading="lazy">
+                </a>
+                <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
+                <ul class="site-footer__social list-unstyled" aria-label="Social media links">
+                    <li><a aria-label="Facebook" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-facebook"></i></a></li>
+                    <li><a aria-label="Instagram" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-instagram"></i></a></li>
+                    <li><a aria-label="YouTube" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-youtube"></i></a></li>
+                    <li><a aria-label="LinkedIn" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
             </div>
-            
-            <div class="border-top border-secondary pt-3 mt-4 d-flex flex-column flex-md-row justify-content-between align-items-center fs-8 text-light opacity-75">
-                <p class="mb-2 mb-md-0">&copy; 2026 ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
-                <div class="d-flex gap-3">
-                    <a href="#" class="text-reset text-decoration-none">Privacy Policy</a>
-                    <span>|</span>
-                    <a href="#" class="text-reset text-decoration-none">Terms & Conditions</a>
+            <!-- Quick Links -->
+            <nav class="site-footer__col" aria-label="Footer quick links">
+                <h2 class="site-footer__title">Quick Links</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculators.html">Solar Calculator</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Services -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Services</h2>
+                <ul class="site-footer__links list-unstyled">
+                    <li>Rooftop Solar Installation</li>
+                    <li>Solar System Design</li>
+                    <li>Net Metering Support</li>
+                    <li>Solar Maintenance (AMC)</li>
+                    <li>Subsidy Assistance</li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <address class="site-footer__col site-footer__contact">
+                <h2 class="site-footer__title">Contact Us</h2>
+                <ul class="site-footer__contact-list list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
+                    </li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919547243120">+91 98765 43210</a></li>
+                    <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
+                    <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
+                </ul>
+            </address>
+            <!-- Location -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Location</h2>
+                <div class="site-footer__map">
+                    <iframe
+                        title="Map showing ShriKrishna Solar location at Kuanpar, Sauri, Belda, Paschim Medinipur 721445"
+                        src="https://www.google.com/maps?q=Kuanpar%2C%20Sauri%2C%20Belda%2C%20Paschim%20Medinipur%20721445&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
+            <nav class="site-footer__legal" aria-label="Footer legal links">
+                <a href="privacy-policy.html">Privacy Policy</a><span>|</span>
+                <a href="terms-conditions.html">Terms &amp; Conditions</a><span>|</span>
+                <a href="refund-policy.html">Refund Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+    <!-- /SECTION: Footer -->
+    <a href="https://wa.me/919547243120" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

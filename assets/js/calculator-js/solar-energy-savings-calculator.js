@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update UI
             updateElementText('res_total', Math.round(totalSavings).toLocaleString('en-IN'));
-            updateElementText('res_year1_save', "â‚¹ " + Math.round(savingsYear1).toLocaleString('en-IN'));
-            updateElementText('res_year10_save', "â‚¹ " + Math.round(savingsYear10).toLocaleString('en-IN'));
-            updateElementText('res_year25_save', "â‚¹ " + Math.round(savingsYear25).toLocaleString('en-IN'));
+            updateElementText('res_year1_save', "₹ " + Math.round(savingsYear1).toLocaleString('en-IN'));
+            updateElementText('res_year10_save', "₹ " + Math.round(savingsYear10).toLocaleString('en-IN'));
+            updateElementText('res_year25_save', "₹ " + Math.round(savingsYear25).toLocaleString('en-IN'));
 
             const emptyState = document.getElementById('empty-state');
             if (emptyState) emptyState.style.display = 'none';

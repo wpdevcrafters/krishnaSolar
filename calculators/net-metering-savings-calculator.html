@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Net Metering Bill Calculator | ShriKrishna Solar</title>
     <meta name="description" content="Calculate your solar net metering bill instantly. Enter import and export units to see your payable amount or banked credits — free tool by ShriKrishna Solar.">
+    <link rel="canonical" href="https://shrikrishnasolar.in/calculators/net-metering-savings-calculator.html">
+    <meta property="og:title" content="Net Metering Bill Calculator | ShriKrishna Solar">
+    <meta property="og:description" content="Calculate your solar net metering bill instantly. Enter import and export units to see your payable amount or banked credits — free tool by ShriKrishna Solar.">
+    <meta property="og:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
+    <meta property="og:url" content="https://shrikrishnasolar.in/calculators/net-metering-savings-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShriKrishna Solar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Net Metering Bill Calculator | ShriKrishna Solar">
+    <meta name="twitter:description" content="Calculate your solar net metering bill instantly. Enter import and export units to see your payable amount or banked credits — free tool by ShriKrishna Solar.">
+    <meta name="twitter:image" content="https://shrikrishnasolar.in/assets/image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/image/favicon.png">
 </head>
-<body>
+<body class="calc-net-metering-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="header">
     <nav class="navbar navbar-expand-xl navbar-light">
@@ -23,7 +36,7 @@
 
             <!-- Tablet: WhatsApp + CTA (md to xl) -->
             <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
-                <a href="https://wa.me/919876543210"
+                <a href="https://wa.me/919547243120"
                    class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                     <i class="bi bi-whatsapp fs-5"></i>
@@ -63,13 +76,13 @@
                             </a>
                             <ul class="submenu nav flex-column ps-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#residential">Residential</a>
+                                    <a class="nav-link" href="../services/residential.html">Residential</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html#commercial">Commercial</a>
+                                    <a class="nav-link" href="../services/commercial.html">Commercial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../services.html">Industrial</a>
+                                    <a class="nav-link" href="../services/Industrial.html">Industrial</a>
                                 </li>
                             </ul>
                         </li>
@@ -77,7 +90,7 @@
                             <a class="nav-link active" href="../calculators.html">Calculators</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                            <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -93,7 +106,7 @@
                            data-bs-dismiss="offcanvas">
                             Book Free Solar Consultation
                         </a>
-                        <a href="https://wa.me/919876543210"
+                        <a href="https://wa.me/919547243120"
                            class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
                            target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
@@ -114,16 +127,16 @@
                     <li class="nav-item has-submenu position-static">
                         <a class="nav-link" href="../services.html">Services</a>
                         <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
-                            <li><a class="dropdown-item" href="../services.html#residential">Residential</a></li>
-                            <li><a class="dropdown-item" href="../services.html#commercial">Commercial</a></li>
-                            <li><a class="dropdown-item" href="../services.html">Industrial</a></li>
+                            <li><a class="dropdown-item" href="../services/residential.html">Residential</a></li>
+                            <li><a class="dropdown-item" href="../services/commercial.html">Commercial</a></li>
+                            <li><a class="dropdown-item" href="../services/Industrial.html">Industrial</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="../calculators.html">Calculators</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#subsidy">Subsidy Information</a>
+                        <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#projects">Success Stories</a>
@@ -133,7 +146,7 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="https://wa.me/919876543210"
+                    <a href="https://wa.me/919547243120"
                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <i class="bi bi-whatsapp fs-5"></i>
@@ -147,6 +160,7 @@
         </div>
     </nav>
 </header>
+    <main id="main-content">
 
 <section class="calc-detail-hero" aria-labelledby="calc-detail-title">
     <div class="calc-detail-hero__bg" aria-hidden="true"></div>
@@ -178,30 +192,30 @@
                 <div class="calculator-form-card">
                     <form id="netmetering-calculator-form">
                         <div class="form-group">
-                            <label>Import Units (From Grid)</label>
+                            <label for="import_units">Import Units (From Grid)</label>
                             <input type="number" id="import_units" class="form-control" placeholder="e.g. 150 (Night Usage)" required>
-                            <p class="calc-inline-068">Units you consume from DISCOM.</p>
+                            <p>Units you consume from DISCOM.</p>
                         </div>
                         <div class="form-group">
-                            <label>Export Units (To Grid)</label>
+                            <label for="export_units">Export Units (To Grid)</label>
                             <input type="number" id="export_units" class="form-control" placeholder="e.g. 200 (Day Surplus)" required>
-                            <p class="calc-inline-068">Solar units you send to DISCOM.</p>
+                            <p>Solar units you send to DISCOM.</p>
                         </div>
                         <div class="form-group">
-                            <label>Tariff Rate (₹/Unit)</label>
+                            <label for="tariff">Tariff Rate (₹/Unit)</label>
                             <input type="number" id="tariff" class="form-control" value="8" required>
                         </div>
-                        <button type="submit" class="btn btn-primary calc-inline-069">Calculate Bill</button>
+                        <button type="submit" class="btn btn-primary">Calculate Bill</button>
                     </form>
                 </div>
 
                 <!-- Right: Results -->
-                <div>
-                    <div id="result-box" class="result-container calc-inline-023">
+                <div class="calculator-result-panel">
+                    <div id="result-box" class="result-container" aria-live="polite" aria-atomic="true">
                         <div class="grid grid-2">
-                            <div class="metric-card featured calc-inline-070">
-                                <div class="metric-label calc-inline-071">Estimated Bill</div>
-                                <div class="metric-value calc-inline-072">₹<span id="res_bill">-</span></div>
+                            <div class="metric-card featured">
+                                <div class="metric-label">Estimated Bill</div>
+                                <div class="metric-value">₹<span id="res_bill">-</span></div>
                                 <div class="metric-sub">Energy Charges</div>
                             </div>
                             <div class="metric-card">
@@ -211,8 +225,8 @@
                             </div>
                         </div>
                         <div class="calc-card-section mt-3">
-                            <h4 class="calc-inline-075">Bill Status</h4>
-                            <p id="bill_explanation" class="calc-inline-076">-</p>
+                            <h4>Bill Status</h4>
+                            <p id="bill_explanation">-</p>
                         </div>
                         <div class="alert alert-warning small mt-3">
                             <strong>Disclaimer:</strong> This calculation is for Energy Charges only. Fixed charges, electricity duty, and other taxes are extra as per your state DISCOM.
@@ -229,7 +243,7 @@
                     </div>
 
                     <!-- Empty State -->
-                    <div id="empty-state" class="calc-empty-placeholder">
+                    <div id="empty-state" class="result-container calc-empty-placeholder" aria-live="polite" aria-atomic="true">
                         <h3>Check your Savings 🧾</h3>
                         <p class="text-muted">Enter your import and export units above to calculate your net metering bill.</p>
                     </div>
@@ -260,6 +274,62 @@
     </div>
 </section>
 
+<section class="faq-section py-5 bg-white" id="netMeteringFaq-section" aria-labelledby="netMeteringFaq-title">
+    <div class="container py-4">
+        <div class="text-center" data-aos="fade-up">
+            <h2 class="faq-section__title" id="netMeteringFaq-title">Net Metering FAQs</h2>
+        </div>
+        <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="accordion faq-accordion" id="netMeteringFaqLeft">
+<div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="netMeteringFaqHeading1">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#netMeteringFaqCollapse1" aria-expanded="false" aria-controls="netMeteringFaqCollapse1">
+                        What is net metering?
+                    </button>
+                </h3>
+                <div id="netMeteringFaqCollapse1" class="accordion-collapse collapse" aria-labelledby="netMeteringFaqHeading1" data-bs-parent="#netMeteringFaqLeft">
+                    <div class="accordion-body">Net metering adjusts imported grid units against exported solar units to calculate net billable consumption.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="netMeteringFaqHeading2">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#netMeteringFaqCollapse2" aria-expanded="false" aria-controls="netMeteringFaqCollapse2">
+                        What are banked units?
+                    </button>
+                </h3>
+                <div id="netMeteringFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="netMeteringFaqHeading2" data-bs-parent="#netMeteringFaqLeft">
+                    <div class="accordion-body">Banked units are surplus exported units that may be carried forward according to state DISCOM rules.</div>
+                </div>
+            </div>            
+            </div>
+            <div class="faq-column">
+                <div class="accordion faq-accordion" id="netMeteringFaqRight">
+<div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="netMeteringFaqHeading3">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#netMeteringFaqCollapse3" aria-expanded="false" aria-controls="netMeteringFaqCollapse3">
+                        Why do I still get a bill after solar?
+                    </button>
+                </h3>
+                <div id="netMeteringFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="netMeteringFaqHeading3" data-bs-parent="#netMeteringFaqRight">
+                    <div class="accordion-body">Fixed charges, taxes, duties, meter rent, and other charges can still apply even if energy charges are low.</div>
+                </div>
+            </div>            <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="netMeteringFaqHeading4">
+                    <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#netMeteringFaqCollapse4" aria-expanded="false" aria-controls="netMeteringFaqCollapse4">
+                        Do net metering rules differ by state?
+                    </button>
+                </h3>
+                <div id="netMeteringFaqCollapse4" class="accordion-collapse collapse" aria-labelledby="netMeteringFaqHeading4" data-bs-parent="#netMeteringFaqRight">
+                    <div class="accordion-body">Yes. Import/export adjustment, banking, settlement, and billing rules depend on state regulations and DISCOM policy.</div>
+                </div>
+            </div>        
+                </div>
+                <div class="faq-actions">
+                    <a href="../contact.html" class="faq-more-btn">View All FAQs <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="cta-section py-4 bg-white">
     <div class="container">
         <div class="cta-banner" data-aos="fade-up">
@@ -275,6 +345,8 @@
     </div>
 </section>
 
+    </main>
+
 <footer class="site-footer" role="contentinfo">
     <div class="container">
         <div class="site-footer__grid">
@@ -285,10 +357,10 @@
                 </a>
                 <p class="site-footer__text">Your trusted partner for rooftop solar solutions in Kharagpur, West Bengal. We help you save more, save energy, and build a sustainable future.</p>
                 <ul class="site-footer__social list-unstyled" aria-label="Social media links">
-                    <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-                    <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a aria-label="Facebook" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-facebook"></i></a></li>
+                    <li><a aria-label="Instagram" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-instagram"></i></a></li>
+                    <li><a aria-label="YouTube" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-youtube"></i></a></li>
+                    <li><a aria-label="LinkedIn" role="link" aria-disabled="true" tabindex="-1"><i class="bi bi-linkedin"></i></a></li>
                 </ul>
             </div>
             <!-- Quick Links -->
@@ -320,24 +392,37 @@
                         <i class="bi bi-geo-alt-fill"></i>
                         <span>ShriKrishna Solar Pvt. Ltd.<br>Kharagpur, West Bengal &ndash; 721301</span>
                     </li>
-                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><i class="bi bi-telephone-fill"></i><a href="tel:+919547243120">+91 98765 43210</a></li>
                     <li><i class="bi bi-envelope-fill"></i><a href="mailto:info@shrikrishnasolar.in">info@shrikrishnasolar.in</a></li>
                     <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Sat &nbsp;9 AM &ndash; 7 PM</span></li>
                 </ul>
             </address>
+            <!-- Location -->
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Our Location</h2>
+                <div class="site-footer__map">
+                    <iframe
+                        title="Map showing ShriKrishna Solar location at Kuanpar, Sauri, Belda, Paschim Medinipur 721445"
+                        src="https://www.google.com/maps?q=Kuanpar%2C%20Sauri%2C%20Belda%2C%20Paschim%20Medinipur%20721445&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
         <div class="site-footer__bottom">
             <p>&copy; <span id="footer-year">2026</span> ShriKrishna Solar Pvt. Ltd. All Rights Reserved.</p>
             <nav class="site-footer__legal" aria-label="Footer legal links">
-                <a href="#">Privacy Policy</a><span>|</span>
-                <a href="#">Terms &amp; Conditions</a><span>|</span>
-                <a href="#">Refund Policy</a>
+                <a href="../privacy-policy.html">Privacy Policy</a><span>|</span>
+                <a href="../terms-conditions.html">Terms &amp; Conditions</a><span>|</span>
+                <a href="../refund-policy.html">Refund Policy</a>
             </nav>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/1234567890" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
+<a href="https://wa.me/919547243120" class="fixed-whatsapp btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center hover-lift" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp fs-2"></i></a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -345,4 +430,3 @@
 <script src="../assets/js/calculator-js/net-metering-savings-calculator.js"></script>
 </body>
 </html>
-

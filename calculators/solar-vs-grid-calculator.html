@@ -25,65 +25,109 @@
 </head>
 <body class="calc-vs-grid-page calc-legacy-calculator-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar navbar-expand-xl navbar-light">
+            <div class="container">
 
-<header class="header">
-    <nav class="navbar navbar-expand-xl navbar-light">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="../index.html">
-                <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo">
-            </a>
-
-            <!-- Tablet: WhatsApp + CTA (md to xl) -->
-            <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
-                <a href="https://wa.me/919547243120"
-                   class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
-                   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-                    <i class="bi bi-whatsapp fs-5"></i>
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo" />
                 </a>
-                <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
-                    Book Free Solar Consultation
-                </a>
-            </div>
 
-            <!-- Hamburger -->
-            <button class="navbar-toggler d-xl-none" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
-                    aria-controls="navDrawer" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Mobile / Tablet Drawer -->
-            <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
-                <div class="offcanvas-header border-bottom">
-                    <a href="../index.html" class="navbar-brand mb-0">
-                        <img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo">
+                <!-- Tablet header bar actions (768 px - 1199 px): WhatsApp + CTA next to hamburger -->
+                <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
+                    <a href="https://wa.me/919547243120"
+                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        <i class="bi bi-whatsapp fs-5"></i>
                     </a>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                        Book Free Solar Consultation
+                    </a>
                 </div>
-                <div class="offcanvas-body d-flex flex-column p-0">
-                    <ul class="navbar-nav px-3 py-2 flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../about.html">About</a>
-                        </li>
-                        <li class="nav-item has-submenu">
-                            <a class="nav-link d-flex justify-content-between align-items-center" href="../services.html" data-submenu-toggle>
-                                Services
-                                <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+
+                <!-- Hamburger (visible on mobile & tablet, hidden on desktop) -->
+                <button class="navbar-toggler d-xl-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
+                        aria-controls="navDrawer" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Right-side offcanvas drawer: mobile + tablet (< xl) -->
+                <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1"
+                        id="navDrawer" aria-labelledby="navDrawerLabel">
+
+                    <div class="offcanvas-header border-bottom">
+                        <a href="../index.html" class="navbar-brand mb-0"><img src="../assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo" />
+                        </a>
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column p-0">
+
+                        <ul class="navbar-nav px-3 py-2 flex-grow-1">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link d-flex justify-content-between align-items-center"
+                                    href="../services.html" data-submenu-toggle>
+                                    Services
+                                    <i class="bi bi-chevron-down submenu-toggle-icon"></i>
+                                </a>
+                                <ul class="submenu nav flex-column ps-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../services/residential.html">Residential</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../services/commercial.html">Commercial</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../services/Industrial.html">Industrial</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../calculators.html">Calculators</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../projects.html">Success Stories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
+                            <a href="../contact.html"
+                                class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                                data-bs-dismiss="offcanvas">
+                                Book Free Solar Consultation
                             </a>
-                            <ul class="submenu nav flex-column ps-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../services/residential.html">Residential</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../services/commercial.html">Commercial</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../services/Industrial.html">Industrial</a>
-                                </li>
+                            <a href="https://wa.me/919547243120"
+                                class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
+                            </a>
+                        </div>
+
+                    </div><!-- /.offcanvas-body -->
+                </div><!-- /#navDrawer -->
+
+                <!-- Desktop nav: visible only at >= 1200 px (xl) -->
+                <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                        <li class="nav-item has-submenu position-static">
+                            <a class="nav-link" href="../services.html">Services</a>
+                            <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
+                                <li><a class="dropdown-item" href="../services/residential.html">Residential</a></li>
+                                <li><a class="dropdown-item" href="../services/commercial.html">Commercial</a></li>
+                                <li><a class="dropdown-item" href="../services/Industrial.html">Industrial</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -93,73 +137,27 @@
                             <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html#projects">Success Stories</a>
+                            <a class="nav-link" href="../projects.html">Success Stories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../contact.html">Contact</a>
                         </li>
                     </ul>
-                    <!-- Mobile-only CTA block -->
-                    <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
-                        <a href="../contact.html"
-                           class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
-                           data-bs-dismiss="offcanvas">
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="https://wa.me/919547243120"
+                            class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                            target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                            <i class="bi bi-whatsapp fs-5"></i>
+                        </a>
+                        <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
                             Book Free Solar Consultation
                         </a>
-                        <a href="https://wa.me/919547243120"
-                           class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
-                        </a>
                     </div>
-                </div>
-            </div>
+                </div><!-- /#mainNav -->
 
-            <!-- Desktop Nav -->
-            <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
-                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../about.html">About</a>
-                    </li>
-                    <li class="nav-item has-submenu position-static">
-                        <a class="nav-link" href="../services.html">Services</a>
-                        <ul class="desktop-submenu bg-white border rounded-4 shadow-sm mt-2 py-2">
-                            <li><a class="dropdown-item" href="../services/residential.html">Residential</a></li>
-                            <li><a class="dropdown-item" href="../services/commercial.html">Commercial</a></li>
-                            <li><a class="dropdown-item" href="../services/Industrial.html">Industrial</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../calculators.html">Calculators</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../subsidy-information.html">Subsidy Information</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#projects">Success Stories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../contact.html">Contact</a>
-                    </li>
-                </ul>
-                <div class="d-flex align-items-center gap-3">
-                    <a href="https://wa.me/919547243120"
-                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
-                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-                        <i class="bi bi-whatsapp fs-5"></i>
-                    </a>
-                    <a href="../contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
-                        Book Free Solar Consultation
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </nav>
-</header>
+            </div><!-- /.container -->
+        </nav>
+    </header>
     <main id="main-content">
 
 <section class="calc-detail-hero" aria-labelledby="calc-detail-title">

@@ -498,12 +498,17 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 
 .stats-banner .stats-item {
     color: #fff;
+    justify-content: center;
+    gap: 0.8rem;
+    text-align: left;
 }
 .stats-banner .stats-icon {
     width: 58px;
     height: 58px;
     background: rgba(255,255,255,0.08);
     color: #fff;
+    flex: 0 0 58px;
+    margin-bottom: 0 !important;
 }
 .stats-banner .stats-item h3 {
     font-size: 1.35rem;
@@ -511,6 +516,9 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 .stats-banner .stats-item p {
     opacity: 0.9;
     margin: 0;
+}
+.stats-banner .stats-text {
+    min-width: 0;
 }
 
 /* ==========================================================================
@@ -3955,7 +3963,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   text-align: center;
   margin-top: 8px;
   line-height: 1.5;
-}.calculator-detail-scope .disclaimer a { color: var(--brand-success-dark); }.calculator-detail-scope /* ===== ANIMATIONS ===== */
+}.calculator-detail-scope .disclaimer a { color: var(--brand-success-dark); }/* ===== ANIMATIONS ===== */
 @keyframes fadeSlideIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -9787,6 +9795,478 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
     line-height: 1.6;
 }
 
+/* ==========================================================================
+   Design QA Refinements - shared visual polish without logic changes
+   ========================================================================== */
+
+/* Stronger active navigation state */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="page"] {
+    position: relative;
+    color: var(--brand-warning) !important;
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.28rem;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--brand-warning);
+}
+
+/* Floating contact safe area */
+body {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.fixed-whatsapp {
+    box-shadow: 0 14px 30px rgba(16, 185, 129, 0.28) !important;
+}
+
+/* Project cards should feel like real work, not flat placeholders */
+.proj-card {
+    background: #ffffff;
+    border-color: #e5edf4 !important;
+}
+
+.proj-card .position-relative::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 44%;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0), rgba(15, 23, 42, 0.28));
+    pointer-events: none;
+}
+
+.proj-img {
+    aspect-ratio: 1.9 / 1;
+    height: auto;
+    min-height: 188px;
+    background: linear-gradient(135deg, #dff8ef, #fff7e6);
+    transition: transform 0.35s ease;
+}
+
+.proj-card:hover .proj-img {
+    transform: scale(1.04);
+}
+
+.proj-badge {
+    z-index: 2;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+.proj-stat-label,
+.calc-tool-card__meta span,
+.hint-text,
+.rmi-sub,
+.metric-label,
+.calc-result-empty-desc,
+.calculator-detail-scope .disclaimer,
+.calculator-detail-scope small,
+.calculator-detail-scope .text-muted {
+    color: #64748b !important;
+}
+
+/* Calculator listing: closer to the main brand card system */
+.calc-tool-card {
+    border-color: rgba(16, 185, 129, 0.14);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.045);
+}
+
+.calc-tool-card::before {
+    height: 4px;
+}
+
+.calc-tool-icon {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75), 0 8px 18px rgba(16, 185, 129, 0.10);
+}
+
+.calc-tool-tag {
+    background: rgba(16, 185, 129, 0.10);
+    color: var(--brand-success-dark);
+}
+
+.calc-tool-card__cta {
+    border-radius: 999px;
+}
+
+/* Calculator detail hero consistency and contrast */
+.calc-detail-hero,
+.calc-page-hero,
+.contact-hero {
+    isolation: isolate;
+}
+
+.calc-detail-hero__bg,
+.calc-page-hero__bg,
+.contact-hero__bg {
+    opacity: 0.98;
+}
+
+.calc-detail-hero::after,
+.calc-page-hero::after,
+.contact-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.32), rgba(15, 23, 42, 0.08));
+    pointer-events: none;
+}
+
+.calc-detail-hero__content,
+.calc-page-hero__content,
+.contact-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.calc-detail-hero__accent,
+.calc-page-hero__accent,
+.contact-hero__accent {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: #ffffff;
+}
+
+.calc-detail-hero__desc,
+.calc-page-hero__desc,
+.contact-hero__desc {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.calc-detail-hero__badge,
+.calc-page-hero__badge,
+.contact-hero__badge {
+    color: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.14);
+}
+
+/* Calculator detail empty states and data blocks */
+.calculator-detail-scope #empty-state,
+.calculator-detail-scope .calc-empty-placeholder {
+    min-height: 340px !important;
+    background:
+        radial-gradient(circle at 50% 18%, rgba(16, 185, 129, 0.10), transparent 34%),
+        linear-gradient(180deg, #ffffff, #f8fafc);
+    border: 1.5px dashed #cfe3d7;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.calculator-detail-scope #empty-state img,
+.calculator-detail-scope .calc-empty-placeholder img {
+    max-width: 86px;
+    opacity: 0.9;
+}
+
+.calculator-detail-scope .result-container,
+.calculator-detail-scope .calculator-form-card,
+.calculator-detail-scope .calc-card,
+.calculator-detail-scope .content-area {
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.055);
+}
+
+.calculator-detail-scope table {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.calculator-detail-scope thead th,
+.calculator-detail-scope th {
+    background: #132033;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.calculator-detail-scope tbody tr:nth-child(even) {
+    background: #f8fbfa;
+}
+
+.calculator-detail-scope tbody tr:hover {
+    background: #eefbf4;
+}
+
+.calculator-detail-scope td,
+.calculator-detail-scope th {
+    padding: 0.8rem 1rem;
+}
+
+.calc-info-section,
+.calc-seo-content,
+.calc-table-section,
+.calc-card-section {
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.045);
+}
+
+/* FAQ consistency */
+.faq-section .container {
+    max-width: 1180px;
+}
+
+.faq-grid {
+    gap: 2rem;
+    max-width: 1120px;
+}
+
+.faq-accordion {
+    gap: 0.75rem;
+}
+
+.faq-item {
+    border-radius: 8px !important;
+    background: #ffffff;
+}
+
+.faq-button {
+    min-height: 44px;
+    height: auto;
+    padding: 0.85rem 1rem;
+    background: #f9fbff;
+    white-space: normal;
+    line-height: 1.35;
+}
+
+.faq-body {
+    padding: 0 1rem 1rem;
+    color: #475569;
+}
+
+/* Contact social row: disabled links should not look primary-clickable */
+.contact-social__link[aria-disabled="true"] {
+    opacity: 0.55;
+    cursor: default;
+    filter: grayscale(0.25);
+}
+
+.contact-social__link[aria-disabled="true"]:hover {
+    transform: none;
+    background: #f8fafc;
+    color: #64748b;
+}
+
+/* Lead form visual states for future CRM-ready UX */
+.res-lead-form .form-control:invalid:not(:placeholder-shown),
+.contact-form .form-control:invalid:not(:placeholder-shown),
+.hero-card .form-control:invalid:not(:placeholder-shown),
+.hero-card .form-select:invalid:not(:placeholder-shown) {
+    border-color: rgba(220, 38, 38, 0.55);
+    box-shadow: 0 0 0 0.16rem rgba(220, 38, 38, 0.08);
+}
+
+.res-lead-form .form-control:valid,
+.contact-form .form-control:valid {
+    border-color: rgba(16, 185, 129, 0.38);
+}
+
+@media (max-width: 991.98px) {
+    .calc-detail-hero,
+    .calc-page-hero,
+    .contact-hero {
+        padding: 5rem 0 3rem;
+    }
+
+    .calc-detail-hero::after,
+    .calc-page-hero::after,
+    .contact-hero::after {
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.34), rgba(15, 23, 42, 0.14));
+    }
+
+    .calculator-detail-scope #empty-state,
+    .calculator-detail-scope .calc-empty-placeholder {
+        min-height: 280px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background: linear-gradient(180deg, #f8fbff 0%, #eef8f4 100%);
+        padding-bottom: 2.25rem;
+    }
+
+    .hero-bg-img {
+        height: 48%;
+        object-position: 62% top;
+        opacity: 0.34;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.96));
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2.25rem, 11vw, 3.45rem);
+        line-height: 1.08;
+        margin-bottom: 1rem !important;
+    }
+
+    .hero-copy .lead {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-copy .d-flex.flex-wrap.gap-3 {
+        gap: 0.75rem !important;
+        margin-bottom: 1.4rem !important;
+    }
+
+    .hero-copy .btn {
+        flex: 1 1 100%;
+        justify-content: center;
+        padding: 0.82rem 1.1rem !important;
+    }
+
+    .hero-features {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-features .feature-item {
+        flex: none;
+        align-items: flex-start !important;
+        padding: 0.75rem !important;
+    }
+
+    .feature-icon {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px;
+    }
+
+    .hero-card {
+        margin-top: 1.25rem;
+        max-height: none;
+        padding: 1.15rem;
+    }
+
+    .res-hero__features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.65rem;
+    }
+
+    .res-hero__features span {
+        align-items: flex-start;
+        font-size: 0.78rem;
+        line-height: 1.35;
+        padding: 0.7rem 0.75rem;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.84);
+    }
+
+    .res-lead-form {
+        padding: 1rem !important;
+    }
+
+    .res-lead-form .form-control {
+        min-height: 42px;
+    }
+
+    .res-lead-form textarea.form-control {
+        min-height: 86px;
+    }
+
+    .fixed-whatsapp {
+        width: 50px;
+        height: 50px;
+        right: max(0.85rem, env(safe-area-inset-right));
+        bottom: max(5.25rem, env(safe-area-inset-bottom));
+    }
+
+    .fixed-whatsapp i {
+        font-size: 1.45rem !important;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .calc-detail-hero,
+    .calc-page-hero,
+    .contact-hero {
+        padding: 4.25rem 0 2.65rem;
+    }
+
+    .calc-detail-hero__title,
+    .calc-page-hero__title,
+    .contact-hero__title {
+        font-size: clamp(1.85rem, 9vw, 2.35rem);
+        line-height: 1.12;
+    }
+
+    .calc-detail-hero__desc,
+    .calc-page-hero__desc,
+    .contact-hero__desc {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .calc-detail-hero__badges,
+    .calc-page-hero__badges,
+    .contact-hero__badges {
+        gap: 0.45rem;
+    }
+
+    .calc-detail-hero__badge,
+    .calc-page-hero__badge,
+    .contact-hero__badge {
+        font-size: 0.73rem;
+        padding: 0.32rem 0.68rem;
+    }
+
+    .hero-features {
+        grid-template-columns: 1fr;
+    }
+
+    .res-hero__features {
+        grid-template-columns: 1fr;
+    }
+
+    .proj-img {
+        min-height: 178px;
+    }
+
+    .faq-button {
+        font-size: 0.82rem;
+    }
+}
+
+.calc-detail-hero .breadcrumb-item,
+.calc-detail-hero .breadcrumb-item a,
+.calc-page-hero .breadcrumb-item,
+.calc-page-hero .breadcrumb-item a,
+.contact-hero .breadcrumb-item,
+.contact-hero .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.calc-detail-hero .breadcrumb-item.active,
+.calc-page-hero .breadcrumb-item.active,
+.contact-hero .breadcrumb-item.active {
+    color: #ffffff !important;
+}
+
+.calc-detail-hero__desc,
+.calc-page-hero__desc,
+.contact-hero__desc {
+    color: rgba(255, 255, 255, 0.92) !important;
+    text-shadow: 0 1px 10px rgba(15, 23, 42, 0.26);
+}
+
+@media (max-width: 768px) {
+    .fixed-whatsapp {
+        display: none !important;
+    }
+}
+
 /* Shared accessible form validation */
 .form-error-message {
     color: #dc2626;
@@ -9862,3 +10342,14 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
             border-radius: 2rem;
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
         }
+
+/* Homepage hero savings summary visibility fix */
+.hero-card .savings-summary {
+    background-color: #d3fcee !important;
+    border-color: rgba(16, 185, 129, 0.18) !important;
+    color: #0f172a !important;
+}
+
+.hero-card .savings-summary .text-success {
+    color: var(--brand-success-dark) !important;
+}

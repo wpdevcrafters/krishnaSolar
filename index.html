@@ -31,42 +31,37 @@
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-
     <header class="header">
         <nav class="navbar navbar-expand-xl navbar-light">
             <div class="container">
 
-                <!-- ── Logo ── -->
+                <!-- Logo -->
                 <a class="navbar-brand" href="index.html">
                     <img src="assets/image/logo.png" alt="ShriKrishna Solar" class="header-logo" />
                 </a>
 
-                <!-- ── Tablet header bar actions (768 px – 1199 px): WhatsApp + CTA next to hamburger ── -->
+                <!-- Tablet header bar actions (768 px - 1199 px): WhatsApp + CTA next to hamburger -->
                 <div class="header-tablet-actions d-none d-md-flex d-xl-none align-items-center gap-2 ms-auto me-3">
                     <a href="https://wa.me/919547243120"
-                       class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
-                       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                        class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <i class="bi bi-whatsapp fs-5"></i>
                     </a>
-                    <a href="#contact" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
+                    <a href="contact.html" class="btn btn-warning header-cta text-white fw-semibold px-3 py-2 shadow-sm">
                         Book Free Solar Consultation
                     </a>
                 </div>
 
-                <!-- ── Hamburger (visible on mobile & tablet, hidden on desktop) ── -->
+                <!-- Hamburger (visible on mobile & tablet, hidden on desktop) -->
                 <button class="navbar-toggler d-xl-none" type="button"
                         data-bs-toggle="offcanvas" data-bs-target="#navDrawer"
                         aria-controls="navDrawer" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- ══════════════════════════════════════════════════════════
-                     RIGHT-SIDE OFFCANVAS DRAWER — mobile + tablet (< xl)
-                     Bootstrap controls display; no d-xl-none here so JS
-                     doesn't fight with utility classes.
-                ══════════════════════════════════════════════════════════ -->
+                <!-- Right-side offcanvas drawer: mobile + tablet (< xl) -->
                 <div class="offcanvas offcanvas-end d-xl-none" tabindex="-1"
-                     id="navDrawer" aria-labelledby="navDrawerLabel">
+                        id="navDrawer" aria-labelledby="navDrawerLabel">
 
                     <div class="offcanvas-header border-bottom">
                         <a href="index.html" class="navbar-brand mb-0"><img src="assets/image/logo.png" alt="ShriKrishna Solar" class="drawer-logo" />
@@ -77,13 +72,12 @@
 
                     <div class="offcanvas-body d-flex flex-column p-0">
 
-                        <!-- Nav links (all breakpoints inside drawer) -->
                         <ul class="navbar-nav px-3 py-2 flex-grow-1">
                             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item has-submenu">
                                 <a class="nav-link d-flex justify-content-between align-items-center"
-                                   href="services.html" data-submenu-toggle>
+                                    href="services.html" data-submenu-toggle>
                                     Services
                                     <i class="bi bi-chevron-down submenu-toggle-icon"></i>
                                 </a>
@@ -106,23 +100,22 @@
                                 <a class="nav-link" href="subsidy-information.html">Subsidy Information</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html#projects">Success Stories</a>
+                                <a class="nav-link" href="projects.html">Success Stories</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                         </ul>
 
-                        <!-- Mobile-only CTA block (< 768 px): shown only on phones -->
                         <div class="d-flex d-md-none flex-column gap-2 px-3 py-3 border-top">
-                            <a href="#contact"
-                               class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
-                               data-bs-dismiss="offcanvas">
+                            <a href="contact.html"
+                                class="btn btn-warning header-cta text-white fw-semibold py-2 shadow-sm justify-content-center w-100"
+                                data-bs-dismiss="offcanvas">
                                 Book Free Solar Consultation
                             </a>
                             <a href="https://wa.me/919547243120"
-                               class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
-                               target="_blank" rel="noopener noreferrer">
+                                class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2 py-2"
+                                target="_blank" rel="noopener noreferrer">
                                 <i class="bi bi-whatsapp fs-5"></i> WhatsApp Us
                             </a>
                         </div>
@@ -130,9 +123,7 @@
                     </div><!-- /.offcanvas-body -->
                 </div><!-- /#navDrawer -->
 
-                <!-- ══════════════════════════════════════════════════════════
-                     DESKTOP NAV — visible only at ≥ 1200 px (xl)
-                ══════════════════════════════════════════════════════════ -->
+                <!-- Desktop nav: visible only at >= 1200 px (xl) -->
                 <div class="collapse navbar-collapse d-none d-xl-flex" id="mainNav">
                     <ul class="navbar-nav mx-auto mb-2 mb-xl-0 fw-medium">
                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -152,7 +143,7 @@
                             <a class="nav-link" href="subsidy-information.html">Subsidy Information</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#projects">Success Stories</a>
+                            <a class="nav-link" href="projects.html">Success Stories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -160,11 +151,11 @@
                     </ul>
                     <div class="d-flex align-items-center gap-3">
                         <a href="https://wa.me/919547243120"
-                           class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
-                           target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                            class="btn btn-outline-success rounded-circle whatsapp-btn d-flex align-items-center justify-content-center shadow-sm"
+                            target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                             <i class="bi bi-whatsapp fs-5"></i>
                         </a>
-                        <a href="#contact" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
+                        <a href="contact.html" class="btn btn-warning header-cta text-white fw-semibold px-4 py-2 shadow-sm">
                             Book Free Solar Consultation
                         </a>
                     </div>
@@ -281,38 +272,48 @@
                     <div class="stats-banner d-flex align-items-center rounded-4 shadow-sm p-3 p-md-4">
                         <div class="row g-3 w-100 text-center align-items-center">
                             <div class="col-6 stats-col">
-                                <div class="stats-item d-flex flex-column align-items-center">
+                                <div class="stats-item d-flex align-items-center">
                                     <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-award fs-4"></i></span>
-                                    <h3 class="fw-bold mb-1">15+</h3>
-                                    <p class="mb-0 fs-8">Years of Experience</p>
+                                    <div class="stats-text">
+                                        <h3 class="fw-bold mb-1">15+</h3>
+                                        <p class="mb-0 fs-8">Years of Experience</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-6 stats-col">
-                                <div class="stats-item d-flex flex-column align-items-center">
+                                <div class="stats-item d-flex align-items-center">
                                     <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-house-fill fs-4"></i></span>
-                                    <h3 class="fw-bold mb-1">1,500+</h3>
-                                    <p class="mb-0 fs-8">Installations Completed</p>
+                                    <div class="stats-text">
+                                        <h3 class="fw-bold mb-1">1,500+</h3>
+                                        <p class="mb-0 fs-8">Installations Completed</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-6 stats-col">
-                                <div class="stats-item d-flex flex-column align-items-center">
+                                <div class="stats-item d-flex align-items-center">
                                     <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-lightning-charge fs-4"></i></span>
-                                    <h3 class="fw-bold mb-1">12 MW+</h3>
-                                    <p class="mb-0 fs-8">Total MW Installed</p>
+                                    <div class="stats-text">
+                                        <h3 class="fw-bold mb-1">12 MW+</h3>
+                                        <p class="mb-0 fs-8">Total MW Installed</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-6 stats-col">
-                                <div class="stats-item d-flex flex-column align-items-center">
+                                <div class="stats-item d-flex align-items-center">
                                     <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-people-fill fs-4"></i></span>
-                                    <h3 class="fw-bold mb-1">4,800+</h3>
-                                    <p class="mb-0 fs-8">Happy Customers</p>
+                                    <div class="stats-text">
+                                        <h3 class="fw-bold mb-1">4,800+</h3>
+                                        <p class="mb-0 fs-8">Happy Customers</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-6 stats-col">
-                                <div class="stats-item d-flex flex-column align-items-center">
+                                <div class="stats-item d-flex align-items-center">
                                     <span class="stats-icon mb-2 d-inline-flex align-items-center justify-content-center rounded-circle"><i class="bi bi-tree-fill fs-4"></i></span>
-                                    <h3 class="fw-bold mb-1">9,200+</h3>
-                                    <p class="mb-0 fs-8">Tons of CO₂ Saved</p>
+                                    <div class="stats-text">
+                                        <h3 class="fw-bold mb-1">9,200+</h3>
+                                        <p class="mb-0 fs-8">Tons of CO₂ Saved</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -868,7 +869,7 @@
                 <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="residential">
                     <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="https://placehold.co/420x220/a8d5a2/1a472a?text=Residential+Solar" class="proj-img w-100" alt="5kW Rooftop Solar System – Kharagpur" loading="lazy" decoding="async">
+                            <img src="assets/image/solarheroimg-optimized.webp" class="proj-img w-100" alt="5kW Rooftop Solar System – Kharagpur" loading="lazy" decoding="async">
                             <span class="proj-badge">Residential</span>
                         </div>
                         <div class="proj-body">
@@ -892,7 +893,7 @@
                 <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="commercial">
                     <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="https://placehold.co/420x220/a2c4d5/0a3d62?text=Commercial+Solar" class="proj-img w-100" alt="20kW Solar System – Midnapore" loading="lazy" decoding="async">
+                            <img src="assets/image/sol2-optimized.webp" class="proj-img w-100" alt="20kW Solar System – Midnapore" loading="lazy" decoding="async">
                             <span class="proj-badge">Commercial</span>
                         </div>
                         <div class="proj-body">
@@ -916,7 +917,7 @@
                 <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="industrial">
                     <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="https://placehold.co/420x220/c5d5a8/2d4a1e?text=Industrial+Solar" class="proj-img w-100" alt="100kW Solar System – Haldia" loading="lazy" decoding="async">
+                            <img src="assets/image/sol3-optimized.webp" class="proj-img w-100" alt="100kW Solar System – Haldia" loading="lazy" decoding="async">
                             <span class="proj-badge">Industrial</span>
                         </div>
                         <div class="proj-body">
@@ -940,7 +941,7 @@
                 <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="commercial">
                     <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="https://placehold.co/420x220/a2c4d5/0a3d62?text=Commercial+Solar" class="proj-img w-100" alt="25kW Solar System – Durgapur" loading="lazy" decoding="async">
+                            <img src="assets/image/sol4-optimized.webp" class="proj-img w-100" alt="25kW Solar System – Durgapur" loading="lazy" decoding="async">
                             <span class="proj-badge">Commercial</span>
                         </div>
                         <div class="proj-body">
@@ -964,7 +965,7 @@
                 <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="residential">
                     <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="https://placehold.co/420x220/a8d5a2/1a472a?text=Residential+Solar" class="proj-img w-100" alt="3kW Home Solar – Asansol" loading="lazy" decoding="async">
+                            <img src="assets/image/solarheroimg-before-optimized.webp" class="proj-img w-100" alt="3kW Home Solar – Asansol" loading="lazy" decoding="async">
                             <span class="proj-badge">Residential</span>
                         </div>
                         <div class="proj-body">
@@ -988,7 +989,7 @@
                 <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="industrial">
                     <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="https://placehold.co/420x220/c5d5a8/2d4a1e?text=Industrial+Solar" class="proj-img w-100" alt="200kW Solar Plant – Bardhaman" loading="lazy" decoding="async">
+                            <img src="assets/image/solarheroimg-after-optimized.webp" class="proj-img w-100" alt="200kW Solar Plant – Bardhaman" loading="lazy" decoding="async">
                             <span class="proj-badge">Industrial</span>
                         </div>
                         <div class="proj-body">
@@ -1012,7 +1013,7 @@
                 <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="residential">
                     <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="https://placehold.co/420x220/a8d5a2/1a472a?text=Residential+Solar" class="proj-img w-100" alt="7kW Solar System – Siliguri" loading="lazy" decoding="async">
+                            <img src="assets/image/sol1-optimized.webp" class="proj-img w-100" alt="7kW Solar System – Siliguri" loading="lazy" decoding="async">
                             <span class="proj-badge">Residential</span>
                         </div>
                         <div class="proj-body">
@@ -1036,7 +1037,7 @@
                 <div class="col-sm-6 col-lg-3 proj-card-wrap" data-category="commercial">
                     <div class="proj-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="https://placehold.co/420x220/a2c4d5/0a3d62?text=Commercial+Solar" class="proj-img w-100" alt="50kW Solar System – Howrah" loading="lazy" decoding="async">
+                            <img src="assets/image/solarheroimg-optimized.webp" class="proj-img w-100" alt="50kW Solar System – Howrah" loading="lazy" decoding="async">
                             <span class="proj-badge">Commercial</span>
                         </div>
                         <div class="proj-body">
